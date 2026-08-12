@@ -1,0 +1,12 @@
+# Roba di sistema, non del progetto
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Configurazione locale degli strumenti
+.claude/
+
+# Pacchetti scaricati dal generatore di APK, se finiscono qui
+*.apk
+*.aab
+*.zip

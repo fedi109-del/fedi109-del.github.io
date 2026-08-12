@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- viewport-fit=cover lets the app paint under the iPhone notch; the CSS puts
+     the header back inside the safe area with env(safe-area-inset-top). -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lebanese Path — learn the Lebanese people actually speak</title>
+<meta name="description" content="A forty-unit course in spoken Lebanese Arabic, from first hello to real conversation. Works offline.">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- installable app -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#f7f1e8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#100e0c" media="(prefers-color-scheme: dark)">
+
+<!-- iPhone: Safari ignores the manifest, so everything has to be said twice -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Lebanese">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+</head>
+<body>
+
+<header id="header"></header>
+<main id="app"></main>
+
+<!-- engine: order matters, data.js first -->
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+<script src="js/drills.js"></script>
+<script src="js/runner.js"></script>
+
+<!-- content -->
+<script src="data/00-reference.js"></script>
+
+<script src="data/unit-01-sounds-and-hello.js"></script>
+<script src="data/unit-02-who-are-you.js"></script>
+<script src="data/unit-03-this-that-where.js"></script>
+<script src="data/unit-04-numbers-and-how-much.js"></script>
+<script src="data/unit-05-times-of-day.js"></script>
+<script src="data/unit-06-my-your-his.js"></script>
+
+<script src="data/unit-07-what-i-want.js"></script>
+<script src="data/unit-08-having-and-carrying.js"></script>
+<script src="data/unit-09-can-and-please.js"></script>
+<script src="data/unit-10-saying-no.js"></script>
+<script src="data/unit-11-describing-things.js"></script>
+<script src="data/unit-12-food-and-quantities.js"></script>
+<script src="data/unit-13-telling-the-time.js"></script>
+<script src="data/unit-14-places-and-directions.js"></script>
+
+<script src="data/unit-15-the-present-engine.js"></script>
+<script src="data/unit-16-everyday-verbs.js"></script>
+<script src="data/unit-17-the-b-drop.js"></script>
+<script src="data/unit-18-daily-routine.js"></script>
+<script src="data/unit-19-give-me-come-here.js"></script>
+<script src="data/unit-20-shopping-and-sizes.js"></script>
+<script src="data/unit-21-getting-around.js"></script>
+<script src="data/unit-22-staying-somewhere.js"></script>
+<script src="data/unit-23-small-talk.js"></script>
+
+<script src="data/unit-24-right-now.js"></script>
+<script src="data/unit-25-tomorrow.js"></script>
+<script src="data/unit-26-the-past-begins.js"></script>
+<script src="data/unit-27-the-second-root.js"></script>
+<script src="data/unit-28-telling-what-happened.js"></script>
+<script src="data/unit-29-was-and-used-to.js"></script>
+<script src="data/unit-30-how-long-since-when.js"></script>
+<script src="data/unit-31-a-night-out.js"></script>
+<script src="data/unit-32-when-it-hurts.js"></script>
+
+<script src="data/unit-33-participles.js"></script>
+<script src="data/unit-34-joining-ideas.js"></script>
+<script src="data/unit-35-work-and-study.js"></script>
+<script src="data/unit-36-opinions-and-preferences.js"></script>
+<script src="data/unit-37-complaining-well.js"></script>
+<script src="data/unit-38-invitations-and-plans.js"></script>
+<script src="data/unit-39-getting-a-haircut.js"></script>
+<script src="data/unit-40-sport-and-encouragement.js"></script>
+
+<!-- screens last: everything is registered by now -->
+<script src="js/app.js"></script>
+
+<!-- home screen and offline copy; does nothing at all when opened as a file -->
+<script src="js/install.js"></script>
+
+</body>
+</html>
