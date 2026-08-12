@@ -3,6 +3,31 @@
 > Guida in italiano, per fedi. L'app in sé è tutta in inglese: questo file è di servizio,
 > come `CLAUDE.md` e `LEGGIMI.md`.
 
+---
+
+## FATTO — l'app è online dal 12 agosto 2026
+
+**Indirizzo: <https://fedi109-del.github.io/>**
+
+È questo il link da mandare a chiunque. Si apre su qualsiasi telefono, computer o tablet,
+senza scaricare niente e senza account.
+
+Repository: <https://github.com/fedi109-del/fedi109-del.github.io> (pubblico).
+
+I passi 1-4 qui sotto sono quindi **già eseguiti**, e restano solo per memoria di come si
+è fatto. Quello che ti riguarda ancora è il **passo 5** (l'iPhone di tuo fratello) e il
+**passo 6** (l'APK), più la sezione «Aggiornare l'app in futuro» in fondo.
+
+### Se qualcosa non funzionasse: la VPN
+
+Il primo tentativo di pubblicare è fallito con un timeout verso `api.github.com`. Non era
+GitHub: era la **VPN OpenVPN**, che ha una MTU di 1380 invece di 1500. I pacchetti piccoli
+passano, quelli grandi — la stretta di mano TLS, il `git push` — vengono scartati in
+silenzio. Se un comando verso GitHub va in timeout, **stacca la VPN e riprova**: è quella.
+
+Sul repository sono già impostati quattro parametri che rendono il push più tollerante
+(`http.version HTTP/1.1`, `postBuffer` grande, nessun timeout per lentezza).
+
 Alla fine di questa pagina avrai tre cose:
 
 1. **un indirizzo web** da mandare a chiunque, che funziona su qualsiasi telefono;
