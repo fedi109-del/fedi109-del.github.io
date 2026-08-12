@@ -20,20 +20,33 @@ nessun server, nessuna connessione a internet.
    nessun dialogo, esempio o ordine di lezioni del libro di Chaghig Filian viene riprodotto.
    Vedi `SCHEMA.md` § "Regola anti-copia".
 4. **Deve funzionare col doppio clic.** Niente build, niente npm, niente `import`/`export`
-   (i moduli ES sono bloccati da `file://`). Solo `<script src>` classici.
+   (i moduli ES sono bloccati da `file://`). Solo `<script src>` classici. Da quando l'app
+   vive anche online (vedi `PUBBLICA.md`) questa legge non è cambiata: il doppio clic resta
+   il modo principale di aprirla, e tutto ciò che riguarda l'installazione sul telefono si
+   spegne da solo quando l'indirizzo comincia per `file://`.
 
 ## Struttura
 
 ```
-index.html          il guscio; elenca tutti gli script
-css/style.css       tema unico, responsive, adatto anche al telefono
-js/data.js          il registro: window.LEB (va caricato per primo)
-js/store.js         progressi, XP, serie di giorni, ripasso dilazionato (localStorage)
-js/drills.js        i sei tipi di esercizio: come si disegnano e come si correggono
-js/app.js           schermate e navigazione
+index.html            il guscio; elenca tutti gli script
+css/style.css         tema unico ("Beirut al tramonto"), chiaro e scuro, adatto al telefono
+js/data.js            il registro: window.LEB (va caricato per primo)
+js/store.js           progressi, XP, serie di giorni, ripasso dilazionato (localStorage)
+js/drills.js          i sei tipi di esercizio: come si disegnano e come si correggono
+js/runner.js          una sessione di esercizi: pratica, quiz, ripasso
+js/app.js             schermate e navigazione
+js/install.js         schermata iniziale del telefono e copia offline; muto sotto file://
 data/00-reference.js  tabelle di riferimento (suoni, suffissi, griglia verbale, tempi)
 data/unit-NN-*.js     una unità = un file
-SCHEMA.md           il contratto dei dati: da leggere prima di scrivere un'unità
+
+manifest.webmanifest  come si chiama e che faccia ha l'app una volta installata
+sw.js                 la copia offline: elenco dei file + strategia "prima la cache"
+icons/                le icone vere in PNG, generate da icone.js
+icone.js              le disegna da zero e le scrive; si rilancia con `node icone.js`
+verifica.js           il controllo completo da disco; si lancia con `node verifica.js`
+
+SCHEMA.md             il contratto dei dati: da leggere prima di scrivere un'unità
+PUBBLICA.md           come metterla online e ricavarne l'APK Android
 ```
 
 ## Come si aggiunge un'unità
@@ -41,7 +54,11 @@ SCHEMA.md           il contratto dei dati: da leggere prima di scrivere un'unit�
 1. Scrivere `data/unit-NN-nome.js` seguendo `SCHEMA.md`.
 2. Aggiungere la riga `<script src="data/unit-NN-nome.js"></script>` in `index.html`,
    **prima** di `js/app.js`.
-3. Ricaricare la pagina: l'unità compare da sola nel percorso.
+3. Aggiungere lo stesso percorso alla lista `ASSETS` dentro `sw.js`, e alzare di uno la
+   riga `var VERSION`. Se lo dimentichi, sul telefono l'app resta alla versione vecchia
+   perché continua a servirsi dalla propria copia offline.
+4. Lanciare `node verifica.js`: controlla anche il punto 3 e si lamenta se manca.
+5. Ricaricare la pagina: l'unità compare da sola nel percorso.
 
 ## Cosa non fare
 

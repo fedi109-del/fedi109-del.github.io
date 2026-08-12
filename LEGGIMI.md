@@ -6,8 +6,24 @@ Doppio clic su **`index.html`**. Si apre nel browser e funziona: niente installa
 internet, nessun account. I progressi restano su questo computer, dentro il browser che hai
 usato per aprirla (se la apri con Chrome e poi con Edge, sono due percorsi separati).
 
-Per averla anche sul telefono: copia l'intera cartella nel telefono e apri `index.html` col
-browser, poi "Aggiungi a schermata Home". L'impaginazione è già fatta per lo schermo stretto.
+## Come si mette sul telefono
+
+C'è un modo che funziona e uno che non funziona.
+
+**Non funziona** copiare la cartella dentro il telefono e aprire `index.html` da lì: né
+iPhone né Android permettono di aggiungere alla schermata iniziale una pagina aperta come
+file, e la copia offline non parte.
+
+**Funziona** mettere l'app online una volta sola e poi aprire quell'indirizzo dal telefono.
+La procedura completa, passo per passo, è in **`PUBBLICA.md`**: alla fine hai un link da
+mandare a chiunque, l'icona sulla schermata iniziale, e — se ti serve — un file `.apk` per
+Android.
+
+Una volta aggiunta alla schermata, l'app si apre a schermo intero, senza barra del browser,
+**e continua a funzionare senza rete**: al primo avvio si copia tutta dentro il telefono.
+
+Attenzione a una cosa: i progressi vivono nel browser che stai usando, non in un account.
+Il percorso sul computer e quello sul telefono sono due percorsi separati, e non si parlano.
 
 ## Com'è fatto il percorso
 

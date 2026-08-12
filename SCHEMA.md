@@ -179,12 +179,16 @@ L'articolo si scrive `el-` e si assimila davanti alle lettere solari: `esh-shems
 1. Controllare che la parentesi finale sia `});` e che il file sia JavaScript valido.
 2. Aggiungere lo `<script src="data/unit-NN-slug.js"></script>` in `index.html`, in ordine,
    prima di `js/app.js`.
-3. Ricaricare la pagina e aprire la console: zero errori.
-4. Andare su **`index.html#/check`**: è il controllore interno, elenca ogni violazione dello
+3. Aggiungere lo stesso percorso alla lista `ASSETS` in `sw.js` e alzare `var VERSION`.
+   È il passo che si dimentica sempre, e il sintomo è sleale: sul computer va tutto bene,
+   mentre sul telefono l'app installata resta ferma alla versione precedente perché
+   continua a servirsi dalla propria copia offline. `node verifica.js` lo controlla.
+4. Ricaricare la pagina e aprire la console: zero errori.
+5. Andare su **`index.html#/check`**: è il controllore interno, elenca ogni violazione dello
    schema (blocchi mancanti, `answer` che non punta a nessuna opzione, tessere che non bastano
    a costruire la frase, troppo pochi tipi di esercizio). Deve dire *"Every unit obeys
    SCHEMA.md"*.
-5. Meglio ancora, dalla cartella del progetto: **`node verifica.js`**. Legge i file da disco —
+6. Meglio ancora, dalla cartella del progetto: **`node verifica.js`**. Legge i file da disco —
    quindi non può mostrare una versione vecchia, come invece succede alla pagina aperta da
    `file://`, che tiene in cache gli script — e controlla anche ciò che il controllore interno
    non vede: la stessa parola scritta in due modi in unità diverse, la qaaf scritta `q`,
