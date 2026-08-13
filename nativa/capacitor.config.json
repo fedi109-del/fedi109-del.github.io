@@ -1,0 +1,12 @@
+{
+  "appId": "com.lebanesepath.app",
+  "appName": "Lebanese Path",
+  "webDir": "www",
+  "appendUserAgent": "LebanesePathApp",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}

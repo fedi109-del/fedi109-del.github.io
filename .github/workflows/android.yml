@@ -1,0 +1,81 @@
+# android.yml — builds the Android APK of Lebanese Path in the cloud.
+#
+# Runs on every push to main that touches the app or the shell, and by hand
+# from the Actions tab. Two things come out of it:
+#   1. an artifact on the run (kept 90 days), and
+#   2. the release tagged app-android, refreshed in place, whose download
+#      link never changes:
+#      https://github.com/fedi109-del/fedi109-del.github.io/releases/download/app-android/lebanese-path.apk
+#
+# This is the DEBUG build: installable on any phone that allows unknown
+# sources, perfect for testing. The Play Store build (assembleRelease +
+# signing key) needs a keystore, which is a decision for its owner, not CI.
+
+name: Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'css/**'
+      - 'js/**'
+      - 'data/**'
+      - 'icons/**'
+      - 'images/**'
+      - 'audio/**'
+      - 'nativa/**'
+      - '.github/workflows/android.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Install the shell
+        working-directory: nativa
+        run: npm ci
+
+      - name: Assemble the web bundle
+        working-directory: nativa
+        run: node copia.js
+
+      - name: Sync Capacitor
+        working-directory: nativa
+        run: npx cap sync android
+
+      - name: Build the APK
+        working-directory: nativa/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lebanese-path-apk
+          path: nativa/android/app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Refresh the stable download link
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp nativa/android/app/build/outputs/apk/debug/app-debug.apk lebanese-path.apk
+          gh release delete app-android --yes --cleanup-tag || true
+          gh release create app-android lebanese-path.apk \
+            --title "Lebanese Path — Android (test build)" \
+            --notes "Debug build for testing on any Android phone: download lebanese-path.apk, open it, allow installing from this source when asked. Updated automatically on every change to the app."

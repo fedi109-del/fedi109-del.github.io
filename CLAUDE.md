@@ -52,7 +52,24 @@ voci.js               la catena dell'audio; si lancia con `node voci.js`
 
 SCHEMA.md             il contratto dei dati: da leggere prima di scrivere un'unità
 PUBBLICA.md           come metterla online e ricavarne l'APK Android
+
+nativa/               l'involucro nativo (Capacitor): android/ e ios/ sono progetti veri
+nativa/copia.js       assembla nativa/www dai file dell'app; niente si modifica lì dentro
+.github/workflows/android.yml   compila l'APK a ogni push su main e aggiorna la
+                      release "app-android" (link di scaricamento stabile)
+.nojekyll             dice a GitHub Pages di servire i file grezzi, senza Jekyll
 ```
+
+## L'involucro nativo
+
+L'app resta una sola: quella che si apre col doppio clic. La cartella `nativa/` le mette
+attorno un guscio Capacitor per gli store: `node copia.js` ricopia i file dell'app in
+`nativa/www` (senza `sw.js`: nel guscio i file sono già sul telefono), e `npx cap sync`
+li porta dentro i progetti Android e iOS. L'APK di prova lo compila GitHub Actions, non
+il computer di casa. Dentro il guscio l'app si riconosce dal token `LebanesePathApp`
+nello user agent (vedi `js/install.js`) e spegne da sola service worker e inviti
+all'installazione. Il progetto iOS è pronto ma si compila solo su un Mac con l'account
+Apple Developer.
 
 ## L'audio
 
