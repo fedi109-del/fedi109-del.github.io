@@ -190,6 +190,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A phone call where almost nothing is conjugated',
+    setting: 'Calling an office. Count the real verbs in this exchange — there are very few.',
+    lines: [
+      { who: 'Receptionist', lb: 'aloo, mar7aba.', ar: 'ألو، مرحبا', en: 'hello.' },
+      { who: 'You', you: true, lb: 'mar7aba. l-ostéés Ziad mawjouud?', ar: 'مرحبا. الأستاذ زياد موجود؟', en: 'hello. Is Ziad in?',
+        note: 'mawjouud, not a verb. Present, available, in — it covers all three.' },
+      { who: 'Receptionist', lb: 'la2, mesh mawjouud halla2. miin 3am byes2al?', ar: 'لأ، مش موجود هلق. مين عم بيسأل؟', en: 'no, he is not in right now. Who is asking?' },
+      { who: 'You', you: true, lb: 'ana Marco. elé noSS séé3a naaTer telifoono.', ar: 'أنا ماركو. إلي نص ساعة ناطر تليفونو', en: 'I am Marco. I have been waiting half an hour for his call.' },
+      { who: 'Receptionist', lb: 'wéén sééken enta?', ar: 'وين ساكن انت؟', en: 'where do you live?' },
+      { who: 'You', you: true, lb: 'sééken b-Ashrafiyyé. bass halla2 ana néézel 3a Béérout.', ar: 'ساكن بالأشرفية. بس هلق أنا نازل ع بيروت', en: 'I live in Achrafieh. But right now I am on my way down to Beirut.',
+        note: 'néézel is not "I go down" and not "I am going down" either. It is the state of being on your way.' },
+      { who: 'Receptionist', lb: 'Tayyeb. kell shii jééhez 3andkon?', ar: 'طيب. كل شي جاهز عندكن؟', en: 'all right. Is everything ready at your end?' },
+      { who: 'You', you: true, lb: 'jééhez. w ana 7ééjez Tiyyaara la-boukra, fa ana mesta3jel.', ar: 'جاهز. وأنا حاجز طيارة لبكرا، فأنا مستعجل', en: 'ready. And I have booked a flight for tomorrow, so I am in a hurry.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The form that is neither a verb nor an adjective',
+    icon: 'bridge',
+    body:
+      'This is the unit that separates people who speak correct Lebanese from people who sound like ' +
+      'they grew up with it. Everything here can be said with a conjugated verb, and a Lebanese ' +
+      'speaker will not use one.\n\n' +
+      '`sééken` where English says I live. `naaTer` where English says I am waiting. `7ééjez` where ' +
+      'English says I have booked. `néézel` where English says I am on my way down. These are ' +
+      'participles: they describe the state you are in as a result of an action, rather than the ' +
+      'action itself.\n\n' +
+      'English has the same thing and uses it far less. *I am sitting* is a participle; *I sit* is a ' +
+      'verb. Lebanese leans on the first one heavily, especially for anything ongoing, anything ' +
+      'already arranged, and anything about where you are or where you are heading.\n\n' +
+      'The practical consequence: when you want to say what you are doing right now, check whether a ' +
+      'participle exists before reaching for `3am`. `naaTer` beats `3am bentor`. `sééken` beats ' +
+      '`beskon`. Getting this right is the last big step before people stop slowing down for you.',
+  },
+
   drills: [
     { type: 'choice', q: 'How many forms does a Lebanese participle have?',
       options: ['Three: masculine, feminine, plural', 'Eight, one per person', 'Two: singular and plural'], answer: 0,

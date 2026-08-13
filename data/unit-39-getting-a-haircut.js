@@ -226,6 +226,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Being precise in a chair you cannot get out of',
+    setting: 'The barber has understood roughly what you want, which is not the same as exactly.',
+    lines: [
+      { who: 'Barber', lb: 'tfaDDal. kiif baddak yééha?', ar: 'تفضل. كيف بدك ياها؟', en: 'have a seat. How do you want it?' },
+      { who: 'You', you: true, lb: 'aSSer shwayy men wara, w khaffef 3aj-jawéneb.', ar: 'أقصر شوي من ورا، وخفف عالجوانب', say: 'أصّر شوي من ورا، وخفف عالجوانب', en: 'shorten it a bit at the back, and thin out the sides.' },
+      { who: 'Barber', lb: 'bel-makana?', ar: 'بالمكنة؟', en: 'with the clippers?' },
+      { who: 'You', you: true, lb: 'la2, bel-m2aSS. w khallé l-fer2 metl ma houwwé.', ar: 'لأ، بالمقص. وخلي الفرق متل ما هو', say: 'لأ، بالمأص. وخلي الفرق متل ما هو', en: 'no, with the scissors. And leave the parting as it is.' },
+      { who: 'Barber', lb: 'w ed-da2n?', ar: 'والدقن؟', en: 'and the beard?' },
+      { who: 'You', you: true, lb: 'khaffefa bass. mesh 2aSiir ktiir — Tabii3é.', ar: 'خففها بس. مش قصير كتير — طبيعي', say: 'خففها بس. مش أصير كتير — طبيعي', en: 'just thin it. Not too short — natural.',
+        note: 'Tabii3é is the safety word. Say it early and say it twice.' },
+      { who: 'Barber', lb: 'khalaS. shou ra2yak?', ar: 'خلص. شو رأيك؟', en: 'done. What do you think?' },
+      { who: 'You', you: true, lb: 'raw3a. ya3Tiik el-3aafyé.', ar: 'روعة. يعطيك العافية', en: 'wonderful. May he give you strength.' },
+      { who: 'Barber', lb: 'na3iiman!', ar: 'نعيما', en: 'may it be blessed',
+        note: 'Said to anyone freshly cut, shaved or washed. The answer is Allah yen3am 3aléék.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The phrases for the state somebody is in',
+    icon: 'scissors',
+    body:
+      'Lebanese has a set of fixed lines that belong to a condition rather than an event, and this ' +
+      'unit collects most of them. `na3iiman` is said to someone who has just had a haircut, a ' +
+      'shave, or a shower, and the answer is `Allah yen3am 3aléék`. `Sa7 en-noom` belongs to someone ' +
+      'who has just woken. `l-7amdella 3as-saléémé` belongs to someone who has just arrived from ' +
+      'somewhere. `saléémtak` belongs to someone unwell. `m3awwaDiin` belongs to someone who has ' +
+      'lost or broken something.\n\n' +
+      'These are not optional decoration. Failing to say `na3iiman` to a friend with an obviously ' +
+      'new haircut is a small, noticeable gap — and every one of them has a fixed reply, so learning ' +
+      'the pair is learning the whole exchange.\n\n' +
+      'The barber shop itself is worth knowing about. It is a place men sit for an hour without ' +
+      'anyone being cut, coffee appears, and the conversation is the reason half the room is there. ' +
+      'Which is also why `Tabii3é` matters: you will be there long enough to regret being ' +
+      'imprecise.',
+  },
+
   drills: [
     { type: 'choice', q: 'The man in the chair says `baddé oSS sha3ré`. Who is holding the scissors?',
       options: [

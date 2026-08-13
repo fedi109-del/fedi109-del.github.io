@@ -175,6 +175,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Fixing a time that both of you will keep loosely',
+    setting: 'On the phone. Layla is trying to pin you down and you are trying to be pinned.',
+    lines: [
+      { who: 'Layla', lb: 'es-séé3a kam halla2?', ar: 'الساعة كم هلق؟', en: 'what time is it now?' },
+      { who: 'You', you: true, lb: 'we7dé w noSS.', ar: 'وحدة ونص', en: 'half past one',
+        note: 'Literally one and a half. Lebanese adds to the hour rather than counting past it.' },
+      { who: 'Layla', lb: 'Tayyeb. ayya séé3a?', ar: 'طيب. أيا ساعة؟', en: 'all right. At what time?' },
+      { who: 'You', you: true, lb: 'Soob es-séé3a tléété.', ar: 'صوب الساعة تلاتة', en: 'around three.',
+        note: 'Soob — towards, around. Almost every time in Lebanon is given with it.' },
+      { who: 'Layla', lb: 'tléété ella reb3?', ar: 'تلاتة إلا ربع؟', en: 'quarter to three?' },
+      { who: 'You', you: true, lb: 'la2, tléété w reb3. ta2riiban.', ar: 'لأ، تلاتة وربع. تقريبا', en: 'no, quarter past three. Approximately.',
+        note: 'ella takes away, w adds. One word between arriving early and arriving late.' },
+      { who: 'Layla', lb: 'men aymata la-aymata?', ar: 'من إيمتى لإيمتى؟', en: 'from when until when?' },
+      { who: 'You', you: true, lb: 'kella séé3a. mesh ktiir.', ar: 'كلها ساعة. مش كتير', en: 'only an hour. Not much.',
+        note: 'kella — "all of it is" — is how Lebanese says only. It makes an hour sound like nothing.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Three o\'clock means three-ish',
+    icon: 'clock',
+    body:
+      'An arrangement for three o\'clock in Beirut is an arrangement for somewhere between three and ' +
+      'half past. This is not rudeness and it is not a stereotype people are embarrassed by — it is ' +
+      'the shared assumption, which is why `Soob` and `ta2riiban` are attached to almost every time ' +
+      'anyone gives you.\n\n' +
+      'Where it does not apply: flights, doctors, official appointments, and anything involving ' +
+      'someone who has worked abroad. Where it applies double: dinner at a house, and anything ' +
+      'described as `bel-léél`.\n\n' +
+      'The useful skill is asking the follow-up. `men aymata la-aymata?` — from when to when — is ' +
+      'the question that turns a vague evening into a plan, and nobody minds being asked it.\n\n' +
+      'One piece of arithmetic worth drilling until it is automatic: `ella` subtracts. `tléété ella ' +
+      'reb3` is a quarter **to** three, `tléété w reb3` is a quarter **past**. Getting these the ' +
+      'wrong way round costs you half an hour in the direction you did not want.',
+  },
+
   drills: [
     { type: 'choice', q: 'How do you ask what time it is?',
       options: ['es-séé3a kam?', 'kam es-séé3a fii?', 'séé3a shou?'], answer: 0,

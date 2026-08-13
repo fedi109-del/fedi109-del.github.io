@@ -164,6 +164,40 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A story with the listener doing half the work',
+    setting: 'Two friends, a coffee, and an account of a bad Saturday. Watch what the person listening keeps saying.',
+    lines: [
+      { who: 'You', you: true, lb: 'maa bkhabbrak shou Saar mbéére7.', ar: 'ما بخبرك شو صار مبارح', en: 'you have no idea what happened yesterday.',
+        note: 'Literally "I will not tell you". It is how a story opens, not a refusal to tell it.' },
+      { who: 'Karim', lb: 'shou Saar?', ar: 'شو صار؟', en: 'what happened?' },
+      { who: 'You', you: true, lb: 'bel-awwal, nzelna 3a Jbeil. wSolna ta2riiban es-séé3a tentéén.', ar: 'بالأول، نزلنا ع جبيل. وصلنا تقريبا الساعة تنتين', en: 'to begin with, we went down to Byblos. We arrived around two.' },
+      { who: 'Karim', lb: 'w-ba3déén?', ar: 'وبعدين؟', en: 'and then?' },
+      { who: 'You', you: true, lb: 'awwal maa wSolna, shefna l-ba7r. raw3a. aDDayna honiik saa3téén.', ar: 'أول ما وصلنا، شفنا البحر. روعة. قضينا هنيك ساعتين', en: 'the moment we arrived, we saw the sea. Wonderful. We spent two hours there.' },
+      { who: 'Karim', lb: '3an jad? byéékhod el-3a2l.', ar: 'عن جد؟ بياخد العقل', en: 'really? It takes your mind away.' },
+      { who: 'You', you: true, lb: 'w-akhiiran, lamma rje3na, kéén fii 3aj2et séér. tléét séé3aat.', ar: 'وأخيرا، لما رجعنا، كان في عجقة سير. تلت ساعات', en: 'and finally, when we came back, there was a traffic jam. Three hours.' },
+      { who: 'Karim', lb: 'maa t2ellé!', ar: 'ما تقلي', say: 'ما تألي', en: 'you do not say!',
+        note: 'Not disbelief. It means keep going, I am with you.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The listener has lines too',
+    icon: 'book',
+    body:
+      'A Lebanese story is not told at somebody, it is built with them. Every few sentences the ' +
+      'listener puts something in — `w-ba3déén?`, `3an jad?`, `maa t2ellé!`, `shou Saar?` — and those ' +
+      'noises are not interruptions. Leaving them out is what feels wrong.\n\n' +
+      'If you are the one listening, silence reads as boredom. If you are the one talking, silence ' +
+      'from the other person means you have lost them. This is worth practising deliberately, ' +
+      'because it is the single thing that makes a conversation feel Lebanese rather than correct.\n\n' +
+      '`maa bkhabbrak` is the strangest of them. Word for word it says "I am not going to tell you", ' +
+      'and it means the exact opposite: what follows is worth hearing. English has nothing quite ' +
+      'like it — "you have no idea" is close.\n\n' +
+      'The skeleton to hang a story on is in the vocabulary of this unit: `bel-awwal`, `men ba3da`, ' +
+      '`ba3déén`, `w-akhiiran`. Four words, and a pile of events becomes something with a shape.',
+  },
+
   drills: [
     { type: 'choice', q: 'You are starting the account of your Saturday. Which word opens it?',
       options: ['awwal shii', 'w-akhiiran', 'ba3déén'], answer: 0,

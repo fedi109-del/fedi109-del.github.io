@@ -132,6 +132,38 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'At the door, patting your pockets',
+    setting: 'You are about to leave. Maya is holding the door. Two different kinds of having are about to collide.',
+    lines: [
+      { who: 'Maya', lb: 'ma3ak et-téléphon?', ar: 'معك التيليفون؟', en: 'have you got the phone on you?',
+        note: 'ma3ak, not 3endak. She is asking what is in your pocket right now.' },
+      { who: 'You', you: true, lb: 'éé, ma3é. bass maa ma3é l-kiis.', ar: 'إي، معي. بس ما معي الكيس', en: 'yes, I have. But I have not got the bag on me.' },
+      { who: 'Maya', lb: '3endak sayyaara, mesh héék?', ar: 'عندك سيارة، مش هيك؟', en: 'you have a car, don\'t you?',
+        note: '3endak this time: she is asking what you own, not what you are carrying.' },
+      { who: 'You', you: true, lb: '3endé, bass mesh hoon.', ar: 'عندي، بس مش هون', en: 'I do, but not here.' },
+      { who: 'Maya', lb: 'ma3ak wa2t?', ar: 'معك وقت؟', en: 'have you got time?' },
+      { who: 'You', you: true, lb: 'ma3ak 7a2. yalla.', ar: 'معك حق. يلا', en: 'you are right. Come on.',
+        note: 'ma3ak 7a2 — literally "you have right with you" — is the ordinary way to say someone is right.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Owning it, carrying it, and being owed it',
+    icon: 'bag',
+    body:
+      'English uses one verb for all of this and lets context sort it out. Lebanese splits it, and ' +
+      'the split is not a subtlety — using the wrong one produces a sentence that is simply about ' +
+      'something else.\n\n' +
+      '`3end-` is what you own or have available: a car, a sister, an exam on Tuesday. `ma3-` is what ' +
+      'is physically on you at this moment: your phone, your keys, cash. So `3endé sayyaara` means ' +
+      'you own a car and `ma3é sayyaara` would mean you are carrying one.\n\n' +
+      'Then `ma3-` goes further and does jobs that have nothing to do with pockets. `ma3ak 7a2` is ' +
+      'you are right. `ma3ak wa2t?` is have you got a minute. `ma3é maSaaré` is I can pay. The idea ' +
+      'underneath is that things you have with you are things available to be used — which is also ' +
+      'why being told `maa ma3é` about money is a complete and final answer.',
+  },
+
   drills: [
     { type: 'choice', q: 'You walk into a shop and want to know whether they sell juice. What do you ask?',
       options: ['3endkon 3aSiir?', 'ma3kon 3aSiir?', 'la-elkon 3aSiir?'], answer: 0,

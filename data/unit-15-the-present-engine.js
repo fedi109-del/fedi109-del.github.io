@@ -181,6 +181,40 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Two people discovering they take the same road',
+    setting: 'A bus stop. Small talk, and every sentence in it is the present tense doing its ordinary job.',
+    lines: [
+      { who: 'Samir', lb: 'wéén betrouu7 kell yoom?', ar: 'وين بتروح كل يوم؟', en: 'where do you go every day?' },
+      { who: 'You', you: true, lb: 'brouu7 3a Béérout. w enta?', ar: 'بروح ع بيروت. وانت؟', en: 'I go to Beirut. And you?',
+        note: 'brouu7 for I, betrouu7 for you. One root, two shells.' },
+      { who: 'Samir', lb: 'ana kaméén. bemshé shwayy, ba3déén béékhod service.', ar: 'أنا كمان. بمشي شوي، بعدين باخد سرفيس', en: 'me too. I walk a bit, then I take a service cab.' },
+      { who: 'You', you: true, lb: 'bta3ref wéén el-m7aTTa?', ar: 'بتعرف وين المحطة؟', en: 'do you know where the station is?' },
+      { who: 'Samir', lb: 'akiid. ana bemro2 menna kell yoom.', ar: 'أكيد. أنا بمرق منها كل يوم', en: 'of course. I pass it every day.' },
+      { who: 'You', you: true, lb: '3aadatan shou bteshrab eS-Sob7?', ar: 'عادة شو بتشرب الصبح؟', en: 'what do you usually drink in the morning?' },
+      { who: 'Samir', lb: '2ahwe. dééyman 2ahwe. maa b7ebb esh-shaay.', ar: 'قهوة. دايما قهوة. ما بحب الشاي', say: 'أهوة. دايما أهوة. ما بحب الشاي', en: 'coffee. Always coffee. I do not like tea.',
+        note: 'maa goes in front of the verb and nowhere else.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The b that is not in the textbook',
+    icon: 'gear',
+    body:
+      'Every verb in that conversation starts with a `b` that Modern Standard Arabic does not have. ' +
+      '`brouu7`, `bemshé`, `beshrab`. Open a grammar of written Arabic and you will not find it, ' +
+      'because it is not written Arabic — it grew in the spoken language across the Levant and it is ' +
+      'now the ordinary present tense from Beirut to Damascus to Amman.\n\n' +
+      'This matters for how you learn. Someone who studied fuS7a at university and arrives in ' +
+      'Lebanon will understand the news and struggle at a bus stop, because the everyday tense they ' +
+      'were taught is the one nobody speaks. You are learning it the other way round, which is ' +
+      'slower to read a newspaper with and much faster to have a conversation in.\n\n' +
+      'The `b` carries habit and general truth: what you do, what is normally the case. What you are ' +
+      'doing at this exact minute needs another marker, `3am`, which arrives in unit 24. Until then, ' +
+      'everything you can say is about your life in general — which turns out to be most of small ' +
+      'talk.',
+  },
+
   drills: [
     { type: 'conjugate', en: 'I know', root: 'a3ref', person: 'ana', tense: 'present',
       options: ['ba3ref', 'bta3ref', 'bya3ref', 'mna3ref'], answer: 0,

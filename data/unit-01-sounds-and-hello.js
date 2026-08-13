@@ -135,7 +135,47 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'On the stairs, eight in the morning',
+    setting: 'Rita lives one floor up. You meet her on the way down. The whole exchange is fixed — you are not choosing your words, you are giving the right half of each pair.',
+    lines: [
+      { who: 'Rita', lb: 'Sabaa7 el-khéér', ar: 'صباح الخير', en: 'a morning of goodness' },
+      { who: 'You', you: true, lb: 'Sabaa7 en-nouur', ar: 'صباح النور', en: 'a morning of light',
+        note: 'She gave you goodness, you give back light. Repeating her words instead marks you out immediately.' },
+      { who: 'Rita', lb: 'kiifak?', ar: 'كيفك؟', en: 'how are you?' },
+      { who: 'You', you: true, lb: 'mnii7, l-7amdella. kiifik?', ar: 'منيح، الحمدلله. كيفك؟', en: 'good, thank God. And you?',
+        note: 'kiifik with an i, because you are asking a woman.' },
+      { who: 'Rita', lb: 'mnii7a, shukran', ar: 'منيحة، شكرا', en: 'good, thank you',
+        note: 'mnii7a with the a: she is answering about herself.' },
+      { who: 'Rita', lb: 'ma3 es-saléémé', ar: 'مع السلامة', en: 'go with safety',
+        note: 'Said to whoever is leaving. The full answer is Allah ysallmak, which you will meet later — for now a nod does the job.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Greetings are not questions',
+    icon: 'talk',
+    body:
+      'In English, "how are you" is a question with a hundred possible answers, most of them dull. ' +
+      'In Lebanon it is closer to a handshake: a fixed movement, done the same way every time, ' +
+      'which means something because it was done at all and not because of its content.\n\n' +
+      'This is why `l-7amdella` is the answer whatever kind of day you are having. It does not mean ' +
+      '"I am well". It means "we are doing the greeting". If your day has genuinely gone wrong, you ' +
+      'say `l-7amdella` first, and then you complain — after the ritual, never instead of it.\n\n' +
+      'The same logic runs through the pairs themselves. Goodness is answered with light, welcome ' +
+      'is answered with welcome. Nobody invents a new reply, and the one person who tries is always ' +
+      'the foreigner. Learning these by heart is not lazy learning: it is exactly how a Lebanese ' +
+      'child learns them too.',
+  },
+
   drills: [
+    /* A listening exercise. Until the recording for this greeting exists it shows
+       the words instead of playing them and works as an ordinary meaning question;
+       the moment the clip lands in audio/ it turns into the real thing on its own. */
+    { type: 'listen', lb: 'Sabaa7 el-khéér',
+      options: ['a morning of goodness', 'an evening of goodness', 'go with safety'], answer: 0,
+      explain: 'Sabaa7 is morning. The evening version swaps it for masa.' },
+
     { type: 'choice', q: 'Which sign stands for the sound made by squeezing low in the throat, with voice?',
       options: ['3', '7', '2'], answer: 0,
       explain: '3 is ع. 7 is the open breath ح, and 2 is the clean stop.' },

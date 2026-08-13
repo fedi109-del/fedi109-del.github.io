@@ -196,6 +196,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Getting someone out of the house',
+    setting: 'Elie has been saying he is coming for twenty minutes. Every sentence here has two verbs in it, and only the first one keeps its b.',
+    lines: [
+      { who: 'You', you: true, lb: 'ta3a nrouu7! léézem nrouu7 halla2.', ar: 'تعا نروح! لازم نروح هلق', en: 'come on, let us go! We have to go now.',
+        note: 'nrouu7, not mnerouu7. After léézem and after ta3a the b falls off.' },
+      { who: 'Elie', lb: 'fiini khallaS shii? khams d2ééye2.', ar: 'فيني خلص شي؟ خمس دقايق', en: 'can I just finish something? Five minutes.' },
+      { who: 'You', you: true, lb: 'maa be2dar estanna kaméén.', ar: 'ما بقدر استنى كمان', say: 'ما بأدر استنى كمان', en: 'I cannot wait any longer.',
+        note: 'be2dar keeps its b because it is the first verb. estanna loses its own.' },
+      { who: 'Elie', lb: 'Tayyeb, Tayyeb. bass léézem ekhod el-mfeté7.', ar: 'طيب، طيب. بس لازم اخد المفاتيح', en: 'all right, all right. But I have to take the keys.' },
+      { who: 'You', you: true, lb: 'khalliina nenzal, w enta bteji ba3déén.', ar: 'خلينا ننزل، وانت بتجي بعدين', en: 'let us go down, and you come after.' },
+      { who: 'Elie', lb: 'la2, ra7 ejé ma3ak. lamma erja3 bekhod-on.', ar: 'لأ، رح إجي معك. لما ارجع باخدهن', en: 'no, I will come with you. When I come back I will take them.',
+        note: 'After ra7 and after lamma, the b goes again. Three markers, one rule.' },
+      { who: 'You', you: true, lb: 'yalla. moumken tenzal halla2?', ar: 'يلا. ممكن تنزل هلق؟', en: 'come on. Could you come down now?' }
+    ]
+  },
+
+  culture: {
+    heading: 'Why the b keeps falling off',
+    icon: 'drop',
+    body:
+      'This is one rule wearing five costumes, and it is worth seeing it as one thing rather than ' +
+      'five.\n\n' +
+      'The `b` marks a statement about the real world: this happens, this is the case. The moment a ' +
+      'verb stops being a statement and becomes something else — something wanted, ordered, planned, ' +
+      'required, or merely possible — the b has nothing left to do and drops. So it goes after ' +
+      '`léézem` (required), after `ra7` (planned), after `fiini` and `moumken` (possible), after ' +
+      '`baddé` (wanted), and after a first verb that already carried it.\n\n' +
+      'English does the same job with the word "to". Two verbs in a row need something between them, ' +
+      'and where English inserts a word, Lebanese removes one. Once you hear it that way the rule ' +
+      'stops needing to be memorised in five separate places.\n\n' +
+      'The practical test: if you can put "to" in front of the English verb, the Lebanese verb has ' +
+      'no b. I have to **to go**. I can **to come**. It is clumsy English and it is a reliable ' +
+      'switch.',
+  },
+
   drills: [
     { type: 'choice', q: 'Which one is Lebanese for "I want to go"?',
       options: ['baddé rouu7', 'baddé brouu7', 'baddé la-rouu7'], answer: 0,

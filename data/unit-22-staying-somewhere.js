@@ -176,6 +176,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'The air conditioner does not work',
+    setting: 'Reception, eleven at night. You have been in the room for an hour and it is thirty degrees in it.',
+    lines: [
+      { who: 'You', you: true, lb: 'masa l-khéér. baddé 3azzbik shwayy.', ar: 'مسا الخير. بدي عزبك شوي', en: 'good evening. Sorry to trouble you a little.',
+        note: 'The standard opener for a complaint. It apologises before saying what is wrong, which is the whole point.' },
+      { who: 'Receptionist', lb: 'walaw! 2moor.', ar: 'ولو! أمور', en: 'do not even mention it! How can I help?' },
+      { who: 'You', you: true, lb: 'l-moukayyef maa byeshteghel.', ar: 'المكيف ما بيشتغل', en: 'the air conditioner does not work.' },
+      { who: 'Receptionist', lb: 'w el-maay? fii maay sokhné?', ar: 'والمي؟ في مي سخنة؟', en: 'and the water? Is there hot water?' },
+      { who: 'You', you: true, lb: 'maa fii. w fii Dajjé ktiir men barra.', ar: 'ما في. وفي ضجة كتير من برا', en: 'there is not. And there is a lot of noise from outside.' },
+      { who: 'Receptionist', lb: 'ma3ak 7a2. fii ouuDa tééné, fo2. baddak yééha?', ar: 'معك حق. في أوضة تانية، فوق. بدك ياها؟', en: 'you are right. There is another room, upstairs. Do you want it?' },
+      { who: 'You', you: true, lb: 'éé, eza moumken. w nefs es-se3r?', ar: 'إي، إذا ممكن. ونفس السعر؟', en: 'yes, if possible. And the same price?' },
+      { who: 'Receptionist', lb: 'nefs es-se3r. maa 3lééh, hayda sheghlé.', ar: 'نفس السعر. ما عليه، هيدا شغلي', en: 'the same price. Never mind, this is my job.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Complaining without spending anything',
+    icon: 'house',
+    body:
+      'A complaint in Lebanon opens with an apology for making it. `baddé 3azzbik` — I want to ' +
+      'trouble you — is not weakness, it is the licence that lets the rest of the sentence be direct. ' +
+      'What follows can be completely blunt: the air conditioner does not work, there is no hot ' +
+      'water. Nobody is offended, because you paid the entry fee.\n\n' +
+      'Skip the opener and go straight to the fault and something changes in the room. The problem ' +
+      'stops being a shared inconvenience and becomes an accusation, and the person in front of you ' +
+      'starts defending themselves instead of fixing it.\n\n' +
+      'The answer you want back is `walaw`. It refuses the apology — do not even mention it — and it ' +
+      'means the transaction is friendly again.\n\n' +
+      'A practical warning about hot water and electricity. Neither is guaranteed in Lebanon and ' +
+      'both run on schedules the building knows and you do not. `maa fii maay sokhné` at nine in the ' +
+      'morning may be a broken heater or may be the hour. Asking `ayya séé3a fii maay sokhné?` gets ' +
+      'you further than complaining does.',
+  },
+
   drills: [
     { type: 'choice', q: 'How do you say "two nights"?',
       options: ['layltéén', 'tnéén layéélé', 'tnéén laylé'], answer: 0,

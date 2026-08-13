@@ -189,6 +189,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Turning somebody down in one long sentence',
+    setting: 'Maya wants you to come on Thursday. You cannot, and saying so in five short sentences would sound like a wall.',
+    lines: [
+      { who: 'Maya', lb: 'shou awlak noDhar el-khamiis?', ar: 'شو أولك نضهر الخميس؟', en: 'how about we go out on Thursday?' },
+      { who: 'You', you: true, lb: 'yaa réét, bass maa fiini, la2enno 3endé sheghl la-7add es-séé3a tméén.', ar: 'يا ريت، بس ما فيني، لأنو عندي شغل لحد الساعة تمان', en: 'I wish, but I cannot, because I have work until eight.',
+        note: 'The refusal, the regret and the reason all in one breath. Three separate sentences would land much colder.' },
+      { who: 'Maya', lb: 'ma3 enno kell marra bet2ouul héék.', ar: 'مع إنو كل مرة بتقول هيك', say: 'مع إنو كل مرة بتأول هيك', en: 'although you say that every time.' },
+      { who: 'You', you: true, lb: 'ma3ak 7a2, bass ba3déén, hal-jem3a maa 3endé wa2t abadan.', ar: 'معك حق، بس بعدين، هالجمعة ما عندي وقت أبدا', en: 'you are right, but besides, this week I have no time at all.' },
+      { who: 'Maya', lb: 'Tayyeb. eza khallaSt bakkiir, betjé?', ar: 'طيب. إذا خلصت بكير، بتجي؟', en: 'all right. If you finish early, will you come?' },
+      { who: 'You', you: true, lb: 'awwal maa khalleS, bkhabbrik. l-mhemm enno maa tentorouuné.', ar: 'أول ما خلص، بخبرك. المهم إنو ما تنطروني', en: 'the moment I finish, I will let you know. What matters is that you do not wait for me.' },
+      { who: 'Maya', lb: 'mesh bass héék — ra7 nekhod Taawlé la-khamsé.', ar: 'مش بس هيك — رح ناخد طاولة لخمسة', en: 'not only that — we will take a table for five.' },
+      { who: 'You', you: true, lb: 'Darouuré enno khabbriiné abl maa te7jzo.', ar: 'ضروري إنو خبريني قبل ما تحجزو', say: 'ضروري إنو خبريني أبل ما تحجزو', en: 'it is essential that you tell me before you book.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Short sentences sound harder than you mean them to',
+    icon: 'link',
+    body:
+      'Up to unit 33 everything you could say came out in short blocks. That is correct Lebanese and ' +
+      'it has a side effect nobody warns you about: chopped sentences read as brusque. "I cannot ' +
+      'come. I have work. Sorry." is four full stops of distance.\n\n' +
+      'Lebanese conversation runs on long joined sentences, and the joins carry the softness. ' +
+      '`la2enno` gives a reason before anyone has to ask for one. `ma3 enno` concedes the other ' +
+      'person\'s point while you disagree with it. `bass` and `ba3déén` stack objections without ' +
+      'sounding like a list of complaints.\n\n' +
+      'The single most useful pattern in the unit is `ma3ak 7a2, bass…` — you are right, but. It ' +
+      'gives ground first, which means the disagreement that follows is heard as a discussion ' +
+      'instead of a contradiction. Lebanese arguments are loud and long and rarely personal, and ' +
+      'this is one of the reasons why.\n\n' +
+      '`enno` is doing something subtle: it is the word "that", and Lebanese uses it far more freely ' +
+      'than English does. `l-mhemm enno`, `Darouuré enno`, `bi3te2ed enno`. Dropping it is not wrong ' +
+      'but keeping it in is what native speech sounds like.',
+  },
+
   drills: [
     { type: 'choice', q: 'Which conjunction takes the b- off the verb that follows it?',
       options: ['abl maa', 'la2enno', 'eza'], answer: 0,

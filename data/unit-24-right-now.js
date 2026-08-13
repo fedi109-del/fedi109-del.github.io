@@ -175,6 +175,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A phone call at the wrong moment',
+    setting: 'You are in a room with bad signal and worse timing. Every verb here is marked 3am, because everything is happening right now.',
+    lines: [
+      { who: 'Rita', lb: 'aloo? shou 3am ta3mol?', ar: 'ألو؟ شو عم تعمل؟', en: 'hello? What are you doing?' },
+      { who: 'You', you: true, lb: '3am bedros. 3endé emti7aan boukra.', ar: 'عم بدرس. عندي امتحان بكرا', en: 'I am studying. I have an exam tomorrow.',
+        note: '3am plus the verb. Without 3am, bedros would mean I study in general.' },
+      { who: 'Rita', lb: 'maa 3am besma3ak mnii7.', ar: 'ما عم بسمعك منيح', en: 'I cannot hear you well.' },
+      { who: 'You', you: true, lb: 'halla2 a7san? 3am be7ké men jouwwa.', ar: 'هلق أحسن؟ عم بحكي من جوا', en: 'better now? I am talking from inside.' },
+      { who: 'Rita', lb: 'shou 3am biSiir 3andkon? fii Dajjé.', ar: 'شو عم بيصير عندكن؟ في ضجة', en: 'what is going on at your place? There is noise.' },
+      { who: 'You', you: true, lb: 'jaaré 3am yeshteghel bel-béét. men es-Sob7.', ar: 'جاري عم يشتغل بالبيت. من الصبح', en: 'my neighbour is working on the house. Since this morning.' },
+      { who: 'Rita', lb: 'Saraa7a, maa 3am tetsalla.', ar: 'صراحة، ما عم تتسلى', en: 'honestly, you are not having a good time.' },
+      { who: 'You', you: true, lb: 'abadan. maa 3am be2dar rakkez abadan.', ar: 'أبدا. ما عم بقدر ركز أبدا', say: 'أبدا. ما عم بأدر ركز أبدا', en: 'not at all. I cannot concentrate at all.',
+        note: 'maa 3am be2dar, then rakkez with no b: two verbs, and the second one drops it. Unit 17 is still running.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Two presents, and why English only has one that works',
+    icon: 'now',
+    body:
+      'English marks this with a whole extra verb: I study, I **am** studying. Lebanese does it with ' +
+      'one small word placed in front, and the word never changes for person. `3am bedros`, `3am ' +
+      'tedros`, `3am yedros`. Learn `3am` and you have the entire progressive.\n\n' +
+      'The distinction is real and gets tested constantly in conversation. `beshteghel` means I work ' +
+      '— I have a job, this is my situation. `3am beshteghel` means I am working right now, do not ' +
+      'call me. Answer the phone with the wrong one and you have said something true about your life ' +
+      'instead of something useful about your afternoon.\n\n' +
+      '`shou 3am biSiir?` is worth memorising whole. It means what is going on, and it works for a ' +
+      'noise in the street, a crowd, a rumour, or a country. You will hear it more than almost any ' +
+      'other question.\n\n' +
+      'One thing to expect on the phone: Lebanese calls open with `aloo` and then a round of the ' +
+      'greetings from unit one before anybody says why they rang. Getting to the point first is ' +
+      'efficient and slightly cold.',
+  },
+
   drills: [
     { type: 'choice', q: 'Which word turns `bedros` into "I am studying at this moment"?',
       options: ['3am', 'ra7', 'maa'], answer: 0,

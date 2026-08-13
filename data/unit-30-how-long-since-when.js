@@ -152,6 +152,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Two strangers in the same queue',
+    setting: 'Nobody has moved for a while. Somebody has to say something.',
+    lines: [
+      { who: 'Woman', lb: 'dakhlak, addéé Sarlak naaTer?', ar: 'دخلك، قديه صرلك ناطر؟', say: 'دخلك، أديه صرلك ناطر؟', en: 'excuse me, how long have you been waiting?',
+        note: 'dakhlak opens a question to a stranger. It is softer than 3afwan and slightly pleading, which suits a queue.' },
+      { who: 'You', you: true, lb: 'Sarlé noSS séé3a. w enté?', ar: 'صرلي نص ساعة. وانتي؟', en: 'I have been half an hour. And you?' },
+      { who: 'Woman', lb: 'bass halla2 wSolt.', ar: 'بس هلق وصلت', en: 'I have only just arrived.' },
+      { who: 'You', you: true, lb: 'elna kellna naaTriin men eS-Sob7.', ar: 'إلنا كلنا ناطرين من الصبح', en: 'we have all been waiting since this morning.' },
+      { who: 'Woman', lb: 'men aymata l-maktab msakkar?', ar: 'من إيمتى المكتب مسكر؟', en: 'since when has the office been closed?' },
+      { who: 'You', you: true, lb: 'maa ba3ref. men shway ejé 7ada w aal jem3a.', ar: 'ما بعرف. من شوي إجا حدا وقال جمعة', say: 'ما بعرف. من شوي إجا حدا وأال جمعة', en: 'I do not know. A while ago someone came and said a week.' },
+      { who: 'Woman', lb: 'jem3a?! mesh ma32ouul.', ar: 'جمعة؟! مش معقول', en: 'a week?! That is unbelievable.' },
+      { who: 'You', you: true, lb: 'kella jem3a. basiiTa!', ar: 'كلها جمعة. بسيطة', en: 'only a week. It is nothing!',
+        note: 'Said with a straight face after half an hour in a queue. Lebanese humour is mostly this.' }
+    ]
+  },
+
+  culture: {
+    heading: 'It has been half an hour for me',
+    icon: 'stopwatch',
+    body:
+      'English builds duration out of a tense — I have been waiting — and Lebanese builds it out of ' +
+      'ownership. `Sarlé noSS séé3a` says, roughly, half an hour has become to me. The time belongs ' +
+      'to the person, and the person is the ending on the end of the word.\n\n' +
+      'Which is why `Sarlé`, `Sarlak`, `Sarelna` are the same eight endings from unit six, doing ' +
+      'their fourth different job in this course. If you learned them properly then, you already ' +
+      'know this unit.\n\n' +
+      '`elé` works the same way and is used more with participles: `elé noSS séé3a naaTer` — I have ' +
+      'been waiting half an hour. You will meet the participle properly in unit 33; here it is ' +
+      'enough to notice that `naaTer` is not a conjugated verb at all.\n\n' +
+      'And `dakhlak` is worth taking away whole. It has no clean translation — something between ' +
+      '"do me a favour" and "please, tell me" — and it opens a question to a stranger more gently ' +
+      'than anything else in the language.',
+  },
+
   drills: [
     { type: 'choice', q: 'How does Lebanese say "I have been here for a week"?',
       options: ['Sarlé jem3a hoon', 'kent hoon jem3a', 'ra7 kouun hoon jem3a'], answer: 0,

@@ -112,6 +112,39 @@ LEB.addUnit({
     { lb: 'miin hayda?', ar: 'مين هيدا؟', en: 'Who is that?', when: 'about a man; hayda points at him' }
   ],
 
+  dialogue: {
+    title: 'Two people waiting for the same lift',
+    setting: 'A building in Achrafieh. Ziad is holding the door. Neither of you has met before.',
+    lines: [
+      { who: 'Ziad', lb: 'mar7aba! ana Ziad.', ar: 'مرحبا! أنا زياد', en: 'hello! I am Ziad' },
+      { who: 'You', you: true, lb: 'mar7abtéén. esmé Marco.', ar: 'مرحبتين. اسمي ماركو', en: 'two hellos back. My name is Marco',
+        note: 'esmé is literally "my name" — there is no verb here at all.' },
+      { who: 'Ziad', lb: 'ahla w sahla. min wéén enta?', ar: 'أهلا وسهلا. من وين انت؟', en: 'welcome. Where are you from?' },
+      { who: 'You', you: true, lb: 'ana men Italia. w enta, men Béérout?', ar: 'أنا من ايطاليا. وانت، من بيروت؟', en: 'I am from Italy. And you, from Beirut?' },
+      { who: 'Ziad', lb: 'la2, ana men Trablos.', ar: 'لأ، أنا من طرابلس', en: 'no, I am from Tripoli',
+        note: 'A place name needs no article and no verb: ana men plus wherever it is.' },
+      { who: 'You', you: true, lb: 'ahla w sahla! tsharrafna.', ar: 'أهلا وسهلا! تشرفنا', en: 'welcome! We have been honoured',
+        note: 'tsharrafna closes an introduction. Said once, at the end, never twice.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Where are you from is a real question',
+    icon: 'pin',
+    body:
+      'Ask a Lebanese person where they are from and the answer is rarely "Lebanon", and often not ' +
+      'Beirut either, even when they were born there and have never lived anywhere else. They will ' +
+      'give you the village — the one their family comes from, where the grandparents are buried and ' +
+      'where everyone goes in August.\n\n' +
+      'So `min wéén enta?` is asking something more specific than it looks. Answering with a country ' +
+      'is fine for a foreigner and slightly odd for a local. If you get a village name you have never ' +
+      'heard of, that is the normal outcome, and asking where it is counts as interest rather than ' +
+      'ignorance.\n\n' +
+      'One warning about `tsharrafna`. It is warm, it is standard, and it belongs at the **end** of ' +
+      'an introduction, once names have been exchanged. Opening with it is like shaking hands as you ' +
+      'walk away.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['ana', 'I'], ['enta', 'you — one man'], ['hiyyé', 'she'], ['ne7na', 'we']] },

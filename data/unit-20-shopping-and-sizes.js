@@ -197,6 +197,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'The shirt is the wrong size and so is the price',
+    setting: 'A shop in Hamra. The assistant has already decided what suits you.',
+    lines: [
+      { who: 'Assistant', lb: 'hayda l-amiiS 7elo 3aléék ktiir.', ar: 'هيدا القميص حلو عليك كتير', say: 'هيدا الأميص حلو عليك كتير', en: 'this shirt looks really good on you.' },
+      { who: 'You', you: true, lb: 'fiiné jarrbo?', ar: 'فيني جربو؟', en: 'can I try it on?' },
+      { who: 'Assistant', lb: 'tfaDDal.', ar: 'تفضل', en: 'go ahead.' },
+      { who: 'You', you: true, lb: 'wéése3 shwayy. 3endkon 2yéés azghar?', ar: 'واسع شوي. عندكن قياس أزغر؟', en: 'it is a bit big. Do you have a smaller size?',
+        note: 'azghar, not zghiir: you are comparing this one with another one.' },
+      { who: 'Assistant', lb: 'fii, bass bi-lawn tééné. hayda a7la, w a7san.', ar: 'في، بس بلون تاني. هيدا أحلى، وأحسن', en: 'there is, but in another colour. This one is nicer, and better.' },
+      { who: 'You', you: true, lb: 'w aghla kaméén?', ar: 'وأغلى كمان؟', en: 'and more expensive too?' },
+      { who: 'Assistant', lb: 'shwayy. bass a7san bi-ktiir.', ar: 'شوي. بس أحسن بكتير', en: 'a bit. But much better.' },
+      { who: 'You', you: true, lb: 'fii khaSm?', ar: 'في خصم؟', en: 'is there a discount?' },
+      { who: 'Assistant', lb: 'la-elak, éé. bass maa te2oul la-7ada.', ar: 'إلك، إي. بس ما تقول لحدا', say: 'إلك، إي. بس ما تأول لحدا', en: 'for you, yes. But do not tell anyone.',
+        note: 'Said to everybody, all day. Take the discount anyway.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The discount that exists for everyone',
+    icon: 'shop',
+    body:
+      'A price in a clothes shop is a starting position more often than it looks, and `fii khaSm?` — ' +
+      'is there a discount — is a normal question rather than a cheeky one. The answer is very often ' +
+      'yes, delivered as a personal favour, in a lowered voice, to every customer who asks.\n\n' +
+      'Do not mistake the theatre for dishonesty. Both sides know the shape of it. What you are ' +
+      'being sold along with the shirt is the feeling of having been looked after, and playing your ' +
+      'part — asking, being pleased, thanking him — is what makes the transaction work.\n\n' +
+      'Where it stops: fixed-price chains, anything with a barcode and a till. Asking there produces ' +
+      'a blank look.\n\n' +
+      'Sizes are their own problem. Lebanese shops carry European, American and Turkish sizing at ' +
+      'the same time and often on the same rail, so `2yéés akbar` and `2yéés azghar` are worth more ' +
+      'than any number. Trying it on is not optional, and `fiiné jarrbo?` is the sentence that gets ' +
+      'you to the mirror.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['azghar', 'smaller'], ['akbar', 'bigger'], ['arkhaS', 'cheaper'], ['aghla', 'more expensive']] },

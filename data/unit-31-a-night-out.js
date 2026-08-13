@@ -157,6 +157,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'The bill, and the fight over it',
+    setting: 'End of dinner, four people, one bill. What happens next is not really about money.',
+    lines: [
+      { who: 'You', you: true, lb: 'Maitre! el-7sééb, 3mool ma3rouuf.', ar: 'ميتر! الحساب، عمول معروف', en: 'waiter! The bill, please.' },
+      { who: 'Waiter', lb: 'ta7t amrak.', ar: 'تحت أمرك', en: 'at your command.' },
+      { who: 'Ziad', lb: 'shou 3am ta3mol? ana bedfa3.', ar: 'شو عم تعمل؟ أنا بدفع', en: 'what are you doing? I am paying.' },
+      { who: 'You', you: true, lb: 'abadan. enta dfa3t el-marra el-mééDyé.', ar: 'أبدا. انت دفعت المرة الماضية', en: 'not at all. You paid last time.' },
+      { who: 'Ziad', lb: 'w shou ya3né? balééha.', ar: 'وشو يعني؟ بلاها', en: 'and so what? Drop it.' },
+      { who: 'You', you: true, lb: 'baddé 3azzbak — fii ghalTa bel-7sééb. hayda mesh taba3na.', ar: 'بدي عزبك — في غلطة بالحساب. هيدا مش تبعنا', en: 'sorry to trouble you — there is a mistake in the bill. This is not ours.' },
+      { who: 'Waiter', lb: 'ma3ak 7a2. 3afwan. hayda 3a 7sééb el-maT3am.', ar: 'معك حق. عفوا. هيدا ع حساب المطعم', en: 'you are right. Sorry. That one is on the house.' },
+      { who: 'Ziad', lb: 'kellak zoo2.', ar: 'كلك ذوق', en: 'you are all good taste.',
+        note: 'The compliment for someone who has just been gracious. It is said to the waiter here, and to your friend at the door.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Nobody splits the bill',
+    icon: 'glass',
+    body:
+      'Going halves is not done. One person pays for everybody, and the next time somebody else ' +
+      'does, and the accounting evens out across months without anyone keeping a ledger. Suggesting ' +
+      'you each pay for what you ate is not thrifty here, it is cold — you have turned an evening ' +
+      'among friends into a transaction.\n\n' +
+      'What you get instead is the argument. Two people reaching for the same bill, both insisting, ' +
+      'occasionally handing a card to the waiter behind the other one\'s back. This is not a genuine ' +
+      'dispute and it is not theatre either. It is how people take turns being generous, and joining ' +
+      'in properly — reaching, insisting, losing gracefully — matters more than who ends up ' +
+      'paying.\n\n' +
+      'If you always lose, offer to pay next time out loud, in front of everyone, and then do it.\n\n' +
+      'A meal here also opens with `mééza` — a table covered in small plates that arrive before ' +
+      'anything you actually ordered — and it lasts hours. Eating and leaving in fifty minutes is ' +
+      'possible and is not what anyone came for.\n\n' +
+      'On tips: `bakhshiish` is normal and modest, and service is often already on the bill. Ten per ' +
+      'cent on top is generous rather than expected.',
+  },
+
   drills: [
     { type: 'choice', q: 'How do you say "a table for two people"?',
       options: ['Taawlé la-shakhSéén', 'Taawlé la-tnéén ashkhaaS', 'Taawlé la-shakhS tnéén'], answer: 0,

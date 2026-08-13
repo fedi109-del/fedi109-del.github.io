@@ -117,7 +117,19 @@ window.Runner = (function () {
       var title = el('div', 'fb-title', r.correct ? 'Right.' : 'Not quite.');
       feedback.appendChild(title);
       if (!r.correct && r.right) {
-        feedback.appendChild(el('div', 'fb-answer', r.right));
+        var ans = el('div', 'fb-answer');
+        ans.appendChild(el('span', null, r.right));
+        /* The one moment the ear is most likely to pay attention: you have just
+           got it wrong and the correct form is on screen. */
+        Say.attach(ans, r.right, { size: 'lg' });
+        feedback.appendChild(ans);
+      } else if (r.correct && typeof r.right === 'string' && Say.has(r.right)) {
+        /* Right as well, but hearing it once more costs a second and is the
+           difference between recognising a word and being able to say it. */
+        var heard = el('div', 'fb-answer quiet');
+        heard.appendChild(el('span', null, r.right));
+        Say.attach(heard, r.right);
+        feedback.appendChild(heard);
       }
       if (r.note) feedback.appendChild(el('div', 'fb-note', r.note));
       action.textContent = (pos + 1 >= total) ? 'Finish' : 'Continue';
@@ -143,8 +155,8 @@ window.Runner = (function () {
       var verdict = '';
       if (mode === 'quiz') {
         verdict = score >= 80
-          ? 'Unit cleared. The next one is open.'
-          : 'You need 80% to clear the unit. Practice once more, then try again — nothing is lost.';
+          ? 'Unit cleared. Everything you met here is now in the review queue.'
+          : 'Eighty per cent marks a unit as cleared. Practise once more and come back — nothing is lost, and the next unit is open either way.';
       } else if (mode === 'review') {
         verdict = 'Everything you got right moves further away; everything you missed comes back tomorrow.';
       } else {

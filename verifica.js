@@ -2,7 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const DIR = 'C:/Users/fedi1/Desktop/libanese app';
+/* The folder this script sits in — never a hard-coded path. Written the other way
+   round, a check run inside a worktree would quietly grade the main folder instead
+   and report that everything is fine while the work in front of you is broken. */
+const DIR = __dirname;
 const DATA = path.join(DIR, 'data');
 
 const units = [];
@@ -27,7 +30,7 @@ function loose(s) {
 }
 
 const problems = [];
-const KINDS = ['choice', 'gap', 'build', 'type', 'match', 'conjugate'];
+const KINDS = ['choice', 'gap', 'build', 'type', 'match', 'conjugate', 'listen'];
 
 for (const u of units) {
   const fail = m => problems.push(u.id + ' — ' + m);
@@ -47,7 +50,9 @@ for (const u of units) {
     const where = (i < (u.drills || []).length ? 'drill ' : 'quiz ') + i;
     kinds.add(d.type);
     if (!KINDS.includes(d.type)) return fail(where + ': unknown type ' + d.type);
-    if (d.type === 'choice' || d.type === 'gap' || (d.type === 'conjugate' && d.options)) {
+    if (d.type === 'listen' && !d.lb) fail(where + ': listen needs the Lebanese in lb');
+    if (d.type === 'choice' || d.type === 'gap' || d.type === 'listen' ||
+        (d.type === 'conjugate' && d.options)) {
       if (!Array.isArray(d.options) || d.options.length < 2) return fail(where + ': needs options');
       if (!Number.isInteger(d.answer) || d.answer < 0 || d.answer >= d.options.length) {
         fail(where + ': answer is not a valid index');
@@ -83,10 +88,29 @@ const dupOrders = orders.filter((o, i) => orders[i + 1] === o);
 const ids = new Set(units.map(u => u.id));
 if (ids.size !== units.length) problems.push('duplicate unit ids');
 
-/* one word, two spellings across units */
+/* One word, two spellings across units.
+   `loose` is the right tolerance for marking an answer and the wrong one here:
+   it throws away vowel length and hyphens, which in this transliteration are not
+   decoration but the difference between separate words — `ra7` is the future
+   particle and `raa7` is "he went", `ma3` is "with" and `ma3-` is the stem of
+   having something on you. Judged by `loose` those pairs look like the same word
+   spelled two ways, and four such false alarms in a row is how a check stops
+   being read at all.
+
+   So: vowel length is kept, and a trailing dash is kept because it marks a stem.
+   Everything a keyboard genuinely varies — case, accents, internal hyphens and
+   spaces — is still flattened, so `Sabaa7 el-khéér` next to `sabaa7 el-kheer`
+   is still caught. */
+const spellingKey = s => String(s || '').toLowerCase()
+  .replace(/[éèêë]/g, 'e').replace(/[àâä]/g, 'a').replace(/[ìîï]/g, 'i')
+  .replace(/[òôö]/g, 'o').replace(/[ùûü]/g, 'u').replace(/['’`]/g, '2')
+  .replace(/[^a-z0-9-]/g, '')
+  .replace(/-(?=.)/g, '')
+  .replace(/^2/, '');
+
 const map = {};
 for (const u of units) for (const v of u.vocab || []) {
-  const k = loose(v.lb).replace(/^2/, '');
+  const k = spellingKey(v.lb);
   (map[k] = map[k] || {});
   (map[k][v.lb] = map[k][v.lb] || []).push(u.order);
 }
@@ -104,6 +128,9 @@ for (const u of units) {
   (u.vocab || []).forEach(v => leb.push(v.lb));
   (u.phrases || []).forEach(p => { leb.push(p.lb); if (p.reply) leb.push(p.reply); });
   (u.grammar || []).forEach(g => (g.examples || []).forEach(e => leb.push(e.lb)));
+  /* The dialogue is Lebanese too, and it is the longest stretch of it in a unit.
+     Left out of this list it was the one place a Latin q could survive. */
+  if (u.dialogue) (u.dialogue.lines || []).forEach(l => leb.push(l.lb));
   (u.drills || []).concat(u.quiz || []).forEach(d => {
     if (typeof d.answer === 'string') leb.push(d.answer);
     (d.tiles || []).concat(d.extra || [], d.accept || []).forEach(t => leb.push(t));

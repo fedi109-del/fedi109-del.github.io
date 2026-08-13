@@ -15,7 +15,7 @@
  * `node verifica.js` fails loudly if you forget the first one.
  */
 
-var VERSION = 'lebanese-path-v1';
+var VERSION = 'lebanese-path-v2';
 
 var ASSETS = [
   './',
@@ -26,11 +26,14 @@ var ASSETS = [
 
   'js/data.js',
   'js/store.js',
+  'js/art.js',
+  'js/audio.js',
   'js/drills.js',
   'js/runner.js',
   'js/install.js',
   'js/app.js',
 
+  'data/audio-manifest.js',
   'data/00-reference.js',
   'data/unit-01-sounds-and-hello.js',
   'data/unit-02-who-are-you.js',

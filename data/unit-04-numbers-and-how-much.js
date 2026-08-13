@@ -207,6 +207,38 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A price you were not expecting',
+    setting: 'A small shop with no price tags on anything. You have picked up a bag.',
+    lines: [
+      { who: 'You', you: true, lb: 'addéé hayda, 3mool ma3rouuf?', ar: 'قديه هيدا، عمول معروف؟', en: 'how much is this, please?' },
+      { who: 'Shopkeeper', lb: 'hayda? khamsiin dollaar.', ar: 'هيدا؟ خمسين دولار', en: 'this one? Fifty dollars.' },
+      { who: 'You', you: true, lb: 'khamsiin? mesh ma32ouul!', ar: 'خمسين؟ مش معقول!', en: 'fifty? That is unbelievable!',
+        note: 'Not rude. Said with a smile it is the opening of a conversation, not the end of one.' },
+      { who: 'Shopkeeper', lb: 'ghaalé? hayda jdiid, ya 7abiibé.', ar: 'غالي؟ هيدا جديد، يا حبيبي', en: 'expensive? This one is new, my dear.' },
+      { who: 'You', you: true, lb: 'fii shii arkhaS?', ar: 'في شي أرخص؟', en: 'is there anything cheaper?' },
+      { who: 'Shopkeeper', lb: 'fii. tléétiin. w hayda l-aakhir.', ar: 'في. تلاتين. وهيدا الآخر', en: 'there is. Thirty. And that is the last of it.',
+        note: 'w hayda l-aakhir — "and this is the end" — is how a seller signals the haggling is over.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Two currencies, one shop',
+    icon: 'price',
+    body:
+      'Lebanon runs on the dollar and the lira at the same time, and which one a price is quoted in ' +
+      'depends on the shop, the item and sometimes the hour. A number said with no currency attached ' +
+      'is worth asking about: `dollaar walla lira?` costs you nothing and saves the ' +
+      'misunderstanding.\n\n' +
+      'Prices in lira come with a lot of zeros, so people shorten them in speech and drop the ' +
+      'thousands entirely. Someone who says `3eshriin` about a coffee does not mean twenty lira. ' +
+      'Listen for what is plausible rather than for what was literally said.\n\n' +
+      'Haggling has a shape. You are expected to react to the first number — `mesh ma32ouul!` is ' +
+      'part of the script, not an insult — and the seller is expected to come down once, not five ' +
+      'times. This works in a market, in a taxi, and with a man selling you a rug. It does not work ' +
+      'in a supermarket or a pharmacy, where the price on the shelf is the price.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['tléété', 'three'], ['khamsé', 'five'], ['3ashra', 'ten'], ['3eshriin', 'twenty']] },

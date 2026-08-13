@@ -223,6 +223,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'An invitation you cannot refuse and should not try to',
+    setting: 'Saturday. Nadia is having people over. She is not really asking.',
+    lines: [
+      { who: 'Nadia', lb: 'shou awlak, 3a béélak sahra 3andna es-sabet?', ar: 'شو أولك، ع بالك سهرة عندنا السبت؟', en: 'what do you say, do you fancy an evening at ours on Saturday?' },
+      { who: 'You', you: true, lb: 'yaa réét! ayy wa2t binéésbik?', ar: 'يا ريت! أي وقت بيناسبك؟', en: 'I would love to! What time suits you?' },
+      { who: 'Nadia', lb: 'Soob es-séé3a tméén. bass maa tejé bakkiir, ba3d maa nkhalleS.', ar: 'صوب الساعة تمان. بس ما تجي بكير، بعد ما نخلص', en: 'around eight. But do not come early, after we finish.',
+        note: 'Arriving on time at a Lebanese house is arriving early. Eight means nine.' },
+      { who: 'You', you: true, lb: 'baddé jiib shii?', ar: 'بدي جيب شي؟', en: 'shall I bring something?' },
+      { who: 'Nadia', lb: 'wala shii! bass 7aalak.', ar: 'ولا شي! بس حالك', en: 'nothing at all! Just yourself.',
+        note: 'Always the answer. Bring something anyway — sweets or fruit, never nothing.' },
+      { who: 'You', you: true, lb: 'w Karim? 3endo mééne3?', ar: 'وكريم؟ عندو مانع؟', en: 'and Karim? Does he mind?' },
+      { who: 'Nadia', lb: 'maa 3endo mééne3. bisharafak, jiibo ma3ak.', ar: 'ما عندو مانع. بشرفك، جيبو معك', en: 'he does not mind. Please, bring him with you.',
+        note: 'Bringing an extra person is normal. Nobody counts chairs.' },
+      { who: 'You', you: true, lb: '3ala albé metl el-3asal. bshouufik es-sabet.', ar: 'على قلبي متل العسل. بشوفك السبت', say: 'على ألبي متل العسل. بشوفك السبت', en: 'on my heart like honey. See you Saturday.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Eight o\'clock means nine, and bring sweets',
+    icon: 'invite',
+    body:
+      'Four rules cover almost everything about being invited to a Lebanese house, and none of them ' +
+      'are written down anywhere.\n\n' +
+      'Arrive late. Half an hour after the time you were given is correct, an hour is fine, and ' +
+      'turning up on the hour will find your host still in the kitchen.\n\n' +
+      'Bring something even though you were told not to. `wala shii` is the required answer to ' +
+      '`baddé jiib shii?` and it is not information. Sweets, fruit, or something from a good bakery. ' +
+      'Wine only if you know the household drinks it.\n\n' +
+      'Expect to be fed past the point of comfort, and remember unit ten: refuse three times, ' +
+      'warmly, and never once say the food is the problem.\n\n' +
+      'And do not leave the first time you stand up. Departure in Lebanon is a process with several ' +
+      'stages — standing, saying goodbye, being persuaded to sit again, coffee, standing again, ' +
+      'twenty minutes at the door. Trying to shortcut it reads as though you were waiting to escape.',
+  },
+
   drills: [
     { type: 'choice', q: 'Which of these is impossible in Lebanese?',
       options: ['khalliina mnrouu7', 'khalliina nrouu7', 'ta3é nrouu7'], answer: 0,

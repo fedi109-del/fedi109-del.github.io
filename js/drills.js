@@ -53,7 +53,12 @@ window.Drills = (function () {
 
   function arabicOn() { return window.Store && Store.settings().arabic; }
 
+  /* Returns nothing and appends nothing when there is nothing to say — which is
+     what lets `conjugate` and `listen` reuse `choice` for its options without
+     inheriting a second "Choose the right one" under the heading they already
+     drew themselves. */
   function promptBlock(host, label, text, sub) {
+    if (!label && !text) return null;
     var wrap = el('div', 'drill-prompt');
     if (label) wrap.appendChild(el('div', 'drill-label', label));
     if (text) wrap.appendChild(el('div', 'drill-question', text));
@@ -311,6 +316,7 @@ window.Drills = (function () {
     if (item.options) {
       var inner = choice({
         q: '',
+        label: '',
         options: item.options,
         answer: item.answer,
         explain: item.explain
@@ -333,7 +339,10 @@ window.Drills = (function () {
         slot = el('span', 'slot', '____');
         b.appendChild(slot);
       } else {
-        b.appendChild(el('span', 'bubble-lb', line.lb));
+        var head = el('span', 'bubble-head');
+        head.appendChild(el('span', 'bubble-lb', line.lb));
+        Say.attach(head, line.lb);
+        b.appendChild(head);
         if (line.ar && arabicOn()) b.appendChild(el('span', 'ar small', line.ar));
         if (line.en) b.appendChild(el('span', 'bubble-en', line.en));
       }
@@ -381,6 +390,45 @@ window.Drills = (function () {
     };
   }
 
+  /* ---------- 7. hear it and choose ----------
+     The only exercise where the Lebanese is not on the screen: the learner has
+     to get it from the ear alone. When the recording for that word has not been
+     made yet the word is shown instead of played, so the exercise degrades into
+     a plain reading question rather than becoming an unanswerable silence. */
+
+  function listen(item, host) {
+    var heard = window.Say && Say.has(item.lb);
+    var wrap = el('div', 'drill-prompt listen-prompt');
+    wrap.appendChild(el('div', 'drill-label', heard ? 'Listen, then choose' : 'What does it mean?'));
+
+    if (heard) {
+      var big = el('button', 'listen-btn');
+      big.type = 'button';
+      big.setAttribute('aria-label', 'Play it again');
+      big.innerHTML = '<svg viewBox="0 0 20 20" aria-hidden="true">' +
+        '<path d="M3 8h3l4-3.2v10.4L6 12H3z"/>' +
+        '<path class="wave" d="M12.6 7.6a3.4 3.4 0 0 1 0 4.8"/>' +
+        '<path class="wave" d="M15 5.4a6.6 6.6 0 0 1 0 9.2"/></svg>' +
+        '<span>Play it again</span>';
+      big.addEventListener('click', function () { Say.play(item.lb, { btn: big }); });
+      wrap.appendChild(big);
+      /* Play once by itself: nobody should have to press a button to be asked
+         the question. A short delay lets the screen settle first. */
+      setTimeout(function () { Say.play(item.lb, { btn: big }); }, 260);
+    } else {
+      wrap.appendChild(el('div', 'drill-question', item.lb));
+    }
+    host.appendChild(wrap);
+
+    return choice({
+      q: '',
+      label: '',
+      options: item.options,
+      answer: item.answer,
+      explain: item.explain
+    }, host);
+  }
+
   /* ---------- dispatch ---------- */
 
   var kinds = {
@@ -389,7 +437,8 @@ window.Drills = (function () {
     type: typeIt,
     match: match,
     conjugate: conjugate,
-    gap: gap
+    gap: gap,
+    listen: listen
   };
 
   function create(item, host) {

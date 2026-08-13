@@ -200,6 +200,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Service or taxi, decided in four seconds',
+    setting: 'A car slows down beside you and the window comes down. This whole exchange happens at walking pace, through a window, before you have agreed to anything.',
+    lines: [
+      { who: 'Driver', lb: 'service?', ar: 'سرفيس؟', en: 'service?',
+        note: 'One word, and it is the question. He is asking whether you want the shared fixed-price ride.' },
+      { who: 'You', you: true, lb: 'service. 3a Mar Mikhayel.', ar: 'سرفيس. ع مار مخايل', en: 'service. To Mar Mikhael.' },
+      { who: 'Driver', lb: 'servicéén.', ar: 'سرفيسين', en: 'two services',
+        note: 'Double fare, because it is off his route or far. You can accept or wait for the next car.' },
+      { who: 'You', you: true, lb: 'la2, service wéé7ed. mesh b3iid.', ar: 'لأ، سرفيس واحد. مش بعيد', en: 'no, one service. It is not far.' },
+      { who: 'Driver', lb: 'Tayyeb, ta3a.', ar: 'طيب، تعا', en: 'all right, come on.' },
+      { who: 'You', you: true, lb: 'fii 3aj2et séér lyoom?', ar: 'في عجقة سير اليوم؟', en: 'is there traffic today?' },
+      { who: 'Driver', lb: 'daayman fii. w eT-Tarii2 melyéén jouwar.', ar: 'دايما في. والطريق مليان جور', en: 'there always is. And the road is full of potholes.' },
+      { who: 'You', you: true, lb: 'fii majéél twa22ef hoon? ya3Tiik el-3aafyé.', ar: 'في مجال توقف هون؟ يعطيك العافية', en: 'could you stop here? May he give you strength.' }
+    ]
+  },
+
+  culture: {
+    heading: 'How the service works',
+    icon: 'taxi',
+    body:
+      'The `service` is the backbone of getting around Lebanon and it confuses every visitor for ' +
+      'about a week. It is a shared car on no fixed route, with a fixed low fare, that picks up ' +
+      'whoever is going roughly the same way. You will end up with strangers on the back seat. That ' +
+      'is the arrangement, not a mistake.\n\n' +
+      'The rules, learned the hard way:\n\n' +
+      'Say `service` before you say where you are going. Say it after and the driver may quote you a ' +
+      'taxi fare, which is several times more. If he says `servicéén` he wants double, which is fair ' +
+      'for a long or awkward trip and worth refusing for a short one — another car is thirty seconds ' +
+      'away.\n\n' +
+      'A driver who wants the whole car to himself says `taxi`. Agree the price before getting in, ' +
+      'every time, no exceptions.\n\n' +
+      'And you get out by announcing it, not by asking. `wa22ef hoon` said about fifty metres before ' +
+      'you actually want to stop is the right timing. `fii majéél twa22ef hoon?` is the polite ' +
+      'version and it also works.',
+  },
+
   drills: [
     { type: 'choice', q: 'You are getting into a car. Which word goes in front of the place you are going?',
       options: ['3a', 'la-', 'men'], answer: 0,

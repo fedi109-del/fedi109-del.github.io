@@ -205,6 +205,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A conversation made almost entirely of filler',
+    setting: 'Two neighbours who have four minutes and no news. Strip out the little words and there is nothing left — which is the lesson.',
+    lines: [
+      { who: 'Georges', lb: 'shou awlak? kiifak?', ar: 'شو أولك؟ كيفك؟', en: 'what do you say? How are you?' },
+      { who: 'You', you: true, lb: 'l-7amdella. w enta?', ar: 'الحمدلله. وانت؟', en: 'thank God. And you?' },
+      { who: 'Georges', lb: 'nafs esh-shii. ya3né… maashé l-7aal.', ar: 'نفس الشي. يعني… ماشي الحال', en: 'the same. I mean… it is going along.',
+        note: 'ya3né buys a second. maashé l-7aal is the answer that admits nothing is great and refuses to complain.' },
+      { who: 'You', you: true, lb: 'shefto l-béét el-jdiid taba3on?', ar: 'شفتو البيت الجديد تبعن؟', en: 'did you see their new place?' },
+      { who: 'Georges', lb: 'smallah, 7elo ktiir.', ar: 'سمالله، حلو كتير', en: 'God keep it, it is really lovely.',
+        note: 'smallah goes with the praise, not after it. It guards what is being admired.' },
+      { who: 'You', you: true, lb: '3anjad? Saraa7a, ana maa 3ejebné.', ar: 'عنجد؟ صراحة، أنا ما عجبني', en: 'really? Honestly, I did not like it.' },
+      { who: 'Georges', lb: 'ktiir smallah.', ar: 'كتير سمالله', en: 'yeah, right',
+        note: 'Same word, flat delivery, opposite meaning. This is sarcasm and everyone hears it.' },
+      { who: 'You', you: true, lb: 'balééha. yalla, ma3 es-saléémé.', ar: 'بلاها. يلا، مع السلامة', en: 'let us drop it. Right, go safely.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The words that carry everything else',
+    icon: 'talk',
+    body:
+      'These are the words a learner meets last and a Lebanese person says most. They do not ' +
+      'translate cleanly, they carry tone rather than meaning, and using them is the difference ' +
+      'between correct Lebanese and Lebanese that sounds like a person.\n\n' +
+      '`yalla` is the champion. It is come on, let us go, right then, hurry up, fine, and goodbye. ' +
+      'Said twice quickly it is impatience; said once slowly it closes a conversation.\n\n' +
+      '`walaw` refuses a thank-you or an apology and insists it was nothing. It is generous and it ' +
+      'is almost automatic.\n\n' +
+      '`ya3né` is I mean, sort of, well — the sound of a sentence being assembled while it is spoken. ' +
+      'Overuse is not a fault, it is native.\n\n' +
+      'And watch `smallah` carefully, because it is the only one that reverses. Said warmly with ' +
+      'praise it protects what you admired. Said flat, with `ktiir` in front of it, it means the ' +
+      'opposite of everything in it — the Lebanese equivalent of "sure, brilliant". Tone is doing ' +
+      'all the work, and there is no way to get it from the spelling.',
+  },
+
   drills: [
     { type: 'choice', q: 'A friend thanks you for driving him home. What do you say back?',
       options: ['walaw', 'yalla', 'akiid'], answer: 0,

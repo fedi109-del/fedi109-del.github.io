@@ -15,7 +15,7 @@ window.Store = (function () {
     xp: 0,
     streak: 0,
     lastDay: '',
-    settings: { arabic: true, freeRoam: false }
+    settings: { arabic: true, guided: false, audio: true }
   };
 
   var state = load();
@@ -33,7 +33,12 @@ window.Store = (function () {
       if (saved.lastDay) s.lastDay = saved.lastDay;
       if (saved.settings) {
         s.settings.arabic = saved.settings.arabic !== false;
-        s.settings.freeRoam = saved.settings.freeRoam === true;
+        s.settings.audio = saved.settings.audio !== false;
+        /* `guided` replaced the old `freeRoam` and flipped its meaning: the course
+           used to be locked unless you opted out, now it is open unless you opt in.
+           An old save is deliberately not migrated — whoever was locked out by the
+           previous default should find the whole path open the next time they look. */
+        s.settings.guided = saved.settings.guided === true;
       }
       return s;
     } catch (e) {
@@ -75,9 +80,10 @@ window.Store = (function () {
     return u;
   }
 
-  /* A unit opens when the one before it is done — unless free roam is on. */
+  /* Every unit is open. Guided mode is the exception, not the rule: switch it on
+     and a unit waits until you have cleared the one before it. */
   function isOpen(unitId) {
-    if (state.settings.freeRoam) return true;
+    if (!state.settings.guided) return true;
     var i = LEB.indexOf(unitId);
     if (i <= 0) return true;
     var prev = LEB.all()[i - 1];

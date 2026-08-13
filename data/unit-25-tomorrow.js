@@ -184,6 +184,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Making a plan that both of you half mean',
+    setting: 'End of the working day. Nadia wants a commitment and you are giving her the Lebanese version of one.',
+    lines: [
+      { who: 'Nadia', lb: 'wéén ra7 tkouun boukra?', ar: 'وين رح تكون بكرا؟', en: 'where will you be tomorrow?' },
+      { who: 'You', you: true, lb: 'ra7 kouun hoon eS-Sob7. ba3d eD-Dohr 3endé meshwaar.', ar: 'رح كون هون الصبح. بعد الضهر عندي مشوار', en: 'I will be here in the morning. In the afternoon I have an errand.',
+        note: 'kouun with no b, because ra7 took it. And kouun only ever shows up in the future.' },
+      { who: 'Nadia', lb: 'Tayyeb. ra7 emro2 3al-ma7al ba3déén, betjé ma3é?', ar: 'طيب. رح أمرق عالمحل بعدين، بتجي معي؟', en: 'all right. I will drop by the shop later, will you come with me?' },
+      { who: 'You', you: true, lb: 'ra7 shouuf. maa ra7 Tawwel bel-meshwaar.', ar: 'رح شوف. ما رح طول بالمشوار', en: 'I will see. I will not be long with the errand.',
+        note: 'ra7 shouuf — I will see — is a real answer and usually a soft no.' },
+      { who: 'Nadia', lb: 'ayya séé3a ra7 touuSal?', ar: 'أيا ساعة رح توصل؟', en: 'what time will you get there?' },
+      { who: 'You', you: true, lb: 'Soob es-séé3a khamsé. w eza tekher, ra7 khabbrik.', ar: 'صوب الساعة خمسة. وإذا تأخر، رح خبرك', en: 'around five. And if I am late, I will let you know.' },
+      { who: 'Nadia', lb: 'w el-jem3a el-jééyé? ra7 tenzal 3a Béérout?', ar: 'والجمعة الجاية؟ رح تنزل ع بيروت؟', en: 'and next week? Will you go down to Beirut?' },
+      { who: 'You', you: true, lb: 'nshalla. ra7 shouuf shou ra7 ySiir.', ar: 'إن شاء الله. رح شوف شو رح يصير', en: 'God willing. I will see what happens.',
+        note: 'ySiir, not biSiir: ra7 stripped the b off this one as well.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Inshallah is not a yes',
+    icon: 'calendar',
+    body:
+      '`nshalla` — God willing — is attached to almost any statement about the future, by religious ' +
+      'people and by people who have not been to a church or a mosque in thirty years. It is ' +
+      'grammar as much as faith: nothing ahead of you is certain, so you mark it.\n\n' +
+      'What it actually signals depends entirely on delivery, and this is where visitors get caught. ' +
+      'Said warmly, with a plan attached, it means yes. Said on its own with a shrug, it means ' +
+      'probably not, and asking again will not improve it. The same is true of `ra7 shouuf` — I will ' +
+      'see — which is a polite no more often than it is a maybe.\n\n' +
+      'This is not evasiveness for its own sake. A flat refusal closes a door on somebody, and ' +
+      'leaving it slightly open costs nothing. If you need a real commitment, ask for a time: `ayya ' +
+      'séé3a?` forces the vagueness to resolve, and nobody minds being asked.\n\n' +
+      'Use `nshalla` yourself and it will pass without comment. Leaving it out of a sentence about ' +
+      'next week is the thing that sounds odd.',
+  },
+
   drills: [
     { type: 'choice', q: 'What does `ra7` do to the verb behind it?',
       options: ['it takes the b- away', 'it keeps the b-', 'it doubles the b-'], answer: 0,

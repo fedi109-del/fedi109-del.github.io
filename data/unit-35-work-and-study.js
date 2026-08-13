@@ -179,6 +179,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'The question everyone asks within ten minutes',
+    setting: 'A wedding, a waiting room, a taxi — it does not matter. This conversation happens everywhere.',
+    lines: [
+      { who: 'Rita', lb: 'shou bteshteghel?', ar: 'شو بتشتغل؟', en: 'what do you do for a living?' },
+      { who: 'You', you: true, lb: 'beshteghel ka-mhandes b-maktab zghiir.', ar: 'بشتغل كمهندس بمكتب زغير', en: 'I work as an engineer in a small office.',
+        note: 'ka- glued to the front means "as a". No article after it.' },
+      { who: 'Rita', lb: 'w kiif esh-sheghl? met3eb?', ar: 'وكيف الشغل؟ متعب؟', en: 'and how is the work? Tiring?' },
+      { who: 'You', you: true, lb: 'met3eb shwayy. beshteghel men eS-Sobe7 la-l-masa, w bet3ab.', ar: 'متعب شوي. بشتغل من الصبح لالمسا، وبتعب', en: 'a bit tiring. I work from morning to evening, and I get tired.' },
+      { who: 'Rita', lb: 'w l-moudiir mnii7 ma3ak?', ar: 'والمدير منيح معك؟', en: 'and is the manager good to you?' },
+      { who: 'You', you: true, lb: 'l-7amdella. bass halla2 3am bfattesh 3a sheghl tééné.', ar: 'الحمدلله. بس هلق عم بفتش ع شغل تاني', en: 'thank God. But right now I am looking for another job.' },
+      { who: 'Rita', lb: '3an jad? fii shii?', ar: 'عن جد؟ في شي؟', en: 'really? Is there anything?' },
+      { who: 'You', you: true, lb: '3endé mou2éébalé boukra. nshalla.', ar: 'عندي مقابلة بكرا. إن شاء الله', say: 'عندي مأابلة بكرا. إن شاء الله', en: 'I have an interview tomorrow. God willing.' },
+      { who: 'Rita', lb: 'yaa réét! khaalé 3endo maktab, bkhabbro.', ar: 'يا ريت! خالي عندو مكتب، بخبرو', en: 'I hope so! My uncle has an office, I will tell him.',
+        note: 'This is not small talk. She means it, and something may well come of it.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Who you know is not a cynical remark',
+    icon: 'work',
+    body:
+      'Rita\'s last line is the most Lebanese thing in this unit. Jobs move through people — the ' +
+      'cousin, the neighbour, the man your father used to work with — and a stranger offering to ' +
+      'mention you to their uncle is offering something real. The word for it is `wasTa`, and it is ' +
+      'complained about constantly and used by everybody, including the people complaining.\n\n' +
+      'Which is why `shou bteshteghel?` arrives so early in a conversation. It is not the status ' +
+      'question it can be elsewhere. It is somebody working out where you fit and whether they know ' +
+      'anyone useful to you.\n\n' +
+      'Two smaller things. Salary is discussed far more openly than in northern Europe — `addéé ' +
+      'btéékhod besh-shahr?` is a question you will be asked — and after 2019 it is usually asked ' +
+      'about which currency you are paid in, which matters more than the number.\n\n' +
+      'And working hours are long, lunch is late, and leaving at five without saying anything is ' +
+      'noticed. `ya3Tiik el-3aafyé` on your way out costs nothing and does a lot.',
+  },
+
   drills: [
     { type: 'choice', q: 'How do you say "I am an engineer"?',
       options: ['ana mhandes', 'ana kéén mhandes', 'ana bkouun mhandes'], answer: 0,
