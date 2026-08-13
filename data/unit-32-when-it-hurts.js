@@ -158,6 +158,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Three days of this and no doctor',
+    setting: 'A pharmacy. In Lebanon this is the first stop, not the last one, and the pharmacist expects to be told everything.',
+    lines: [
+      { who: 'Pharmacist', lb: 'mar7aba. shou bak?', ar: 'مرحبا. شو بك؟', en: 'hello. What is wrong with you?' },
+      { who: 'You', you: true, lb: '3endé waja3 b-zlé3iimé w shwayy 7araara.', ar: 'عندي وجع بزلعومي وشوي حرارة', en: 'I have a pain in my throat and a bit of a fever.' },
+      { who: 'Pharmacist', lb: 'men aymata?', ar: 'من إيمتى؟', en: 'since when?' },
+      { who: 'You', you: true, lb: 'Sarlé tléét iyyéém. mbéére7 kent saakhen ktiir.', ar: 'صرلي تلت إيام. مبارح كنت ساخن كتير', en: 'three days now. Yesterday I had a high fever.' },
+      { who: 'Pharmacist', lb: 'raasak byouuja3?', ar: 'راسك بيوجع؟', en: 'does your head hurt?' },
+      { who: 'You', you: true, lb: 'shwayy. w 7aases 7aalé D3iif.', ar: 'شوي. وحاسس حالي ضعيف', en: 'a bit. And I feel weak.' },
+      { who: 'Pharmacist', lb: 'yemken eltihééb. eza ba3do boukra, rouu7 3and 7akiim.', ar: 'يمكن التهاب. إذا بعدو بكرا، روح عند حكيم', en: 'it might be an infection. If it is still there tomorrow, go and see a doctor.' },
+      { who: 'You', you: true, lb: 'Tayyeb. shukran ktiir.', ar: 'طيب. شكرا كتير', en: 'all right. Thank you very much.' },
+      { who: 'Pharmacist', lb: 'saléémtak. nshalla tkouun a7san.', ar: 'سلامتك. إن شاء الله تكون أحسن', en: 'may you be well. Hopefully you will be better.',
+        note: 'saléémtak is what you say to anyone who is ill. The answer is Allah ysallmak.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The pharmacist sees you first',
+    icon: 'heart',
+    body:
+      'In Lebanon the pharmacy is where an illness starts. You describe the symptoms across the ' +
+      'counter, the pharmacist asks two or three questions, and you walk out with something — often ' +
+      'something that would need a prescription elsewhere. It is fast, it is cheap, and it works for ' +
+      'the ordinary run of things.\n\n' +
+      'It also means you should be able to say what hurts out loud, because there is no form to fill ' +
+      'in and nobody is going to look anything up for you. The pattern is simple and worth drilling ' +
+      'until it is automatic: `3endé waja3 b-` plus the body part.\n\n' +
+      '`saléémtak` is the phrase to take away. It is said to anyone unwell, anyone who has had an ' +
+      'accident, anyone just out of hospital, and the answer is always `Allah ysallmak`. Its cousin ' +
+      '`l-7amdella 3as-saléémé` — thank God for your safety — is said to someone who has come back ' +
+      'from a journey or come through something bad, and you will hear it at airports constantly.\n\n' +
+      'One thing that surprises visitors: people are direct about illness. You will be told you look ' +
+      'terrible, asked what is wrong, and offered a remedy by someone you met ten minutes ago. That ' +
+      'is care, delivered without any of the English hedging.',
+  },
+
   drills: [
     { type: 'choice', q: 'How do you say "I have a headache"?',
       options: ['3endé waja3 raas', 'raasé byouuja3', 'ana waja3 raas'], answer: 0,

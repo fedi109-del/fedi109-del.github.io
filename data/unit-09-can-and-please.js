@@ -137,6 +137,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Looking for someone in a building with no names on the bells',
+    setting: 'Six floors, eighteen buzzers, not a label on any of them. A man is coming out as you go in.',
+    lines: [
+      { who: 'You', you: true, lb: '3afwan, fiik tséé3edné?', ar: 'عفوا، فيك تساعدني؟', en: 'excuse me, can you help me?' },
+      { who: 'Karim', lb: 'akiid. 2moor.', ar: 'أكيد. أمور', en: 'of course. How can I help?',
+        note: '2moor is what someone says when they are ready to help you. It is not a question about your health.' },
+      { who: 'You', you: true, lb: 'fii 7ada hoon esmo Elie?', ar: 'في حدا هون اسمو ايلي؟', en: 'is there someone here called Elie?' },
+      { who: 'Karim', lb: 'fii, bass mesh hoon halla2.', ar: 'في، بس مش هون هلق', en: 'there is, but he is not here right now.' },
+      { who: 'You', you: true, lb: 'Tayyeb. maa 3lééh.', ar: 'طيب. ما عليه', en: 'all right. Never mind.' },
+      { who: 'Karim', lb: 'fiini séé3dak b-shii tééné?', ar: 'فيني ساعدك بشي تاني؟', en: 'can I help you with anything else?' },
+      { who: 'You', you: true, lb: 'la2, shukran. ya3Tiik el-3aafyé.', ar: 'لأ، شكرا. يعطيك العافية', en: 'no, thank you. May he give you strength.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Four ways to ask, and when each one fits',
+    icon: 'hand',
+    body:
+      'Lebanese has a ladder of politeness and every rung is in ordinary use. Picking the wrong one ' +
+      'is not offensive, it is just slightly odd, in the way that "would you be so kind" is odd when ' +
+      'you want the salt.\n\n' +
+      '`fiik…?` is the everyday ask: can you, are you able to. `moumken?` is lighter and softer, good ' +
+      'for asking permission. `min faDlak` is the formal one — an official, a stranger much older ' +
+      'than you, a complaint you want taken seriously. `3mool ma3rouuf` literally asks someone to do ' +
+      'you a favour, and it is warmer than all of them; it works in a café and with a neighbour, and ' +
+      'it is the one to reach for by default.\n\n' +
+      '`léék` looks alarming in a phrasebook — it is an imperative, "look" — and it is not rude at ' +
+      'all. It is closer to "listen," the noise people make to open a sentence. You will hear it ' +
+      'twenty times a day, often with nothing to look at.\n\n' +
+      'Expect to be helped more than you asked for. Someone who does not know the answer will ask ' +
+      'the man in the shop next door, and you will end up with three people on the pavement ' +
+      'discussing your problem.',
+  },
+
   drills: [
     { type: 'choice', q: 'You are asking one woman whether she can. Which form?',
       options: ['fiiké', 'fiik', 'fiiya'], answer: 0,

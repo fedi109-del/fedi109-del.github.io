@@ -203,6 +203,40 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Explaining why you look like that',
+    setting: 'Monday morning. Dalia has been at her desk since seven and has opinions about your face.',
+    lines: [
+      { who: 'Dalia', lb: 'ayya séé3a bt-ouu3a?', ar: 'أيا ساعة بتوعى؟', en: 'what time do you wake up?' },
+      { who: 'You', you: true, lb: '3aadatan Soob es-séé3a tméén.', ar: 'عادة صوب الساعة تمان', en: 'usually around eight.' },
+      { who: 'Dalia', lb: 'w ba3déén?', ar: 'وبعدين؟', en: 'and then?' },
+      { who: 'You', you: true, lb: 'awwal shii bet7ammam. men ba3da betrawwa2 w boDhar.', ar: 'أول شي بتحمم. من بعدها بترّوق وبضهر', en: 'first I shower. After that I have breakfast and I go out.',
+        note: 'awwal shii… men ba3da… is the frame for putting a day in order.' },
+      { who: 'Dalia', lb: 'btemshé 3ash-sheghl?', ar: 'بتمشي عالشغل؟', en: 'do you walk to work?' },
+      { who: 'You', you: true, lb: 'aw2aat. lamma erja3 3al-béét, bet7ammam kaméén marra.', ar: 'أوقات. لما ارجع عالبيت، بتحمم كمان مرة', en: 'sometimes. When I get home, I shower again.' },
+      { who: 'Dalia', lb: 'w bel-léél? shou bta3mol?', ar: 'وبالليل؟ شو بتعمل؟', en: 'and at night? What do you do?' },
+      { who: 'You', you: true, lb: 'daayman beshar. w hayda l-meshklé.', ar: 'دايما بسهر. وهيدا المشكلة', en: 'I always stay up late. And that is the problem.',
+        note: 'beshar has no clean English translation. It is staying up, out, awake — the good version, not insomnia.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Staying up is a whole verb',
+    icon: 'routine',
+    body:
+      'English needs a phrase for it. Lebanese has `sahra` for the evening and `beshar` for what you ' +
+      'do during it, and neither carries any suggestion that you should have gone to bed. A `sahra` ' +
+      'is an evening spent with people that runs later than planned, at somebody\'s house as often ' +
+      'as anywhere else, and being told `sahra 7elwé` is a compliment about the company rather than ' +
+      'the hour.\n\n' +
+      'That is why Lebanese days start later than their working hours suggest, and why `Sa7 en-noom` ' +
+      'from unit five is affectionate rather than pointed. Nobody thinks getting up at eight is late ' +
+      'if the night before had people in it.\n\n' +
+      'The frame worth stealing from this unit is `awwal shii… men ba3da…` — first this, after that. ' +
+      'It works for a day, a recipe, directions, or an argument, and it buys you a second to think ' +
+      'while sounding organised.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['bouu3a', 'I wake up'], ['boDhar', 'I go out'], ['berja3', 'I come back'], ['bnéém', 'I sleep']] },

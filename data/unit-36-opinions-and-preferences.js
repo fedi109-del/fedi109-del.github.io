@@ -197,6 +197,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Disagreeing at full volume and staying friends',
+    setting: 'Two people who have had this argument before and will have it again. Nobody is upset.',
+    lines: [
+      { who: 'Elie', lb: 'shou ra2yak bel-maT3am el-jdiid?', ar: 'شو رأيك بالمطعم الجديد؟', en: 'what do you think of the new restaurant?' },
+      { who: 'You', you: true, lb: 'Saraa7a, maa 7abbayto. bfaDDel el-2adiim bi-ktiir.', ar: 'صراحة، ما حبيتو. بفضل القديم بكتير', say: 'صراحة، ما حبيتو. بفضل الأديم بكتير', en: 'honestly, I did not like it. I prefer the old one by a long way.' },
+      { who: 'Elie', lb: 'abadan! el-jdiid a7la w a7san.', ar: 'أبدا! الجديد أحلى وأحسن', en: 'not at all! The new one is nicer and better.' },
+      { who: 'You', you: true, lb: 'ma3ak 7a2 enno arya7. bass el-akl? Saraa7a, la2.', ar: 'معك حق إنو أريح. بس الأكل؟ صراحة، لأ', en: 'you are right that it is more comfortable. But the food? Honestly, no.' },
+      { who: 'Elie', lb: 'ééh wallah, l-akl mesh 3aaTel bass mesh a7san shii.', ar: 'إيه والله، الأكل مش عاطل بس مش أحسن شي', en: 'that is true, the food is not bad but it is not the best.' },
+      { who: 'You', you: true, lb: 'shefet? be3te2ed enno l-2adiim a7san, khSouuSatan bel-masa.', ar: 'شفت؟ بعتقد إنو القديم أحسن، خصوصا بالمسا', say: 'شفت؟ بعتأد إنو الأديم أحسن، خصوصا بالمسا', en: 'you see? I reckon the old one is better, especially in the evening.' },
+      { who: 'Elie', lb: '7asab. eza 3endak wa2t, ktiir mnii7. eza mesta3jel, la2.', ar: 'حسب. إذا عندك وقت، كتير منيح. إذا مستعجل، لأ', en: 'it depends. If you have time, very good. If you are in a hurry, no.' },
+      { who: 'You', you: true, lb: 'yalla, khalliina nrouu7 3al-etnéén w menshouuf.', ar: 'يلا، خلينا نروح عالتنين ومنشوف', en: 'right, let us go to both and we will see.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Loud is not angry',
+    icon: 'scales',
+    body:
+      'A Lebanese disagreement is louder, faster and more physical than most northern European ones, ' +
+      'and it means much less. Voices go up, hands move, two people talk at once, and then everyone ' +
+      'orders coffee. Reading the volume as hostility is the single most common misunderstanding a ' +
+      'visitor has.\n\n' +
+      'What actually carries weight is the structure. `ma3ak 7a2 enno…, bass…` concedes something ' +
+      'real before disagreeing, and `ééh wallah` admits the other person landed a point. Those two ' +
+      'moves are what keep the argument from becoming a fight, and they matter far more than tone ' +
+      'of voice.\n\n' +
+      '`Saraa7a` — honestly — is a signal, not a filler. It marks the sentence after it as your ' +
+      'actual opinion rather than the polite one, and it gives you licence to say something ' +
+      'unflattering. Use it before criticism and it lands as candour.\n\n' +
+      'One trap worth remembering from unit ten: `mesh 3aaTel` is genuine praise here, not the ' +
+      'lukewarm English "not bad". If you actually mean it was mediocre, you need `mesh a7san shii` ' +
+      'or `3aadé`.',
+  },
+
   drills: [
     { type: 'choice', q: 'Where can bi-ktiir go?',
       options: ['after a comparative — arya7 bi-ktiir', 'before any adjective — bi-ktiir mnii7', 'at the start of the sentence'], answer: 0,

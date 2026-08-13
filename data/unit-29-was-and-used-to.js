@@ -159,6 +159,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'How it used to be around here',
+    setting: 'Abou Elie has lived in this street since before the building went up. He has been waiting for someone to ask.',
+    lines: [
+      { who: 'Abou Elie', lb: 'elé zaméén maa sheftak!', ar: 'إلي زمان ما شفتك', en: 'it has been ages since I saw you!' },
+      { who: 'You', you: true, lb: 'kent barra. kiifak enta?', ar: 'كنت برا. كيفك انت؟', en: 'I was away. How are you?' },
+      { who: 'Abou Elie', lb: 'l-7amdella. halla2 ana met2aa3ed.', ar: 'الحمدلله. هلق أنا متقاعد', say: 'الحمدلله. هلق أنا متأاعد', en: 'thank God. I am retired now.' },
+      { who: 'You', you: true, lb: 'shou kent teshteghel abel?', ar: 'شو كنت تشتغل قبل؟', say: 'شو كنت تشتغل أبل؟', en: 'what did you use to do before?',
+        note: 'kent plus the present verb with no b. That is the whole "used to" construction.' },
+      { who: 'Abou Elie', lb: 'kent moudiir b-maSna3. kent erja3 3al-béét kell yoom es-séé3a tméén.', ar: 'كنت مدير بمصنع. كنت ارجع عالبيت كل يوم الساعة تمان', en: 'I was a manager in a factory. I used to get home every day at eight.' },
+      { who: 'Abou Elie', lb: 'w kéén fii 3ashra bel-béét. halla2 wala 7ada.', ar: 'وكان في عشرة بالبيت. هلق ولا حدا', en: 'and there used to be ten of us at home. Now not a soul.',
+        note: 'kéén fii — there was, there were. It never changes shape.' },
+      { who: 'You', you: true, lb: 'yaa réét kent 3eref!', ar: 'يا ريت كنت عرف', en: 'I wish I had known!' },
+      { who: 'Abou Elie', lb: 'basiiTa. wala yhemmak.', ar: 'بسيطة. ولا يهمك', en: 'it is nothing. Do not let it worry you.' }
+    ]
+  },
+
+  culture: {
+    heading: 'One word that moves any sentence backwards',
+    icon: 'photo',
+    body:
+      '`kéén` is the cheapest grammar in this course. Put it in front of a sentence you can already ' +
+      'build and the whole thing moves one step into the past, with nothing else changing.\n\n' +
+      '`3am beshteghel` is I am working. `kent 3am beshteghel` is I was working. `baddé rouu7` is I ' +
+      'want to go; `kent baddé rouu7` is I was going to go, and it is how you explain a plan that ' +
+      'did not survive. `fii maay` is there is water; `kéén fii maay` is there was. One word, and ' +
+      'every construction you own doubles.\n\n' +
+      'The habitual past — used to — works the same way: `kent` plus a present verb with no b. `kent ' +
+      'erja3` is I used to go back. English needs three words for that and Lebanese needs one plus a ' +
+      'missing letter.\n\n' +
+      'You will hear the past used about the country a great deal, and often about a version of it ' +
+      'the speaker is too young to remember. `kéén fii` carries a lot of weight in Lebanon. It is ' +
+      'worth listening to without arguing with it.',
+  },
+
   drills: [
     { type: 'conjugate', en: 'they were', root: 'ken / kéén', person: 'henné', tense: 'past',
       options: ['kééno', 'kenna', 'kéénet', 'kento'], answer: 0 },

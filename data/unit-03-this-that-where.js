@@ -198,6 +198,39 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Lost one street from the market',
+    setting: 'You know the market is close. You cannot see it. A man is unloading crates outside a shop.',
+    lines: [
+      { who: 'You', you: true, lb: '3afwan, wéén es-souu2?', ar: 'عفوا، وين السوق؟', en: 'excuse me, where is the market?' },
+      { who: 'Man', lb: 'es-souu2? 3ala Tuul.', ar: 'السوق؟ على طول', en: 'the market? Straight ahead',
+        note: '3ala Tuul is the answer you will get most often. It means straight on, and it is said with the hand.' },
+      { who: 'You', you: true, lb: 'shou hayda?', ar: 'شو هيدا؟', en: 'what is that?',
+        note: 'You are pointing at the big door at the end of the road.' },
+      { who: 'Man', lb: 'hayda l-bééb. es-souu2 wara l-bééb.', ar: 'هيدا الباب. السوق ورا الباب', en: 'that is the door. The market is behind the door.' },
+      { who: 'You', you: true, lb: 'akiid? mesh haydé eT-Tarii2?', ar: 'أكيد؟ مش هيدي الطريق؟', en: 'are you sure? Is this not the road?' },
+      { who: 'Man', lb: 'mbala! bass el-bééb a2rab.', ar: 'مبلى! بس الباب أقرب', en: 'yes it is! But the door is nearer.',
+        note: 'mbala is the yes that contradicts a no. Answering na3am here would agree with your doubt.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Nobody says they do not know',
+    icon: 'compass',
+    body:
+      'Ask for directions in Beirut and you will get them. You will get them whether or not the ' +
+      'person knows the way. Sending someone off empty-handed feels unkind, so a guess is offered ' +
+      'with the same confidence as a fact, and `3ala Tuul` — straight ahead — does a lot of work it ' +
+      'was never meant to do.\n\n' +
+      'This is not being lied to. It is generosity with the wrong tool. The practical answer is to ' +
+      'ask two people, walk in the direction both of them agreed on, and use landmarks rather than ' +
+      'street names: the door, the bakery, the church. Almost nobody navigates Beirut by street ' +
+      'name, including the people who live there and the drivers who work there.\n\n' +
+      'Note what `mbala` does in that last line. Lebanese keeps a separate word for the yes that ' +
+      'overturns a negative — the one English has to fake with a stressed "yes it **is**". Use ' +
+      '`na3am` there and you have accidentally agreed that it is not the road.',
+  },
+
   drills: [
     { type: 'choice', q: 'You are pointing at a siyyaara, and siyyaara is feminine. Which word?',
       options: ['haydé', 'hayda', 'wéén'], answer: 0,

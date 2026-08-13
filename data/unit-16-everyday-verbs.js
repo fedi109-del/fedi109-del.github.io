@@ -184,6 +184,38 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Deciding what to do with an afternoon',
+    setting: 'Two friends on a balcony. Sixteen verbs, one plan, no conclusion.',
+    lines: [
+      { who: 'Maya', lb: 'shou bta3mol lyoom?', ar: 'شو بتعمل اليوم؟', en: 'what are you doing today?' },
+      { who: 'You', you: true, lb: 'maa ba3ref. yemken beshtré shwayy khoDra.', ar: 'ما بعرف. يمكن بشتري شوي خضرة', en: 'I do not know. Maybe I will buy some vegetables.' },
+      { who: 'Maya', lb: 'bshouuf. w ba3déén?', ar: 'بشوف. وبعدين؟', en: 'I see. And then?' },
+      { who: 'You', you: true, lb: 'berja3 3al-béét w be23od.', ar: 'برجع عالبيت وبقعد', en: 'I go back home and I sit.',
+        note: 'be23od is not only "I sit down". It is also "I stay in", which is what it means here.' },
+      { who: 'Maya', lb: 'maa betjé ma3é 3and Rita?', ar: 'ما بتجي معي عند ريتا؟', en: 'are you not coming with me to Rita\'s?' },
+      { who: 'You', you: true, lb: 'maa be2dar. bass be7ké ma3a boukra.', ar: 'ما بقدر. بس بحكي معها بكرا', say: 'ما بأدر. بس بحكي معها بكرا', en: 'I cannot. But I will talk to her tomorrow.' },
+      { who: 'Maya', lb: 'Tayyeb. bjiib shii ma3é?', ar: 'طيب. بجيب شي معي؟', en: 'all right. Shall I bring something?' },
+      { who: 'You', you: true, lb: 'jiib 2ahwe. bshouufak boukra.', ar: 'جيب قهوة. بشوفك بكرا', say: 'جيب أهوة. بشوفك بكرا', en: 'bring coffee. I will see you tomorrow.' }
+    ]
+  },
+
+  culture: {
+    heading: 'One tense doing three jobs',
+    icon: 'doing',
+    body:
+      'Look at `bshouufak boukra` — I see you tomorrow. There is no future marker in it, and yet it ' +
+      'clearly means tomorrow. The b-present in Lebanese covers habit, general truth, and any near ' +
+      'future that feels settled. Adding `ra7` from unit 25 would not be wrong, it would just be ' +
+      'more deliberate.\n\n' +
+      'The same width shows up in `bjiib shii?` — shall I bring something? A question in the plain ' +
+      'present is an offer. English needs a separate word for that and Lebanese does not.\n\n' +
+      'This is why the sixteen verbs in this unit are worth more than sixteen words. Each one covers ' +
+      'a wider range than its English translation, and the ranges overlap in ways that let you say ' +
+      'far more than you have learned. `bshouuf` is I see, I will have a look, let me think about ' +
+      'it, and — with a flat delivery — we shall see, which usually means no.',
+  },
+
   drills: [
     { type: 'conjugate', en: 'he brings', root: 'jiib', person: 'houwwé', tense: 'present',
       options: ['bijiib', 'bjiib', 'betjiib', 'menjiib'], answer: 0,

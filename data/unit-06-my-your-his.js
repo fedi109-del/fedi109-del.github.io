@@ -195,6 +195,40 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A photograph on a phone',
+    setting: 'Nour turns her screen towards you. This is going to take a while, and that is the point of it.',
+    lines: [
+      { who: 'Nour', lb: 'haydé 3aylté.', ar: 'هيدي عيلتي', en: 'this is my family' },
+      { who: 'You', you: true, lb: 'miin haydé?', ar: 'مين هيدي؟', en: 'who is she?' },
+      { who: 'Nour', lb: 'haydé emmé. w hayda bayyé.', ar: 'هيدي إمي. وهيدا بيي', en: 'this is my mother. And this is my father.',
+        note: 'Same word, two endings: emm becomes emmé, bayy becomes bayyé. That -é is the whole unit.' },
+      { who: 'You', you: true, lb: 'w henné? ekhwtik?', ar: 'وهنّي؟ إخوتك؟', en: 'and them? Your brothers?' },
+      { who: 'Nour', lb: 'éé. tléété. w haydé okhté, Rita.', ar: 'إي. تلاتة. وهيدي أختي، ريتا', en: 'yes. Three. And this is my sister, Rita.' },
+      { who: 'You', you: true, lb: 'shou esm emmik?', ar: 'شو اسم إمك؟', en: 'what is your mother\'s name?',
+        note: 'emmik with an i, because Nour is a woman. To a man it would be emmak.' },
+      { who: 'Nour', lb: 'esma Thérèse.', ar: 'اسمها تيريز', en: 'her name is Thérèse',
+        note: 'esm plus -a: her name. The ending does the work a possessive word does in English.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Asking about the family is not being nosy',
+    icon: 'person',
+    body:
+      'In much of northern Europe, asking a new acquaintance about their parents is a step too far. ' +
+      'In Lebanon it is the second question, and declining to answer is the odd move. Family is how ' +
+      'people are placed: the surname, the village, whose son you are. Someone working out who your ' +
+      'father is has not lost interest in you.\n\n' +
+      'That is also why French names sit next to Arabic ones in the same family without anyone ' +
+      'noticing — Thérèse and Nour are sisters and neither name is remarkable.\n\n' +
+      'Watch out for `7abiibé`. It means "my dear" and it is everywhere: from a friend, from your ' +
+      'aunt, from the man selling you tomatoes, from someone who is about to disagree with you. It ' +
+      'is not flirting and it is not intimacy, it is the oil the language runs on. And `tekram ' +
+      '3aynak` — may your eye be honoured — is what you say when someone asks you for something and ' +
+      'you are going to do it. It means yes, warmly, before the thing is even named.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['emmé', 'my mother'], ['emmak', 'your mother — to a man'], ['emmo', 'his mother'], ['emma', 'her mother']] },

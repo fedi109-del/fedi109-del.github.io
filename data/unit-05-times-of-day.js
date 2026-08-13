@@ -189,6 +189,38 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Coming downstairs at two in the afternoon',
+    setting: 'Abou Elie looks after the building. He is washing the entrance. He has been up since six.',
+    lines: [
+      { who: 'Abou Elie', lb: 'Sa7 en-noom!', ar: 'صح النوم', en: 'may your sleep be sound',
+        note: 'Said to someone who has just got up. At two in the afternoon it is said with a smile.' },
+      { who: 'You', you: true, lb: 'masa l-khéér. ya3Tiik el-3aafyé.', ar: 'مسا الخير. يعطيك العافية', en: 'good evening. May he give you strength.' },
+      { who: 'Abou Elie', lb: 'Allah y3aafiik.', ar: 'الله يعافيك', en: 'and may God keep you strong',
+        note: 'The fixed answer. Never anything else.' },
+      { who: 'Abou Elie', lb: 'mbéére7 bel-léél, ha?', ar: 'مبارح بالليل، ها؟', en: 'last night, eh?' },
+      { who: 'You', you: true, lb: '3afwan. lyoom mesh bakkiir.', ar: 'عفوا. اليوم مش بكير', en: 'sorry. Today is not early.' },
+      { who: 'Abou Elie', lb: 'w boukra? bakkiir?', ar: 'وبكرا؟ بكير؟', en: 'and tomorrow? Early?' },
+      { who: 'You', you: true, lb: 'boukra bakkiir, akiid!', ar: 'بكرا بكير، أكيد', en: 'tomorrow, early, of course!' }
+    ]
+  },
+
+  culture: {
+    heading: 'The line you say to anyone working',
+    icon: 'hand',
+    body:
+      '`ya3Tiik el-3aafyé` has no equivalent in English, and it is the phrase most worth taking away ' +
+      'from this unit. You say it to the waiter clearing your table, the driver who got you there, ' +
+      'the man laying tiles on the third floor, your colleague at six in the evening. It notices ' +
+      'that someone is working, and it costs nothing.\n\n' +
+      'The answer is always `Allah y3aafiik`. Not thank you, not a nod. That pair belongs to the same ' +
+      'family as the greetings in unit one: fixed on both sides.\n\n' +
+      'The Lebanese day also runs later than most northern ones. `masa` starts around four in the ' +
+      'afternoon and stretches until people go to bed, which is late. Dinner at nine is early. An ' +
+      'invitation for "the evening" does not mean six. And `Sa7 en-noom`, which you will hear at ' +
+      'eleven in the morning as often as at seven, is affection with a small hook in it.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['eS-Sob7', 'the morning'], ['ba3d eD-Dohr', 'the afternoon'], ['3ashiyyé', 'the evening'], ['bel-léél', 'at night']] },

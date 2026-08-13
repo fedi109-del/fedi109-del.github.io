@@ -47,16 +47,20 @@ LEB.addUnit({
   order: 7,                     // progressivo globale, coincide col numero dell'unità
   title: 'Coffee, Please',      // 2-4 parole, inglese, niente due punti
   goal: 'Order a drink and pay for it without switching to English.',
+  icon: 'cup',                  // facoltativo: un disegno di js/art.js. Senza, l'app
+                                // ne sceglie uno in base al numero dell'unità
   canDo: [                      // 2-4 promesse concrete, in prima persona sottintesa
     'Ask for coffee the way it is actually asked for',
     'Say how much sugar you want',
     'Ask for the bill'
   ],
-  grammar: [ /* vedi §3 */ ],
-  vocab:   [ /* vedi §4 */ ],
-  phrases: [ /* vedi §5 */ ],
-  drills:  [ /* vedi §6 — 10-14 esercizi */ ],
-  quiz:    [ /* vedi §6 —  8-10 esercizi, più difficili */ ]
+  grammar:  [ /* vedi §3 */ ],
+  vocab:    [ /* vedi §4 */ ],
+  phrases:  [ /* vedi §5 */ ],
+  dialogue: { /* vedi §5-bis — obbligatorio */ },
+  culture:  { /* vedi §5-ter — obbligatorio */ },
+  drills:   [ /* vedi §6 — 10-14 esercizi */ ],
+  quiz:     [ /* vedi §6 —  8-10 esercizi, più difficili */ ]
 });
 ```
 
@@ -113,7 +117,51 @@ Il libanese vive di coppie botta-e-risposta: quando esiste una risposta obbligat
 
 ---
 
-## 6. `drills` e `quiz` — i sei tipi di esercizio
+## 5-bis. `dialogue` — la conversazione (obbligatoria, 6-9 battute)
+
+```js
+dialogue: {
+  title: 'Ordering without a single verb',
+  setting: 'Una riga o due: dove siamo, chi è l\'altro, che cosa è in gioco.',
+  lines: [
+    { who: 'Waiter', lb: 'shou baddak?', ar: 'شو بدك؟', en: 'what do you want?' },
+    { who: 'You', you: true, lb: 'baddé 2ahwe', ar: 'بدي قهوة', say: 'بدي أهوة',
+      en: 'I want a coffee', note: 'facoltativa: che cosa notare in questa battuta' }
+  ]
+}
+```
+
+`you: true` sposta la battuta a destra e la colora: è quella che dice chi impara.
+
+**Regola del vocabolario.** Un dialogo usa **solo** ciò che è già stato insegnato fino a
+quell'unità compresa. I nomi propri sono liberi; un nome comune mai visto si può usare se la
+traduzione inglese lo chiarisce da sola. La *meccanica grammaticale* invece non si anticipa
+mai: niente verbi coniugati prima dell'unità 15, niente futuro prima della 25, niente passato
+prima della 26. È l'errore più facile da fare e il più fastidioso per chi impara.
+
+**Regola anti-copia**: vale la Legge C. Situazioni, personaggi e battute sono nostri.
+
+---
+
+## 5-ter. `culture` — la nota culturale (obbligatoria, 150-280 parole)
+
+```js
+culture: {
+  heading: 'How much sugar is a real question',
+  icon: 'cup',                 // facoltativo, un disegno di js/art.js
+  body: 'Testo con **grassetto**, `codice` e \\n\\n fra i paragrafi.'
+}
+```
+
+Spiega *come ci si comporta*, non *come si coniuga*: la grammatica sta in `grammar` e qui
+non ci torna. Vale la pena scriverla quando dice qualcosa che un dizionario non direbbe —
+perché rifiutare il caffè è difficile, perché nessuno dice di non sapere la strada, perché
+il conto non si divide. Stessa voce del resto dell'app: adulta, concreta, senza entusiasmo
+di maniera.
+
+---
+
+## 6. `drills` e `quiz` — i sette tipi di esercizio
 
 Stessa forma per entrambi. `drills` allena (10-14), `quiz` verifica (8-10, più difficile,
 almeno tre tipi diversi, e deve coprire sia il vocabolario sia la grammatica dell'unità).
@@ -147,7 +195,17 @@ almeno tre tipi diversi, e deve coprire sia il vocabolario sia la grammatica del
   ],
   options: ['Sabaa7 en-nouur', 'masa l-khéér', 'ma3 es-saléémé'], answer: 0,
   explain: 'The morning greeting has one fixed answer: light for light.' }
+
+// 7. ascolto — 'lb' è la traccia da far sentire, le opzioni sono in inglese
+{ type: 'listen', lb: 'Sabaa7 el-khéér',
+  options: ['a morning of goodness', 'an evening of goodness', 'go with safety'], answer: 0,
+  explain: 'Sabaa7 is morning. The evening version swaps it for masa.' }
 ```
+
+Il tipo `listen` è l'unico che non mostra il libanese a schermo. Se la traccia manca, però,
+non si rompe: mostra la parola scritta e diventa una normale domanda di significato, e torna
+a essere un esercizio d'ascolto da solo appena l'mp3 arriva. Si può quindi scrivere prima che
+l'audio esista.
 
 Regole di equilibrio per `drills`: almeno **quattro tipi diversi**, almeno un `gap`, almeno un
 `build`, e — dalle unità con verbi in poi — almeno un `conjugate`.
@@ -171,6 +229,30 @@ va scritta nella forma **esatta e corretta**: è quella che il giocatore vede do
 
 L'articolo si scrive `el-` e si assimila davanti alle lettere solari: `esh-shems`, `en-nouur`,
 `et-tilifon`. Va scritto come si pronuncia.
+
+---
+
+## 7-bis. L'audio
+
+Ogni parola, frase, esempio e battuta di dialogo può avere una traccia. Il nome del file si
+calcola dalla traslitterazione (`baddé 2ahwe` → `audio/badde-2ahwe.mp3`), quindi non si
+decide e non si scrive a mano: lo fa `node voci.js`, che stila anche l'elenco di ciò che
+manca in `audio/DA-DIRE.md`.
+
+Un campo facoltativo serve a chi genera l'audio a macchina:
+
+```js
+{ lb: 'baddé 2ahwe', ar: 'بدي قهوة', say: 'بدي أهوة', en: 'I want a coffee' }
+```
+
+`ar` è la grafia corretta, quella che si legge a schermo. `say` è la stessa frase scritta
+**come si pronuncia in libanese**, e serve solo a impedire che un sintetizzatore legga
+قهوة come *qahwa*. Va messo ovunque compaia una qaaf, e ignorato altrove. Chi registra con
+una voce vera legge la colonna libanese e di `say` non si accorge nemmeno.
+
+Regola che non si tocca: **mai la voce del browser per il libanese**. Tutte le voci arabe
+installate sui telefoni parlano arabo standard e insegnerebbero la pronuncia sbagliata.
+Niente traccia, niente altoparlante: è meglio il silenzio.
 
 ---
 

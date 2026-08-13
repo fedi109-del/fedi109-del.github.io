@@ -207,6 +207,45 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'A man2ouushé and a stop that is not a stop',
+    setting: 'The bakery first, then the back of a service cab. Nothing here is a request in the English sense, and none of it is rude.',
+    lines: [
+      { who: 'Baker', lb: 'tfaDDal, shou baddak?', ar: 'تفضل، شو بدك؟', en: 'go ahead, what would you like?' },
+      { who: 'You', you: true, lb: '3Tiiné tnéén za3tar, 3mool ma3rouuf.', ar: 'عطيني تنين زعتر، عمول معروف', en: 'give me two thyme ones, please.',
+        note: '3Tiiné is a bare order — give me. With 3mool ma3rouuf on the end it is exactly as polite as it needs to be.' },
+      { who: 'Baker', lb: 'shii tééné? 7oTTellak jebné kaméén?', ar: 'شي تاني؟ حطلك جبنة كمان؟', en: 'anything else? Shall I put cheese in for you too?' },
+      { who: 'You', you: true, lb: 'éé, 7oTTellé shwayy jebné. bidouun banadouura.', ar: 'إي، حطلي شوي جبنة. بدون بندورة', en: 'yes, put a bit of cheese in for me. Without tomato.' },
+      { who: 'Baker', lb: 'tfaDDal.', ar: 'تفضل', en: 'here you are.',
+        note: 'Same word as at the start. tfaDDal covers here-you-are, go-ahead, after-you and come-in.' },
+      { who: 'You', you: true, lb: 'ya3Tiik el-3aafyé.', ar: 'يعطيك العافية', en: 'may he give you strength.' },
+      { who: 'Driver', lb: 'wéén?', ar: 'وين؟', en: 'where?' },
+      { who: 'You', you: true, lb: 'wa22ef hoon, 3mool ma3rouuf. hoon, hoon!', ar: 'وقف هون، عمول معروف. هون، هون', en: 'stop here, please. Here, here!',
+        note: 'Said late, twice, and slightly too loud. That is the correct way to get out of a service.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Orders are not rude here',
+    icon: 'give',
+    body:
+      'Translate `3Tiiné shaay` word for word and you get "give me a tea", which in English is what ' +
+      'you say when you have decided to be unpleasant. In Lebanese it is neutral. The imperative is ' +
+      'the ordinary way to ask for something, and politeness is added on the end rather than built ' +
+      'into the verb.\n\n' +
+      'That is the whole trick. `3Tiiné` on its own is blunt. `3Tiiné…, 3mool ma3rouuf` is warm. ' +
+      'English softens by twisting the sentence — could I possibly have — and Lebanese softens by ' +
+      'appending three syllables. Trying to import the English construction produces something that ' +
+      'sounds anxious.\n\n' +
+      '`tfaDDal` deserves its own note, because it does more work than any other word in the ' +
+      'language. It is here you are, go ahead, after you, please come in, help yourself, and take a ' +
+      'seat. It changes with who you are talking to — `tfaDDalé` to a woman, `tfaDDalo` to a group — ' +
+      'and if you learn one word from this unit, learn this one.\n\n' +
+      'The `-ellé` and `-ellak` endings on `7oTT` are worth noticing too: put **for me**, put **for ' +
+      'you**. Lebanese attaches the person you are doing it for straight onto the verb, and it turns ' +
+      'an order into something closer to a favour.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['3Tiiné', 'give me'], ['jiib', 'bring'], ['ta3a', 'come'], ['7oTT', 'put']] },

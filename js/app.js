@@ -35,7 +35,9 @@
     headerSlot.innerHTML = '';
     var brand = el('a', 'brand');
     brand.href = '#/path';
-    brand.appendChild(el('span', 'brand-mark', '🌲'));
+    var mk = el('span', 'brand-mark');
+    mk.innerHTML = Art.mark();
+    brand.appendChild(mk);
     brand.appendChild(el('span', 'brand-name', 'Lebanese Path'));
     headerSlot.appendChild(brand);
 
@@ -66,63 +68,141 @@
   /* ---------- the path ---------- */
 
   function screenPath() {
-    var wrap = el('div', 'screen');
-    var hero = el('section', 'hero');
-    hero.appendChild(el('h1', null, 'Learn Lebanese, not textbook Arabic'));
-    hero.appendChild(el('p', 'lede',
-      'This is the spoken language of Lebanon: the one people actually use in a taxi, ' +
-      'at the bakery, on the phone. Forty units, five stages, from your first hello to ' +
-      'holding an argument about traffic.'));
+    var wrap = el('div', 'screen wide');
     var done = Store.completedCount();
     var totalUnits = LEB.all().length;
-    hero.appendChild(el('p', 'muted', done + ' of ' + totalUnits + ' units cleared'));
-
     var next = nextUnitToDo();
+
+    /* The opening: the same evening the stage covers walk through, seen from the
+       start of it. Everything the learner needs in order to begin is in this one
+       panel — the promise, where they are, and the one button that continues. */
+    var hero = el('section', 'hero-panel');
+    var art = el('div', 'hero-art');
+    /* Both drawings are laid down and CSS shows one: the upright composition
+       beside the headline on a wide screen, the wide strip above it on a phone.
+       Two SVGs cost about a kilobyte between them, which is cheaper than asking
+       either one to survive a shape it was not drawn for. */
+    var tall = el('div', 'art-tall');
+    tall.innerHTML = Art.portrait();
+    var wide = el('div', 'art-wide');
+    wide.innerHTML = Art.scene('rooftops');
+    art.appendChild(tall);
+    art.appendChild(wide);
+    hero.appendChild(art);
+
+    var copy = el('div', 'hero-copy');
+    copy.appendChild(el('h1', null, 'Learn Lebanese, not textbook Arabic'));
+    copy.appendChild(el('p', 'lede',
+      'This is the spoken language of Lebanon: the one people use in a taxi, at the ' +
+      'bakery, on the phone. Forty units, five stages, from your first hello to holding ' +
+      'an argument about traffic.'));
+
+    var meters = el('div', 'meters');
+    meters.appendChild(meter(done + '/' + totalUnits, 'units cleared'));
+    meters.appendChild(meter(String(Store.xp()), 'experience'));
+    meters.appendChild(meter(String(Store.streak()), 'day streak'));
+    copy.appendChild(meters);
+
     if (next) {
       var row = el('div', 'row');
-      var cont = el('a', 'primary-btn', done ? 'Continue — unit ' + next.order : 'Start unit 1');
+      var cont = el('a', 'primary-btn lg', done ? 'Continue — unit ' + next.order : 'Begin with unit 1');
       cont.href = '#/unit/' + next.id;
       row.appendChild(cont);
       var due = Store.dueCount();
       if (due) {
-        var rev = el('a', 'ghost-btn', 'Review ' + due + ' now');
+        var rev = el('a', 'ghost-btn lg', 'Review ' + due);
         rev.href = '#/review';
         row.appendChild(rev);
       }
-      hero.appendChild(row);
+      copy.appendChild(row);
     }
+    hero.appendChild(copy);
     wrap.appendChild(hero);
 
     LEB.stages.forEach(function (stage) {
       var units = LEB.byStage(stage.id);
       if (!units.length) return;
-      var sec = el('section', 'stage');
-      var head = el('div', 'stage-head');
-      var titles = el('div');
-      titles.appendChild(el('h2', null, stage.name));
-      titles.appendChild(el('p', 'muted', stage.blurb));
-      head.appendChild(titles);
-      var badge = el('div', 'level-badge', stage.level);
-      head.appendChild(badge);
-      sec.appendChild(head);
-
-      var pct = Store.stageProgress(stage.id);
-      var bar = el('div', 'bar slim');
-      var fill = el('div', 'bar-fill');
-      fill.style.width = pct + '%';
-      bar.appendChild(fill);
-      sec.appendChild(bar);
-
-      var grid = el('div', 'unit-grid');
-      units.forEach(function (u) { grid.appendChild(unitCard(u)); });
-      sec.appendChild(grid);
-      wrap.appendChild(sec);
+      wrap.appendChild(stageBlock(stage, units, next));
     });
 
     if (!LEB.all().length) {
-      wrap.appendChild(el('p', 'warn', 'No units are loaded. Check the <script> tags in index.html.'));
+      wrap.appendChild(el('p', 'warn', 'No units are loaded. Check the script tags in index.html.'));
     }
     return wrap;
+  }
+
+  function meter(value, label) {
+    var m = el('div', 'meter');
+    m.appendChild(el('div', 'meter-num', value));
+    m.appendChild(el('div', 'meter-lab', label));
+    return m;
+  }
+
+  /* One stage: an illustrated band, then its units strung along a single thread.
+     The thread is the point — five separate grids of cards read as a catalogue,
+     one continuous line reads as a road you are somewhere along. */
+  function stageBlock(stage, units, current) {
+    var sec = el('section', 'stage');
+    var cleared = units.filter(function (u) { return Store.unit(u.id).done; }).length;
+
+    var band = el('div', 'stage-band');
+    var cover = el('div', 'stage-cover');
+    cover.innerHTML = Art.scene(Art.sceneForStage(stage.id));
+    band.appendChild(cover);
+
+    var bandText = el('div', 'stage-text');
+    var line = el('div', 'stage-line');
+    line.appendChild(el('span', 'stage-ord', 'Stage ' + stage.id));
+    line.appendChild(el('span', 'level-badge', stage.level));
+    bandText.appendChild(line);
+    bandText.appendChild(el('h2', null, stage.name));
+    bandText.appendChild(el('p', 'muted', stage.blurb));
+
+    var pct = Store.stageProgress(stage.id);
+    var bar = el('div', 'bar slim');
+    var fill = el('div', 'bar-fill');
+    fill.style.width = pct + '%';
+    bar.appendChild(fill);
+    bandText.appendChild(bar);
+    bandText.appendChild(el('p', 'stage-count', cleared + ' of ' + units.length + ' cleared'));
+    band.appendChild(bandText);
+    sec.appendChild(band);
+
+    var trail = el('ol', 'trail');
+    units.forEach(function (u) {
+      trail.appendChild(unitNode(u, current && current.id === u.id));
+    });
+    sec.appendChild(trail);
+    return sec;
+  }
+
+  /* A stop on the road. The circle carries the subject of the unit as a drawing,
+     so the path can be read at a glance without any title being parsed: a cup, a
+     taxi, a pair of scissors. */
+  function unitNode(u, isCurrent) {
+    var p = Store.unit(u.id);
+    var open = Store.isOpen(u.id);
+    var li = el('li', 'stop' + (p.done ? ' done' : '') + (open ? '' : ' locked') + (isCurrent ? ' current' : ''));
+
+    var link = el(open ? 'a' : 'div', 'stop-inner');
+    if (open) link.href = '#/unit/' + u.id;
+
+    var dot = el('span', 'stop-dot');
+    dot.innerHTML = p.done ? Art.glyph('check') : (open ? Art.glyph(Art.iconFor(u)) : Art.glyph('lock'));
+    link.appendChild(dot);
+
+    var body = el('span', 'stop-body');
+    var top = el('span', 'stop-top');
+    top.appendChild(el('span', 'stop-num', 'Unit ' + u.order));
+    if (isCurrent && !p.done) top.appendChild(el('span', 'stop-flag', 'you are here'));
+    if (p.quizBest) top.appendChild(el('span', 'stop-score', 'best ' + p.quizBest + '%'));
+    body.appendChild(top);
+    body.appendChild(el('span', 'stop-title', u.title));
+    body.appendChild(el('span', 'stop-goal', u.goal || ''));
+    link.appendChild(body);
+
+    li.appendChild(link);
+    return li;
   }
 
   /* The first unit that is open and not yet cleared — where "continue" lands. */
@@ -134,25 +214,6 @@
     return list[list.length - 1] || null;
   }
 
-  function unitCard(u) {
-    var p = Store.unit(u.id);
-    var open = Store.isOpen(u.id);
-    var card = el(open ? 'a' : 'div', 'unit-card' + (p.done ? ' done' : '') + (open ? '' : ' locked'));
-    if (open) card.href = '#/unit/' + u.id;
-
-    var top = el('div', 'unit-top');
-    top.appendChild(el('span', 'unit-num', String(u.order)));
-    if (p.done) top.appendChild(el('span', 'tick', '✓'));
-    else if (!open) top.appendChild(el('span', 'tick', '🔒'));
-    card.appendChild(top);
-
-    card.appendChild(el('h3', null, u.title));
-    card.appendChild(el('p', 'muted', u.goal || ''));
-
-    if (p.quizBest) card.appendChild(el('div', 'unit-score', 'best quiz ' + p.quizBest + '%'));
-    return card;
-  }
-
   /* ---------- one unit ---------- */
 
   function screenUnit(id) {
@@ -162,37 +223,120 @@
     Store.enroll(LEB.reviewItems(u));
 
     var wrap = el('div', 'screen');
-    var head = el('header', 'unit-head');
-    head.appendChild(el('div', 'crumb', 'Stage ' + u.stage + ' · Unit ' + u.order));
-    head.appendChild(el('h1', null, u.title));
-    if (u.goal) head.appendChild(el('p', 'lede', u.goal));
+    wrap.appendChild(unitCover(u));
+
+    u.grammar.forEach(function (g) { wrap.appendChild(grammarBlock(g)); });
+    if (u.vocab.length) wrap.appendChild(vocabBlock(u.vocab));
+    if (u.phrases.length) wrap.appendChild(phraseBlock(u.phrases));
+    if (u.dialogue) wrap.appendChild(dialogueBlock(u.dialogue));
+    if (u.culture) wrap.appendChild(cultureBlock(u.culture));
+
+    wrap.appendChild(unitActions(u));
+    return wrap;
+  }
+
+  /* The head of a lesson: the stage's own illustration, dimmed back so the words
+     sit on top of it, with the unit's drawing pressed into the corner like a seal. */
+  function unitCover(u) {
+    var head = el('header', 'unit-cover');
+    var back = el('div', 'unit-cover-art');
+    back.innerHTML = Art.scene(Art.sceneForStage(u.stage));
+    head.appendChild(back);
+
+    var inner = el('div', 'unit-cover-copy');
+    var seal = el('div', 'unit-seal');
+    seal.innerHTML = Art.glyph(Art.iconFor(u));
+    inner.appendChild(seal);
+
+    var text = el('div');
+    text.appendChild(el('div', 'crumb', 'Stage ' + u.stage + ' · Unit ' + u.order));
+    text.appendChild(el('h1', null, u.title));
+    if (u.goal) text.appendChild(el('p', 'lede', u.goal));
+    inner.appendChild(text);
+    head.appendChild(inner);
+
     if (u.canDo.length) {
       var list = el('ul', 'can-do');
       u.canDo.forEach(function (c) { list.appendChild(el('li', null, c)); });
       head.appendChild(list);
     }
-    wrap.appendChild(head);
+    return head;
+  }
 
-    u.grammar.forEach(function (g) { wrap.appendChild(grammarBlock(g)); });
-    if (u.vocab.length) wrap.appendChild(vocabBlock(u.vocab));
-    if (u.phrases.length) wrap.appendChild(phraseBlock(u.phrases));
-
+  function unitActions(u) {
     var actions = el('div', 'actions card');
     var p = Store.unit(u.id);
-    actions.appendChild(el('h2', null, 'Ready?'));
+    actions.appendChild(el('h2', null, 'Now use it'));
     actions.appendChild(el('p', 'muted',
-      'Practice as many times as you like. The quiz needs 80% to open the next unit.'));
+      'Practise as often as you like — nothing is scored there. The quiz is the one ' +
+      'that counts, and eighty per cent marks the unit cleared.'));
     var row = el('div', 'row');
-    var practice = el('a', 'primary-btn', 'Practice (' + u.drills.length + ')');
+    var practice = el('a', 'primary-btn', 'Practise · ' + u.drills.length);
     practice.href = '#/practice/' + u.id;
     row.appendChild(practice);
-    var quiz = el('a', 'ghost-btn', 'Quiz (' + u.quiz.length + ')');
+    var quiz = el('a', 'ghost-btn', 'Quiz · ' + u.quiz.length);
     quiz.href = '#/quiz/' + u.id;
     row.appendChild(quiz);
     actions.appendChild(row);
     if (p.quizBest) actions.appendChild(el('p', 'muted', 'Best so far: ' + p.quizBest + '%'));
-    wrap.appendChild(actions);
-    return wrap;
+
+    var nx = LEB.next(u.id);
+    if (nx) {
+      var on = el('a', 'next-unit');
+      on.href = '#/unit/' + nx.id;
+      var g = el('span', 'next-glyph');
+      g.innerHTML = Art.glyph(Art.iconFor(nx));
+      on.appendChild(g);
+      var t = el('span');
+      t.appendChild(el('span', 'next-lab', 'Next · unit ' + nx.order));
+      t.appendChild(el('span', 'next-title', nx.title));
+      on.appendChild(t);
+      actions.appendChild(on);
+    }
+    return actions;
+  }
+
+  /* A real conversation, read top to bottom, with a speaker on every line.
+     Grammar explains the machine; this is the only place the learner hears the
+     machine running at speed. */
+  function dialogueBlock(d) {
+    var sec = el('section', 'card dialogue-card');
+    sec.appendChild(el('h2', null, d.title || 'Listen in'));
+    if (d.setting) sec.appendChild(el('p', 'muted', d.setting));
+
+    var thread = el('div', 'thread');
+    (d.lines || []).forEach(function (line) {
+      var row = el('div', 'bubble-row ' + (line.you ? 'you' : 'them'));
+      row.appendChild(el('div', 'who', line.who || (line.you ? 'You' : '')));
+      var b = el('div', 'bubble');
+      var lbRow = el('div', 'bubble-head');
+      lbRow.appendChild(el('span', 'bubble-lb', line.lb));
+      Say.attach(lbRow, line.lb);
+      b.appendChild(lbRow);
+      if (line.ar && arabicOn()) b.appendChild(el('div', 'ar small', line.ar));
+      if (line.en) b.appendChild(el('div', 'bubble-en', line.en));
+      if (line.note) b.appendChild(el('div', 'bubble-note', line.note));
+      row.appendChild(b);
+      thread.appendChild(row);
+    });
+    sec.appendChild(thread);
+    return sec;
+  }
+
+  /* Why the language does this, not just that it does. Kept visually apart from
+     grammar so it never reads as something to be memorised. */
+  function cultureBlock(c) {
+    var sec = el('section', 'card culture');
+    var head = el('div', 'culture-head');
+    var g = el('span', 'culture-glyph');
+    g.innerHTML = Art.glyph(c.icon || 'compass');
+    head.appendChild(g);
+    head.appendChild(el('h2', null, c.heading || 'How it works over there'));
+    sec.appendChild(head);
+    var body = el('div', 'body');
+    body.innerHTML = rich(c.body || '');
+    sec.appendChild(body);
+    return sec;
   }
 
   function grammarBlock(g) {
@@ -208,7 +352,10 @@
       var ex = el('div', 'examples');
       g.examples.forEach(function (e) {
         var row = el('div', 'example');
-        row.appendChild(el('div', 'ex-lb', e.lb));
+        var lbRow = el('div', 'ex-head');
+        lbRow.appendChild(el('span', 'ex-lb', e.lb));
+        Say.attach(lbRow, e.lb);
+        row.appendChild(lbRow);
         if (e.ar && arabicOn()) row.appendChild(el('div', 'ar', e.ar));
         row.appendChild(el('div', 'ex-en', e.en));
         if (e.note) row.appendChild(el('div', 'ex-note', e.note));
@@ -255,7 +402,9 @@
     var list = el('div', 'vocab');
     vocab.forEach(function (v) {
       var row = el('div', 'vocab-row');
-      var lb = el('div', 'v-lb', v.lb);
+      var lb = el('div', 'v-lb');
+      lb.appendChild(el('span', null, v.lb));
+      Say.attach(lb, v.lb);
       row.appendChild(lb);
       if (v.ar && arabicOn()) row.appendChild(el('div', 'ar', v.ar));
       row.appendChild(el('div', 'v-en', v.en));
@@ -276,7 +425,10 @@
     var list = el('div', 'phrases');
     phrases.forEach(function (p) {
       var row = el('div', 'phrase');
-      row.appendChild(el('div', 'p-lb', p.lb));
+      var lb = el('div', 'p-lb');
+      lb.appendChild(el('span', null, p.lb));
+      Say.attach(lb, p.lb, { size: 'lg' });
+      row.appendChild(lb);
       if (p.ar && arabicOn()) row.appendChild(el('div', 'ar', p.ar));
       row.appendChild(el('div', 'p-en', p.en));
       if (p.when) row.appendChild(el('div', 'p-when', p.when));
@@ -305,7 +457,10 @@
         if (Store.unit(x.id).seen) pool = pool.concat(LEB.reviewItems(x));
       });
       if (!dueItems.length) {
-        var card = el('div', 'card');
+        var card = el('div', 'card empty-card');
+        var pic = el('div', 'empty-pic');
+        pic.innerHTML = Art.restful();
+        card.appendChild(pic);
         card.appendChild(el('h2', null, 'Nothing is due'));
         card.appendChild(el('p', 'muted',
           'Come back later, or open a new unit — every word you meet joins the review queue by itself.'));
@@ -391,7 +546,10 @@
       });
       matched.slice(0, LIMIT).forEach(function (v) {
         var row = el('div', 'vocab-row');
-        row.appendChild(el('div', 'v-lb', v.lb));
+        var lb = el('div', 'v-lb');
+        lb.appendChild(el('span', null, v.lb));
+        Say.attach(lb, v.lb);
+        row.appendChild(lb);
         if (v.ar && arabicOn()) row.appendChild(el('div', 'ar', v.ar));
         row.appendChild(el('div', 'v-en', v.en));
         row.appendChild(el('div', 'v-note', 'unit ' + v.unit));
@@ -420,10 +578,29 @@
     card.appendChild(toggle('Show Arabic script', 'arabic',
       'Lebanese is mostly written in Latin letters by Lebanese people themselves. ' +
       'Keep the Arabic on if you also want to train your eye for signs and menus.'));
-    card.appendChild(toggle('Open every unit', 'freeRoam',
-      'Off by default: a unit opens when you clear the one before it with 80%. ' +
-      'Turn it on to wander wherever you like.'));
+    card.appendChild(toggle('Play the audio', 'audio',
+      'A speaker sits next to every word and every line. Turn it off if you would ' +
+      'rather read in silence.'));
+    card.appendChild(toggle('Guided path', 'guided',
+      'Off by default: the whole course is open, wander wherever you like. ' +
+      'Turn it on and each unit waits until you have cleared the one before it with 80%.'));
     wrap.appendChild(card);
+
+    var sound = el('section', 'card');
+    sound.appendChild(el('h2', null, 'About the recordings'));
+    var have = Say.count();
+    var total = 930;
+    sound.appendChild(el('p', 'muted',
+      have
+        ? have + ' of roughly ' + total + ' clips are installed. A speaker appears next to ' +
+          'everything that has one; the rest stay silent until their recording arrives.'
+        : 'No recordings are installed yet, so no speakers are shown. Drop mp3 files into ' +
+          'the audio folder, run the voci script, and they appear on their own.'));
+    sound.appendChild(el('p', 'muted',
+      'The app will never read Lebanese with the voice built into your phone or browser. ' +
+      'Every one of those voices speaks Modern Standard Arabic — it would say qahwa for ' +
+      'coffee, and you would learn a pronunciation nobody in Lebanon uses.'));
+    wrap.appendChild(sound);
 
     var danger = el('section', 'card');
     danger.appendChild(el('h2', null, 'Start over'));
@@ -491,10 +668,12 @@
     u.drills.concat(u.quiz).forEach(function (d, i) {
       var where = (i < u.drills.length ? 'drill ' : 'quiz ') + i;
       kinds[d.type] = true;
-      if (['choice', 'gap', 'build', 'type', 'match', 'conjugate'].indexOf(d.type) === -1) {
+      if (['choice', 'gap', 'build', 'type', 'match', 'conjugate', 'listen'].indexOf(d.type) === -1) {
         return fail(where + ': unknown type "' + d.type + '"');
       }
-      if (d.type === 'choice' || d.type === 'gap' || (d.type === 'conjugate' && d.options)) {
+      if (d.type === 'listen' && !d.lb) fail(where + ': listen needs the Lebanese in lb');
+      if (d.type === 'choice' || d.type === 'gap' || d.type === 'listen' ||
+          (d.type === 'conjugate' && d.options)) {
         if (!Array.isArray(d.options) || d.options.length < 2) return fail(where + ': needs at least 2 options');
         if (typeof d.answer !== 'number' || d.answer < 0 || d.answer >= d.options.length) {
           fail(where + ': answer must be an index into options (got ' + JSON.stringify(d.answer) + ')');

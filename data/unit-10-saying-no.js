@@ -134,6 +134,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Trying to stop eating at someone\'s house',
+    setting: 'Hala has already served you twice. Your plate is being looked at. This is a negotiation and you are losing it.',
+    lines: [
+      { who: 'Hala', lb: 'kaméén shwayy?', ar: 'كمان شوي؟', en: 'a little bit more?' },
+      { who: 'You', you: true, lb: 'la2, shukran. maa fii lzouum.', ar: 'لأ، شكرا. ما في لزوم', en: 'no, thank you. There is no need.' },
+      { who: 'Hala', lb: 'léésh? 3aaTel?', ar: 'ليش؟ عاطل؟', en: 'why? Is it no good?',
+        note: 'The trap. Any refusal is heard first as a verdict on the food.' },
+      { who: 'You', you: true, lb: 'abadan! mesh 3aaTel, mnii7 ktiir.', ar: 'أبدا! مش عاطل، منيح كتير', en: 'not at all! It is not bad, it is very good.',
+        note: 'abadan is the flat denial — never, not in the slightest. It is what rescues the sentence.' },
+      { who: 'You', you: true, lb: 'bass ana te3béén.', ar: 'بس أنا تعبان', en: 'but I am tired.' },
+      { who: 'Hala', lb: 'Tayyeb. maa 3lééh.', ar: 'طيب. ما عليه', en: 'all right. Never mind.' },
+      { who: 'You', you: true, lb: 'mesh meshklé?', ar: 'مش مشكلة؟', en: 'no problem?' },
+      { who: 'Hala', lb: 'wala shii!', ar: 'ولا شي', en: 'nothing at all!' }
+    ]
+  },
+
+  culture: {
+    heading: 'No is a conversation, not a word',
+    icon: 'no',
+    body:
+      'A bare `la2, shukran` is grammatically perfect and socially thin. In Lebanon a refusal is ' +
+      'expected to come with something around it: a reason, a compliment to the thing you are ' +
+      'refusing, or a flat denial of the insult the other person has already assumed. That is the ' +
+      'work `abadan` is doing above.\n\n' +
+      'The other half of the rule is that a first no is not believed, and is not meant to be. Food ' +
+      'is offered three times. So is a lift home, so is the last piece of anything. Refusing once ' +
+      'and being pressed again is not somebody ignoring you — it is the form. If you actually mean ' +
+      'it, you refuse three times, warmly, and nobody is hurt.\n\n' +
+      'This cuts both ways. When a Lebanese guest turns something down once, they may well want it. ' +
+      'Offer again.\n\n' +
+      'One useful asymmetry: `mesh 3aaTel` — not bad — is genuine praise here, not the faint kind. ' +
+      'And `wala shii`, nothing at all, is the warmest possible answer to "was that a problem?"',
+  },
+
   drills: [
     { type: 'choice', q: 'How do you say "not good", talking about a film?',
       options: ['mesh mnii7', 'maa mnii7', 'mann mnii7'], answer: 0,

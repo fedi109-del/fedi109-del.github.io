@@ -144,6 +144,38 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Ordering without a single verb',
+    setting: 'A café on a side street. Plastic chairs, one waiter, no menu. Everything you are about to say is a stem with an ending on it.',
+    lines: [
+      { who: 'Waiter', lb: 'ahla w sahla. shou baddak?', ar: 'أهلا وسهلا. شو بدك؟', say: 'أهلا وسهلا. شو بدك؟', en: 'welcome. What do you want?' },
+      { who: 'You', you: true, lb: 'baddé 2ahwe, 3mool ma3rouuf.', ar: 'بدي قهوة، عمول معروف', say: 'بدي أهوة، عمول معروف', en: 'I want a coffee, please.',
+        note: 'baddé, not "I want": there is no verb in that sentence at all.' },
+      { who: 'Waiter', lb: 'ma3 7aliib?', ar: 'مع حليب؟', en: 'with milk?' },
+      { who: 'You', you: true, lb: 'la2, bala 7aliib.', ar: 'لأ، بلا حليب', en: 'no, without milk.' },
+      { who: 'Waiter', lb: 'shii tééné?', ar: 'شي تاني؟', en: 'anything else?' },
+      { who: 'You', you: true, lb: 'maay kaméén, eza betriid.', ar: 'مي كمان، إذا بتريد', en: 'water as well, if you would.',
+        note: 'Water arrives beside the coffee whether you ask or not, but asking is polite.' },
+      { who: 'Waiter', lb: 'ana bel-khedmé.', ar: 'أنا بالخدمة', en: 'I am at your service.' }
+    ]
+  },
+
+  culture: {
+    heading: 'How much sugar is a real question',
+    icon: 'cup',
+    body:
+      'Order a coffee in Lebanon and you will be asked how you take it. There are three usual ' +
+      'answers and they are not about milk, which mostly does not come into it. `sada` is bitter, ' +
+      'no sugar at all, and it is what gets served at funerals and in serious conversations. ' +
+      '`wasaT` is a little sugar, and it is what most people drink. `7elwé` is properly sweet.\n\n' +
+      'Answer with the wrong one and you will get a cup you do not enjoy, because Lebanese coffee is ' +
+      'small, thick, and not something you dilute afterwards. Say `wasaT` if you have no idea.\n\n' +
+      'The other thing nobody warns you about: refusing a coffee is difficult. Offering it is how a ' +
+      'shop, an office or a home says you are welcome, and "no thank you" is heard as an answer to ' +
+      'the welcome rather than to the drink. If you genuinely cannot, take it, hold it, and leave ' +
+      'most of it. Everyone does.',
+  },
+
   drills: [
     { type: 'choice', q: 'A friend asks what you would like. How do you say "I want a coffee"?',
       options: ['baddé 2ahwe', 'baddak 2ahwe', 'ma3é 2ahwe'], answer: 0,

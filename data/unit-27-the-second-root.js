@@ -181,6 +181,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Where were you and why did nobody hear from you',
+    setting: 'Every verb in this exchange is one of the awkward ones. Notice how far the past is from the present in each pair.',
+    lines: [
+      { who: 'Hala', lb: 'wéén re7t mbéére7? maa sme3t menak shii.', ar: 'وين رحت مبارح؟ ما سمعت منك شي', en: 'where did you go yesterday? I did not hear anything from you.' },
+      { who: 'You', you: true, lb: 'nzelt 3a Béérout. wSolt ta2riiban es-séé3a khamsé.', ar: 'نزلت ع بيروت. وصلت تقريبا الساعة خمسة', en: 'I went down to Beirut. I arrived around five.',
+        note: 'nezel becomes nzelt, woSel becomes wSolt. The present birouu7 has nothing to do with raa7 either.' },
+      { who: 'Hala', lb: 'w shou 3amelt honiik?', ar: 'وشو عملت هنيك؟', en: 'and what did you do there?' },
+      { who: 'You', you: true, lb: 'shtaréét shwayy ghraaD, ba3déén sheft Ziad.', ar: 'اشتريت شوي غراض، بعدين شفت زياد', en: 'I bought a few things, then I saw Ziad.' },
+      { who: 'Hala', lb: 'Ziad! shou aal?', ar: 'زياد! شو قال؟', say: 'زياد! شو أال؟', en: 'Ziad! What did he say?' },
+      { who: 'You', you: true, lb: 'wala shii. shereb 2ahwe w reje3 3al-maktab.', ar: 'ولا شي. شرب قهوة ورجع عالمكتب', say: 'ولا شي. شرب أهوة ورجع عالمكتب', en: 'nothing. He drank a coffee and went back to the office.' },
+      { who: 'Hala', lb: 'w enta? kent ta3béén?', ar: 'وانت؟ كنت تعبان؟', en: 'and you? Were you tired?' },
+      { who: 'You', you: true, lb: 'ktiir. rje3t 3al-béét w nemt bakkiir.', ar: 'كتير. رجعت عالبيت ونمت بكير', en: 'very. I went home and slept early.',
+        note: 'néém, he slept, becomes nemt for I. The long vowel shortens the moment an ending arrives.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Why these have to be learned in pairs',
+    icon: 'root',
+    body:
+      'Up to now every verb has behaved. You met one form and the rest followed from it. This unit ' +
+      'is where that stops, and it is the point at which most self-taught learners quietly plateau.\n\n' +
+      'The verbs here have a weak letter in the middle or at the end, and that letter behaves ' +
+      'differently under stress. `raa7` and `birouu7` are the same verb. So are `néém` and `bnéém`, ' +
+      '`shééf` and `bshouuf`, `aal` and `b2ouul`. Nothing about the present form lets you predict the ' +
+      'past, and nothing about the past lets you predict the present.\n\n' +
+      'So learn them as pairs, out loud, together, the way you would learn *go / went*. Do not learn ' +
+      '`raa7` and hope. English speakers already accept that went has nothing to do with go, and ' +
+      'this is the same bargain in a different language.\n\n' +
+      'There is one mercy: the pairs are a closed set. There are perhaps thirty verbs like this and ' +
+      'they are the thirty you use most, which means you will meet each of them constantly and they ' +
+      'stick faster than the regular ones.',
+  },
+
   drills: [
     { type: 'conjugate', en: 'I went', root: 'rouu7', person: 'ana', tense: 'past',
       options: ['re7t', 'raa7t', 'rou7t'], answer: 0,

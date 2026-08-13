@@ -187,6 +187,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Standing in an empty flat',
+    setting: 'Rami found it and wants you to like it. You have thirty seconds to have an opinion.',
+    lines: [
+      { who: 'Rami', lb: 'shou ra2yak bel-béét?', ar: 'شو رأيك بالبيت؟', en: 'what do you think of the place?' },
+      { who: 'You', you: true, lb: '7elo ktiir!', ar: 'حلو كتير', en: 'really lovely!' },
+      { who: 'Rami', lb: '3youunak el-7elwiin.', ar: 'عيونك الحلوين', en: 'it is your beautiful eyes',
+        note: 'Never accept a compliment flat. This one hands it straight back: anything looks good to eyes like yours.' },
+      { who: 'You', you: true, lb: 'bass zghiir shwayy. w 2adiim.', ar: 'بس زغير شوي. وقديم', en: 'but it is a bit small. And old.' },
+      { who: 'Rami', lb: '2adiim, bass mesh 3aaTel. l-ouuDa kbiiré.', ar: 'قديم، بس مش عاطل. الأوضة كبيرة', en: 'old, but not bad. The room is big.',
+        note: 'kbiiré with the -é: ouuDa is feminine, so the adjective follows it.' },
+      { who: 'You', you: true, lb: 'w es-se3r?', ar: 'والسعر؟', en: 'and the price?' },
+      { who: 'Rami', lb: 'rkhiiS. ktiir rkhiiS.', ar: 'رخيص. كتير رخيص', en: 'cheap. Very cheap.' },
+      { who: 'You', you: true, lb: 'raw3a!', ar: 'روعة', en: 'wonderful!' }
+    ]
+  },
+
+  culture: {
+    heading: 'Praise, and the thing you say right after it',
+    icon: 'colour',
+    body:
+      'Two habits come with describing things out loud in Lebanon, and neither is in the grammar.\n\n' +
+      'The first: a compliment is not accepted, it is returned. Say someone\'s house is lovely and ' +
+      'you get `3youunak el-7elwiin` — your eyes are the beautiful ones. Say their cooking is good ' +
+      'and you get something similar. Standing there and saying thank you is not wrong, it is just ' +
+      'flat, and it leaves the exchange unfinished.\n\n' +
+      'The second is older and stranger. Praising something openly is thought to attract the evil ' +
+      'eye — `el-3één` — so praise is followed by `smallah`, a short word that means "in the name of ' +
+      'God" and functions as a guard. This is strongest about children and health. Telling a mother ' +
+      'her baby is beautiful without adding `smallah` will make someone in the room uncomfortable, ' +
+      'even people who would tell you they do not believe in any of it.\n\n' +
+      'You will meet `smallah` properly in unit 23, along with the sour version of it: `ktiir ' +
+      'smallah`, said with a flat voice, which means the opposite of everything it contains.',
+  },
+
   drills: [
     { type: 'choice', q: 'Where does an adjective stand in Lebanese?',
       options: ['after the noun', 'before the noun', 'either side, as you like'], answer: 0,

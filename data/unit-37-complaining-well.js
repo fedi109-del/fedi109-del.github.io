@@ -215,6 +215,43 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Two hours late and an excuse involving traffic',
+    setting: 'The technician was coming at ten. It is midday. He has just walked in, entirely relaxed.',
+    lines: [
+      { who: 'Technician', lb: 'mar7aba! 3afwan, kéén fii 3aj2et séér.', ar: 'مرحبا! عفوا، كان في عجقة سير', en: 'hello! Sorry, there was traffic.',
+        note: 'The national excuse. Sometimes true.' },
+      { who: 'You', you: true, lb: 'dakhlak, Sarelna saa3téén naaTriin.', ar: 'دخلك، صرلنا ساعتين ناطرين', en: 'excuse me, we have been waiting two hours.' },
+      { who: 'Technician', lb: 'ma3ak 7a2. bass eT-Tarii2 kéénet msakkra.', ar: 'معك حق. بس الطريق كانت مسكرة', en: 'you are right. But the road was closed.' },
+      { who: 'You', you: true, lb: 'Tayyeb, bass léésh maa khabbartné? bass telifoon.', ar: 'طيب، بس ليش ما خبرتني؟ بس تليفون', en: 'all right, but why did you not tell me? Just a phone call.',
+        note: 'The complaint lands on the thing that could have been done, not on the person. That is what keeps it working.' },
+      { who: 'Technician', lb: 'ma3ak 7a2. b3tezer.', ar: 'معك حق. بعتذر', en: 'you are right. I apologise.' },
+      { who: 'You', you: true, lb: 'maa fii lzouum. bass el-marra el-jééyé, khabberné.', ar: 'ما في لزوم. بس المرة الجاية، خبرني', en: 'there is no need. But next time, tell me.' },
+      { who: 'Technician', lb: 'kell Talab metl haT-Talab. halla2 bebda.', ar: 'كل طلب متل هالطلب. هلق ببدا', en: 'consider it done. I will start now.' },
+      { who: 'You', you: true, lb: 'ya3Tiik el-3aafyé.', ar: 'يعطيك العافية', en: 'may he give you strength.',
+        note: 'The complaint is finished. Ending on this puts the room back where it was.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Complain about the thing, not the person',
+    icon: 'rain',
+    body:
+      'There is a way to raise a problem here that gets it fixed, and a way that gets you an ' +
+      'argument and no repair. The difference is not politeness — Lebanese complaints are direct — ' +
+      'it is where the complaint points.\n\n' +
+      'Aim at the fact and you are on the same side as the other person: the bill has a mistake in ' +
+      'it, nobody called me, the road was closed. Aim at the person and they start defending ' +
+      'themselves, and everything after that is about their dignity rather than your problem.\n\n' +
+      'The sequence that works: open with `dakhlak` or `baddé 3azzbak`, state the fact, ask for the ' +
+      'specific thing you want, and then close warmly — `maa fii lzouum`, `ya3Tiik el-3aafyé`. That ' +
+      'last step is not optional. A complaint that ends the moment it is resolved leaves the room ' +
+      'colder than it was.\n\n' +
+      'And `mesh ma32ouul` is your strongest ordinary weapon. It means this is not acceptable, it is ' +
+      'said with real feeling, and it is nowhere near an insult. `yaa 3ayb esh-shouum` is a level ' +
+      'above and should be kept for something that genuinely deserves it.',
+  },
+
   drills: [
     { type: 'choice', q: 'What is `dakhlak` for?',
       options: [

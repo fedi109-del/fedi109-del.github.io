@@ -215,6 +215,45 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'One more, and then one more',
+    setting: 'The last unit of the course, and the last set of the session. Both are nearly finished.',
+    lines: [
+      { who: 'Coach', lb: 'yalla! kaméén wa7ad!', ar: 'يلا! كمان واحد', en: 'come on! One more!' },
+      { who: 'You', you: true, lb: 'maa fiini. ana helkéén.', ar: 'ما فيني. أنا هلكان', en: 'I cannot. I am wiped out.' },
+      { who: 'Coach', lb: 'fiik! enta awé add maa baddak.', ar: 'فيك! انت قوي قد ما بدك', say: 'فيك! انت أوي أد ما بدك', en: 'you can! You are as strong as you want to be.' },
+      { who: 'You', you: true, lb: 'Allah yséé3edné 3léék.', ar: 'الله يساعدني عليك', en: 'God help me with you',
+        note: 'Affectionate exasperation. Said to someone who will not let it go, and it means you like them.' },
+      { who: 'Coach', lb: 'maa te3tal hamm. ba3d wa7ad w bass.', ar: 'ما تعتل هم. بعد واحد وبس', en: 'do not carry the worry. One more and that is it.' },
+      { who: 'You', you: true, lb: 'aal wa7ad… ktiir smallah.', ar: 'قال واحد… كتير سمالله', say: 'أال واحد… كتير سمالله', en: 'he said one… yeah, right.',
+        note: 'aal plus a word repeats what somebody just claimed, with the doubt built in. Pure sarcasm.' },
+      { who: 'Coach', lb: 'khalaS, bi-zyéédé la-lyoom. ya3Tiik el-3aafyé.', ar: 'خلص، بزيادة لليوم. يعطيك العافية', en: 'all right, that is plenty for today. May he give you strength.' },
+      { who: 'You', you: true, lb: 'w enta kaméén. bshouufak boukra — nshalla.', ar: 'وانت كمان. بشوفك بكرا — إن شاء الله', en: 'and you. See you tomorrow — God willing.',
+        note: 'You now know exactly how much that nshalla is promising. Unit 25.' }
+    ]
+  },
+
+  culture: {
+    heading: 'Yalla, and what you have actually got',
+    icon: 'ball',
+    body:
+      '`yalla` is the last word of this course and the first word of most Lebanese sentences that ' +
+      'need something to happen. Come on, let us go, hurry up, right then, fine, goodbye. Said ' +
+      'twice, quickly, it is impatience. Said once, slowly, it ends a conversation. Said by a coach ' +
+      'it means one more.\n\n' +
+      'Football and basketball are followed seriously here, and support is loud, partisan and ' +
+      'inherited. The encouragement vocabulary in this unit — `yalla`, `awé`, `maa te3tal hamm` — is ' +
+      'the same whether you are pushing a friend through a last set, getting somebody through a bad ' +
+      'week, or shouting at a screen.\n\n' +
+      'Forty units back you could not read `2ahwe`. You can now order it, complain that it came ' +
+      'cold, argue about which café makes it best, tell somebody what happened to you yesterday and ' +
+      'what you were going to do instead, and turn down an invitation without anybody being ' +
+      'hurt.\n\n' +
+      'What is left is not more grammar. It is hours of listening, and a willingness to be corrected ' +
+      'by people who will be delighted that you tried. `bi-zyéédé la-lyoom` — that is plenty for ' +
+      'today.',
+  },
+
   drills: [
     { type: 'conjugate', en: 'we can walk', root: 'emshé', person: 'ne7na', tense: 'subordinate',
       options: ['fiina nemshé', 'fiina mnemshé', 'fiiyon yemsho', 'fiik temshé'], answer: 0,

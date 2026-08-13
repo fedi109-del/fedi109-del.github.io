@@ -169,6 +169,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Half a kilo of everything',
+    setting: 'A grocer the size of a garage, stacked to the ceiling. Abou Georges has known your building for thirty years and has never used a price list.',
+    lines: [
+      { who: 'Abou Georges', lb: '2moor!', ar: 'أمور', en: 'what can I get you?' },
+      { who: 'You', you: true, lb: 'baddé khebz w jebné, 3mool ma3rouuf.', ar: 'بدي خبز وجبنة، عمول معروف', en: 'I want bread and cheese, please.' },
+      { who: 'Abou Georges', lb: 'addéé jebné?', ar: 'قديه جبنة؟', say: 'أديه جبنة؟', en: 'how much cheese?' },
+      { who: 'You', you: true, lb: 'noSS kiilo. w 2anniinet 7aliib.', ar: 'نص كيلو. وقنينة حليب', en: 'half a kilo. And a bottle of milk.',
+        note: '2anniinet, not 2anniiné: the word changes shape when something follows it. A bottle of milk, not a bottle and milk.' },
+      { who: 'Abou Georges', lb: 'shii tééné? el-banadouura Taaza lyoom.', ar: 'شي تاني؟ البندورة طازة اليوم', en: 'anything else? The tomatoes are fresh today.' },
+      { who: 'You', you: true, lb: 'Tayyeb, kiilo banadouura kaméén.', ar: 'طيب، كيلو بندورة كمان', en: 'all right, a kilo of tomatoes as well.' },
+      { who: 'You', you: true, lb: 'addé baddak menné?', ar: 'قديه بدك مني؟', say: 'أديه بدك مني؟', en: 'how much do I owe you?' },
+      { who: 'Abou Georges', lb: 'el-ghala yoom 3an yoom, ya 3ammé…', ar: 'الغلا يوم عن يوم، يا عمي', en: 'the cost of things, day after day…',
+        note: 'The sentence that comes before a price nobody is happy about. It is said to the ceiling, not to you.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The shop that knows your building',
+    icon: 'shop',
+    body:
+      'The small grocer — the `dekkéén` — is not a small supermarket. It is closer to a front room ' +
+      'that sells things. Prices are in the owner\'s head, quantities are approximate, and the last ' +
+      'few hundred lira get waved away rather than counted out.\n\n' +
+      'Two things follow from that. Regulars run a tab, paid off whenever, and asking to start one ' +
+      'after two visits is not how it works — it arrives on its own once he knows which floor you ' +
+      'live on. And nothing is weighed in a hurry, because the transaction is also the conversation. ' +
+      'Going in, pointing, and leaving in ninety seconds reads as rudeness, even if you smiled.\n\n' +
+      'You will hear `el-ghala yoom 3an yoom` constantly, at the grocer and everywhere else. It is ' +
+      'not aimed at you and it does not want an answer beyond a sympathetic noise. After the ' +
+      'currency collapse of 2019 it stopped being a complaint about prices and became something ' +
+      'closer to a greeting between people who both know what happened.\n\n' +
+      'And `3ammé` in that last line means my uncle. Any man much older than you is uncle; any ' +
+      'woman is `khaalté`, my aunt. Nobody is related to anybody.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['khebz', 'bread'], ['jebné', 'cheese'], ['bayD', 'eggs'], ['7aliib', 'milk']] },

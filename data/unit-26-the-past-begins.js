@@ -176,6 +176,41 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'What happened to Sunday',
+    setting: 'Monday. Tony wants the account and you have very little to give him.',
+    lines: [
+      { who: 'Tony', lb: 'shou 3amelt mbéére7?', ar: 'شو عملت مبارح؟', en: 'what did you do yesterday?' },
+      { who: 'You', you: true, lb: 'wala shii. a3adt bel-béét.', ar: 'ولا شي. قعدت بالبيت', say: 'ولا شي. أعدت بالبيت', en: 'nothing. I stayed at home.',
+        note: 'a3adt with the -t: that ending is you and I both, and only the sentence tells you which.' },
+      { who: 'Tony', lb: 'kell en-nhaar?', ar: 'كل النهار؟', en: 'all day?' },
+      { who: 'You', you: true, lb: 'trawwa2t bakkiir, ba3déén ghassalt eS-S7ouun.', ar: 'ترّوقت بكير، بعدين غسلت الصحون', en: 'I had breakfast early, then I washed the dishes.' },
+      { who: 'Tony', lb: 'w khallaSt esh-sheghl?', ar: 'وخلصت الشغل؟', en: 'and did you finish the work?' },
+      { who: 'You', you: true, lb: 'maa khallaSt. bass kammalt shwayy.', ar: 'ما خلصت. بس كملت شوي', en: 'I did not finish. But I carried on a bit.' },
+      { who: 'Tony', lb: 'w akalt shii?', ar: 'وأكلت شي؟', en: 'and did you eat anything?' },
+      { who: 'You', you: true, lb: 'Talabt men barra. maa 3endé wa2t Tabbekh.', ar: 'طلبت من برا. ما عندي وقت طبخ', en: 'I ordered in. I have no time to cook.' },
+      { who: 'Tony', lb: 'Sadda2tak.', ar: 'صدقتك', en: 'I believed you',
+        note: 'Past tense, said with a straight face. It means the opposite.' }
+    ]
+  },
+
+  culture: {
+    heading: 'The past is where Lebanese gets simple',
+    icon: 'hourglass',
+    body:
+      'This is the good news after twenty-five units. The Lebanese past tense keeps one shape and ' +
+      'adds an ending to it — no prefix, no b, no `3am`, nothing in front of the verb at all. `akal` ' +
+      'is he ate; `akalt` is I ate or you ate; `akalna` is we ate. Compare that with the present ' +
+      'tense, which changes at the front and the back at once.\n\n' +
+      'The one thing that trips people is that `-t` covers both I and you, masculine. `akalt` on its ' +
+      'own is ambiguous and nobody minds, because the conversation has already made it obvious. If ' +
+      'it has not, the pronoun goes back in: `ana akalt`, `enta akalt`.\n\n' +
+      'Negating is just as easy. `maa` in front, exactly where it goes in the present. `maa ' +
+      'khallaSt` — I did not finish. There is no equivalent of "did" to worry about.\n\n' +
+      'Which leaves you free to worry about the thing that is genuinely hard in this language, ' +
+      'coming in unit 27: verbs whose middle letter moves when the tense changes.',
+  },
+
   drills: [
     { type: 'choice', q: 'In the past tense, where is the person marked?',
       options: ['at the end of the verb', 'at the front of the verb', 'at both ends'], answer: 0,

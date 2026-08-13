@@ -174,6 +174,42 @@ LEB.addUnit({
     }
   ],
 
+  dialogue: {
+    title: 'Directions given entirely by landmark',
+    setting: 'You want a pharmacy. Nobody is going to give you a street name, because nobody uses them.',
+    lines: [
+      { who: 'You', you: true, lb: '3afwan, fii Saydaliyyé 2ariibé?', ar: 'عفوا، في صيدلية قريبة؟', say: 'عفوا، في صيدلية أريبة؟', en: 'excuse me, is there a pharmacy nearby?' },
+      { who: 'Woman', lb: 'fii, fii. 2ariib ktiir.', ar: 'في، في. قريب كتير', say: 'في، في. أريب كتير', en: 'there is, there is. Very close.' },
+      { who: 'You', you: true, lb: 'wéén bet-te7diid?', ar: 'وين بالتحديد؟', en: 'where exactly?',
+        note: 'The question that saves you twenty minutes. Ask it every time.' },
+      { who: 'Woman', lb: '2eddéém el-forn. 7add el-ma7al el-a7mar.', ar: 'قدام الفرن. حد المحل الأحمر', say: 'أدام الفرن. حد المحل الأحمر', en: 'in front of the bakery. Next to the red shop.' },
+      { who: 'You', you: true, lb: 'w el-forn wéén?', ar: 'والفرن وين؟', en: 'and where is the bakery?' },
+      { who: 'Woman', lb: 'ta7t. ta7t el-jesr.', ar: 'تحت. تحت الجسر', en: 'below. Under the bridge.' },
+      { who: 'You', you: true, lb: 'Tayyeb. jouwwa walla barra?', ar: 'طيب. جوا ولا برا؟', en: 'all right. Inside or outside?' },
+      { who: 'Woman', lb: 'barra, 3ala Tuul. 2ariib ktiir!', ar: 'برا، على طول. قريب كتير', say: 'برا، على طول. أريب كتير', en: 'outside, straight ahead. Very close!',
+        note: 'Everything is 2ariib ktiir. Ask the next person as well.' }
+    ]
+  },
+
+  culture: {
+    heading: 'A city with no addresses',
+    icon: 'pin',
+    body:
+      'Beirut has street names. They are on signs, they are on maps, and almost nobody navigates by ' +
+      'them. Directions are given by what you can see: the bakery, the pharmacy, the church, the ' +
+      'building with the blue balconies, the spot where the petrol station used to be twenty years ' +
+      'ago and is not any more.\n\n' +
+      'So the prepositions in this unit are not a grammar exercise, they are the address system. ' +
+      '`2eddéém`, `wara`, `7add`, `ta7t`, `fo2` — in front of, behind, next to, under, above — do ' +
+      'the work that a street number does elsewhere. Deliveries are arranged this way. So are ' +
+      'taxis.\n\n' +
+      '`fo2` and `ta7t` also mean up the hill and down the hill, which in a city built on slopes is ' +
+      'most of the information. Going `ta7t` from Achrafieh means towards the sea. People say it ' +
+      'about whole neighbourhoods, not just staircases.\n\n' +
+      'The practical rule: get two landmarks, not one. A single landmark you have never seen is ' +
+      'worth nothing, and the second one tells you which direction the first is in.',
+  },
+
   drills: [
     { type: 'match',
       pairs: [['jouwwa', 'inside'], ['barra', 'outside'], ['fo2', 'above'], ['ta7t', 'under']] },
