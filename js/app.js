@@ -148,6 +148,17 @@
     var band = el('div', 'stage-band');
     var cover = el('div', 'stage-cover');
     cover.innerHTML = Art.scene(Art.sceneForStage(stage.id));
+    /* If a real photograph exists for this stage it sits over the drawing; while
+       it loads — or if it never arrives — the drawing is what you see. No file,
+       no photo: the same pact the audio buttons keep. */
+    var photo = new Image();
+    photo.className = 'stage-photo';
+    photo.alt = '';
+    photo.loading = 'lazy';
+    photo.src = 'images/stage-' + stage.id + '.jpg';
+    photo.addEventListener('load', function () { band.classList.add('has-photo'); });
+    photo.addEventListener('error', function () { photo.remove(); });
+    cover.appendChild(photo);
     band.appendChild(cover);
 
     var bandText = el('div', 'stage-text');
@@ -446,6 +457,31 @@
 
   /* ---------- sessions ---------- */
 
+  /* Practice opens with the ear when it can. If some of the unit's words have a
+     recorded track, one or two of them come back as listening questions at the
+     top of the session. They are built here, not in the data files, because
+     they only make sense on a device that actually has the mp3s: elsewhere the
+     session simply starts one question earlier. */
+  function listenExtras(u) {
+    if (!window.Say || !u.vocab || u.vocab.length < 4) return [];
+    var voiced = u.vocab.filter(function (v) { return v.en && Say.has(v.lb); });
+    if (!voiced.length) return [];
+    return Drills.shuffle(voiced).slice(0, 2).map(function (v) {
+      var wrong = Drills.shuffle(u.vocab.filter(function (o) {
+        return o.en && o.en !== v.en;
+      })).slice(0, 2).map(function (o) { return o.en; });
+      if (wrong.length < 2) return null;
+      var options = Drills.shuffle([v.en].concat(wrong));
+      return {
+        type: 'listen',
+        lb: v.lb,
+        options: options,
+        answer: options.indexOf(v.en),
+        explain: v.note || ''
+      };
+    }).filter(Boolean);
+  }
+
   function screenSession(mode, id) {
     var host = el('div', 'screen run');
     var u = id ? LEB.byId(id) : null;
@@ -481,7 +517,7 @@
     }
 
     if (!u) return el('p', 'warn', 'Unknown unit: ' + id);
-    var queue = (mode === 'quiz' ? u.quiz : u.drills);
+    var queue = (mode === 'quiz' ? u.quiz : listenExtras(u).concat(u.drills));
     Runner.start({
       host: host,
       mode: mode,

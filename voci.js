@@ -55,6 +55,20 @@ for (const f of files) {
    Chi registra legge comunque la colonna libanese, non l'arabo. */
 const lines = new Map();
 
+/* Tre lettere dell'arabo scritto non suonano mai come la loro forma, a Beirut:
+   la qaaf è un colpo di glottide, ذ e ظ escono z. Le unità le scrivono giuste
+   (è così che il libanese si scrive), ma una macchina le leggerebbe alla
+   standard — qahwa, dhawq — cioè la pronuncia che quest'app esiste per evitare.
+   Qui la grafia per la macchina viene riscritta come si pronuncia. */
+function fonetica(s) {
+  return String(s || '')
+    /* ق dopo vocale lunga in mezzo alla parola: hamza nuda — سوق diventa سوء */
+    .replace(/([^\s][اوي])ق/g, '$1ء')
+    /* ogni altra ق: alef con hamza — قهوة diventa أهوة, وقت diventa وأت */
+    .replace(/ق/g, 'أ')
+    .replace(/[ذظ]/g, 'ز');
+}
+
 function add(lb, ar, en, unit, kind, say) {
   if (!lb || typeof lb !== 'string') return;
   const k = key(lb);
@@ -62,7 +76,7 @@ function add(lb, ar, en, unit, kind, say) {
   lines.set(k, {
     key: k,
     lb: lb,
-    say: say || ar || '',
+    say: fonetica(say || ar || ''),
     ar: ar || '',
     en: en || '',
     unit: unit,
