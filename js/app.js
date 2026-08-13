@@ -1,9 +1,19 @@
 /* app.js — the screens and the navigation between them.
-   Routes live in the address bar so the back button works: #/path, #/unit/u03,
-   #/practice/u03, #/quiz/u03, #/review, #/reference, #/settings */
+   Routes live in the address bar so the back button works:
+     #/path      the Learn tab: the course as a road of round stops
+     #/train     the Practice tab: review, listening, weak spots
+     #/words     the Words tab: reference tables and every word in the app
+     #/more      the More tab: the guide, the settings, the resets
+     #/guide     the start-from-zero guide
+     #/unit/uNN  the tips-and-notes page of one unit
+     #/practice/uNN · #/quiz/uNN · #/review · #/listening · #/shuffle — sessions
+
+   The shape of the whole thing is an app, not a site: a tab bar at the bottom,
+   one screen at a time above it, and sessions that take the full screen with
+   both bars hidden, because an exercise deserves the learner's whole thumb. */
 
 (function () {
-  var root, headerSlot;
+  var root, headerSlot, tabbar;
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -29,7 +39,9 @@
       .replace(/\n/g, '<br>');
   }
 
-  /* ---------- header ---------- */
+  /* ---------- top bar ----------
+     Identity on the left, the three numbers that matter on the right. No menu:
+     navigation lives in the tab bar, where an app keeps it. */
 
   function paintHeader() {
     headerSlot.innerHTML = '';
@@ -53,71 +65,182 @@
     stats.appendChild(review);
     stats.appendChild(xp);
     stats.appendChild(streak);
-
-    var nav = el('nav', 'nav');
-    [['#/path', 'Path'], ['#/reference', 'Reference'], ['#/settings', 'Settings']].forEach(function (p) {
-      var a = el('a', 'nav-link', p[1]);
-      a.href = p[0];
-      nav.appendChild(a);
-    });
-
     headerSlot.appendChild(stats);
-    headerSlot.appendChild(nav);
   }
 
-  /* ---------- the path ---------- */
+  /* ---------- tab bar ----------
+     Built once, kept forever; render() only moves the light. */
+
+  var TABS = [
+    ['#/path', 'Learn', 'cedar'],
+    ['#/train', 'Practice', 'stopwatch'],
+    ['#/words', 'Words', 'book'],
+    ['#/more', 'More', 'gear']
+  ];
+
+  function buildTabs() {
+    tabbar = el('nav', null);
+    tabbar.id = 'tabbar';
+    tabbar.setAttribute('aria-label', 'Main');
+    TABS.forEach(function (t) {
+      var a = el('a', 'tab');
+      a.href = t[0];
+      var g = el('span', 'tab-glyph');
+      g.innerHTML = Art.glyph(t[2]);
+      a.appendChild(g);
+      a.appendChild(el('span', 'tab-lab', t[1]));
+      tabbar.appendChild(a);
+    });
+    document.body.appendChild(tabbar);
+  }
+
+  /* Which tab a route belongs to, so Unit 7's tips still light up Learn. */
+  var TAB_OF = {
+    path: '#/path', unit: '#/path', guide: '#/path',
+    train: '#/train',
+    words: '#/words', reference: '#/words',
+    more: '#/more', settings: '#/more'
+  };
+
+  function setActiveTab(routeKey) {
+    var want = TAB_OF[routeKey] || '';
+    tabbar.querySelectorAll('.tab').forEach(function (a) {
+      a.classList.toggle('on', a.getAttribute('href') === want);
+    });
+  }
+
+  /* ---------- the unit sheet ----------
+     Tap a stop on the road and this slides up from the bottom edge: what the
+     unit promises, and the three doors into it. It is the app's handshake —
+     nothing starts by accident, nothing needs a page load to be looked at. */
+
+  function closeSheet() {
+    var s = document.querySelector('.sheet-wrap');
+    if (s) s.remove();
+    document.removeEventListener('keydown', sheetKey);
+  }
+
+  function sheetKey(e) { if (e.key === 'Escape') closeSheet(); }
+
+  function openSheet(u) {
+    closeSheet();
+    var p = Store.unit(u.id);
+    var open = Store.isOpen(u.id);
+
+    var wrap = el('div', 'sheet-wrap');
+    var back = el('div', 'sheet-back');
+    back.addEventListener('click', closeSheet);
+    wrap.appendChild(back);
+
+    var sheet = el('div', 'sheet');
+    sheet.setAttribute('role', 'dialog');
+    sheet.setAttribute('aria-label', 'Unit ' + u.order + ' — ' + u.title);
+    sheet.appendChild(el('div', 'sheet-handle'));
+
+    var head = el('div', 'sheet-head');
+    var seal = el('div', 'unit-seal');
+    seal.innerHTML = Art.glyph(p.done ? 'check' : Art.iconFor(u));
+    head.appendChild(seal);
+    var ht = el('div');
+    var stage = null;
+    LEB.stages.forEach(function (s) { if (s.id === u.stage) stage = s; });
+    ht.appendChild(el('div', 'crumb', 'Unit ' + u.order + (stage ? ' · ' + stage.level : '')));
+    ht.appendChild(el('h2', null, u.title));
+    head.appendChild(ht);
+    sheet.appendChild(head);
+
+    if (u.goal) sheet.appendChild(el('p', 'sheet-goal', u.goal));
+
+    if (u.canDo.length) {
+      var list = el('ul', 'can-do');
+      u.canDo.forEach(function (c) { list.appendChild(el('li', null, c)); });
+      sheet.appendChild(list);
+    }
+
+    if (p.quizBest) sheet.appendChild(el('p', 'sheet-score', 'Best quiz so far: ' + p.quizBest + '%'));
+
+    if (!open) {
+      sheet.appendChild(el('p', 'muted',
+        'Guided path is on: clear the unit before this one with 80% and it opens. ' +
+        'Or switch Guided path off under More, and wander freely.'));
+    } else {
+      var row = el('div', 'row sheet-row');
+      var start = el('a', 'primary-btn lg', p.seen ? 'Start lesson' : 'Start lesson');
+      start.href = '#/practice/' + u.id;
+      start.addEventListener('click', closeSheet);
+      row.appendChild(start);
+      var quiz = el('a', 'ghost-btn lg', 'Quiz');
+      quiz.href = '#/quiz/' + u.id;
+      quiz.addEventListener('click', closeSheet);
+      row.appendChild(quiz);
+      sheet.appendChild(row);
+
+      var tips = el('a', 'sheet-tips');
+      tips.href = '#/unit/' + u.id;
+      tips.addEventListener('click', closeSheet);
+      var tg = el('span', 'next-glyph');
+      tg.innerHTML = Art.glyph('book');
+      tips.appendChild(tg);
+      var tt = el('span');
+      tt.appendChild(el('span', 'next-lab', 'Before you start'));
+      tt.appendChild(el('span', 'next-title', 'Tips & notes — the grammar, the words, the dialogue'));
+      tips.appendChild(tt);
+      sheet.appendChild(tips);
+    }
+
+    wrap.appendChild(sheet);
+    document.body.appendChild(wrap);
+    document.addEventListener('keydown', sheetKey);
+  }
+
+  /* ---------- the Learn tab ---------- */
 
   function screenPath() {
     var wrap = el('div', 'screen wide');
     var done = Store.completedCount();
-    var totalUnits = LEB.all().length;
     var next = nextUnitToDo();
+    var fresh = !done && !Store.xp();
 
-    /* The opening: the same evening the stage covers walk through, seen from the
-       start of it. Everything the learner needs in order to begin is in this one
-       panel — the promise, where they are, and the one button that continues. */
-    var hero = el('section', 'hero-panel');
-    var art = el('div', 'hero-art');
-    /* Both drawings are laid down and CSS shows one: the upright composition
-       beside the headline on a wide screen, the wide strip above it on a phone.
-       Two SVGs cost about a kilobyte between them, which is cheaper than asking
-       either one to survive a shape it was not drawn for. */
-    var tall = el('div', 'art-tall');
-    tall.innerHTML = Art.portrait();
-    var wide = el('div', 'art-wide');
-    wide.innerHTML = Art.scene('rooftops');
-    art.appendChild(tall);
-    art.appendChild(wide);
-    hero.appendChild(art);
-
-    var copy = el('div', 'hero-copy');
-    copy.appendChild(el('h1', null, 'Learn Lebanese, not textbook Arabic'));
-    copy.appendChild(el('p', 'lede',
-      'This is the spoken language of Lebanon: the one people use in a taxi, at the ' +
-      'bakery, on the phone. Forty units, five stages, from your first hello to holding ' +
-      'an argument about traffic.'));
-
-    var meters = el('div', 'meters');
-    meters.appendChild(meter(done + '/' + totalUnits, 'units cleared'));
-    meters.appendChild(meter(String(Store.xp()), 'experience'));
-    meters.appendChild(meter(String(Store.streak()), 'day streak'));
-    copy.appendChild(meters);
-
-    if (next) {
+    /* The first thing on screen is the next thing to do — an app opens on the
+       action, not on a poster of itself. */
+    if (fresh) {
+      var hello = el('section', 'card welcome-card');
+      var art = el('div', 'welcome-art');
+      art.innerHTML = Art.scene('dawn');
+      hello.appendChild(art);
+      var wc = el('div', 'welcome-copy');
+      wc.appendChild(el('h1', null, 'From zero to real Lebanese'));
+      wc.appendChild(el('p', 'lede',
+        'No Arabic needed to begin — not a letter, not a sound. The course starts ' +
+        'with how Lebanese is written and works up to holding your own in a fast ' +
+        'conversation. Ten minutes a day is enough.'));
       var row = el('div', 'row');
-      var cont = el('a', 'primary-btn lg', done ? 'Continue — unit ' + next.order : 'Begin with unit 1');
-      cont.href = '#/unit/' + next.id;
-      row.appendChild(cont);
+      var g = el('a', 'ghost-btn lg', 'Read this first');
+      g.href = '#/guide';
+      row.appendChild(g);
+      var b = el('a', 'primary-btn lg', 'Start Unit 1');
+      if (next) b.href = '#/unit/' + next.id;
+      row.appendChild(b);
+      wc.appendChild(row);
+      hello.appendChild(wc);
+      wrap.appendChild(hello);
+    } else if (next) {
+      var now = el('section', 'now-strip');
+      var nt = el('div', 'now-text');
+      nt.appendChild(el('div', 'crumb', 'Up next'));
+      nt.appendChild(el('div', 'now-title', 'Unit ' + next.order + ' — ' + next.title));
+      now.appendChild(nt);
+      var cont = el('a', 'primary-btn', Store.unit(next.id).seen ? 'Continue' : 'Start');
+      cont.href = Store.unit(next.id).seen ? '#/practice/' + next.id : '#/unit/' + next.id;
+      now.appendChild(cont);
       var due = Store.dueCount();
       if (due) {
-        var rev = el('a', 'ghost-btn lg', 'Review ' + due);
+        var rev = el('a', 'ghost-btn', 'Review ' + due);
         rev.href = '#/review';
-        row.appendChild(rev);
+        now.appendChild(rev);
       }
-      copy.appendChild(row);
+      wrap.appendChild(now);
     }
-    hero.appendChild(copy);
-    wrap.appendChild(hero);
 
     LEB.stages.forEach(function (stage) {
       var units = LEB.byStage(stage.id);
@@ -131,16 +254,8 @@
     return wrap;
   }
 
-  function meter(value, label) {
-    var m = el('div', 'meter');
-    m.appendChild(el('div', 'meter-num', value));
-    m.appendChild(el('div', 'meter-lab', label));
-    return m;
-  }
-
-  /* One stage: an illustrated band, then its units strung along a single thread.
-     The thread is the point — five separate grids of cards read as a catalogue,
-     one continuous line reads as a road you are somewhere along. */
+  /* One stage: an illustrated band that says where you are, then its units as
+     round stops staggered down the middle of the screen — a road, not a list. */
   function stageBlock(stage, units, current) {
     var sec = el('section', 'stage');
     var cleared = units.filter(function (u) { return Store.unit(u.id).done; }).length;
@@ -179,40 +294,41 @@
     band.appendChild(bandText);
     sec.appendChild(band);
 
-    var trail = el('ol', 'trail');
-    units.forEach(function (u) {
-      trail.appendChild(unitNode(u, current && current.id === u.id));
+    var trail = el('ol', 'path-trail');
+    units.forEach(function (u, i) {
+      trail.appendChild(node(u, current && current.id === u.id, i));
     });
     sec.appendChild(trail);
     return sec;
   }
 
-  /* A stop on the road. The circle carries the subject of the unit as a drawing,
-     so the path can be read at a glance without any title being parsed: a cup, a
-     taxi, a pair of scissors. */
-  function unitNode(u, isCurrent) {
+  /* A stop on the road: a pressable coin with the unit's drawing in it, the
+     name underneath, and the whole row shifted left or right so the eye walks
+     a winding path instead of falling down a column. */
+  function node(u, isCurrent, i) {
     var p = Store.unit(u.id);
     var open = Store.isOpen(u.id);
-    var li = el('li', 'stop' + (p.done ? ' done' : '') + (open ? '' : ' locked') + (isCurrent ? ' current' : ''));
+    var li = el('li', 'node shift-' + (i % 4) +
+      (p.done ? ' done' : '') + (open ? '' : ' locked') + (isCurrent ? ' current' : ''));
 
-    var link = el(open ? 'a' : 'div', 'stop-inner');
-    if (open) link.href = '#/unit/' + u.id;
+    if (isCurrent && !p.done) li.appendChild(el('span', 'node-flag', 'start'));
 
-    var dot = el('span', 'stop-dot');
-    dot.innerHTML = p.done ? Art.glyph('check') : (open ? Art.glyph(Art.iconFor(u)) : Art.glyph('lock'));
-    link.appendChild(dot);
+    var btn = el('button', 'node-btn');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Unit ' + u.order + ' — ' + u.title);
+    btn.innerHTML = Art.glyph(open ? Art.iconFor(u) : 'lock');
+    if (p.done) {
+      var badge = el('span', 'node-check');
+      badge.innerHTML = Art.glyph('check');
+      btn.appendChild(badge);
+    }
+    btn.addEventListener('click', function () { openSheet(u); });
+    li.appendChild(btn);
 
-    var body = el('span', 'stop-body');
-    var top = el('span', 'stop-top');
-    top.appendChild(el('span', 'stop-num', 'Unit ' + u.order));
-    if (isCurrent && !p.done) top.appendChild(el('span', 'stop-flag', 'you are here'));
-    if (p.quizBest) top.appendChild(el('span', 'stop-score', 'best ' + p.quizBest + '%'));
-    body.appendChild(top);
-    body.appendChild(el('span', 'stop-title', u.title));
-    body.appendChild(el('span', 'stop-goal', u.goal || ''));
-    link.appendChild(body);
-
-    li.appendChild(link);
+    var lab = el('span', 'node-lab');
+    lab.appendChild(el('span', 'node-num', 'Unit ' + u.order));
+    lab.appendChild(el('span', 'node-title', u.title));
+    li.appendChild(lab);
     return li;
   }
 
@@ -225,7 +341,7 @@
     return list[list.length - 1] || null;
   }
 
-  /* ---------- one unit ---------- */
+  /* ---------- one unit: the tips-and-notes page ---------- */
 
   function screenUnit(id) {
     var u = LEB.byId(id);
@@ -242,7 +358,19 @@
     if (u.dialogue) wrap.appendChild(dialogueBlock(u.dialogue));
     if (u.culture) wrap.appendChild(cultureBlock(u.culture));
 
-    wrap.appendChild(unitActions(u));
+    var p = Store.unit(u.id);
+    if (p.quizBest) wrap.appendChild(el('p', 'muted center', 'Best quiz so far: ' + p.quizBest + '%'));
+
+    /* The way onward rides the bottom of the screen the whole way down: read as
+       much or as little as you like, the lesson is always one thumb away. */
+    var cta = el('div', 'unit-cta');
+    var start = el('a', 'primary-btn', 'Start lesson');
+    start.href = '#/practice/' + u.id;
+    cta.appendChild(start);
+    var quiz = el('a', 'ghost-btn', 'Quiz');
+    quiz.href = '#/quiz/' + u.id;
+    cta.appendChild(quiz);
+    wrap.appendChild(cta);
     return wrap;
   }
 
@@ -260,7 +388,7 @@
     inner.appendChild(seal);
 
     var text = el('div');
-    text.appendChild(el('div', 'crumb', 'Stage ' + u.stage + ' · Unit ' + u.order));
+    text.appendChild(el('div', 'crumb', 'Stage ' + u.stage + ' · Unit ' + u.order + ' · Tips & notes'));
     text.appendChild(el('h1', null, u.title));
     if (u.goal) text.appendChild(el('p', 'lede', u.goal));
     inner.appendChild(text);
@@ -272,39 +400,6 @@
       head.appendChild(list);
     }
     return head;
-  }
-
-  function unitActions(u) {
-    var actions = el('div', 'actions card');
-    var p = Store.unit(u.id);
-    actions.appendChild(el('h2', null, 'Now use it'));
-    actions.appendChild(el('p', 'muted',
-      'Practise as often as you like — nothing is scored there. The quiz is the one ' +
-      'that counts, and eighty per cent marks the unit cleared.'));
-    var row = el('div', 'row');
-    var practice = el('a', 'primary-btn', 'Practise · ' + u.drills.length);
-    practice.href = '#/practice/' + u.id;
-    row.appendChild(practice);
-    var quiz = el('a', 'ghost-btn', 'Quiz · ' + u.quiz.length);
-    quiz.href = '#/quiz/' + u.id;
-    row.appendChild(quiz);
-    actions.appendChild(row);
-    if (p.quizBest) actions.appendChild(el('p', 'muted', 'Best so far: ' + p.quizBest + '%'));
-
-    var nx = LEB.next(u.id);
-    if (nx) {
-      var on = el('a', 'next-unit');
-      on.href = '#/unit/' + nx.id;
-      var g = el('span', 'next-glyph');
-      g.innerHTML = Art.glyph(Art.iconFor(nx));
-      on.appendChild(g);
-      var t = el('span');
-      t.appendChild(el('span', 'next-lab', 'Next · unit ' + nx.order));
-      t.appendChild(el('span', 'next-title', nx.title));
-      on.appendChild(t);
-      actions.appendChild(on);
-    }
-    return actions;
   }
 
   /* A real conversation, read top to bottom, with a speaker on every line.
@@ -457,11 +552,42 @@
 
   /* ---------- sessions ---------- */
 
+  /* The first time through a unit, its words are taught before they are asked:
+     a card per word, dealt in small hands between the exercises. On a return
+     visit the cards stay in the deck box — you have met them, so you drill. */
+  function teachCards(u) {
+    return u.vocab.map(function (v) {
+      return {
+        type: 'teach',
+        lb: v.lb,
+        ar: v.ar || '',
+        en: v.en,
+        note: v.note || '',
+        pos: v.pos || '',
+        gender: v.gender || ''
+      };
+    });
+  }
+
+  /* Three new words, then a few exercises that can now be answered, then three
+     more. Teaching everything first would be a lecture; asking everything first
+     would be an ambush. */
+  function interleave(cards, drills) {
+    var queue = [];
+    var ci = 0, di = 0;
+    var perHand = 3;
+    var perPlay = Math.max(2, Math.ceil(drills.length / Math.ceil(cards.length / perHand || 1)));
+    while (ci < cards.length || di < drills.length) {
+      for (var a = 0; a < perHand && ci < cards.length; a++) queue.push(cards[ci++]);
+      for (var b = 0; b < perPlay && di < drills.length; b++) queue.push(drills[di++]);
+    }
+    return queue;
+  }
+
   /* Practice opens with the ear when it can. If some of the unit's words have a
-     recorded track, one or two of them come back as listening questions at the
-     top of the session. They are built here, not in the data files, because
-     they only make sense on a device that actually has the mp3s: elsewhere the
-     session simply starts one question earlier. */
+     recorded track, one or two of them come back as listening questions inside
+     the session. They are built here, not in the data files, because they only
+     make sense on a device that actually has the mp3s. */
   function listenExtras(u) {
     if (!window.Say || !u.vocab || u.vocab.length < 4) return [];
     var voiced = u.vocab.filter(function (v) { return v.en && Say.has(v.lb); });
@@ -482,9 +608,21 @@
     }).filter(Boolean);
   }
 
+  function emptyCard(host, title, note, btnLabel, href) {
+    var card = el('div', 'card empty-card');
+    var pic = el('div', 'empty-pic');
+    pic.innerHTML = Art.restful();
+    card.appendChild(pic);
+    card.appendChild(el('h2', null, title));
+    card.appendChild(el('p', 'muted', note));
+    var b = el('a', 'primary-btn', btnLabel);
+    b.href = href;
+    card.appendChild(b);
+    host.appendChild(card);
+  }
+
   function screenSession(mode, id) {
     var host = el('div', 'screen run');
-    var u = id ? LEB.byId(id) : null;
 
     if (mode === 'review') {
       var dueItems = Store.due(20);
@@ -493,31 +631,85 @@
         if (Store.unit(x.id).seen) pool = pool.concat(LEB.reviewItems(x));
       });
       if (!dueItems.length) {
-        var card = el('div', 'card empty-card');
-        var pic = el('div', 'empty-pic');
-        pic.innerHTML = Art.restful();
-        card.appendChild(pic);
-        card.appendChild(el('h2', null, 'Nothing is due'));
-        card.appendChild(el('p', 'muted',
-          'Come back later, or open a new unit — every word you meet joins the review queue by itself.'));
-        var b = el('a', 'primary-btn', 'Back to the path');
-        b.href = '#/path';
-        card.appendChild(b);
-        host.appendChild(card);
+        emptyCard(host, 'Nothing is due',
+          'Come back later, or open a new unit — every word you meet joins the review queue by itself.',
+          'Back to the path', '#/path');
         return host;
       }
       Runner.start({
         host: host,
         mode: 'review',
         queue: Runner.reviewQueue(dueItems, pool),
-        onQuit: function () { go('#/path'); },
-        onFinish: function () { go('#/path'); }
+        onQuit: function () { go('#/train'); },
+        onFinish: function () { go('#/train'); }
       });
       return host;
     }
 
+    if (mode === 'listening') {
+      var voiced = [];
+      LEB.all().forEach(function (x) {
+        if (!Store.unit(x.id).seen) return;
+        x.vocab.forEach(function (v) {
+          if (v.en && Say.has(v.lb)) voiced.push({ v: v, u: x });
+        });
+      });
+      if (voiced.length < 4) {
+        emptyCard(host, 'The ear needs recordings',
+          'Listening practice appears once recorded clips are installed for words you have met.',
+          'Back to practice', '#/train');
+        return host;
+      }
+      var qs = Drills.shuffle(voiced).slice(0, 10).map(function (it) {
+        var wrong = Drills.shuffle(voiced.filter(function (o) { return o.v.en !== it.v.en; }))
+          .slice(0, 2).map(function (o) { return o.v.en; });
+        var options = Drills.shuffle([it.v.en].concat(wrong));
+        return { type: 'listen', lb: it.v.lb, options: options, answer: options.indexOf(it.v.en), explain: it.v.note || '' };
+      });
+      Runner.start({
+        host: host, mode: 'listening', queue: qs,
+        onQuit: function () { go('#/train'); },
+        onFinish: function () { go('#/train'); }
+      });
+      return host;
+    }
+
+    if (mode === 'shuffle') {
+      var poolD = [];
+      LEB.all().forEach(function (x) {
+        if (Store.unit(x.id).seen) poolD = poolD.concat(x.drills);
+      });
+      if (!poolD.length) {
+        emptyCard(host, 'Nothing to mix yet',
+          'Open a unit first — the mixer draws its questions from every unit you have met.',
+          'Back to the path', '#/path');
+        return host;
+      }
+      Runner.start({
+        host: host, mode: 'mix', queue: Drills.shuffle(poolD).slice(0, 12),
+        onQuit: function () { go('#/train'); },
+        onFinish: function () { go('#/train'); }
+      });
+      return host;
+    }
+
+    var u = LEB.byId(id);
     if (!u) return el('p', 'warn', 'Unknown unit: ' + id);
-    var queue = (mode === 'quiz' ? u.quiz : listenExtras(u).concat(u.drills));
+
+    /* Starting a lesson counts as meeting the unit, wherever you came from. */
+    Store.markSeen(u.id);
+    Store.enroll(LEB.reviewItems(u));
+
+    var queue;
+    if (mode === 'quiz') {
+      queue = u.quiz;
+    } else {
+      var p = Store.unit(u.id);
+      var drills = listenExtras(u).concat(u.drills);
+      /* First pass teaches; every later pass goes straight to the exercises. */
+      queue = (p.practiced || p.done) ? drills : interleave(teachCards(u), drills);
+    }
+
     Runner.start({
       host: host,
       mode: mode,
@@ -537,17 +729,112 @@
     return host;
   }
 
-  /* ---------- reference ---------- */
+  /* ---------- the Practice tab ----------
+     One place for everything that is not new ground: the review queue, the ear,
+     the units that still wobble, and a mixed bag for a spare five minutes. */
 
-  function screenReference() {
+  function screenTrain() {
     var wrap = el('div', 'screen');
-    wrap.appendChild(el('h1', null, 'Reference'));
-    wrap.appendChild(el('p', 'lede', 'The tables worth coming back to, plus every word in the app.'));
+    wrap.appendChild(el('h1', null, 'Practice'));
+    wrap.appendChild(el('p', 'lede', 'New ground lives on the path. This is where what you met stops wobbling.'));
 
-    var ref = LEB.getReference();
-    if (ref) {
-      ref.sections.forEach(function (s) { wrap.appendChild(grammarBlock(s)); });
+    /* Review — the one that matters most, so it comes first and biggest. */
+    var due = Store.dueCount();
+    var rev = el('section', 'card train-card');
+    var rh = el('div', 'train-head');
+    var rg = el('span', 'train-glyph');
+    rg.innerHTML = Art.glyph('hourglass');
+    rh.appendChild(rg);
+    var rt = el('div');
+    rt.appendChild(el('h2', null, 'Review'));
+    rt.appendChild(el('p', 'muted', due
+      ? due + ' item' + (due > 1 ? 's are' : ' is') + ' due. Right answers move further away; misses come back tomorrow.'
+      : 'Nothing is due right now. Every word you meet joins this queue by itself.'));
+    rh.appendChild(rt);
+    rev.appendChild(rh);
+    if (due) {
+      var rb = el('a', 'primary-btn', 'Review ' + due);
+      rb.href = '#/review';
+      rev.appendChild(rb);
     }
+    wrap.appendChild(rev);
+
+    /* Listening — only shown as a door when there are clips to hear. */
+    var lis = el('section', 'card train-card');
+    var lh = el('div', 'train-head');
+    var lg = el('span', 'train-glyph');
+    lg.innerHTML = Art.glyph('ear');
+    lh.appendChild(lg);
+    var lt = el('div');
+    lt.appendChild(el('h2', null, 'Listening'));
+    lt.appendChild(el('p', 'muted', Say.count()
+      ? 'Ten words from units you have met, by ear alone.'
+      : 'Appears once recorded clips are installed. The app never uses the phone\'s own Arabic voice — it speaks the wrong Arabic.'));
+    lh.appendChild(lt);
+    lis.appendChild(lh);
+    if (Say.count()) {
+      var lb = el('a', 'primary-btn', 'Train the ear');
+      lb.href = '#/listening';
+      lis.appendChild(lb);
+    }
+    wrap.appendChild(lis);
+
+    /* Weak spots — quizzes tried and not yet cleared. */
+    var weak = LEB.all().filter(function (u) {
+      var p = Store.unit(u.id);
+      return p.quizBest > 0 && p.quizBest < 80;
+    });
+    if (weak.length) {
+      var wk = el('section', 'card train-card');
+      var wh = el('div', 'train-head');
+      var wg = el('span', 'train-glyph');
+      wg.innerHTML = Art.glyph('scales');
+      wh.appendChild(wg);
+      var wt = el('div');
+      wt.appendChild(el('h2', null, 'Not cleared yet'));
+      wt.appendChild(el('p', 'muted', 'Quizzes you have tried that still sit under 80%.'));
+      wh.appendChild(wt);
+      wk.appendChild(wh);
+      var chips = el('div', 'row');
+      weak.slice(0, 6).forEach(function (u) {
+        var c = el('a', 'ghost-btn', 'Unit ' + u.order + ' · ' + Store.unit(u.id).quizBest + '%');
+        c.href = '#/practice/' + u.id;
+        chips.appendChild(c);
+      });
+      wk.appendChild(chips);
+      wrap.appendChild(wk);
+    }
+
+    /* The mixer — a spare five minutes, twelve questions from anywhere. */
+    var seen = LEB.all().some(function (u) { return Store.unit(u.id).seen; });
+    var mix = el('section', 'card train-card');
+    var mh = el('div', 'train-head');
+    var mg = el('span', 'train-glyph');
+    mg.innerHTML = Art.glyph('star');
+    mh.appendChild(mg);
+    var mt = el('div');
+    mt.appendChild(el('h2', null, 'Quick mix'));
+    mt.appendChild(el('p', 'muted', seen
+      ? 'Twelve questions drawn from every unit you have met, in no order at all — the way the street asks them.'
+      : 'Opens after your first unit.'));
+    mh.appendChild(mt);
+    mix.appendChild(mh);
+    if (seen) {
+      var mb = el('a', 'primary-btn', 'Deal twelve');
+      mb.href = '#/shuffle';
+      mix.appendChild(mb);
+    }
+    wrap.appendChild(mix);
+
+    return wrap;
+  }
+
+  /* ---------- the Words tab ---------- */
+
+  function screenWords() {
+    var wrap = el('div', 'screen');
+    wrap.appendChild(el('h1', null, 'Words'));
+    wrap.appendChild(el('p', 'lede', 'Every word in the course, and the tables worth coming back to.'));
 
     var sec = el('section', 'card');
     sec.appendChild(el('h2', null, 'Word list'));
@@ -601,22 +888,135 @@
     search.addEventListener('input', function () { draw(search.value); });
     draw('');
     wrap.appendChild(sec);
+
+    var ref = LEB.getReference();
+    if (ref) {
+      wrap.appendChild(el('h2', 'ref-title', 'Reference tables'));
+      ref.sections.forEach(function (s) { wrap.appendChild(grammarBlock(s)); });
+    }
     return wrap;
   }
 
-  /* ---------- settings ---------- */
+  /* ---------- the start-from-zero guide ----------
+     The complete beginner's first five minutes, written down once and kept in
+     reach forever. Nothing here is required reading twice. */
 
-  function screenSettings() {
+  function guideCard(heading, body, table) {
+    var g = { heading: heading, body: body };
+    if (table) g.table = table;
+    return grammarBlock(g);
+  }
+
+  function screenGuide() {
     var wrap = el('div', 'screen');
-    wrap.appendChild(el('h1', null, 'Settings'));
-    var card = el('section', 'card');
+    wrap.appendChild(el('h1', null, 'Start here'));
+    wrap.appendChild(el('p', 'lede',
+      'Five minutes of orientation, then the course does the rest. You need no ' +
+      'Arabic at all to begin — this page is the whole entry ticket.'));
 
+    wrap.appendChild(guideCard(
+      'What you are learning',
+      'This course teaches **Lebanese Arabic** — the spoken language of Lebanon, the one ' +
+      'used in kitchens, taxis, shops and phone calls.\n\n' +
+      'It is not Modern Standard Arabic, the formal language of news bulletins and ' +
+      'official documents. Nobody chats in Standard Arabic, and courses that teach it ' +
+      'leave you understanding the news but not your neighbour. The two differ in sound, ' +
+      'in words, even in grammar: where a textbook says *qahwa* for coffee, Beirut says ' +
+      '`2ahwe` — the famous Arabic q is not pronounced in everyday Lebanese at all.\n\n' +
+      'Everything in this app is the Lebanese that Lebanese people actually say.'));
+
+    wrap.appendChild(guideCard(
+      'How Lebanese is written here',
+      'Lebanese people mostly write their language in **Latin letters**, on phones and ' +
+      'in chats. A few sounds have no Latin letter, so digits that *look* like the ' +
+      'Arabic letters stand in for them. This is not an invention of this app — it is ' +
+      'how the whole country types. You will learn each sound properly in Unit 1; ' +
+      'this table is only so the writing never surprises you.',
+      {
+        headers: ['you will see', 'it stands for', 'the sound'],
+        rows: [
+          ['`7`', 'ح', 'a hard breath from the throat — not an ordinary h'],
+          ['`3`', 'ع', 'a squeezed sound low in the throat, with voice'],
+          ['`2`', 'ء and ق', 'a clean stop, like the catch in "uh-oh"'],
+          ['`S D T Z`', 'ص ض ط ظ', 'capital = the heavy version; it changes the word'],
+          ['`é` · `aa` `ii` `uu`', '—', 'a closed e; doubled vowels are held longer'],
+          ['`kh` `gh` `sh`', 'خ غ ش', 'as in Scottish *loch*, a gargled g, and sh']
+        ]
+      }));
+
+    wrap.appendChild(guideCard(
+      'How the course works',
+      'The path has **forty units in five stages**, from absolute zero to arguing about ' +
+      'traffic. Every unit works the same way:\n\n' +
+      '**1 · Tips & notes** — short explanations of how the language works, with the ' +
+      'unit\'s words and a real conversation. Read it before the lesson, or dive in and ' +
+      'come back when curious.\n\n' +
+      '**2 · Lesson** — new words are taught to you card by card, a few at a time, with ' +
+      'exercises in between that use exactly what you were just shown. Nothing is asked ' +
+      'before it is taught.\n\n' +
+      '**3 · Quiz** — the one that counts. Eighty per cent clears the unit.\n\n' +
+      '**4 · Review** — every word you meet joins a review queue that resurfaces it at ' +
+      'growing intervals: tomorrow, in two days, in four. Ten minutes of review a day is ' +
+      'worth more than an hour on Sunday.'));
+
+    wrap.appendChild(guideCard(
+      'How to study',
+      'Do the review first, every day — it is short, and it is the part that makes ' +
+      'things stick. Then take new ground when you have the appetite for it.\n\n' +
+      '**Say everything out loud.** Lebanese lives in the mouth and the ear, not on ' +
+      'paper. Whisper on the bus if you must, but move your lips.\n\n' +
+      'Do not chase perfect scores. Eighty per cent clears a unit because the missing ' +
+      'twenty comes back on its own through review. Forward beats flawless.\n\n' +
+      'The course is fully open: nothing is locked. If you want the discipline of one ' +
+      'unit at a time, switch **Guided path** on under More.'));
+
+    wrap.appendChild(guideCard(
+      'About the audio',
+      'Where you see a speaker button, a real recording exists — press and hold it for ' +
+      'a slowed-down version. Where there is no button, the clip has not been recorded ' +
+      'yet.\n\n' +
+      'The app will never read Lebanese with your phone\'s built-in voice. Every Arabic ' +
+      'voice a phone ships speaks Modern Standard Arabic and would teach you a ' +
+      'pronunciation nobody in Lebanon uses. Wrong audio is worse than silence.'));
+
+    var row = el('div', 'row center-row');
+    var u1 = LEB.all()[0];
+    if (u1) {
+      var b = el('a', 'primary-btn lg', 'Begin with Unit 1');
+      b.href = '#/unit/' + u1.id;
+      row.appendChild(b);
+    }
+    wrap.appendChild(row);
+    return wrap;
+  }
+
+  /* ---------- the More tab ---------- */
+
+  function screenMore() {
+    var wrap = el('div', 'screen');
+    wrap.appendChild(el('h1', null, 'More'));
+
+    var guide = el('a', 'card more-guide');
+    guide.href = '#/guide';
+    var gh = el('div', 'train-head');
+    var gg = el('span', 'train-glyph');
+    gg.innerHTML = Art.glyph('compass');
+    gh.appendChild(gg);
+    var gt = el('div');
+    gt.appendChild(el('h2', null, 'Start here — the guide'));
+    gt.appendChild(el('p', 'muted', 'What Lebanese is, how it is written, and how to study. Five minutes, worth them.'));
+    gh.appendChild(gt);
+    guide.appendChild(gh);
+    wrap.appendChild(guide);
+
+    var card = el('section', 'card');
+    card.appendChild(el('h2', null, 'Settings'));
     card.appendChild(toggle('Show Arabic script', 'arabic',
       'Lebanese is mostly written in Latin letters by Lebanese people themselves. ' +
       'Keep the Arabic on if you also want to train your eye for signs and menus.'));
     card.appendChild(toggle('Play the audio', 'audio',
-      'A speaker sits next to every word and every line. Turn it off if you would ' +
-      'rather read in silence.'));
+      'A speaker sits next to every word and line that has a recording. Turn it off ' +
+      'if you would rather read in silence.'));
     card.appendChild(toggle('Guided path', 'guided',
       'Off by default: the whole course is open, wander wherever you like. ' +
       'Turn it on and each unit waits until you have cleared the one before it with 80%.'));
@@ -625,18 +1025,26 @@
     var sound = el('section', 'card');
     sound.appendChild(el('h2', null, 'About the recordings'));
     var have = Say.count();
-    var total = 930;
     sound.appendChild(el('p', 'muted',
       have
-        ? have + ' of roughly ' + total + ' clips are installed. A speaker appears next to ' +
-          'everything that has one; the rest stay silent until their recording arrives.'
-        : 'No recordings are installed yet, so no speakers are shown. Drop mp3 files into ' +
-          'the audio folder, run the voci script, and they appear on their own.'));
+        ? have + ' recorded clips are installed. A speaker appears next to everything ' +
+          'that has one; the rest stay silent until their recording arrives.'
+        : 'No recordings are installed yet, so no speakers are shown. They will appear ' +
+          'on their own the moment the clips are added — no update needed.'));
     sound.appendChild(el('p', 'muted',
-      'The app will never read Lebanese with the voice built into your phone or browser. ' +
-      'Every one of those voices speaks Modern Standard Arabic — it would say qahwa for ' +
-      'coffee, and you would learn a pronunciation nobody in Lebanon uses.'));
+      'The app never reads Lebanese with the voice built into your phone. Every one of ' +
+      'those voices speaks Modern Standard Arabic — it would say qahwa for coffee, and ' +
+      'you would learn a pronunciation nobody in Lebanon uses.'));
     wrap.appendChild(sound);
+
+    var about = el('section', 'card');
+    about.appendChild(el('h2', null, 'About the language here'));
+    about.appendChild(el('p', 'muted',
+      'Everything in this app is Lebanese (Levantine) as it is spoken — not Modern ' +
+      'Standard Arabic. That is why qaaf is a glottal stop, why there is no verb "to ' +
+      'have", and why some of these sentences would be wrong in a fuS7a exam. That is ' +
+      'the point.'));
+    wrap.appendChild(about);
 
     var danger = el('section', 'card');
     danger.appendChild(el('h2', null, 'Start over'));
@@ -652,14 +1060,6 @@
     });
     danger.appendChild(b);
     wrap.appendChild(danger);
-
-    var about = el('section', 'card');
-    about.appendChild(el('h2', null, 'About the language here'));
-    about.appendChild(el('p', 'muted',
-      'Everything in this app is Lebanese (Levantine) as it is spoken — not Modern Standard Arabic. ' +
-      'That is why qaaf is a glottal stop, why there is no verb "to have", and why some of these ' +
-      'sentences would be wrong in a fuS7a exam. That is the point.'));
-    wrap.appendChild(about);
     return wrap;
   }
 
@@ -766,33 +1166,41 @@
 
   /* ---------- routing ---------- */
 
+  var RUN_ROUTES = { practice: 1, quiz: 1, review: 1, listening: 1, shuffle: 1 };
+
   function render() {
+    closeSheet();
     paintHeader();
     var hash = location.hash || '#/path';
     var parts = hash.replace('#/', '').split('/');
+    var key = parts[0] || 'path';
     var view;
-    switch (parts[0]) {
+    switch (key) {
       case 'unit': view = screenUnit(parts[1]); break;
       case 'practice': view = screenSession('practice', parts[1]); break;
       case 'quiz': view = screenSession('quiz', parts[1]); break;
       case 'review': view = screenSession('review'); break;
-      case 'reference': view = screenReference(); break;
-      case 'settings': view = screenSettings(); break;
+      case 'listening': view = screenSession('listening'); break;
+      case 'shuffle': view = screenSession('shuffle'); break;
+      case 'train': view = screenTrain(); break;
+      case 'words': case 'reference': view = screenWords(); break;
+      case 'more': case 'settings': view = screenMore(); break;
+      case 'guide': view = screenGuide(); break;
       case 'check': view = screenCheck(); break;
       default: view = screenPath();
     }
+    document.body.classList.toggle('in-run', !!RUN_ROUTES[key]);
     root.innerHTML = '';
     root.appendChild(view);
     window.scrollTo(0, 0);
-    document.querySelectorAll('.nav-link').forEach(function (a) {
-      a.classList.toggle('on', a.getAttribute('href') === '#/' + parts[0]);
-    });
+    setActiveTab(key);
   }
 
   window.addEventListener('hashchange', render);
   document.addEventListener('DOMContentLoaded', function () {
     root = document.getElementById('app');
     headerSlot = document.getElementById('header');
+    buildTabs();
     render();
   });
 })();

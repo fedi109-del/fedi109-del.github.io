@@ -39,12 +39,15 @@ window.Runner = (function () {
     });
   }
 
-  /* mode: 'practice' | 'quiz' | 'review' */
+  /* mode: 'practice' | 'quiz' | 'review' | 'listening' | 'mix' */
   function start(opts) {
     var host = opts.host;
     var queue = opts.queue.slice();
     var mode = opts.mode;
     var total = queue.length;
+    /* Teaching cards ride the same queue but are not questions: they fill the
+       progress bar, never the score. A session of cards alone scores 100. */
+    var scoreable = queue.filter(function (q) { return q.type !== 'teach'; }).length;
     var pos = 0;
     var correct = 0;
     var current = null;
@@ -98,6 +101,12 @@ window.Runner = (function () {
       counter.textContent = (pos + 1) + '/' + total;
       barInner.style.width = Math.round((pos / total) * 100) + '%';
       current = Drills.create(queue[pos], stage);
+      /* A teaching card has nothing to get wrong: the button goes straight to
+         Continue and the first press moves on. */
+      if (queue[pos].type === 'teach') {
+        checked = true;
+        action.textContent = (pos + 1 >= total) ? 'Finish' : 'Continue';
+      }
       stage.scrollTop = 0;
     }
 
@@ -145,12 +154,12 @@ window.Runner = (function () {
     function finish() {
       document.removeEventListener('keydown', onKey);
       barInner.style.width = '100%';
-      var score = total ? Math.round((correct / total) * 100) : 100;
+      var score = scoreable ? Math.round((correct / scoreable) * 100) : 100;
       Store.addXp(correct * 4 + (mode === 'quiz' ? 10 : 0));
       host.innerHTML = '';
       var card = el('div', 'card done-card');
       card.appendChild(el('div', 'done-score', score + '%'));
-      card.appendChild(el('div', 'done-line', correct + ' of ' + total + ' right'));
+      card.appendChild(el('div', 'done-line', correct + ' of ' + scoreable + ' right'));
 
       var verdict = '';
       if (mode === 'quiz') {
@@ -159,13 +168,17 @@ window.Runner = (function () {
           : 'Eighty per cent marks a unit as cleared. Practise once more and come back — nothing is lost, and the next unit is open either way.';
       } else if (mode === 'review') {
         verdict = 'Everything you got right moves further away; everything you missed comes back tomorrow.';
+      } else if (mode === 'listening') {
+        verdict = 'Ear trained. The same clips hide inside lessons and reviews too.';
+      } else if (mode === 'mix') {
+        verdict = 'Mix done. Nothing here changes a unit score — it is pure training.';
       } else {
         verdict = 'Practice done. The quiz is unlocked.';
       }
       card.appendChild(el('p', 'done-note', verdict));
 
       var row = el('div', 'row');
-      var again = el('button', 'ghost-btn', 'Back to the path');
+      var again = el('button', 'ghost-btn', mode === 'practice' || mode === 'quiz' ? 'Back to the unit' : 'Back');
       again.type = 'button';
       again.addEventListener('click', opts.onQuit);
       row.appendChild(again);

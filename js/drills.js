@@ -429,6 +429,44 @@ window.Drills = (function () {
     }, host);
   }
 
+  /* ---------- 8. a teaching card ----------
+     Not an exercise: the moment a new word is handed over. It exists so that a
+     lesson never asks for a word it has not first put in the learner's hand.
+     The runner shows Continue instead of Check and keeps it out of the score. */
+
+  function teach(item, host) {
+    var card = el('div', 'teach-card');
+    card.appendChild(el('div', 'teach-tag', item.pos === 'phr' ? 'New phrase' : 'New word'));
+
+    var head = el('div', 'teach-head');
+    head.appendChild(el('div', 'teach-lb', item.lb));
+    var spoken = window.Say && Say.attach(head, item.lb, { size: 'lg' });
+    card.appendChild(head);
+
+    if (item.ar && arabicOn()) card.appendChild(el('div', 'ar teach-ar', item.ar));
+    card.appendChild(el('div', 'teach-en', item.en));
+
+    if (item.pos || item.gender) {
+      var tags = el('div', 'v-tags');
+      if (item.pos) tags.appendChild(el('span', 'tag', item.pos));
+      if (item.gender) tags.appendChild(el('span', 'tag', item.gender));
+      card.appendChild(tags);
+    }
+    if (item.note) card.appendChild(el('div', 'teach-note', item.note));
+    host.appendChild(card);
+
+    /* Heard before read about: the clip plays once on its own when it exists. */
+    if (spoken) {
+      setTimeout(function () { Say.play(item.lb, { btn: spoken }); }, 300);
+    }
+
+    return {
+      ready: function () { return true; },
+      check: function () { return { correct: true, right: '', note: '' }; },
+      lock: function () {}
+    };
+  }
+
   /* ---------- dispatch ---------- */
 
   var kinds = {
@@ -438,7 +476,8 @@ window.Drills = (function () {
     match: match,
     conjugate: conjugate,
     gap: gap,
-    listen: listen
+    listen: listen,
+    teach: teach
   };
 
   function create(item, host) {

@@ -19,6 +19,11 @@
 (function () {
   'use strict';
 
+  /* Inside the native shell (Capacitor stamps this token into the user agent —
+     see nativa/capacitor.config.json) the app IS installed: no service worker,
+     no banners, nothing to do here at all. */
+  if (/LebanesePathApp/.test(navigator.userAgent)) return;
+
   var ONLINE = location.protocol === 'http:' || location.protocol === 'https:';
   var DISMISSED = 'lebanese-path/install-dismissed';
 

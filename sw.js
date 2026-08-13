@@ -15,7 +15,7 @@
  * `node verifica.js` fails loudly if you forget the first one.
  */
 
-var VERSION = 'lebanese-path-v3';
+var VERSION = 'lebanese-path-v4';
 
 var ASSETS = [
   './',
