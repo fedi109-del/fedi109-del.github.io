@@ -2,7 +2,7 @@
 
 Generato da `node voci.js`. Non si scrive a mano.
 
-Servono **1193** tracce in tutto, ne mancano **970**.
+Servono **1193** tracce in tutto, ne mancano **738**.
 
 Chi registra legge la colonna **libanese**, non l'arabo: l'arabo è lì solo per
 chi genera con una macchina, e va letto con la pronuncia libanese (la qaaf è un
@@ -112,386 +112,154 @@ Il file va salvato in `audio/` col nome esatto della prima colonna, estensione `
 | `beet-abyad.mp3` | béét abyaD | a white house | 11 |
 | `el-banadouura-7amra.mp3` | el-banadouura 7amra | the tomatoes are red | 11 |
 | `es-siyyaara-s-sawda.mp3` | es-siyyaara s-sawda | the black car | 11 |
-| `kbiir.mp3` | kbiir | big | 11 |
-| `melyeen.mp3` | melyéén | full | 11 |
-| `raw3a.mp3` | raw3a! | wonderful! | 11 |
 | `rkhiis-ktiir-rkhiis.mp3` | rkhiiS. ktiir rkhiiS. | cheap. Very cheap. | 11 |
-| `shou-ra2yak.mp3` | shou ra2yak? | what do you think? (to a man) | 11 |
 | `shou-ra2yak-bel-beet.mp3` | shou ra2yak bel-béét? | what do you think of the place? | 11 |
-| `shou-ra2yik.mp3` | shou ra2yik? | what do you think? (to a woman) | 11 |
 | `siyyaara-sawda.mp3` | siyyaara sawda | a black car | 11 |
-| `taaza.mp3` | Taaza | fresh | 11 |
-| `tawiil.mp3` | Tawiil | long, tall | 11 |
 | `w-es-se3r.mp3` | w es-se3r? | and the price? | 11 |
-| `zghiir.mp3` | zghiir | small | 11 |
-| `2anniine.mp3` | 2anniiné | bottle | 12 |
-| `3a-zaw2ak.mp3` | 3a zaw2ak! | exactly how you like it | 12 |
-| `3elbe.mp3` | 3elbé | tin, box | 12 |
-| `adde-baddak-menne.mp3` | addé baddak menné? | how much do I owe you? | 12 |
-| `adde-l-7seeb.mp3` | addé l-7sééb? | how much is the bill? | 12 |
 | `addee-jebne.mp3` | addéé jebné? | how much cheese? | 12 |
 | `badde-khebz-w-jebne-3mool-ma3rouuf.mp3` | baddé khebz w jebné, 3mool ma3rouuf. | I want bread and cheese, please. | 12 |
 | `bala-7aliib.mp3` | bala 7aliib | without milk | 12 |
-| `banadouura.mp3` | banadouura | tomatoes | 12 |
-| `bayd.mp3` | bayD | eggs | 12 |
-| `bi-zyeede-la-lyoom.mp3` | bi-zyéédé la-lyoom | that is plenty for today | 12 |
-| `el-ghala-yoom-3an-yoom.mp3` | el-ghala yoom 3an yoom | the cost of living, day after day | 12 |
 | `el-ghala-yoom-3an-yoom-ya-3amme.mp3` | el-ghala yoom 3an yoom, ya 3ammé… | the cost of things, day after day… | 12 |
-| `fweeke.mp3` | fwééké | fruit | 12 |
-| `jebne.mp3` | jebné | cheese | 12 |
-| `khebz.mp3` | khebz | bread | 12 |
-| `khodra.mp3` | khoDra | vegetables | 12 |
-| `la7me.mp3` | la7mé | meat | 12 |
-| `laymouun.mp3` | laymouun | oranges | 12 |
-| `mortbeen.mp3` | morTbéén | jar | 12 |
 | `noss-kiilo-w-2anniinet-7aliib.mp3` | noSS kiilo. w 2anniinet 7aliib. | half a kilo. And a bottle of milk. | 12 |
 | `shii-teene-el-banadouura-taaza-lyoom.mp3` | shii tééné? el-banadouura Taaza lyoom. | anything else? The tomatoes are fresh today. | 12 |
 | `shii-tleet-3elab.mp3` | shii tléét 3elab | about three tins | 12 |
 | `shway-jebne.mp3` | shway jebné | a bit of cheese | 12 |
-| `t7iin.mp3` | T7iin | flour | 12 |
 | `tayyeb-kiilo-banadouura-kameen.mp3` | Tayyeb, kiilo banadouura kaméén. | all right, a kilo of tomatoes as well. | 12 |
-| `teffee7.mp3` | tefféé7 | apples | 12 |
-| `zaytouun.mp3` | zaytouun | olives | 12 |
 | `3as-see3a-tmeene.mp3` | 3as-séé3a tmééné | at eight o clock | 13 |
-| `7da3ash.mp3` | 7da3ash | eleven | 13 |
-| `addee-es-see3a.mp3` | addéé es-séé3a? | what time is it? | 13 |
-| `ayya-see3a.mp3` | ayya séé3a? | at what time? | 13 |
-| `d2ii2a.mp3` | d2ii2a | minute | 13 |
-| `ella.mp3` | ella | except, minus, to (the hour) | 13 |
-| `es-see3a-kam.mp3` | es-séé3a kam? | what time is it? | 13 |
 | `es-see3a-kam-halla2.mp3` | es-séé3a kam halla2? | what time is it now? | 13 |
-| `es-see3a-khamse.mp3` | es-séé3a khamsé | it is five — the answer needs no verb | 13 |
 | `es-see3a-khamse-ta2riiban.mp3` | es-séé3a khamsé ta2riiban | almost five | 13 |
 | `es-see3a-sab3a-es-sob7.mp3` | es-séé3a sab3a eS-Sob7 | seven in the morning | 13 |
-| `kella-reb3-see3a.mp3` | kella reb3 séé3a | it is only fifteen minutes | 13 |
 | `kella-see3a-mesh-ktiir.mp3` | kella séé3a. mesh ktiir. | only an hour. Not much. | 13 |
 | `la2-tleete-w-reb3-ta2riiban.mp3` | la2, tléété w reb3. ta2riiban. | no, quarter past three. Approximately. | 13 |
 | `las-see3a-3ashra.mp3` | las-séé3a 3ashra | until ten o clock | 13 |
-| `men-aymata-la-aymata.mp3` | men aymata la-aymata? | from when until when? | 13 |
-| `noss.mp3` | noSS | a half, thirty minutes | 13 |
-| `reb3.mp3` | reb3 | a quarter, fifteen minutes | 13 |
-| `soob.mp3` | Soob | towards, around | 13 |
-| `soob-es-see3a-sette.mp3` | Soob es-séé3a setté | around six | 13 |
 | `soob-es-see3a-sette-w-noss.mp3` | Soob es-séé3a setté w-noSS | around half past six | 13 |
 | `soob-es-see3a-tleete.mp3` | Soob es-séé3a tléété. | around three. | 13 |
-| `ta2riiban.mp3` | ta2riiban | almost, approximately | 13 |
 | `tayyeb-ayya-see3a.mp3` | Tayyeb. ayya séé3a? | all right. At what time? | 13 |
-| `telt.mp3` | telt | a third, twenty minutes | 13 |
-| `tenteen.mp3` | tentéén | two o clock | 13 |
 | `tleete-ella-reb3.mp3` | tléété ella reb3? | quarter to three? | 13 |
-| `tna3ash.mp3` | tna3ash | twelve | 13 |
-| `we7de.mp3` | we7dé | one o clock | 13 |
 | `we7de-w-noss.mp3` | we7dé w noSS. | half past one | 13 |
-| `2ariib.mp3` | 2ariib | near, close | 14 |
-| `2ariib-ktiir.mp3` | 2ariib ktiir | very close | 14 |
-| `2beel.mp3` | 2béél | facing, opposite | 14 |
-| `2eddeem.mp3` | 2eddéém | in front of | 14 |
 | `2eddeem-el-forn-7add-el-ma7al-el-a7mar.mp3` | 2eddéém el-forn. 7add el-ma7al el-a7mar. | in front of the bakery. Next to the red shop. | 14 |
 | `3afwan-fii-saydaliyye-2ariibe.mp3` | 3afwan, fii Saydaliyyé 2ariibé? | excuse me, is there a pharmacy nearby? | 14 |
-| `7add.mp3` | 7add | next to | 14 |
-| `barra.mp3` | barra | outside | 14 |
 | `barra-3ala-tuul-2ariib-ktiir.mp3` | barra, 3ala Tuul. 2ariib ktiir! | outside, straight ahead. Very close! | 14 |
-| `eh-fii.mp3` | éh, fii | yes, there is | 14 |
 | `el-ghraad-ma3e.mp3` | el-ghraaD ma3é | I have the shopping with me | 14 |
 | `fii-fii-2ariib-ktiir.mp3` | fii, fii. 2ariib ktiir. | there is, there is. Very close. | 14 |
 | `fii-ma7al-2ariib-men-hoon.mp3` | fii ma7al 2ariib men hoon | there is a shop near here | 14 |
-| `fii-ma7al-hoon.mp3` | fii ma7al hoon? | is there a shop here? | 14 |
-| `fo2.mp3` | fo2 | above, on top of, upstairs | 14 |
-| `honiik.mp3` | honiik | there | 14 |
 | `honiik-wara-l-m7atta.mp3` | honiik, wara l-m7aTTa | over there, behind the station | 14 |
-| `jouwwa.mp3` | jouwwa | inside | 14 |
-| `m7atta.mp3` | m7aTTa | station | 14 |
-| `ma7al.mp3` | ma7al | shop, place | 14 |
-| `maa-fii.mp3` | maa fii | there is not any | 14 |
 | `maa-fii-7ada-hoon.mp3` | maa fii 7ada hoon | there is nobody here | 14 |
-| `maktab.mp3` | maktab | office, desk | 14 |
-| `ta7t.mp3` | ta7t | under, downstairs | 14 |
 | `ta7t-ta7t-el-jesr.mp3` | ta7t. ta7t el-jesr. | below. Under the bridge. | 14 |
 | `tayyeb-jouwwa-walla-barra.mp3` | Tayyeb. jouwwa walla barra? | all right. Inside or outside? | 14 |
 | `w-el-forn-ween.mp3` | w el-forn wéén? | and where is the bakery? | 14 |
-| `wara.mp3` | wara | behind | 14 |
-| `ween-bet-te7diid.mp3` | wéén bet-te7diid? | where exactly? | 14 |
-| `ween-el-m7atta.mp3` | wéén el-m7aTTa? | where is the station? | 14 |
 | `ween-el-maktab.mp3` | wéén el-maktab? | where is the office? | 14 |
 | `2ahwe-deeyman-2ahwe-maa-b7ebb-esh-shaay.mp3` | 2ahwe. dééyman 2ahwe. maa b7ebb esh-shaay. | coffee. Always coffee. I do not like tea. | 15 |
-| `3aadatan.mp3` | 3aadatan | usually | 15 |
 | `3aadatan-shou-bteshrab-es-sob7.mp3` | 3aadatan shou bteshrab eS-Sob7? | what do you usually drink in the morning? | 15 |
 | `akiid-ana-bemro2-menna-kell-yoom.mp3` | akiid. ana bemro2 menna kell yoom. | of course. I pass it every day. | 15 |
 | `ana-kameen-bemshe-shwayy-ba3deen-beekhod-service.mp3` | ana kaméén. bemshé shwayy, ba3déén béékhod service. | me too. I walk a bit, then I take a service cab. | 15 |
-| `aw2aat.mp3` | aw2aat | sometimes | 15 |
-| `b7ebb.mp3` | b7ebb | I like, I love | 15 |
-| `b7ebb-ktiir.mp3` | b7ebb ktiir | I like it a lot | 15 |
-| `ba3ref.mp3` | ba3ref | I know | 15 |
-| `beekol.mp3` | béékol | I eat | 15 |
-| `bemshe.mp3` | bemshé | I walk | 15 |
-| `beshrab.mp3` | beshrab | I drink | 15 |
-| `birouu7.mp3` | birouu7 | he goes | 15 |
-| `brouu7.mp3` | brouu7 | I go | 15 |
 | `brouu7-3a-beerout-w-enta.mp3` | brouu7 3a Béérout. w enta? | I go to Beirut. And you? | 15 |
 | `brouu7-3ash-sheghl-kell-yoom.mp3` | brouu7 3ash-sheghl kell yoom | I go to work every day. | 15 |
-| `bta3ref.mp3` | bta3ref? | do you know? (to a man) | 15 |
 | `bta3ref-ween-el-m7atta.mp3` | bta3ref wéén el-m7aTTa? | do you know where the station is? | 15 |
-| `bya3ref.mp3` | bya3ref | he knows | 15 |
-| `byemshe.mp3` | byemshé | he walks | 15 |
-| `byeshrab.mp3` | byeshrab | he drinks | 15 |
-| `deeyman.mp3` | dééyman | always | 15 |
 | `hiyye-bta3ref-et-tarii2.mp3` | hiyyé bta3ref eT-Tarii2 | She knows the road. | 15 |
-| `maa-ba3ref.mp3` | maa ba3ref | I do not know | 15 |
 | `maa-beshrab-2ahwe.mp3` | maa beshrab 2ahwe | I do not drink coffee. | 15 |
 | `menrouu7-3al-beet-bakkiir.mp3` | menrouu7 3al-béét bakkiir | We go home early. | 15 |
-| `ne7na-mnemshe.mp3` | ne7na mnemshé | we walk | 15 |
-| `shou-bteshrab.mp3` | shou bteshrab? | what do you drink? (to a man) | 15 |
-| `ween-betrouu7-kell-yoom.mp3` | wéén betrouu7 kell yoom? | where do you go every day? (to a man) | 15 |
-| `b2ouul.mp3` | b2ouul | I say | 16 |
-| `ba3mol.mp3` | ba3mol | I do, I make | 16 |
-| `ba3te.mp3` | ba3Té | I give | 16 |
-| `be23od.mp3` | be23od | I sit, I sit down | 16 |
-| `be23od-hoon.mp3` | be23od hoon | I sit here | 16 |
-| `be2dar.mp3` | be2dar | I can, I am able to | 16 |
-| `be7ke.mp3` | be7ké | I talk, I speak | 16 |
-| `be7ke-ma3o.mp3` | be7ké ma3o | I will talk to him | 16 |
-| `beekhod.mp3` | béékhod | I take | 16 |
-| `beje.mp3` | bejé | I come | 16 |
-| `berja3.mp3` | berja3 | I go back, I come back | 16 |
 | `berja3-3al-beet-bakkiir.mp3` | berja3 3al-béét bakkiir | I come back home early. | 16 |
 | `berja3-3al-beet-w-be23od.mp3` | berja3 3al-béét w be23od. | I go back home and I sit. | 16 |
-| `beshtre.mp3` | beshtré | I buy | 16 |
 | `beshtre-l-khebz-men-hoon.mp3` | beshtré l-khebz men hoon | I buy the bread from here. | 16 |
-| `bjiib.mp3` | bjiib | I bring | 16 |
-| `bshouuf.mp3` | bshouuf | I see, I have a look | 16 |
 | `bshouuf-w-ba3deen.mp3` | bshouuf. w ba3déén? | I see. And then? | 16 |
-| `bshouufak-boukra.mp3` | bshouufak boukra | I will see you tomorrow (to a man) | 16 |
 | `byeje-ma3na-kell-jem3a.mp3` | byejé ma3na kell jem3a | He comes with us every week. | 16 |
 | `jiib-2ahwe-bshouufak-boukra.mp3` | jiib 2ahwe. bshouufak boukra. | bring coffee. I will see you tomorrow. | 16 |
 | `maa-ba3ref-yemken-beshtre-shwayy-khodra.mp3` | maa ba3ref. yemken beshtré shwayy khoDra. | I do not know. Maybe I will buy some vegetables. | 16 |
-| `maa-be2dar.mp3` | maa be2dar | I cannot | 16 |
 | `maa-be2dar-bass-be7ke-ma3a-boukra.mp3` | maa be2dar. bass be7ké ma3a boukra. | I cannot. But I will talk to her tomorrow. | 16 |
 | `maa-betje-ma3e-3and-rita.mp3` | maa betjé ma3é 3and Rita? | are you not coming with me to Rita's? | 16 |
 | `mna3te-la-rana.mp3` | mna3Té la-Rana | We give it to Rana. | 16 |
-| `shou-betjiib-ma3ak.mp3` | shou betjiib ma3ak? | what do you bring with you? (to a man) | 16 |
-| `shou-bta3mol.mp3` | shou bta3mol? | what do you do? (to a man) | 16 |
 | `shou-bta3mol-lyoom.mp3` | shou bta3mol lyoom? | what are you doing today? | 16 |
 | `tayyeb-bjiib-shii-ma3e.mp3` | Tayyeb. bjiib shii ma3é? | all right. Shall I bring something? | 16 |
-| `3am.mp3` | 3am | right now — the continuous marker | 17 |
-| `abl-maa.mp3` | abl maa | before (in front of a verb) | 17 |
-| `enno.mp3` | enno | that — introducing a verb | 17 |
-| `fii-majeel.mp3` | fii majéél | would there be a chance to… | 17 |
-| `fiik.mp3` | fiik | you can (to a man) | 17 |
 | `fiik-teje-ma3na.mp3` | fiik tejé ma3na? | Can you come with us? | 17 |
-| `fiik-terja3-boukra.mp3` | fiik terja3 boukra? | can you come back tomorrow? (to a man) | 17 |
-| `fiini.mp3` | fiini | I can | 17 |
 | `fiini-khallas-shii-khams-d2eeye2.mp3` | fiini khallaS shii? khams d2ééye2. | can I just finish something? Five minutes. | 17 |
-| `kermeel.mp3` | kerméél | so that, in order to | 17 |
-| `khalliina.mp3` | khalliina | let us | 17 |
-| `khalliina-ne23od.mp3` | khalliina ne23od | let us sit down | 17 |
 | `khalliina-nenzal-w-enta-bteji-ba3deen.mp3` | khalliina nenzal, w enta bteji ba3déén. | let us go down, and you come after. | 17 |
-| `la.mp3` | la- | in order to (the short version of kerméél) | 17 |
 | `la2-ra7-eje-ma3ak-lamma-erja3-bekhod-on.mp3` | la2, ra7 ejé ma3ak. lamma erja3 bekhod-on. | no, I will come with you. When I come back I will take them. | 17 |
-| `lamma.mp3` | lamma | when, whenever | 17 |
 | `lamma-youu3a-byeshrab-2ahwe.mp3` | lamma youu3a, byeshrab 2ahwe | When he wakes up, he drinks coffee. | 17 |
-| `leezem.mp3` | léézem | must, have to | 17 |
 | `leezem-nerja3-3al-beet.mp3` | léézem nerja3 3al-béét | We have to go back home. | 17 |
-| `leezem-rouu7.mp3` | léézem rouu7 | I have to go | 17 |
-| `maa-be2dar-eje.mp3` | maa be2dar ejé | I cannot come | 17 |
 | `maa-be2dar-estanna-kameen.mp3` | maa be2dar estanna kaméén. | I cannot wait any longer. | 17 |
 | `moumken-te23do-hoon.mp3` | moumken te23do hoon | You could sit here. | 17 |
-| `moumken-teje-ma3na.mp3` | moumken tejé ma3na? | could you come with us? (to a man) | 17 |
-| `ra7.mp3` | ra7 | will — the future marker | 17 |
-| `ta3a.mp3` | ta3a | come on, let us (to a man) | 17 |
-| `ta3a-nrouu7.mp3` | ta3a nrouu7 | come on, let us go | 17 |
 | `ta3a-nrouu7-leezem-nrouu7-halla2.mp3` | ta3a nrouu7! léézem nrouu7 halla2. | come on, let us go! We have to go now. | 17 |
 | `tayyeb-tayyeb-bass-leezem-ekhod-el-mfete7.mp3` | Tayyeb, Tayyeb. bass léézem ekhod el-mfeté7. | all right, all right. But I have to take the keys. | 17 |
 | `yalla-moumken-tenzal-halla2.mp3` | yalla. moumken tenzal halla2? | come on. Could you come down now? | 17 |
-| `3aadatan-bneem-soob-es-see3a-7da3ash.mp3` | 3aadatan bnéém Soob es-séé3a 7da3ash | I usually go to sleep around eleven. | 18 |
 | `3aadatan-bouu3a-soob-es-see3a-sette.mp3` | 3aadatan bouu3a Soob es-séé3a setté | Usually I wake up around six. | 18 |
 | `3aadatan-soob-es-see3a-tmeen.mp3` | 3aadatan Soob es-séé3a tméén. | usually around eight. | 18 |
-| `3asha.mp3` | 3asha | dinner | 18 |
 | `aw2aat-lamma-erja3-3al-beet-bet7ammam-kameen-marra.mp3` | aw2aat. lamma erja3 3al-béét, bet7ammam kaméén marra. | sometimes. When I get home, I shower again. | 18 |
 | `awwal-shii-bet7ammam-men-ba3da-betrawwa2-w-bodhar.mp3` | awwal shii bet7ammam. men ba3da betrawwa2 w boDhar. | first I shower. After that I have breakfast and I go out. | 18 |
 | `awwal-shii-bghassel-wejje-w-bfarshe-sneene.mp3` | awwal shii bghassel wejjé w-bfarshé snééné | First of all I wash my face and brush my teeth. | 18 |
-| `awwal-shii-men-ba3da.mp3` | awwal shii… men ba3da… | First of all… after that… | 18 |
 | `ayya-see3a-bt-ouu3a.mp3` | ayya séé3a bt-ouu3a? | what time do you wake up? | 18 |
-| `ayya-see3a-btodhar.mp3` | ayya séé3a btoDhar? | What time do you leave? (to a man) | 18 |
 | `bel-leel-maa-beshar-ktiir.mp3` | bel-léél maa beshar ktiir | At night I do not stay up much. | 18 |
-| `beshar.mp3` | beshar | I stay up late | 18 |
-| `beshteghel.mp3` | beshteghel | I work | 18 |
 | `beshteghel-kell-en-nhaar.mp3` | beshteghel kell en-nhaar | I work all day. | 18 |
-| `bet7ammam.mp3` | bet7ammam | I take a shower | 18 |
-| `betrawwa2.mp3` | betrawwa2 | I have breakfast | 18 |
 | `betrawwa2-bel-beet-ma3-emme.mp3` | betrawwa2 bel-béét ma3 emmé | I have breakfast at home with my mother. | 18 |
-| `bfarshe-sneene.mp3` | bfarshé snééné | I brush my teeth | 18 |
 | `bfarshe-sneene-lamma-neem.mp3` | bfarshé snééné lamma néém | I brush my teeth when I go to sleep. | 18 |
-| `bneem.mp3` | bnéém | I sleep, I go to sleep | 18 |
 | `bneem-soob-es-see3a-7da3ash.mp3` | bnéém Soob es-séé3a 7da3ash | I go to sleep around eleven. | 18 |
-| `bodhar.mp3` | boDhar | I go out, I leave | 18 |
 | `bodhar-men-el-beet-soob-es-see3a-sab3a-w-noss.mp3` | boDhar men el-béét Soob es-séé3a sab3a w-noSS | I leave the house around half past seven. | 18 |
-| `bouu3a.mp3` | bouu3a | I wake up | 18 |
 | `btemshe-3ash-sheghl.mp3` | btemshé 3ash-sheghl? | do you walk to work? | 18 |
-| `daayman.mp3` | daayman | always | 18 |
 | `daayman-beshar-w-hayda-l-meshkle.mp3` | daayman beshar. w hayda l-meshklé. | I always stay up late. And that is the problem. | 18 |
-| `kell-yoom-bemshe-3ash-sheghl.mp3` | kell yoom bemshé 3ash-sheghl | Every day I walk to work. | 18 |
 | `kell-yoom-bemshe-lal-m7atta.mp3` | kell yoom bemshé lal-m7aTTa | Every day I walk to the station. | 18 |
 | `lamma-erja3-3al-beet-beekol-3asha-ma3-3aylte.mp3` | lamma erja3 3al-béét, béékol 3asha ma3 3aylté | When I get home, I eat dinner with my family. | 18 |
-| `lamma-erja3-3al-beet-bet7ammam.mp3` | lamma erja3 3al-béét, bet7ammam | When I get home, I take a shower. | 18 |
 | `lamma-ouu3a-bghassel-wejje.mp3` | lamma ouu3a, bghassel wejjé | When I wake up, I wash my face. | 18 |
 | `lamma-terja3e-khabbriine.mp3` | lamma terja3é, khabbriiné | When you get back, tell me. | 18 |
-| `maa-beshar-abadan.mp3` | maa beshar abadan | I never stay up late. | 18 |
 | `men-ba3da-bet7ammam-w-belbos.mp3` | men ba3da bet7ammam w-belbos | After that I shower and get dressed. | 18 |
-| `shou-bta3mol-bel-leel.mp3` | shou bta3mol bel-léél? | What do you do at night? (to a man) | 18 |
 | `w-ba3deen.mp3` | w ba3déén? | and then? | 18 |
 | `w-bel-leel-shou-bta3mol.mp3` | w bel-léél? shou bta3mol? | and at night? What do you do? | 18 |
-| `3tiine.mp3` | 3Tiiné | give me (to one person) | 19 |
 | `3tiine-anniine-3mool-ma3rouuf.mp3` | 3Tiiné anniiné, 3mool ma3rouuf | Give me a bottle, please. | 19 |
-| `3tiine-shaay-3mool-ma3rouuf.mp3` | 3Tiiné shaay, 3mool ma3rouuf | Give me a tea, please. | 19 |
 | `3tiine-tneen-za3tar-3mool-ma3rouuf.mp3` | 3Tiiné tnéén za3tar, 3mool ma3rouuf. | give me two thyme ones, please. | 19 |
-| `3touune.mp3` | 3Touuné | give me (to a group) | 19 |
-| `7ott.mp3` | 7oTT | put (to a man) | 19 |
-| `7ottelle.mp3` | 7oTTellé | put for me | 19 |
 | `7ottelle-na3na3-ma3-el-khodra.mp3` | 7oTTellé na3na3 ma3 el-khoDra | Put mint in with the vegetables for me. | 19 |
-| `7ottelle-shwayy-khodra.mp3` | 7oTTellé shwayy khoDra | Put a bit of veg in for me. | 19 |
-| `bidouun.mp3` | bidouun | without | 19 |
 | `ee-7ottelle-shwayy-jebne-bidouun-banadouura.mp3` | éé, 7oTTellé shwayy jebné. bidouun banadouura. | yes, put a bit of cheese in for me. Without tomato. | 19 |
-| `jebelna.mp3` | jebelna | bring us | 19 |
-| `jebelna-3asiir-eza-betriid.mp3` | jebelna 3aSiir, eza betriid | Bring us a juice, please. | 19 |
 | `jebelna-kees-3asiir.mp3` | jebelna kéés 3aSiir | Bring us a glass of juice. | 19 |
-| `jiib.mp3` | jiib | bring (to a man) | 19 |
-| `khabberne.mp3` | khabberné | tell me | 19 |
-| `khabberne-ween-el-forn.mp3` | khabberné wéén el-forn | Tell me where the bakery is. | 19 |
-| `ma-tensa.mp3` | ma tensa | do not forget (to a man) | 19 |
-| `ma-tensa-l-khebz.mp3` | ma tensa l-khebz | Do not forget the bread. | 19 |
 | `maa-ttawwle-ne7na-naatriin.mp3` | maa tTawwlé, ne7na naaTriin | Do not be long, we are waiting. | 19 |
-| `ouum.mp3` | ouum | get up, come on | 19 |
 | `shii-teene-7ottellak-jebne-kameen.mp3` | shii tééné? 7oTTellak jebné kaméén? | anything else? Shall I put cheese in for you too? | 19 |
-| `ta3a-hoon.mp3` | ta3a hoon | Come here. | 19 |
-| `tfaddal.mp3` | tfaDDal | here you are, go ahead, after you | 19 |
 | `tfaddal-shou-baddak.mp3` | tfaDDal, shou baddak? | go ahead, what would you like? | 19 |
-| `wa22ef.mp3` | wa22ef | stop (to a man) | 19 |
-| `wa22ef-hoon-3mool-ma3rouuf.mp3` | wa22ef hoon, 3mool ma3rouuf | Stop here, please. | 19 |
 | `wa22ef-hoon-3mool-ma3rouuf-hoon-hoon.mp3` | wa22ef hoon, 3mool ma3rouuf. hoon, hoon! | stop here, please. Here, here! | 19 |
-| `walaw.mp3` | walaw | please, do not even mention it | 19 |
-| `2yees.mp3` | 2yéés | size | 20 |
-| `3endkon-2yees-akbar.mp3` | 3endkon 2yéés akbar? | Do you have a bigger size? | 20 |
-| `a7la.mp3` | a7la | lovelier, nicer | 20 |
-| `a7san.mp3` | a7san | better | 20 |
-| `aghla.mp3` | aghla | more expensive | 20 |
-| `akbar.mp3` | akbar | bigger | 20 |
-| `amiis.mp3` | amiiS | shirt | 20 |
-| `arkhas.mp3` | arkhaS | cheaper | 20 |
-| `azghar.mp3` | azghar | smaller | 20 |
-| `b-addee-hayde.mp3` | b-addéé haydé? | How much is this one? | 20 |
 | `badde-ghayyro-fii-majeel.mp3` | baddé ghayyro, fii majéél? | I want to change it, is that possible? | 20 |
-| `badde-shii-arkhas.mp3` | baddé shii arkhaS | I want something cheaper. | 20 |
 | `bfaddel-el-azghar.mp3` | bfaDDel el-azghar | I prefer the smaller one. | 20 |
-| `bi-ktiir.mp3` | bi-ktiir | much more, by a lot | 20 |
-| `bjarreb.mp3` | bjarreb | I try, I try on | 20 |
 | `fii-bass-bi-lawn-teene-hayda-a7la-w-a7san.mp3` | fii, bass bi-lawn tééné. hayda a7la, w a7san. | there is, but in another colour. This one is nicer, and better. | 20 |
-| `fii-khasm.mp3` | fii khaSm? | Is there a discount? | 20 |
-| `fiine-jarrbo.mp3` | fiiné jarrbo? | Can I try it on? | 20 |
-| `fostaan.mp3` | fostaan | dress | 20 |
-| `hal-fostaan-weese3-3layye.mp3` | hal-fostaan wéése3 3layyé | This dress is too big on me. | 20 |
 | `hayda-l-2yees-akbar-bi-ktiir.mp3` | hayda l-2yéés akbar bi-ktiir | This size is much bigger. | 20 |
 | `hayda-l-amiis-7elo-3aleek-ktiir.mp3` | hayda l-amiiS 7elo 3aléék ktiir. | this shirt looks really good on you. | 20 |
-| `kemm.mp3` | kemm | sleeve | 20 |
-| `khasm.mp3` | khaSm | discount | 20 |
 | `la-elak-ee-bass-maa-te2oul-la-7ada.mp3` | la-elak, éé. bass maa te2oul la-7ada. | for you, yes. But do not tell anyone. | 20 |
 | `shwayy-bass-a7san-bi-ktiir.mp3` | shwayy. bass a7san bi-ktiir. | a bit. But much better. | 20 |
 | `w-aghla-kameen.mp3` | w aghla kaméén? | and more expensive too? | 20 |
-| `weese3.mp3` | wéése3 | roomy, too big | 20 |
 | `weese3-shwayy-3endkon-2yees-azghar.mp3` | wéése3 shwayy. 3endkon 2yéés azghar? | it is a bit big. Do you have a smaller size? | 20 |
-| `3aj2et-seer.mp3` | 3aj2et séér | traffic jam | 21 |
-| `7aajez-darak.mp3` | 7aajez darak | checkpoint | 21 |
-| `b-addee-men-hoon-lal-m7atta.mp3` | b-addéé men hoon lal-m7aTTa? | how much from here to the station? | 21 |
-| `badde-enzal-3a-beirut.mp3` | baddé enzal 3a Beirut | I want to go down to Beirut | 21 |
 | `badde-s-siyyaara-la-tleet-iyyeem.mp3` | baddé s-siyyaara la-tléét iyyéém | I want the car for three days. | 21 |
-| `badde-yeeha-la-tleet-iyyeem.mp3` | baddé yééha la-tléét iyyéém | I want it for three days | 21 |
 | `bemro2-3al-forn-3a-tarii2e.mp3` | bemro2 3al-forn 3a Tarii2é | I pass by the bakery on my way. | 21 |
 | `berja3-etla3-3al-jabal.mp3` | berja3 eTla3 3al-jabal | I go back up to the mountain. | 21 |
 | `daayman-fii-w-et-tarii2-melyeen-jouwar.mp3` | daayman fii. w eT-Tarii2 melyéén jouwar. | there always is. And the road is full of potholes. | 21 |
-| `emro2.mp3` | emro2 | to pass by | 21 |
-| `enzal.mp3` | enzal | to go down | 21 |
-| `es-siyyaara-m2ammane.mp3` | es-siyyaara m2ammané? | is the car insured? | 21 |
-| `esta2jer.mp3` | esta2jer | to rent | 21 |
 | `fii-3aj2et-seer-lyoom.mp3` | fii 3aj2et séér lyoom? | is there traffic today? | 21 |
-| `fii-jouwar-3a-hat-tarii2.mp3` | fii jouwar 3a haT-Tarii2 | there are potholes on this road | 21 |
-| `fii-majeel-twa22ef-hoon.mp3` | fii majéél twa22ef hoon? | could you stop here? | 21 |
 | `fii-majeel-twa22ef-hoon-3mool-ma3rouuf.mp3` | fii majéél twa22ef hoon 3mool ma3rouuf? | Could you stop here please? | 21 |
 | `fii-majeel-twa22ef-hoon-ya3tiik-el-3aafye.mp3` | fii majéél twa22ef hoon? ya3Tiik el-3aafyé. | could you stop here? May he give you strength. | 21 |
-| `jouura.mp3` | jouura | pothole | 21 |
 | `la2-service-wee7ed-mesh-b3iid.mp3` | la2, service wéé7ed. mesh b3iid. | no, one service. It is not far. | 21 |
 | `ma-tense-tredda-3ashiyye.mp3` | ma tensé tredda 3ashiyyé | Do not forget to bring it back in the evening. | 21 |
-| `mashe.mp3` | mashé | on foot, walking | 21 |
 | `mnenzal-3a-beirut-kell-yoom.mp3` | mnenzal 3a Beirut kell yoom | We go down to Beirut every day. | 21 |
-| `otla3.mp3` | oTla3 | to go up | 21 |
-| `ouusal.mp3` | ouuSal | to arrive | 21 |
-| `service.mp3` | service | shared cab on a fixed route | 21 |
 | `service-3a-mar-mikhayel.mp3` | service. 3a Mar Mikhayel. | service. To Mar Mikhael. | 21 |
 | `serviceen.mp3` | servicéén. | two services | 21 |
-| `taxi.mp3` | taxi | taxi | 21 |
 | `tayyeb-ta3a.mp3` | Tayyeb, ta3a. | all right, come on. | 21 |
-| `te2miin.mp3` | te2miin | insurance | 21 |
-| `ween-betwa22ef.mp3` | wéén betwa22ef? | where do you stop? | 21 |
-| `3mool-ma3rouuf-l-7ajz-b-esme.mp3` | 3mool ma3rouuf, l-7ajz b-esmé | the booking is in my name, please | 22 |
-| `7adertak.mp3` | 7aDertak | you (polite) | 22 |
-| `7ajz.mp3` | 7ajz | booking | 22 |
-| `b-addee-bel-layle.mp3` | b-addéé bel-laylé? | how much per night? | 22 |
 | `badde-3azzbik-fii-dajje-bel-ouuda.mp3` | baddé 3azzbik, fii Dajjé bel-ouuDa | Sorry to bother you, there is noise in the room. | 22 |
-| `badde-3azzbik-l-moukayyef-maa-byeshteghel.mp3` | baddé 3azzbik, l-moukayyef maa byeshteghel | sorry to bother you, the air conditioner does not work | 22 |
 | `badde-ouuda-la-laylteen.mp3` | baddé ouuDa la-layltéén | I want a room for two nights. | 22 |
-| `dajje.mp3` | Dajjé | noise | 22 |
 | `ee-eza-moumken-w-nefs-es-se3r.mp3` | éé, eza moumken. w nefs es-se3r? | yes, if possible. And the same price? | 22 |
 | `fii-majeel-teje-3al-ouuda.mp3` | fii majéél tejé 3al-ouuDa? | Could you come up to the room? | 22 |
 | `fii-moukayyef-bel-ouuda.mp3` | fii moukayyef bel-ouuDa? | Is there an air conditioner in the room? | 22 |
-| `fii-ouuda-mawjouude-la-laylteen.mp3` | fii ouuDa mawjouudé la-layltéén? | is there a room free for two nights? | 22 |
-| `fii-terwii2a-ma3-l-ouuda.mp3` | fii terwii2a ma3 l-ouuDa? | does breakfast come with the room? | 22 |
-| `foundo2.mp3` | foundo2 | hotel | 22 |
 | `l-7ajz-la-tleet-layeele.mp3` | l-7ajz la-tléét layéélé | The booking is for three nights. | 22 |
 | `l-moukayyef-maa-byeshteghel.mp3` | l-moukayyef maa byeshteghel | The air conditioner does not work. | 22 |
-| `lawa7de.mp3` | lawa7dé | on my own | 22 |
-| `layle.mp3` | laylé | night | 22 |
-| `laylteen.mp3` | layltéén | two nights | 22 |
 | `ma3ak-7a2-fii-ouuda-teene-fo2-baddak-yeeha.mp3` | ma3ak 7a2. fii ouuDa tééné, fo2. baddak yééha? | you are right. There is another room, upstairs. Do you want it? | 22 |
-| `maa-fii-maay-sokhne.mp3` | maa fii maay sokhné | there is no hot water | 22 |
 | `maa-fii-w-fii-dajje-ktiir-men-barra.mp3` | maa fii. w fii Dajjé ktiir men barra. | there is not. And there is a lot of noise from outside. | 22 |
-| `maay-sokhne.mp3` | maay sokhné | hot water | 22 |
 | `masa-l-kheer-badde-3azzbik-shwayy.mp3` | masa l-khéér. baddé 3azzbik shwayy. | good evening. Sorry to trouble you a little. | 22 |
-| `mawjouud.mp3` | mawjouud | there, available | 22 |
-| `moukayyef.mp3` | moukayyef | air conditioner | 22 |
-| `ne7na-shakhseen.mp3` | ne7na shakhSéén | there are two of us | 22 |
 | `nefs-es-se3r-maa-3leeh-hayda-sheghle.mp3` | nefs es-se3r. maa 3lééh, hayda sheghlé. | the same price. Never mind, this is my job. | 22 |
-| `shakhs.mp3` | shakhS | person | 22 |
-| `sokhn.mp3` | sokhn | hot | 22 |
-| `terwii2a.mp3` | terwii2a | breakfast | 22 |
 | `w-el-maay-fii-maay-sokhne.mp3` | w el-maay? fii maay sokhné? | and the water? Is there hot water? | 22 |
-| `wala-yhemmik.mp3` | wala yhemmik | do not give it a thought | 22 |
 | `walaw-2moor.mp3` | walaw! 2moor. | do not even mention it! How can I help? | 22 |
-| `3anjad.mp3` | 3anjad | really, for real | 23 |
 | `3anjad-saraa7a-ana-maa-3ejebne.mp3` | 3anjad? Saraa7a, ana maa 3ejebné. | really? Honestly, I did not like it. | 23 |
-| `baleeha.mp3` | balééha | let us drop it | 23 |
 | `baleeha-yalla-ma3-es-saleeme.mp3` | balééha. yalla, ma3 es-saléémé. | let us drop it. Right, go safely. | 23 |
-| `kellak-zoo2.mp3` | kellak zoo2 | you are all good taste | 23 |
-| `ktiir-smallah.mp3` | ktiir smallah | yeah, right | 23 |
 | `l-7amdella-w-enta.mp3` | l-7amdella. w enta? | thank God. And you? | 23 |
-| `lakeen.mp3` | lakéén | so, in that case | 23 |
 | `maa-3leeh-mesh-meshkle.mp3` | maa 3lééh, mesh meshklé | Never mind, it is not a problem. | 23 |
-| `maa-te3tal-hamm.mp3` | maa te3tal hamm | do not carry worry | 23 |
-| `nafs-esh-shii.mp3` | nafs esh-shii | same here, the same thing | 23 |
 | `nafs-esh-shii-ya3ne-maashe-l-7aal.mp3` | nafs esh-shii. ya3né… maashé l-7aal. | the same. I mean… it is going along. | 23 |
-| `saraa7a.mp3` | Saraa7a | honestly | 23 |
 | `shefto-l-beet-el-jdiid-taba3on.mp3` | shefto l-béét el-jdiid taba3on? | did you see their new place? | 23 |
-| `shou-awlak.mp3` | shou awlak? | what do you say? | 23 |
 | `shou-awlak-kiifak.mp3` | shou awlak? kiifak? | what do you say? How are you? | 23 |
-| `smallah.mp3` | smallah | said right after praising something | 23 |
 | `smallah-7elo-ktiir.mp3` | smallah, 7elo ktiir. | God keep it, it is really lovely. | 23 |
-| `tayyeb-lakeen.mp3` | Tayyeb lakéén | all right then | 23 |
 | `tayyeb-lakeen-bshouufak-3al-khamse.mp3` | Tayyeb lakéén, bshouufak 3al-khamsé | All right then, I will see you at five. | 23 |
 | `te3been-baleeha-lyoom.mp3` | te3béén? balééha lyoom | Tired? Then let us drop it for today. | 23 |
-| `ya3ne.mp3` | ya3né | that is, I mean | 23 |
 | `ya3ne-mesh-lyoom-boukra.mp3` | ya3né mesh lyoom, boukra | I mean not today, tomorrow. | 23 |
-| `yalla.mp3` | yalla | come on; right away; fine then | 23 |
 | `yalla-basiita.mp3` | yalla basiiTa | Never mind, it is nothing. | 23 |
 | `yalla-l-film-biballesh.mp3` | yalla, l-film biballesh | Come on, the film is starting. | 23 |
-| `yalla-leesh-la2.mp3` | yalla, léésh la2 | fine, why not | 23 |
-| `3am-be7dar-mousalsal.mp3` | 3am be7Dar mousalsal | I am watching a series | 24 |
 | `3am-bedros-3ende-emti7aan-boukra.mp3` | 3am bedros. 3endé emti7aan boukra. | I am studying. I have an exam tomorrow. | 24 |
 | `3am-beshteghel.mp3` | 3am beshteghel | I am working. | 24 |
 | `3am-bteshteghel-lyoom.mp3` | 3am bteshteghel lyoom? | are you working today? | 24 |
