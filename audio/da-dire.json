@@ -2250,15 +2250,6 @@
   "kind": "example"
  },
  {
-  "key": "3am-bteshteghel-lyoom",
-  "lb": "3am bteshteghel lyoom?",
-  "say": "عَم بْتِشْتِغِل اليوم؟",
-  "ar": "عَم بْتِشْتِغِل اليوم؟",
-  "en": "are you working today?",
-  "unit": 24,
-  "kind": "phrase"
- },
- {
   "key": "3am-byedros-bel-bayt",
   "lb": "3am byedros bel-bayt",
   "say": "عَم بْيِدْرُس بالبَيت",
@@ -2295,15 +2286,6 @@
   "kind": "example"
  },
  {
-  "key": "berneemej",
-  "lb": "bernéémej",
-  "say": "بِرْنامِج",
-  "ar": "بِرْنامِج",
-  "en": "programme, show",
-  "unit": 24,
-  "kind": "word"
- },
- {
   "key": "beshteghel-bi-bank",
   "lb": "beshteghel bi-bank",
   "say": "بِشْتِغِل بِبَنك",
@@ -2311,69 +2293,6 @@
   "en": "I work in a bank.",
   "unit": 24,
   "kind": "example"
- },
- {
-  "key": "e2dar",
-  "lb": "e2dar",
-  "say": "إِأْدَر",
-  "ar": "إِقْدَر",
-  "en": "to be able to, can (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "e7dar",
-  "lb": "e7Dar",
-  "say": "إِحضَر",
-  "ar": "إِحضَر",
-  "en": "to watch, to attend (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "e7ke",
-  "lb": "e7ké",
-  "say": "إِحكي",
-  "ar": "إِحكي",
-  "en": "to talk, to speak (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "edros",
-  "lb": "edros",
-  "say": "إِدْرُس",
-  "ar": "إِدْرُس",
-  "en": "to study (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "es2al",
-  "lb": "es2al",
-  "say": "إِسْأَل",
-  "ar": "إِسْأَل",
-  "en": "to ask (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "eshteghel",
-  "lb": "eshteghel",
-  "say": "إِشْتِغِل",
-  "ar": "إِشْتِغِل",
-  "en": "to work (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "etsalla",
-  "lb": "etsalla",
-  "say": "إِتْسَلّى",
-  "ar": "إِتْسَلّى",
-  "en": "to enjoy oneself (root)",
-  "unit": 24,
-  "kind": "word"
  },
  {
   "key": "halla2-a7san-3am-be7ke-men-jouwwa",
@@ -2394,15 +2313,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "maa-3am-be2dar-neem",
-  "lb": "maa 3am be2dar néém",
-  "say": "ما عَم بِأْدَر نام",
-  "ar": "ما عَم بِقْدَر نام",
-  "en": "I cannot sleep right now",
-  "unit": 24,
-  "kind": "phrase"
- },
- {
   "key": "maa-3am-bedros",
   "lb": "maa 3am bedros",
   "say": "ما عَم بِدْرُس",
@@ -2412,42 +2322,6 @@
   "kind": "example"
  },
  {
-  "key": "maa-3am-besma3ak-mnii7",
-  "lb": "maa 3am besma3ak mnii7",
-  "say": "ما عَم بِسْمَعَك مْنيح",
-  "ar": "ما عَم بِسْمَعَك مْنيح",
-  "en": "I cannot hear you well",
-  "unit": 24,
-  "kind": "phrase"
- },
- {
-  "key": "mou2eebale",
-  "lb": "mou2éébalé",
-  "say": "مُأابَلة",
-  "ar": "مُقابَلة",
-  "en": "interview",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "mousalsal",
-  "lb": "mousalsal",
-  "say": "مُسَلْسَل",
-  "ar": "مُسَلْسَل",
-  "en": "series",
-  "unit": 24,
-  "kind": "word"
- },
- {
-  "key": "rakkez",
-  "lb": "rakkez",
-  "say": "رَكِّز",
-  "ar": "رَكِّز",
-  "en": "to concentrate (root)",
-  "unit": 24,
-  "kind": "word"
- },
- {
   "key": "saraa7a-maa-3am-tetsalla",
   "lb": "Saraa7a, maa 3am tetsalla.",
   "say": "صراحة، ما عم تتسلى",
@@ -2455,15 +2329,6 @@
   "en": "honestly, you are not having a good time.",
   "unit": 24,
   "kind": "dialogue"
- },
- {
-  "key": "shou-3am-bisiir",
-  "lb": "shou 3am biSiir?",
-  "say": "شو عَم بيصير؟",
-  "ar": "شو عَم بيصير؟",
-  "en": "what is going on?",
-  "unit": 24,
-  "kind": "phrase"
  },
  {
   "key": "shou-3am-bisiir-3andkon-fii-dajje",
@@ -2484,87 +2349,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ba3deen",
-  "lb": "ba3déén",
-  "say": "بَعْدين",
-  "ar": "بَعْدين",
-  "en": "later, afterwards",
-  "unit": 25,
-  "kind": "word"
- },
- {
-  "key": "eb2a",
-  "lb": "eb2a",
-  "say": "إِبْأى",
-  "ar": "إِبْقى",
-  "en": "to stay (root)",
-  "unit": 25,
-  "kind": "word"
- },
- {
-  "key": "el-jem3a-el-jeeye",
-  "lb": "el-jem3a el-jééyé",
-  "say": "الجِمْعَة الجايي",
-  "ar": "الجِمْعَة الجايي",
-  "en": "next week",
-  "unit": 25,
-  "kind": "word"
- },
- {
-  "key": "eshtre",
-  "lb": "eshtré",
-  "say": "إِشْتْري",
-  "ar": "إِشْتْري",
-  "en": "to buy (root)",
-  "unit": 25,
-  "kind": "word"
- },
- {
-  "key": "etrok",
-  "lb": "etrok",
-  "say": "إِتْرُك",
-  "ar": "إِتْرُك",
-  "en": "to leave behind (root)",
-  "unit": 25,
-  "kind": "word"
- },
- {
-  "key": "kouun",
-  "lb": "kouun",
-  "say": "كون",
-  "ar": "كون",
-  "en": "to be (root) — only in the future and after other verbs",
-  "unit": 25,
-  "kind": "word"
- },
- {
-  "key": "maa-ra7-enzal-lyoom",
-  "lb": "maa ra7 enzal lyoom",
-  "say": "ما رَح إِنْزَل اليوم",
-  "ar": "ما رَح إِنْزَل اليوم",
-  "en": "I am not going down today",
-  "unit": 25,
-  "kind": "phrase"
- },
- {
-  "key": "maa-ra7-tawwel",
-  "lb": "maa ra7 Tawwel",
-  "say": "ما رَح طَوِّل",
-  "ar": "ما رَح طَوِّل",
-  "en": "I will not be long",
-  "unit": 25,
-  "kind": "phrase"
- },
- {
-  "key": "meshwaar",
-  "lb": "meshwaar",
-  "say": "مِشْوار",
-  "ar": "مِشْوار",
-  "en": "errand, short trip out",
-  "unit": 25,
-  "kind": "word"
- },
- {
   "key": "nshalla-ra7-shouuf-shou-ra7-ysiir",
   "lb": "nshalla. ra7 shouuf shou ra7 ySiir.",
   "say": "إن شاء الله. رح شوف شو رح يصير",
@@ -2572,24 +2356,6 @@
   "en": "God willing. I will see what happens.",
   "unit": 25,
   "kind": "dialogue"
- },
- {
-  "key": "ra7-emro2-3al-ma7al-ba3deen",
-  "lb": "ra7 emro2 3al-ma7al ba3déén",
-  "say": "رَح إِمْرُأ عالمَحَل بَعْدين",
-  "ar": "رَح إِمْرُق عالمَحَل بَعْدين",
-  "en": "I will drop by the shop later",
-  "unit": 25,
-  "kind": "phrase"
- },
- {
-  "key": "ra7-kouun-hoon",
-  "lb": "ra7 kouun hoon",
-  "say": "رَح كون هون",
-  "ar": "رَح كون هون",
-  "en": "I will be here",
-  "unit": 25,
-  "kind": "phrase"
  },
  {
   "key": "ra7-kouun-hoon-es-sob7-ba3d-ed-dohr-3ende-meshwaar",
@@ -2601,15 +2367,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ra7-ouusal-ba3d-ed-dohr",
-  "lb": "ra7 ouuSal ba3d eD-Dohr",
-  "say": "رَح أوصَل بَعْد الضُّهر",
-  "ar": "رَح أوصَل بَعْد الضُّهر",
-  "en": "I will get there in the afternoon",
-  "unit": 25,
-  "kind": "phrase"
- },
- {
   "key": "ra7-shouuf-maa-ra7-tawwel-bel-meshwaar",
   "lb": "ra7 shouuf. maa ra7 Tawwel bel-meshwaar.",
   "say": "رح شوف. ما رح طول بالمشوار",
@@ -2617,15 +2374,6 @@
   "en": "I will see. I will not be long with the errand.",
   "unit": 25,
   "kind": "dialogue"
- },
- {
-  "key": "ra7-shouufak-boukra",
-  "lb": "ra7 shouufak boukra",
-  "say": "رَح شوفَك بُكْرة",
-  "ar": "رَح شوفَك بُكْرة",
-  "en": "I will see you tomorrow",
-  "unit": 25,
-  "kind": "phrase"
  },
  {
   "key": "soob-es-see3a-khamse-w-eza-tekher-ra7-khabbrik",
@@ -2655,60 +2403,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ween-ra7-tkouun-boukra",
-  "lb": "wéén ra7 tkouun boukra?",
-  "say": "وين رَح تْكون بُكْرة؟",
-  "ar": "وين رَح تْكون بُكْرة؟",
-  "en": "where will you be tomorrow?",
-  "unit": 25,
-  "kind": "phrase"
- },
- {
-  "key": "3alla2",
-  "lb": "3alla2",
-  "say": "عَلَّأ",
-  "ar": "عَلَّق",
-  "en": "he hung up",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "a3ad",
-  "lb": "a3ad",
-  "say": "أَعَد",
-  "ar": "قَعَد",
-  "en": "he sat down, he stayed",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "akal",
-  "lb": "akal",
-  "say": "أَكَل",
-  "ar": "أَكَل",
-  "en": "he ate",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "akhad",
-  "lb": "akhad",
-  "say": "أَخَد",
-  "ar": "أَخَد",
-  "en": "he took",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "ana-talabt-el-7seeb",
-  "lb": "ana Talabt el-7sééb",
-  "say": "أنا طَلَبْت الحْساب",
-  "ar": "أنا طَلَبْت الحْساب",
-  "en": "I asked for the bill",
-  "unit": 26,
-  "kind": "phrase"
- },
- {
   "key": "ana-talabt-houwwe-maa-talab",
   "lb": "ana Talabt, houwwé maa Talab",
   "say": "أنا طَلَبْت، هوي ما طَلَب",
@@ -2716,60 +2410,6 @@
   "en": "I ordered, he did not.",
   "unit": 26,
   "kind": "example"
- },
- {
-  "key": "daras",
-  "lb": "daras",
-  "say": "دَرَس",
-  "ar": "دَرَس",
-  "en": "he studied",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "ghassal",
-  "lb": "ghassal",
-  "say": "غَسَّل",
-  "ar": "غَسَّل",
-  "en": "he washed",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "ghassalt-es-s7ouun",
-  "lb": "ghassalt eS-S7ouun",
-  "say": "غَسَّلْت الصْحون",
-  "ar": "غَسَّلْت الصْحون",
-  "en": "I washed the dishes",
-  "unit": 26,
-  "kind": "phrase"
- },
- {
-  "key": "jeewab",
-  "lb": "jééwab",
-  "say": "جاوَب",
-  "ar": "جاوَب",
-  "en": "he answered",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "kammal",
-  "lb": "kammal",
-  "say": "كَمَّل",
-  "ar": "كَمَّل",
-  "en": "he carried on",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "khallas",
-  "lb": "khallaS",
-  "say": "خَلَّص",
-  "ar": "خَلَّص",
-  "en": "he finished",
-  "unit": 26,
-  "kind": "word"
  },
  {
   "key": "maa-darast-lyoom",
@@ -2781,15 +2421,6 @@
   "kind": "example"
  },
  {
-  "key": "maa-khallast",
-  "lb": "maa khallaSt",
-  "say": "ما خَلَّصْت",
-  "ar": "ما خَلَّصْت",
-  "en": "I have not finished",
-  "unit": 26,
-  "kind": "phrase"
- },
- {
   "key": "maa-khallast-bass-kammalt-shwayy",
   "lb": "maa khallaSt. bass kammalt shwayy.",
   "say": "ما خلصت. بس كملت شوي",
@@ -2797,15 +2428,6 @@
   "en": "I did not finish. But I carried on a bit.",
   "unit": 26,
   "kind": "dialogue"
- },
- {
-  "key": "mbeere7-a3adna-bel-bayt",
-  "lb": "mbéére7 a3adna bel-bayt",
-  "say": "مْبارِح أَعَدنا بالبَيت",
-  "ar": "مْبارِح قَعَدنا بالبَيت",
-  "en": "yesterday we stayed at home",
-  "unit": 26,
-  "kind": "phrase"
  },
  {
   "key": "mbeere7-ghassalt-es-s7ouun",
@@ -2817,15 +2439,6 @@
   "kind": "example"
  },
  {
-  "key": "sadda2",
-  "lb": "Sadda2",
-  "say": "صَدَّأ",
-  "ar": "صَدَّق",
-  "en": "he believed",
-  "unit": 26,
-  "kind": "word"
- },
- {
   "key": "sadda2tak",
   "lb": "Sadda2tak.",
   "say": "صدأتك",
@@ -2833,24 +2446,6 @@
   "en": "I believed you",
   "unit": 26,
   "kind": "dialogue"
- },
- {
-  "key": "seema7",
-  "lb": "sééma7",
-  "say": "سامَح",
-  "ar": "سامَح",
-  "en": "he forgave",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "shala7",
-  "lb": "shala7",
-  "say": "شَلَح",
-  "ar": "شَلَح",
-  "en": "he took off (clothes)",
-  "unit": 26,
-  "kind": "word"
  },
  {
   "key": "shou-3amelt-mbeere7",
@@ -2862,33 +2457,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "shou-akalt-lyoom",
-  "lb": "shou akalt lyoom?",
-  "say": "شو أَكَلْت اليوم؟",
-  "ar": "شو أَكَلْت اليوم؟",
-  "en": "what did you eat today?",
-  "unit": 26,
-  "kind": "phrase"
- },
- {
-  "key": "shou-talabto",
-  "lb": "shou Talabto?",
-  "say": "شو طَلَبْتوا؟",
-  "ar": "شو طَلَبْتوا؟",
-  "en": "what did you order?",
-  "unit": 26,
-  "kind": "phrase"
- },
- {
-  "key": "talab",
-  "lb": "Talab",
-  "say": "طَلَب",
-  "ar": "طَلَب",
-  "en": "he ordered, he asked for",
-  "unit": 26,
-  "kind": "word"
- },
- {
   "key": "talabt-men-barra-maa-3ende-wa2t-tabbekh",
   "lb": "Talabt men barra. maa 3endé wa2t Tabbekh.",
   "say": "طلبت من برا. ما عندي وأت طبخ",
@@ -2896,24 +2464,6 @@
   "en": "I ordered in. I have no time to cook.",
   "unit": 26,
   "kind": "dialogue"
- },
- {
-  "key": "tarak",
-  "lb": "tarak",
-  "say": "تَرَك",
-  "ar": "تَرَك",
-  "en": "he left behind",
-  "unit": 26,
-  "kind": "word"
- },
- {
-  "key": "trawwa2",
-  "lb": "trawwa2",
-  "say": "تْرَوَّأ",
-  "ar": "تْرَوَّق",
-  "en": "he had breakfast",
-  "unit": 26,
-  "kind": "word"
  },
  {
   "key": "trawwa2t-bakkiir-ba3deen-ghassalt-es-s7ouun",
@@ -2952,15 +2502,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "aal",
-  "lb": "aal",
-  "say": "أال",
-  "ar": "قال",
-  "en": "he said",
-  "unit": 27,
-  "kind": "word"
- },
- {
   "key": "ana-kent-hoon-mbeere7",
   "lb": "ana kent hoon mbéére7",
   "say": "أنا كِنْت هون مْبارِح",
@@ -2968,33 +2509,6 @@
   "en": "I was here yesterday.",
   "unit": 27,
   "kind": "example"
- },
- {
-  "key": "farsha",
-  "lb": "farsha",
-  "say": "فَرْشى",
-  "ar": "فَرْشى",
-  "en": "he brushed",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "keen",
-  "lb": "kéén",
-  "say": "كان",
-  "ar": "كان",
-  "en": "he was",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "kent-hoon-mbeere7",
-  "lb": "kent hoon mbéére7",
-  "say": "كِنْت هون مْبارِح",
-  "ar": "كِنْت هون مْبارِح",
-  "en": "I was here yesterday",
-  "unit": 27,
-  "kind": "phrase"
  },
  {
   "key": "ktiir-rje3t-3al-beet-w-nemt-bakkiir",
@@ -3006,51 +2520,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "le3eb",
-  "lb": "le3eb",
-  "say": "لِعِب",
-  "ar": "لِعِب",
-  "en": "he played",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "lebes",
-  "lb": "lebes",
-  "say": "لِبِس",
-  "ar": "لِبِس",
-  "en": "he wore, he put on",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "maa-sme3t-shii",
-  "lb": "maa sme3t shii",
-  "say": "ما سْمِعْت شي",
-  "ar": "ما سْمِعْت شي",
-  "en": "I did not hear anything",
-  "unit": 27,
-  "kind": "phrase"
- },
- {
-  "key": "neem",
-  "lb": "néém",
-  "say": "نام",
-  "ar": "نام",
-  "en": "he slept",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "nezel",
-  "lb": "nezel",
-  "say": "نِزِل",
-  "ar": "نِزِل",
-  "en": "he went down",
-  "unit": 27,
-  "kind": "word"
- },
- {
   "key": "nzelt-3a-beerout-wsolt-ta2riiban-es-see3a-khamse",
   "lb": "nzelt 3a Béérout. wSolt ta2riiban es-séé3a khamsé.",
   "say": "نزلت ع بيروت. وصلت تأريبا الساعة خمسة",
@@ -3060,78 +2529,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "raa7",
-  "lb": "raa7",
-  "say": "راح",
-  "ar": "راح",
-  "en": "he went",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "reje3",
-  "lb": "reje3",
-  "say": "رِجِع",
-  "ar": "رِجِع",
-  "en": "he went back",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "seme3",
-  "lb": "seme3",
-  "say": "سِمِع",
-  "ar": "سِمِع",
-  "en": "he heard",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "sheef",
-  "lb": "shééf",
-  "say": "شاف",
-  "ar": "شاف",
-  "en": "he saw",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "sheft-hal-film",
-  "lb": "sheft hal-film?",
-  "say": "شِفْت هالفيلم؟",
-  "ar": "شِفْت هالفيلم؟",
-  "en": "have you seen that film?",
-  "unit": 27,
-  "kind": "phrase"
- },
- {
-  "key": "shereb",
-  "lb": "shereb",
-  "say": "شِرِب",
-  "ar": "شِرِب",
-  "en": "he drank",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "shou-aal",
-  "lb": "shou aal?",
-  "say": "شو أال؟",
-  "ar": "شو قال؟",
-  "en": "what did he say?",
-  "unit": 27,
-  "kind": "phrase"
- },
- {
-  "key": "shtara",
-  "lb": "shtara",
-  "say": "اشْتَرى",
-  "ar": "اشْتَرى",
-  "en": "he bought",
-  "unit": 27,
-  "kind": "word"
- },
- {
   "key": "shtareet-shwayy-ghraad-ba3deen-sheft-ziad",
   "lb": "shtaréét shwayy ghraaD, ba3déén sheft Ziad.",
   "say": "اشتريت شوي غراض، بعدين شفت زياد",
@@ -3139,15 +2536,6 @@
   "en": "I bought a few things, then I saw Ziad.",
   "unit": 27,
   "kind": "dialogue"
- },
- {
-  "key": "tole3",
-  "lb": "Tole3",
-  "say": "طِلِع",
-  "ar": "طِلِع",
-  "en": "he went up, it turned out",
-  "unit": 27,
-  "kind": "word"
  },
  {
   "key": "w-enta-kent-ta3been",
@@ -3177,24 +2565,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "we3e",
-  "lb": "we3e",
-  "say": "وِعي",
-  "ar": "وِعي",
-  "en": "he woke up",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "ween-re7t-mbeere7",
-  "lb": "wéén re7t mbéére7?",
-  "say": "وين رِحْت مْبارِح؟",
-  "ar": "وين رِحْت مْبارِح؟",
-  "en": "where did you go yesterday?",
-  "unit": 27,
-  "kind": "phrase"
- },
- {
   "key": "ween-re7t-mbeere7-maa-sme3t-menak-shii",
   "lb": "wéén re7t mbéére7? maa sme3t menak shii.",
   "say": "وين رحت مبارح؟ ما سمعت منك شي",
@@ -3202,24 +2572,6 @@
   "en": "where did you go yesterday? I did not hear anything from you.",
   "unit": 27,
   "kind": "dialogue"
- },
- {
-  "key": "wosel",
-  "lb": "woSel",
-  "say": "وِصِل",
-  "ar": "وِصِل",
-  "en": "he arrived",
-  "unit": 27,
-  "kind": "word"
- },
- {
-  "key": "wsolna",
-  "lb": "wSolna",
-  "say": "وْصِلْنا",
-  "ar": "وْصِلْنا",
-  "en": "we are here",
-  "unit": 27,
-  "kind": "phrase"
  },
  {
   "key": "ziad-shou-aal",
@@ -3231,15 +2583,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "3an-jad",
-  "lb": "3an jad?",
-  "say": "عَنْ جَد؟",
-  "ar": "عَنْ جَد؟",
-  "en": "really? seriously?",
-  "unit": 28,
-  "kind": "phrase"
- },
- {
   "key": "3an-jad-byeekhod-el-3a2l",
   "lb": "3an jad? byéékhod el-3a2l.",
   "say": "عن جد؟ بياخد العأل",
@@ -3247,24 +2590,6 @@
   "en": "really? It takes your mind away.",
   "unit": 28,
   "kind": "dialogue"
- },
- {
-  "key": "abel-maa",
-  "lb": "abel maa",
-  "say": "أَبْل ما",
-  "ar": "قَبْل ما",
-  "en": "before (in front of a verb)",
-  "unit": 28,
-  "kind": "word"
- },
- {
-  "key": "addayna",
-  "lb": "aDDayna",
-  "say": "أَضَّيْنا",
-  "ar": "قَضَّيْنا",
-  "en": "we spent (time)",
-  "unit": 28,
-  "kind": "word"
  },
  {
   "key": "addayna-honiik-shii-arb3a-see3aat-w-ba3deen-nzelna-3a-beirut",
@@ -3285,15 +2610,6 @@
   "kind": "example"
  },
  {
-  "key": "awwal-maa",
-  "lb": "awwal maa",
-  "say": "أَوَّل ما",
-  "ar": "أَوَّل ما",
-  "en": "as soon as, the moment that",
-  "unit": 28,
-  "kind": "word"
- },
- {
   "key": "awwal-maa-wsolna-shefna-l-ba7r-raw3a-addayna-honiik-saa3teen",
   "lb": "awwal maa wSolna, shefna l-ba7r. raw3a. aDDayna honiik saa3téén.",
   "say": "أول ما وصلنا، شفنا البحر. روعة. أضينا هنيك ساعتين",
@@ -3301,15 +2617,6 @@
   "en": "the moment we arrived, we saw the sea. Wonderful. We spent two hours there.",
   "unit": 28,
   "kind": "dialogue"
- },
- {
-  "key": "awwal-shii",
-  "lb": "awwal shii",
-  "say": "أَوَّل شي",
-  "ar": "أَوَّل شي",
-  "en": "first of all",
-  "unit": 28,
-  "kind": "word"
  },
  {
   "key": "awwal-shii-tmasshayna-shwayy-bel-balde-l-adiime",
@@ -3330,15 +2637,6 @@
   "kind": "example"
  },
  {
-  "key": "bel-awwal",
-  "lb": "bel-awwal",
-  "say": "بالأَوَّل",
-  "ar": "بالأَوَّل",
-  "en": "at the start, to begin with",
-  "unit": 28,
-  "kind": "word"
- },
- {
   "key": "bel-awwal-nzelna-3a-jbeil-wsolna-ta2riiban-es-see3a-tenteen",
   "lb": "bel-awwal, nzelna 3a Jbeil. wSolna ta2riiban es-séé3a tentéén.",
   "say": "بالأول، نزلنا ع جبيل. وصلنا تأريبا الساعة تنتين",
@@ -3346,33 +2644,6 @@
   "en": "to begin with, we went down to Byblos. We arrived around two.",
   "unit": 28,
   "kind": "dialogue"
- },
- {
-  "key": "bi-nafs-el-wa2t",
-  "lb": "bi-nafs el-wa2t",
-  "say": "بِنَفس الوَأت",
-  "ar": "بِنَفس الوَقت",
-  "en": "at the same time",
-  "unit": 28,
-  "kind": "word"
- },
- {
-  "key": "byeekhod-el-3a2l",
-  "lb": "byéékhod el-3a2l",
-  "say": "بْياخُد العَأْل",
-  "ar": "بْياخُد العَقْل",
-  "en": "it takes the mind away",
-  "unit": 28,
-  "kind": "phrase"
- },
- {
-  "key": "eeh-wallah",
-  "lb": "ééh wallah",
-  "say": "إيه والله",
-  "ar": "",
-  "en": "yes, honestly",
-  "unit": 28,
-  "kind": "reply"
  },
  {
   "key": "lamma-wsolna-keen-et-ta2s-deefe-ktiir",
@@ -3384,15 +2655,6 @@
   "kind": "example"
  },
  {
-  "key": "maa-bkhabbrak",
-  "lb": "maa bkhabbrak!",
-  "say": "ما بْخَبّْرَك!",
-  "ar": "ما بْخَبّْرَك!",
-  "en": "you have no idea",
-  "unit": 28,
-  "kind": "phrase"
- },
- {
   "key": "maa-bkhabbrak-shou-saar-mbeere7",
   "lb": "maa bkhabbrak shou Saar mbéére7.",
   "say": "ما بخبرك شو صار مبارح",
@@ -3402,15 +2664,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "maa-t2elle",
-  "lb": "maa t2ellé!",
-  "say": "ما تْأِلّي!",
-  "ar": "ما تْقِلّي!",
-  "en": "you do not say",
-  "unit": 28,
-  "kind": "phrase"
- },
- {
   "key": "maa-talabt-samak-talabt-kafta",
   "lb": "maa Talabt samak, Talabt kafta",
   "say": "",
@@ -3418,15 +2671,6 @@
   "en": "I did not order fish, I ordered kofta.",
   "unit": 28,
   "kind": "example"
- },
- {
-  "key": "men-ba3da",
-  "lb": "men ba3da",
-  "say": "مِن بَعدها",
-  "ar": "مِن بَعدها",
-  "en": "after that",
-  "unit": 28,
-  "kind": "word"
  },
  {
   "key": "men-ba3da-a3adna-b-mat3am-zghiir-2beel-et-tarii2-w-talabna-samak",
@@ -3447,33 +2691,6 @@
   "kind": "example"
  },
  {
-  "key": "rje3na",
-  "lb": "rje3na",
-  "say": "رْجِعْنا",
-  "ar": "رْجِعْنا",
-  "en": "we went back, we returned",
-  "unit": 28,
-  "kind": "word"
- },
- {
-  "key": "shefna",
-  "lb": "shefna",
-  "say": "شِفْنا",
-  "ar": "شِفْنا",
-  "en": "we saw",
-  "unit": 28,
-  "kind": "word"
- },
- {
-  "key": "shou-saar",
-  "lb": "shou Saar?",
-  "say": "شو صار؟",
-  "ar": "شو صار؟",
-  "en": "what happened?",
-  "unit": 28,
-  "kind": "phrase"
- },
- {
   "key": "tania-w-jawza-tole3o-kameen",
   "lb": "Tania w-jawza Tole3o kaméén",
   "say": "",
@@ -3481,15 +2698,6 @@
   "en": "Tania and her husband went up too.",
   "unit": 28,
   "kind": "example"
- },
- {
-  "key": "w-akhiiran",
-  "lb": "w-akhiiran",
-  "say": "وأخيراً",
-  "ar": "وأخيراً",
-  "en": "and finally",
-  "unit": 28,
-  "kind": "word"
  },
  {
   "key": "w-akhiiran-lamma-rje3na-keen-fii-3aj2et-seer-tleet-see3aat",
@@ -3528,15 +2736,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ele-zameen",
-  "lb": "elé zaméén",
-  "say": "إلي زَمان",
-  "ar": "إلي زَمان",
-  "en": "it has been ages since I",
-  "unit": 29,
-  "kind": "phrase"
- },
- {
   "key": "ele-zameen-maa-sheftak",
   "lb": "elé zaméén maa sheftak!",
   "say": "إلي زمان ما شفتك",
@@ -3546,15 +2745,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "keen-fii",
-  "lb": "kéén fii",
-  "say": "كان في",
-  "ar": "كان في",
-  "en": "there was, there were",
-  "unit": 29,
-  "kind": "word"
- },
- {
   "key": "keen-fii-taawleet-faadye",
   "lb": "kéén fii Taawléét faaDyé",
   "say": "كان في طاوْلات فاضْية",
@@ -3562,33 +2752,6 @@
   "en": "There were free tables.",
   "unit": 29,
   "kind": "example"
- },
- {
-  "key": "keenet",
-  "lb": "kéénet",
-  "say": "كانِت",
-  "ar": "كانِت",
-  "en": "she was",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "keeno",
-  "lb": "kééno",
-  "say": "كانوا",
-  "ar": "كانوا",
-  "en": "they were",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "kenna",
-  "lb": "kenna",
-  "say": "كِنّا",
-  "ar": "كِنّا",
-  "en": "we were",
-  "unit": 29,
-  "kind": "word"
  },
  {
   "key": "kenna-baddna-nrouu7-3al-ba7r-w-akhiiran-a3adna-bel-beet",
@@ -3607,15 +2770,6 @@
   "en": "We had been waiting for them for half an hour.",
   "unit": 29,
   "kind": "example"
- },
- {
-  "key": "kent",
-  "lb": "kent",
-  "say": "كِنْت",
-  "ar": "كِنْت",
-  "en": "I was, you (m) were",
-  "unit": 29,
-  "kind": "word"
  },
  {
   "key": "kent-3am-beshteghel-lamma-talfan-sami",
@@ -3663,33 +2817,6 @@
   "kind": "example"
  },
  {
-  "key": "kente",
-  "lb": "kenté",
-  "say": "كِنْتِ",
-  "ar": "كِنْتِ",
-  "en": "you (f) were",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "kento",
-  "lb": "kento",
-  "say": "كِنْتوا",
-  "ar": "كِنْتوا",
-  "en": "you (pl) were",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "l-7amdella-3as-saleeme",
-  "lb": "l-7amdella 3as-saléémé",
-  "say": "الحَمْدِالله ع السَّلامة",
-  "ar": "الحَمْدِالله ع السَّلامة",
-  "en": "thank God you are safe",
-  "unit": 29,
-  "kind": "phrase"
- },
- {
   "key": "l-7amdella-halla2-ana-met2aa3ed",
   "lb": "l-7amdella. halla2 ana met2aa3ed.",
   "say": "الحمدلله. هلأ أنا متأاعد",
@@ -3717,15 +2844,6 @@
   "kind": "example"
  },
  {
-  "key": "maa-3lee",
-  "lb": "maa 3léé",
-  "say": "ما عْليه",
-  "ar": "ما عْليه",
-  "en": "never mind, it does not matter",
-  "unit": 29,
-  "kind": "phrase"
- },
- {
   "key": "maa-kenna-mabsouutiin",
   "lb": "maa kenna mabsouuTiin",
   "say": "ما كِنّا مَبْسوطين",
@@ -3733,51 +2851,6 @@
   "en": "We were not happy.",
   "unit": 29,
   "kind": "example"
- },
- {
-  "key": "masna3",
-  "lb": "maSna3",
-  "say": "مَصْنَع",
-  "ar": "مَصْنَع",
-  "en": "factory",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "met2aa3ed",
-  "lb": "met2aa3ed",
-  "say": "مِتْأاعِد",
-  "ar": "مِتْقاعِد",
-  "en": "retired",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "moudiir",
-  "lb": "moudiir",
-  "say": "مُدير",
-  "ar": "مُدير",
-  "en": "manager",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "naater",
-  "lb": "naaTer",
-  "say": "ناطِر",
-  "ar": "ناطِر",
-  "en": "waiting",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "shou-keen-ra2yak",
-  "lb": "shou kéén ra2yak?",
-  "say": "شو كان رَأْيَك؟",
-  "ar": "شو كان رَأْيَك؟",
-  "en": "what did you make of it?",
-  "unit": 29,
-  "kind": "phrase"
  },
  {
   "key": "shou-kent-teshteghel-abel",
@@ -3789,15 +2862,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "tabii3e",
-  "lb": "Tabii3é",
-  "say": "طَبيعي",
-  "ar": "طَبيعي",
-  "en": "normal, natural",
-  "unit": 29,
-  "kind": "word"
- },
- {
   "key": "w-keen-fii-3ashra-bel-beet-halla2-wala-7ada",
   "lb": "w kéén fii 3ashra bel-béét. halla2 wala 7ada.",
   "say": "وكان في عشرة بالبيت. هلأ ولا حدا",
@@ -3807,24 +2871,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "wala-yhemmak",
-  "lb": "wala yhemmak",
-  "say": "وَلا يْهِمَّك",
-  "ar": "وَلا يْهِمَّك",
-  "en": "do not let it worry you",
-  "unit": 29,
-  "kind": "phrase"
- },
- {
-  "key": "yaa-reet",
-  "lb": "yaa réét!",
-  "say": "يا ريت!",
-  "ar": "يا ريت!",
-  "en": "I wish",
-  "unit": 29,
-  "kind": "phrase"
- },
- {
   "key": "yaa-reet-kent-3eref",
   "lb": "yaa réét kent 3eref!",
   "say": "يا ريت كنت عرف",
@@ -3832,51 +2878,6 @@
   "en": "I wish I had known!",
   "unit": 29,
   "kind": "dialogue"
- },
- {
-  "key": "ze3leen",
-  "lb": "ze3léén",
-  "say": "زِعْلان",
-  "ar": "زِعْلان",
-  "en": "upset, put out",
-  "unit": 29,
-  "kind": "word"
- },
- {
-  "key": "7aaliyyan",
-  "lb": "7aaliyyan",
-  "say": "حالِياً",
-  "ar": "حالِياً",
-  "en": "at the moment, currently",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "addee-sarlak-hoon",
-  "lb": "addéé Sarlak hoon?",
-  "say": "أَدّيه صْرلَك هون؟",
-  "ar": "قَدّيه صْرلَك هون؟",
-  "en": "how long have you been here?",
-  "unit": 30,
-  "kind": "phrase"
- },
- {
-  "key": "bass-halla2-wsolt",
-  "lb": "bass halla2 wSolt",
-  "say": "بَس هَلَّأ وْصِلْت",
-  "ar": "بَس هَلَّق وْصِلْت",
-  "en": "I have only just arrived",
-  "unit": 30,
-  "kind": "phrase"
- },
- {
-  "key": "dakhlak",
-  "lb": "dakhlak?",
-  "say": "دَخْلَك؟",
-  "ar": "دَخْلَك؟",
-  "en": "excuse me, can I ask you something",
-  "unit": 30,
-  "kind": "phrase"
  },
  {
   "key": "dakhlak-addee-sarlak-naater",
@@ -3897,24 +2898,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "elna-noss-see3a-naatriin",
-  "lb": "elna noSS séé3a naaTriin",
-  "say": "إلْنا نُصّ ساعة ناطْرين",
-  "ar": "إلْنا نُصّ ساعة ناطْرين",
-  "en": "we have been waiting half an hour",
-  "unit": 30,
-  "kind": "phrase"
- },
- {
-  "key": "iyyeem",
-  "lb": "iyyéém",
-  "say": "إيّام",
-  "ar": "إيّام",
-  "en": "days",
-  "unit": 30,
-  "kind": "word"
- },
- {
   "key": "jem3a-mesh-ma32ouul",
   "lb": "jem3a?! mesh ma32ouul.",
   "say": "جمعة؟! مش معأول",
@@ -3922,15 +2905,6 @@
   "en": "a week?! That is unbelievable.",
   "unit": 30,
   "kind": "dialogue"
- },
- {
-  "key": "jeme3teen",
-  "lb": "jeme3téén",
-  "say": "جِمعْتين",
-  "ar": "جِمعْتين",
-  "en": "two weeks",
-  "unit": 30,
-  "kind": "word"
  },
  {
   "key": "kella-jem3a-basiita",
@@ -3942,15 +2916,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "kella-noss-see3a",
-  "lb": "kella noSS séé3a!",
-  "say": "كِلّها نُصّ ساعة!",
-  "ar": "كِلّها نُصّ ساعة!",
-  "en": "it is only half an hour",
-  "unit": 30,
-  "kind": "phrase"
- },
- {
   "key": "maa-ba3ref-men-shway-eje-7ada-w-aal-jem3a",
   "lb": "maa ba3ref. men shway ejé 7ada w aal jem3a.",
   "say": "ما بعرف. من شوي إجا حدا وأال جمعة",
@@ -3958,15 +2923,6 @@
   "en": "I do not know. A while ago someone came and said a week.",
   "unit": 30,
   "kind": "dialogue"
- },
- {
-  "key": "men-aymata",
-  "lb": "men aymata?",
-  "say": "مِن أَيْمَتى؟",
-  "ar": "مِن أَيْمَتى؟",
-  "en": "since when?",
-  "unit": 30,
-  "kind": "word"
  },
  {
   "key": "men-aymata-l-maktab-msakkar",
@@ -3978,42 +2934,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "men-shway",
-  "lb": "men shway",
-  "say": "مِنْ شْوَي",
-  "ar": "مِنْ شْوَي",
-  "en": "a while ago",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "noss-see3a",
-  "lb": "noSS séé3a",
-  "say": "نُصّ ساعة",
-  "ar": "نُصّ ساعة",
-  "en": "half an hour",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "reb3-see3a",
-  "lb": "reb3 séé3a",
-  "say": "رِبع ساعة",
-  "ar": "رِبع ساعة",
-  "en": "a quarter of an hour",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "sarelna",
-  "lb": "Sarelna",
-  "say": "صرلنا",
-  "ar": "",
-  "en": "it has been … for us",
-  "unit": 30,
-  "kind": "word"
- },
- {
   "key": "sarelna-see3teen-naatriin",
   "lb": "Sarelna séé3téén naaTriin",
   "say": "",
@@ -4021,24 +2941,6 @@
   "en": "We have been waiting two hours.",
   "unit": 30,
   "kind": "example"
- },
- {
-  "key": "sarlak",
-  "lb": "Sarlak",
-  "say": "صْرلَك",
-  "ar": "صْرلَك",
-  "en": "it has been … for you (m)",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "sarle",
-  "lb": "Sarlé",
-  "say": "صْرلي",
-  "ar": "صْرلي",
-  "en": "it has been … for me",
-  "unit": 30,
-  "kind": "word"
  },
  {
   "key": "sarle-jem3a-hoon",
@@ -4059,15 +2961,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "sarle-reb3-see3a",
-  "lb": "Sarlé reb3 séé3a",
-  "say": "صرلي ربع ساعة",
-  "ar": "",
-  "en": "a quarter of an hour",
-  "unit": 30,
-  "kind": "reply"
- },
- {
   "key": "sarlo-shahreen-3am-byeshteghel-hoon",
   "lb": "Sarlo shahréén 3am byeshteghel hoon",
   "say": "",
@@ -4075,33 +2968,6 @@
   "en": "He has been working here for two months.",
   "unit": 30,
   "kind": "example"
- },
- {
-  "key": "see3teen",
-  "lb": "séé3téén",
-  "say": "ساعْتين",
-  "ar": "ساعْتين",
-  "en": "two hours",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "shahr",
-  "lb": "shahr",
-  "say": "شَهْر",
-  "ar": "شَهْر",
-  "en": "month",
-  "unit": 30,
-  "kind": "word"
- },
- {
-  "key": "3a-7seeb-el-mat3am",
-  "lb": "3a 7sééb el-maT3am",
-  "say": "عَ حْساب المَطْعَم",
-  "ar": "عَ حْساب المَطْعَم",
-  "en": "on the house",
-  "unit": 31,
-  "kind": "phrase"
  },
  {
   "key": "abadan-enta-dfa3t-el-marra-el-meedye",
@@ -4113,15 +2979,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "badde-3azzbak",
-  "lb": "baddé 3azzbak",
-  "say": "بَدّي عَزّْبَك",
-  "ar": "بَدّي عَذّْبَك",
-  "en": "sorry to trouble you",
-  "unit": 31,
-  "kind": "phrase"
- },
- {
   "key": "badde-3azzbak-fii-ghalta-bel-7seeb-hayda-mesh-taba3na",
   "lb": "baddé 3azzbak — fii ghalTa bel-7sééb. hayda mesh taba3na.",
   "say": "بدي عزبك — في غلطة بالحساب. هيدا مش تبعنا",
@@ -4129,24 +2986,6 @@
   "en": "sorry to trouble you — there is a mistake in the bill. This is not ours.",
   "unit": 31,
   "kind": "dialogue"
- },
- {
-  "key": "bakhshiish",
-  "lb": "bakhshiish",
-  "say": "بَخْشيش",
-  "ar": "بَخْشيش",
-  "en": "tip",
-  "unit": 31,
-  "kind": "word"
- },
- {
-  "key": "basiita-maa-fii-lzouum",
-  "lb": "basiiTa! maa fii lzouum",
-  "say": "بسيطة ما في لزوم",
-  "ar": "",
-  "en": "it is nothing, there is no need",
-  "unit": 31,
-  "kind": "reply"
  },
  {
   "key": "bet7ebbo-7elo",
@@ -4167,15 +3006,6 @@
   "kind": "example"
  },
  {
-  "key": "ghalta",
-  "lb": "ghalTa",
-  "say": "غَلْطَة",
-  "ar": "غَلْطَة",
-  "en": "mistake",
-  "unit": 31,
-  "kind": "word"
- },
- {
   "key": "jebelna-2anniinteen-nbiid-a7mar-3mool-ma3rouuf",
   "lb": "jebelna 2anniintéén nbiid a7mar, 3mool ma3rouuf",
   "say": "",
@@ -4185,24 +3015,6 @@
   "kind": "example"
  },
  {
-  "key": "kell-talab-metl-hat-talab",
-  "lb": "kell Talab metl haT-Talab!",
-  "say": "كِل طَلَب مِتْل هالطَّلَب!",
-  "ar": "كِل طَلَب مِتْل هالطَّلَب!",
-  "en": "consider it done, gladly",
-  "unit": 31,
-  "kind": "phrase"
- },
- {
-  "key": "leey7a",
-  "lb": "lééy7a",
-  "say": "لايْحَة",
-  "ar": "لايْحَة",
-  "en": "menu, list",
-  "unit": 31,
-  "kind": "word"
- },
- {
   "key": "ma3ak-7a2-3afwan-hayda-3a-7seeb-el-mat3am",
   "lb": "ma3ak 7a2. 3afwan. hayda 3a 7sééb el-maT3am.",
   "say": "معك حأ. عفوا. هيدا ع حساب المطعم",
@@ -4210,24 +3022,6 @@
   "en": "you are right. Sorry. That one is on the house.",
   "unit": 31,
   "kind": "dialogue"
- },
- {
-  "key": "maa-fii-3azeeb",
-  "lb": "maa fii 3azééb",
-  "say": "ما في عزيب",
-  "ar": "",
-  "en": "no trouble at all",
-  "unit": 31,
-  "kind": "reply"
- },
- {
-  "key": "maitre",
-  "lb": "Maitre!",
-  "say": "مِتر!",
-  "ar": "مِتر!",
-  "en": "the word you call a waiter with",
-  "unit": 31,
-  "kind": "phrase"
  },
  {
   "key": "maitre-el-7seeb-3mool-ma3rouuf",
@@ -4248,24 +3042,6 @@
   "kind": "example"
  },
  {
-  "key": "meeza",
-  "lb": "mééza",
-  "say": "المازة",
-  "ar": "المازة",
-  "en": "mezze, the small plates that open a meal",
-  "unit": 31,
-  "kind": "word"
- },
- {
-  "key": "mouneesabe",
-  "lb": "mounéésabé",
-  "say": "مُناسَبة",
-  "ar": "مُناسَبة",
-  "en": "occasion",
-  "unit": 31,
-  "kind": "word"
- },
- {
   "key": "ne7na-talabna-kees-nbiid-mesh-2anniine",
   "lb": "ne7na Talabna kéés nbiid, mesh 2anniiné",
   "say": "",
@@ -4275,15 +3051,6 @@
   "kind": "example"
  },
  {
-  "key": "sa7n",
-  "lb": "Sa7n",
-  "say": "صَحْن",
-  "ar": "صَحْن",
-  "en": "plate",
-  "unit": 31,
-  "kind": "word"
- },
- {
   "key": "shou-3am-ta3mol-ana-bedfa3",
   "lb": "shou 3am ta3mol? ana bedfa3.",
   "say": "شو عم تعمل؟ أنا بدفع",
@@ -4291,15 +3058,6 @@
   "en": "what are you doing? I am paying.",
   "unit": 31,
   "kind": "dialogue"
- },
- {
-  "key": "ta7t-amrak",
-  "lb": "ta7t amrak",
-  "say": "تَحْت أَمْرَك",
-  "ar": "تَحْت أَمْرَك",
-  "en": "under your command",
-  "unit": 31,
-  "kind": "phrase"
  },
  {
   "key": "tole3-ghaale-shwayy",
@@ -4320,24 +3078,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "3am-b3azzbak",
-  "lb": "3am b3azzbak",
-  "say": "عَم بْعَزّْبَك",
-  "ar": "عَم بْعَذّْبَك",
-  "en": "I am putting you to trouble",
-  "unit": 32,
-  "kind": "phrase"
- },
- {
-  "key": "3ayn",
-  "lb": "3ayn",
-  "say": "عَين",
-  "ar": "عَين",
-  "en": "eye",
-  "unit": 32,
-  "kind": "word"
- },
- {
   "key": "3ende-waja3-b-zle3iime-w-shwayy-7araara",
   "lb": "3endé waja3 b-zlé3iimé w shwayy 7araara.",
   "say": "عندي وجع بزلعومي وشوي حرارة",
@@ -4345,60 +3085,6 @@
   "en": "I have a pain in my throat and a bit of a fever.",
   "unit": 32,
   "kind": "dialogue"
- },
- {
-  "key": "7akiim",
-  "lb": "7akiim",
-  "say": "حَكيم",
-  "ar": "حَكيم",
-  "en": "doctor",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "7araara",
-  "lb": "7araara",
-  "say": "حَرارة",
-  "ar": "حَرارة",
-  "en": "fever, temperature",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "batn",
-  "lb": "baTn",
-  "say": "بَطن",
-  "ar": "بَطن",
-  "en": "stomach, belly",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "d3iif",
-  "lb": "D3iif",
-  "say": "ضْعيف",
-  "ar": "ضْعيف",
-  "en": "weak",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "dahr",
-  "lb": "Dahr",
-  "say": "ضَهْر",
-  "ar": "ضَهْر",
-  "en": "back",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "eltiheeb",
-  "lb": "eltihééb",
-  "say": "إِلْتِهاب",
-  "ar": "إِلْتِهاب",
-  "en": "infection",
-  "unit": 32,
-  "kind": "word"
  },
  {
   "key": "fii-wa7de-btefta7-arb3a-w-3eshriin-see3a",
@@ -4410,24 +3096,6 @@
   "kind": "example"
  },
  {
-  "key": "iid",
-  "lb": "iid",
-  "say": "إيد",
-  "ar": "إيد",
-  "en": "hand",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "jesm",
-  "lb": "jesm",
-  "say": "جِسْم",
-  "ar": "جِسْم",
-  "en": "body",
-  "unit": 32,
-  "kind": "word"
- },
- {
   "key": "jesme-mlashlash-w-maa-3ende-eebliyye",
   "lb": "jesmé mlashlash w-maa 3endé éébliyyé",
   "say": "",
@@ -4435,15 +3103,6 @@
   "en": "I feel washed out and I have no appetite.",
   "unit": 32,
   "kind": "example"
- },
- {
-  "key": "maa-bisiir-heek",
-  "lb": "maa biSiir héék!",
-  "say": "ما بيصير هيك!",
-  "ar": "ما بيصير هيك!",
-  "en": "that will not do",
-  "unit": 32,
-  "kind": "phrase"
  },
  {
   "key": "mar7aba-shou-bak",
@@ -4455,33 +3114,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "mesh-bayneetna",
-  "lb": "mesh baynéétna!",
-  "say": "مش بيناتنا",
-  "ar": "",
-  "en": "do not stand on ceremony with me",
-  "unit": 32,
-  "kind": "reply"
- },
- {
-  "key": "nshallah-tkouun-a7san",
-  "lb": "nshallah tkouun a7san",
-  "say": "إنشالله تْكون أَحْسَن",
-  "ar": "إنشالله تْكون أَحْسَن",
-  "en": "hopefully you will be better",
-  "unit": 32,
-  "kind": "phrase"
- },
- {
-  "key": "raas",
-  "lb": "raas",
-  "say": "راس",
-  "ar": "راس",
-  "en": "head",
-  "unit": 32,
-  "kind": "word"
- },
- {
   "key": "raasak-byouuja3",
   "lb": "raasak byouuja3?",
   "say": "راسك بيوجع؟",
@@ -4489,42 +3121,6 @@
   "en": "does your head hurt?",
   "unit": 32,
   "kind": "dialogue"
- },
- {
-  "key": "rashe7",
-  "lb": "rashe7",
-  "say": "رَشح",
-  "ar": "رَشح",
-  "en": "a cold, the flu",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "saakhen",
-  "lb": "saakhen",
-  "say": "ساخِن",
-  "ar": "ساخِن",
-  "en": "running a fever, hot",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "saleemeta",
-  "lb": "saléémeta",
-  "say": "سَلامِتها",
-  "ar": "سَلامِتها",
-  "en": "may she be well",
-  "unit": 32,
-  "kind": "phrase"
- },
- {
-  "key": "saleemtak",
-  "lb": "saléémtak",
-  "say": "سَلامْتَك",
-  "ar": "سَلامْتَك",
-  "en": "may you be safe and well",
-  "unit": 32,
-  "kind": "phrase"
  },
  {
   "key": "saleemtak-nshalla-tkouun-a7san",
@@ -4554,33 +3150,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "saydaliyye",
-  "lb": "Saydaliyyé",
-  "say": "صَيْدَلِيّة",
-  "ar": "صَيْدَلِيّة",
-  "en": "pharmacy",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "senn",
-  "lb": "senn",
-  "say": "سِن",
-  "ar": "سِن",
-  "en": "tooth",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "shou-bak",
-  "lb": "shou bak?",
-  "say": "شو بَك؟",
-  "ar": "شو بَك؟",
-  "en": "what is wrong with you?",
-  "unit": 32,
-  "kind": "phrase"
- },
- {
   "key": "shwayy-w-7aases-7aale-d3iif",
   "lb": "shwayy. w 7aases 7aalé D3iif.",
   "say": "شوي. وحاسس حالي ضعيف",
@@ -4599,15 +3168,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "waja3",
-  "lb": "waja3",
-  "say": "وَجَع",
-  "ar": "وَجَع",
-  "en": "pain, ache",
-  "unit": 32,
-  "kind": "word"
- },
- {
   "key": "yemken-eltiheeb-eza-ba3do-boukra-rouu7-3and-7akiim",
   "lb": "yemken eltihééb. eza ba3do boukra, rouu7 3and 7akiim.",
   "say": "يمكن التهاب. إزا بعدو بكرا، روح عند حكيم",
@@ -4615,60 +3175,6 @@
   "en": "it might be an infection. If it is still there tomorrow, go and see a doctor.",
   "unit": 32,
   "kind": "dialogue"
- },
- {
-  "key": "zle3iim",
-  "lb": "zlé3iim",
-  "say": "زْلاعيم",
-  "ar": "زْلاعيم",
-  "en": "throat",
-  "unit": 32,
-  "kind": "word"
- },
- {
-  "key": "7aabeb",
-  "lb": "7aabeb",
-  "say": "حابِب",
-  "ar": "حابِب",
-  "en": "fond of, taken with",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "7aases",
-  "lb": "7aases",
-  "say": "حاسِس",
-  "ar": "حاسِس",
-  "en": "feeling",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "7eejez",
-  "lb": "7ééjez",
-  "say": "حاجِز",
-  "ar": "حاجِز",
-  "en": "having booked",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "7eejez-tiyyaara-la-boukra",
-  "lb": "7ééjez Tiyyaara la-boukra",
-  "say": "حاجِز طِيّارة لَبُكْرة",
-  "ar": "حاجِز طِيّارة لَبُكْرة",
-  "en": "I have booked a flight for tomorrow",
-  "unit": 33,
-  "kind": "phrase"
- },
- {
-  "key": "aa3ed",
-  "lb": "aa3ed",
-  "say": "أاعِد",
-  "ar": "قاعِد",
-  "en": "sitting, staying put",
-  "unit": 33,
-  "kind": "word"
  },
  {
   "key": "aloo-mar7aba",
@@ -4689,15 +3195,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ana-seeken-bi-beirut",
-  "lb": "ana sééken bi-Beirut",
-  "say": "أنا ساكن ببيروت",
-  "ar": "",
-  "en": "I live in Beirut",
-  "unit": 33,
-  "kind": "reply"
- },
- {
   "key": "ana-seekne-2beel-el-madrase",
   "lb": "ana séékné 2béél el-madrasé",
   "say": "أنا ساكْنة أْبال المَدْرَسة",
@@ -4705,15 +3202,6 @@
   "en": "I live opposite the school.",
   "unit": 33,
   "kind": "example"
- },
- {
-  "key": "ele-noss-see3a-naater",
-  "lb": "elé noSS séé3a naaTer",
-  "say": "إلي نُصّ ساعة ناطِر",
-  "ar": "إلي نُصّ ساعة ناطِر",
-  "en": "I have been waiting half an hour",
-  "unit": 33,
-  "kind": "phrase"
  },
  {
   "key": "ele-noss-see3a-naater-bel-maktab",
@@ -4725,15 +3213,6 @@
   "kind": "example"
  },
  {
-  "key": "jeehez",
-  "lb": "jééhez",
-  "say": "جاهِز",
-  "ar": "جاهِز",
-  "en": "ready",
-  "unit": 33,
-  "kind": "word"
- },
- {
   "key": "jeehez-w-ana-7eejez-tiyyaara-la-boukra-fa-ana-mesta3jel",
   "lb": "jééhez. w ana 7ééjez Tiyyaara la-boukra, fa ana mesta3jel.",
   "say": "جاهز. وأنا حاجز طيارة لبكرا، فأنا مستعجل",
@@ -4741,24 +3220,6 @@
   "en": "ready. And I have booked a flight for tomorrow, so I am in a hurry.",
   "unit": 33,
   "kind": "dialogue"
- },
- {
-  "key": "kell-shii-jeehez",
-  "lb": "kell shii jééhez",
-  "say": "كِل شي جاهِز",
-  "ar": "كِل شي جاهِز",
-  "en": "everything is ready",
-  "unit": 33,
-  "kind": "phrase"
- },
- {
-  "key": "l-mat3am-mfawwal-lyoom",
-  "lb": "l-maT3am mfawwal lyoom",
-  "say": "المَطعَم مْفَوَّل اليوم",
-  "ar": "المَطعَم مْفَوَّل اليوم",
-  "en": "the restaurant is fully booked today",
-  "unit": 33,
-  "kind": "phrase"
  },
  {
   "key": "la2-mesh-mawjouud-halla2-miin-3am-byes2al",
@@ -4770,15 +3231,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "m3a22am",
-  "lb": "m3a22am",
-  "say": "مْعَأَّم",
-  "ar": "مْعَقَّم",
-  "en": "sanitised",
-  "unit": 33,
-  "kind": "word"
- },
- {
   "key": "mar7aba-l-ostees-ziad-mawjouud",
   "lb": "mar7aba. l-ostéés Ziad mawjouud?",
   "say": "مرحبا. الأستاز زياد موجود؟",
@@ -4786,60 +3238,6 @@
   "en": "hello. Is Ziad in?",
   "unit": 33,
   "kind": "dialogue"
- },
- {
-  "key": "mesh-mawjouud-halla2",
-  "lb": "mesh mawjouud halla2",
-  "say": "مِش مَوْجود هَلَّأ",
-  "ar": "مِش مَوْجود هَلَّق",
-  "en": "he is not in right now",
-  "unit": 33,
-  "kind": "phrase"
- },
- {
-  "key": "mesta3jel",
-  "lb": "mesta3jel",
-  "say": "مِسْتَعْجِل",
-  "ar": "مِسْتَعْجِل",
-  "en": "in a hurry",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "neezel",
-  "lb": "néézel",
-  "say": "نازِل",
-  "ar": "نازِل",
-  "en": "on the way down",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "neezel-3a-beirut",
-  "lb": "néézel 3a Beirut",
-  "say": "نازِل عَ بيروت",
-  "ar": "نازِل عَ بيروت",
-  "en": "I am on my way down to Beirut",
-  "unit": 33,
-  "kind": "phrase"
- },
- {
-  "key": "saayer",
-  "lb": "Saayer",
-  "say": "صايِر",
-  "ar": "صايِر",
-  "en": "having become",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "seeken",
-  "lb": "sééken",
-  "say": "ساكِن",
-  "ar": "ساكِن",
-  "en": "living, resident",
-  "unit": 33,
-  "kind": "word"
  },
  {
   "key": "seeken-b-ashrafiyye-bass-halla2-ana-neezel-3a-beerout",
@@ -4858,24 +3256,6 @@
   "en": "all right. Is everything ready at your end?",
   "unit": 33,
   "kind": "dialogue"
- },
- {
-  "key": "tiyyaara",
-  "lb": "Tiyyaara",
-  "say": "طِيّارة",
-  "ar": "طِيّارة",
-  "en": "plane, flight",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "key": "ween-seeken",
-  "lb": "wéén sééken?",
-  "say": "وين ساكِن؟",
-  "ar": "وين ساكِن؟",
-  "en": "where do you live?",
-  "unit": 33,
-  "kind": "phrase"
  },
  {
   "key": "ween-seeken-enta",
@@ -4905,33 +3285,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ba3d-maa",
-  "lb": "ba3d maa",
-  "say": "بَعْد ما",
-  "ar": "بَعْد ما",
-  "en": "after",
-  "unit": 34,
-  "kind": "word"
- },
- {
-  "key": "ba3deen-maa-3ende-wa2t",
-  "lb": "ba3déén, maa 3endé wa2t",
-  "say": "بَعْدين، ما عِنْدي وَأْت",
-  "ar": "بَعْدين، ما عِنْدي وَقْت",
-  "en": "besides, I do not have time",
-  "unit": 34,
-  "kind": "phrase"
- },
- {
-  "key": "darouure",
-  "lb": "Darouuré",
-  "say": "ضَروري",
-  "ar": "ضَروري",
-  "en": "it is essential that",
-  "unit": 34,
-  "kind": "word"
- },
- {
   "key": "darouure-enno-khabbriine-abl-maa-te7jzo",
   "lb": "Darouuré enno khabbriiné abl maa te7jzo.",
   "say": "ضروري إنو خبريني أبل ما تحجزو",
@@ -4939,15 +3292,6 @@
   "en": "it is essential that you tell me before you book.",
   "unit": 34,
   "kind": "dialogue"
- },
- {
-  "key": "eza",
-  "lb": "eza",
-  "say": "إزا",
-  "ar": "إذا",
-  "en": "if",
-  "unit": 34,
-  "kind": "word"
  },
  {
   "key": "eza-betriid-be7joz-taawle-la-boukra",
@@ -4977,42 +3321,6 @@
   "kind": "example"
  },
  {
-  "key": "l-mhemm",
-  "lb": "l-mhemm",
-  "say": "المْهِم",
-  "ar": "المْهِم",
-  "en": "what matters is",
-  "unit": 34,
-  "kind": "word"
- },
- {
-  "key": "l-mhemm-enno-maa-tet2akkhar",
-  "lb": "l-mhemm enno maa tet2akkhar",
-  "say": "المْهِم إنّو ما تِتْأَخَّر",
-  "ar": "المْهِم إنّو ما تِتْأَخَّر",
-  "en": "what matters is that you are not late",
-  "unit": 34,
-  "kind": "phrase"
- },
- {
-  "key": "la2ennak",
-  "lb": "la2ennak",
-  "say": "لَإنَّك",
-  "ar": "لَإنَّك",
-  "en": "because you are (m)",
-  "unit": 34,
-  "kind": "word"
- },
- {
-  "key": "la2enno",
-  "lb": "la2enno",
-  "say": "لَإنّو",
-  "ar": "لَإنّو",
-  "en": "because",
-  "unit": 34,
-  "kind": "word"
- },
- {
   "key": "lamma-erja3-men-el-maktab-mneekol",
   "lb": "lamma erja3 men el-maktab, mnéékol",
   "say": "لمّا إِرْجَع مِن المَكْتَب، مْناكُل",
@@ -5020,15 +3328,6 @@
   "en": "When I get back from the office, we will eat.",
   "unit": 34,
   "kind": "example"
- },
- {
-  "key": "ma3-enno",
-  "lb": "ma3 enno",
-  "say": "مَعْ إنّو",
-  "ar": "مَعْ إنّو",
-  "en": "although",
-  "unit": 34,
-  "kind": "word"
  },
  {
   "key": "ma3-enno-kell-marra-bet2ouul-heek",
@@ -5040,15 +3339,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ma3ak-7a2-bass",
-  "lb": "ma3ak 7a2, bass…",
-  "say": "مَعَك حَأ، بَس…",
-  "ar": "مَعَك حَق، بَس…",
-  "en": "you are right, but…",
-  "unit": 34,
-  "kind": "phrase"
- },
- {
   "key": "ma3ak-7a2-bass-ba3deen-hal-jem3a-maa-3ende-wa2t-abadan",
   "lb": "ma3ak 7a2, bass ba3déén, hal-jem3a maa 3endé wa2t abadan.",
   "say": "معك حأ، بس بعدين، هالجمعة ما عندي وأت أبدا",
@@ -5056,15 +3346,6 @@
   "en": "you are right, but besides, this week I have no time at all.",
   "unit": 34,
   "kind": "dialogue"
- },
- {
-  "key": "mesh-bass-heek",
-  "lb": "mesh bass héék",
-  "say": "مِش بَس هيك",
-  "ar": "مِش بَس هيك",
-  "en": "not only that",
-  "unit": 34,
-  "kind": "word"
  },
  {
   "key": "mesh-bass-heek-ra7-nekhod-taawle-la-khamse",
@@ -5083,15 +3364,6 @@
   "en": "We are eating at home because the restaurant is fully booked.",
   "unit": 34,
   "kind": "example"
- },
- {
-  "key": "shou-awlak-nodhar",
-  "lb": "shou awlak noDhar?",
-  "say": "شو أَوْلَك نِضْهَر؟",
-  "ar": "شو قَوْلَك نِضْهَر؟",
-  "en": "how about we go out?",
-  "unit": 34,
-  "kind": "phrase"
  },
  {
   "key": "shou-awlak-nodhar-el-khamiis",
@@ -5121,15 +3393,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "3am-bfattesh-3a-sheghl",
-  "lb": "3am bfattesh 3a sheghl",
-  "say": "عَم بْفَتِّش عَ شِغل",
-  "ar": "عَم بْفَتِّش عَ شِغل",
-  "en": "I am looking for work",
-  "unit": 35,
-  "kind": "phrase"
- },
- {
   "key": "3an-jad-fii-shii",
   "lb": "3an jad? fii shii?",
   "say": "عن جد؟ في شي؟",
@@ -5137,15 +3400,6 @@
   "en": "really? Is there anything?",
   "unit": 35,
   "kind": "dialogue"
- },
- {
-  "key": "3ende-mou2eebale-boukra",
-  "lb": "3endé mou2éébalé boukra",
-  "say": "عِنْدي مُأابَلة بُكْرة",
-  "ar": "عِنْدي مُقابَلة بُكْرة",
-  "en": "I have an interview tomorrow",
-  "unit": 35,
-  "kind": "phrase"
  },
  {
   "key": "3ende-mou2eebale-boukra-nshalla",
@@ -5157,24 +3411,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "addee-bteekhod-besh-shahr",
-  "lb": "addéé btéékhod besh-shahr?",
-  "say": "أَدّيه بْتاخُد بالشَّهر؟",
-  "ar": "قَدّيه بْتاخُد بالشَّهر؟",
-  "en": "how much do you take a month?",
-  "unit": 35,
-  "kind": "phrase"
- },
- {
-  "key": "bedros",
-  "lb": "bedros",
-  "say": "بِدْرُس",
-  "ar": "بِدْرُس",
-  "en": "I study",
-  "unit": 35,
-  "kind": "word"
- },
- {
   "key": "beshteghel-ka-mhandes-b-maktab-zghiir",
   "lb": "beshteghel ka-mhandes b-maktab zghiir.",
   "say": "بشتغل كمهندس بمكتب زغير",
@@ -5184,51 +3420,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "beshteghel-ka-mwazzaf-bi-maktab",
-  "lb": "beshteghel ka-mwaZZaf bi-maktab",
-  "say": "بشتغل كموزف بمكتب",
-  "ar": "",
-  "en": "I work as an employee in an office",
-  "unit": 35,
-  "kind": "reply"
- },
- {
-  "key": "beshteghel-men-es-sobe7-la-l-masa",
-  "lb": "beshteghel men eS-Sobe7 la-l-masa",
-  "say": "بِشْتِغِل مِن الصُّبح لَلمَسا",
-  "ar": "بِشْتِغِل مِن الصُّبح لَلمَسا",
-  "en": "I work from morning to evening",
-  "unit": 35,
-  "kind": "phrase"
- },
- {
-  "key": "bet3ab",
-  "lb": "bet3ab",
-  "say": "بِتْعَب",
-  "ar": "بِتْعَب",
-  "en": "I get tired",
-  "unit": 35,
-  "kind": "word"
- },
- {
-  "key": "fattesh-3a",
-  "lb": "fattesh 3a",
-  "say": "فَتِّش عَ",
-  "ar": "فَتِّش عَ",
-  "en": "to look for",
-  "unit": 35,
-  "kind": "word"
- },
- {
-  "key": "ka",
-  "lb": "ka-",
-  "say": "كَـ",
-  "ar": "كَـ",
-  "en": "as a",
-  "unit": 35,
-  "kind": "word"
- },
- {
   "key": "l-7amdella-bass-halla2-3am-bfattesh-3a-sheghl-teene",
   "lb": "l-7amdella. bass halla2 3am bfattesh 3a sheghl tééné.",
   "say": "الحمدلله. بس هلأ عم بفتش ع شغل تاني",
@@ -5236,15 +3427,6 @@
   "en": "thank God. But right now I am looking for another job.",
   "unit": 35,
   "kind": "dialogue"
- },
- {
-  "key": "l-moudiir-mesh-mawjouud",
-  "lb": "l-moudiir mesh mawjouud",
-  "say": "المُدير مِش مَوْجود",
-  "ar": "المُدير مِش مَوْجود",
-  "en": "the manager is not in",
-  "unit": 35,
-  "kind": "phrase"
  },
  {
   "key": "l-moudiira-mtawwle-bel-maktab-lyoom",
@@ -5265,24 +3447,6 @@
   "kind": "example"
  },
  {
-  "key": "madrase",
-  "lb": "madrasé",
-  "say": "مَدْرَسة",
-  "ar": "مَدْرَسة",
-  "en": "school",
-  "unit": 35,
-  "kind": "word"
- },
- {
-  "key": "met3eb",
-  "lb": "met3eb",
-  "say": "مِتْعِب",
-  "ar": "مِتْعِب",
-  "en": "tiring",
-  "unit": 35,
-  "kind": "word"
- },
- {
   "key": "met3eb-shwayy-beshteghel-men-es-sobe7-la-l-masa-w-bet3ab",
   "lb": "met3eb shwayy. beshteghel men eS-Sobe7 la-l-masa, w bet3ab.",
   "say": "متعب شوي. بشتغل من الصبح لالمسا، وبتعب",
@@ -5290,24 +3454,6 @@
   "en": "a bit tiring. I work from morning to evening, and I get tired.",
   "unit": 35,
   "kind": "dialogue"
- },
- {
-  "key": "mhandes",
-  "lb": "mhandes",
-  "say": "مْهَنْدِس",
-  "ar": "مْهَنْدِس",
-  "en": "engineer, architect",
-  "unit": 35,
-  "kind": "word"
- },
- {
-  "key": "mwazzaf",
-  "lb": "mwaZZaf",
-  "say": "مْوَزَّف",
-  "ar": "مْوَظَّف",
-  "en": "employee, office worker",
-  "unit": 35,
-  "kind": "word"
  },
  {
   "key": "naater-el-mou2eebale-men-es-sobe7",
@@ -5326,15 +3472,6 @@
   "en": "My job is tiring, but I like it.",
   "unit": 35,
   "kind": "example"
- },
- {
-  "key": "shou-bteshteghel",
-  "lb": "shou bteshteghel?",
-  "say": "شو بِتْشْتِغِل؟",
-  "ar": "شو بِتْشْتِغِل؟",
-  "en": "what do you do for a living?",
-  "unit": 35,
-  "kind": "phrase"
  },
  {
   "key": "w-kiif-esh-sheghl-met3eb",
@@ -5364,24 +3501,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "7abbayt",
-  "lb": "7abbayt",
-  "say": "حَبِّيت",
-  "ar": "حَبِّيت",
-  "en": "I like this (a thing in front of me)",
-  "unit": 36,
-  "kind": "word"
- },
- {
-  "key": "7asab",
-  "lb": "7asab",
-  "say": "حَسَب",
-  "ar": "حَسَب",
-  "en": "depending on, it depends",
-  "unit": 36,
-  "kind": "word"
- },
- {
   "key": "7asab-eza-3endak-wa2t-ktiir-mnii7-eza-mesta3jel-la2",
   "lb": "7asab. eza 3endak wa2t, ktiir mnii7. eza mesta3jel, la2.",
   "say": "حسب. إزا عندك وأت، كتير منيح. إزا مستعجل، لأ",
@@ -5400,42 +3519,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "aktar-shii",
-  "lb": "aktar shii",
-  "say": "أَكْتَر شي",
-  "ar": "أَكْتَر شي",
-  "en": "most of all",
-  "unit": 36,
-  "kind": "word"
- },
- {
-  "key": "arya7",
-  "lb": "arya7",
-  "say": "أَرْيَح",
-  "ar": "أَرْيَح",
-  "en": "more comfortable",
-  "unit": 36,
-  "kind": "word"
- },
- {
-  "key": "be3te2ed",
-  "lb": "be3te2ed",
-  "say": "بِعْتِأِد",
-  "ar": "بِعْتِقِد",
-  "en": "I reckon, I think",
-  "unit": 36,
-  "kind": "word"
- },
- {
-  "key": "bfaddel",
-  "lb": "bfaDDel",
-  "say": "بْفَضِّل",
-  "ar": "بْفَضِّل",
-  "en": "I prefer",
-  "unit": 36,
-  "kind": "word"
- },
- {
   "key": "eeh-wallah-l-akl-mesh-3aatel-bass-mesh-a7san-shii",
   "lb": "ééh wallah, l-akl mesh 3aaTel bass mesh a7san shii.",
   "say": "إيه والله، الأكل مش عاطل بس مش أحسن شي",
@@ -5443,15 +3526,6 @@
   "en": "that is true, the food is not bad but it is not the best.",
   "unit": 36,
   "kind": "dialogue"
- },
- {
-  "key": "khsouusatan",
-  "lb": "khSouuSatan",
-  "say": "خْصوصاً",
-  "ar": "خْصوصاً",
-  "en": "especially",
-  "unit": 36,
-  "kind": "word"
  },
  {
   "key": "ma3ak-7a2-enno-arya7-bass-el-akl-saraa7a-la2",
@@ -5463,15 +3537,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ra2y",
-  "lb": "ra2y",
-  "say": "رَأْي",
-  "ar": "رَأْي",
-  "en": "opinion",
-  "unit": 36,
-  "kind": "word"
- },
- {
   "key": "saraa7a-maa-7abbayto-bfaddel-el-2adiim-bi-ktiir",
   "lb": "Saraa7a, maa 7abbayto. bfaDDel el-2adiim bi-ktiir.",
   "say": "صراحة، ما حبيتو. بفضل الأديم بكتير",
@@ -5479,15 +3544,6 @@
   "en": "honestly, I did not like it. I prefer the old one by a long way.",
   "unit": 36,
   "kind": "dialogue"
- },
- {
-  "key": "saraa7a-maa-b7ebbo",
-  "lb": "Saraa7a, maa b7ebbo",
-  "say": "صَراحة، ما بْحِبُّه",
-  "ar": "صَراحة، ما بْحِبُّه",
-  "en": "honestly, I do not like it",
-  "unit": 36,
-  "kind": "phrase"
  },
  {
   "key": "shefet-be3te2ed-enno-l-2adiim-a7san-khsouusatan-bel-masa",
@@ -5517,15 +3573,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "7ejje",
-  "lb": "7ejjé",
-  "say": "حِجّة",
-  "ar": "حِجّة",
-  "en": "excuse",
-  "unit": 37,
-  "kind": "word"
- },
- {
   "key": "ana-m3assab-la2enno-kell-marra-fii-7ejje-jdiide",
   "lb": "ana m3aSSab la2enno kell marra fii 7ejjé jdiidé",
   "say": "أنا مْعَصَّب لأَنُّه كِل مَرّة في حِجّة جْديدة",
@@ -5553,15 +3600,6 @@
   "kind": "example"
  },
  {
-  "key": "ba3do",
-  "lb": "ba3do",
-  "say": "بَعْدُه",
-  "ar": "بَعْدُه",
-  "en": "he is still, it is still",
-  "unit": 37,
-  "kind": "word"
- },
- {
   "key": "ba3do-l-moudiir-mesh-mawjouud",
   "lb": "ba3do l-moudiir mesh mawjouud",
   "say": "بَعْدُه المُدير مِش مَوْجود",
@@ -5569,24 +3607,6 @@
   "en": "The manager is still not here.",
   "unit": 37,
   "kind": "example"
- },
- {
-  "key": "badal",
-  "lb": "badal",
-  "say": "بَدَل",
-  "ar": "بَدَل",
-  "en": "instead of",
-  "unit": 37,
-  "kind": "word"
- },
- {
-  "key": "badde-3azzbak-bass",
-  "lb": "baddé 3azzbak, bass…",
-  "say": "بَدّي عَزّْبَك، بَس…",
-  "ar": "بَدّي عَذّْبَك، بَس…",
-  "en": "sorry to trouble you, but…",
-  "unit": 37,
-  "kind": "phrase"
  },
  {
   "key": "basiita-maa-fii-lzouum-shukran",
@@ -5616,15 +3636,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "e3tezer",
-  "lb": "e3tezer",
-  "say": "إِعْتِزِر",
-  "ar": "إِعْتِذِر",
-  "en": "to apologise",
-  "unit": 37,
-  "kind": "word"
- },
- {
   "key": "ele-telt-see3a-naatra-hoon",
   "lb": "elé telt séé3a naaTra hoon",
   "say": "إلي تِلت ساعة ناطْرة هون",
@@ -5643,24 +3654,6 @@
   "kind": "example"
  },
  {
-  "key": "et2akkhar",
-  "lb": "et2akkhar",
-  "say": "إِتْأَخَّر",
-  "ar": "إِتْأَخَّر",
-  "en": "to be late",
-  "unit": 37,
-  "kind": "word"
- },
- {
-  "key": "farjiine",
-  "lb": "farjiiné",
-  "say": "فَرْجيني",
-  "ar": "فَرْجيني",
-  "en": "show me",
-  "unit": 37,
-  "kind": "phrase"
- },
- {
   "key": "kell-talab-metl-hat-talab-halla2-bebda",
   "lb": "kell Talab metl haT-Talab. halla2 bebda.",
   "say": "كل طلب متل هالطلب. هلأ ببدا",
@@ -5668,15 +3661,6 @@
   "en": "consider it done. I will start now.",
   "unit": 37,
   "kind": "dialogue"
- },
- {
-  "key": "m3assab",
-  "lb": "m3aSSab",
-  "say": "مْعَصَّب",
-  "ar": "مْعَصَّب",
-  "en": "angry, fed up",
-  "unit": 37,
-  "kind": "word"
  },
  {
   "key": "ma3ak-7a2-b3tezer",
@@ -5733,42 +3717,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ya-3amme",
-  "lb": "ya 3ammé!",
-  "say": "يا عَمّي!",
-  "ar": "يا عَمّي!",
-  "en": "oh come on",
-  "unit": 37,
-  "kind": "phrase"
- },
- {
-  "key": "yaa-3ayb-esh-shouum",
-  "lb": "yaa 3ayb esh-shouum!",
-  "say": "يا عَيْب الشّوم!",
-  "ar": "يا عَيْب الشّوم!",
-  "en": "how embarrassing",
-  "unit": 37,
-  "kind": "phrase"
- },
- {
-  "key": "2ajjel",
-  "lb": "2ajjel",
-  "say": "أَجِّل",
-  "ar": "أَجِّل",
-  "en": "to postpone",
-  "unit": 38,
-  "kind": "word"
- },
- {
-  "key": "3a-beelak",
-  "lb": "3a béélak?",
-  "say": "عَ بالَك؟",
-  "ar": "عَ بالَك؟",
-  "en": "do you feel like it?",
-  "unit": 38,
-  "kind": "phrase"
- },
- {
   "key": "3a-beelik-nrouu7-3al-cinema",
   "lb": "3a béélik nrouu7 3al-cinema?",
   "say": "عَ بالِك نْروح عَ السينَما؟",
@@ -5778,15 +3726,6 @@
   "kind": "example"
  },
  {
-  "key": "3ala-albe-metl-el-3asal",
-  "lb": "3ala albé metl el-3asal",
-  "say": "عَلى أَلْبي مِتل العَسَل",
-  "ar": "عَلى قَلْبي مِتل العَسَل",
-  "en": "on my heart like honey",
-  "unit": 38,
-  "kind": "phrase"
- },
- {
   "key": "3ala-albe-metl-el-3asal-bshouufik-es-sabet",
   "lb": "3ala albé metl el-3asal. bshouufik es-sabet.",
   "say": "على ألبي متل العسل. بشوفيك السبت",
@@ -5794,24 +3733,6 @@
   "en": "on my heart like honey. See you Saturday.",
   "unit": 38,
   "kind": "dialogue"
- },
- {
-  "key": "7afle",
-  "lb": "7aflé",
-  "say": "حَفْلة",
-  "ar": "حَفْلة",
-  "en": "party",
-  "unit": 38,
-  "kind": "word"
- },
- {
-  "key": "ayy-wa2t-bineesbak",
-  "lb": "ayy wa2t binéésbak?",
-  "say": "أَيّ وَأْت بينسْبَك؟",
-  "ar": "أَيّ وَقْت بينسْبَك؟",
-  "en": "what time works for you?",
-  "unit": 38,
-  "kind": "phrase"
  },
  {
   "key": "ayy-wa2t-bineesbik-boukra",
@@ -5832,24 +3753,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "bineeseb",
-  "lb": "binééseb",
-  "say": "بينسِب",
-  "ar": "بينسِب",
-  "en": "it suits, it works for",
-  "unit": 38,
-  "kind": "word"
- },
- {
-  "key": "bisharafak",
-  "lb": "bisharafak!",
-  "say": "بِشَرَفَك!",
-  "ar": "بِشَرَفَك!",
-  "en": "please!",
-  "unit": 38,
-  "kind": "phrase"
- },
- {
   "key": "bkouun-bel-maktab-la-s-see3a-sette",
   "lb": "bkouun bel-maktab la-s-séé3a setté",
   "say": "بْكون بالمَكْتَب لَلسّاعة سِتّة",
@@ -5857,24 +3760,6 @@
   "en": "I will be at the office until six.",
   "unit": 38,
   "kind": "example"
- },
- {
-  "key": "dayf",
-  "lb": "Dayf",
-  "say": "ضَيْف",
-  "ar": "ضَيْف",
-  "en": "guest",
-  "unit": 38,
-  "kind": "word"
- },
- {
-  "key": "eeh-ktiir",
-  "lb": "ééh, ktiir",
-  "say": "إيه كتير",
-  "ar": "",
-  "en": "yes, very much",
-  "unit": 38,
-  "kind": "reply"
  },
  {
   "key": "khalliihon-yerja3o-ma3na",
@@ -5895,15 +3780,6 @@
   "kind": "example"
  },
  {
-  "key": "m7ammas",
-  "lb": "m7ammas",
-  "say": "مْحَمَّس",
-  "ar": "مْحَمَّس",
-  "en": "excited, keen",
-  "unit": 38,
-  "kind": "word"
- },
- {
   "key": "maa-3endo-meene3-bisharafak-jiibo-ma3ak",
   "lb": "maa 3endo mééne3. bisharafak, jiibo ma3ak.",
   "say": "ما عندو مانع. بشرفك، جيبو معك",
@@ -5922,24 +3798,6 @@
   "kind": "example"
  },
  {
-  "key": "meene3",
-  "lb": "mééne3",
-  "say": "مانِع",
-  "ar": "مانِع",
-  "en": "objection",
-  "unit": 38,
-  "kind": "word"
- },
- {
-  "key": "ontor",
-  "lb": "onTor",
-  "say": "إِنْطُر",
-  "ar": "إِنْطُر",
-  "en": "to wait",
-  "unit": 38,
-  "kind": "word"
- },
- {
   "key": "ra7-nouusal-2abl-es-see3a-tmeene",
   "lb": "ra7 nouuSal 2abl es-séé3a tmééné",
   "say": "رَح نوصَل أَبل السّاعة تْمانة",
@@ -5956,15 +3814,6 @@
   "en": "Does six work for you, or is nine better?",
   "unit": 38,
   "kind": "example"
- },
- {
-  "key": "sahra",
-  "lb": "sahra",
-  "say": "سَهْرة",
-  "ar": "سَهْرة",
-  "en": "an evening out, people over late",
-  "unit": 38,
-  "kind": "word"
  },
  {
   "key": "shou-awlak-3a-beelak-sahra-3andna-es-sabet",
@@ -6003,15 +3852,6 @@
   "kind": "example"
  },
  {
-  "key": "tezkara",
-  "lb": "tezkara",
-  "say": "تِزْكَرة",
-  "ar": "تِذْكَرة",
-  "en": "ticket",
-  "unit": 38,
-  "kind": "word"
- },
- {
   "key": "w-karim-3endo-meene3",
   "lb": "w Karim? 3endo mééne3?",
   "say": "وكريم؟ عندو مانع؟",
@@ -6037,60 +3877,6 @@
   "en": "I would love to! What time suits you?",
   "unit": 38,
   "kind": "dialogue"
- },
- {
-  "key": "3al-yamiin",
-  "lb": "3al-yamiin",
-  "say": "عَ اليَمين",
-  "ar": "عَ اليَمين",
-  "en": "on the right",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "3ash-shmeel",
-  "lb": "3ash-shméél",
-  "say": "عَ الشّْمال",
-  "ar": "عَ الشّْمال",
-  "en": "on the left",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "7ellee2",
-  "lb": "7elléé2",
-  "say": "حِلّاء",
-  "ar": "حِلّاق",
-  "en": "barber, hairdresser",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "allah-yen3am-3leek",
-  "lb": "Allah yen3am 3léék",
-  "say": "الله ينعم عليك",
-  "ar": "",
-  "en": "and may God give you bliss",
-  "unit": 39,
-  "kind": "reply"
- },
- {
-  "key": "assa",
-  "lb": "aSSa",
-  "say": "أَصّة",
-  "ar": "قَصّة",
-  "en": "a haircut",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "asser",
-  "lb": "aSSer",
-  "say": "أَصِّر",
-  "ar": "قَصِّر",
-  "en": "to shorten",
-  "unit": 39,
-  "kind": "word"
  },
  {
   "key": "asser-shwayy-men-wara-w-khaffef-3aj-jaweneb",
@@ -6147,24 +3933,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ben-noss",
-  "lb": "ben-noSS",
-  "say": "بالنُّص",
-  "ar": "بالنُّص",
-  "en": "in the middle",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "bi-khsouus",
-  "lb": "bi-khSouuS…",
-  "say": "بِخْصوص…",
-  "ar": "بِخْصوص…",
-  "en": "as for…",
-  "unit": 39,
-  "kind": "phrase"
- },
- {
   "key": "bi-khsouus-ed-da2n-zayye7-bass",
   "lb": "bi-khSouuS ed-da2n, zayye7 bass",
   "say": "بِخْصوص الدَّأن، زَيِّح بَس",
@@ -6181,51 +3949,6 @@
   "en": "Shall I thin the beard out for you a bit?",
   "unit": 39,
   "kind": "example"
- },
- {
-  "key": "da2n",
-  "lb": "da2n",
-  "say": "دَأن",
-  "ar": "دَقن",
-  "en": "beard, chin",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "fer2",
-  "lb": "fer2",
-  "say": "فِرأ",
-  "ar": "فِرق",
-  "en": "parting",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "gheer-shekel",
-  "lb": "ghéér shekel",
-  "say": "غير شِكِل",
-  "ar": "غير شِكِل",
-  "en": "a completely different shape",
-  "unit": 39,
-  "kind": "phrase"
- },
- {
-  "key": "jeeneb",
-  "lb": "jééneb",
-  "say": "جانِب",
-  "ar": "جانِب",
-  "en": "side",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "khaffef",
-  "lb": "khaffef",
-  "say": "خَفِّف",
-  "ar": "خَفِّف",
-  "en": "to thin out, to reduce",
-  "unit": 39,
-  "kind": "word"
  },
  {
   "key": "khaffef-ed-da2n-shwayy-bass",
@@ -6255,24 +3978,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "la-3youunak",
-  "lb": "la-3youunak!",
-  "say": "لَعْيونَك!",
-  "ar": "لَعْيونَك!",
-  "en": "for your eyes",
-  "unit": 39,
-  "kind": "phrase"
- },
- {
-  "key": "la-wara",
-  "lb": "la-wara",
-  "say": "لَوَرا",
-  "ar": "لَوَرا",
-  "en": "towards the back",
-  "unit": 39,
-  "kind": "word"
- },
- {
   "key": "la2-bel-m2ass-w-khalle-l-fer2-metl-ma-houwwe",
   "lb": "la2, bel-m2aSS. w khallé l-fer2 metl ma houwwé.",
   "say": "لأ، بالمأص. وخلي الفرأ متل ما هو",
@@ -6280,42 +3985,6 @@
   "en": "no, with the scissors. And leave the parting as it is.",
   "unit": 39,
   "kind": "dialogue"
- },
- {
-  "key": "le7ye",
-  "lb": "le7yé",
-  "say": "لِحْية",
-  "ar": "لِحْية",
-  "en": "beard",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "m2ass",
-  "lb": "m2aSS",
-  "say": "مْأَص",
-  "ar": "مْقَص",
-  "en": "scissors",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "makana",
-  "lb": "makana",
-  "say": "مَكَنة",
-  "ar": "مَكَنة",
-  "en": "clippers, machine",
-  "unit": 39,
-  "kind": "word"
- },
- {
-  "key": "na3iiman",
-  "lb": "na3iiman!",
-  "say": "نَعيماً!",
-  "ar": "نَعيماً!",
-  "en": "may it be blessed",
-  "unit": 39,
-  "kind": "phrase"
  },
  {
   "key": "ra7-shellak-shwayy-men-foo2",
@@ -6334,15 +4003,6 @@
   "en": "wonderful. May he give you strength.",
   "unit": 39,
   "kind": "dialogue"
- },
- {
-  "key": "sha3r",
-  "lb": "sha3r",
-  "say": "شَعْر",
-  "ar": "شَعْر",
-  "en": "hair",
-  "unit": 39,
-  "kind": "word"
  },
  {
   "key": "shwayy-men-foo2-bass-ktiir-men-el-jweeneb",
@@ -6381,15 +4041,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "7ammes",
-  "lb": "7ammes",
-  "say": "حَمِّس",
-  "ar": "حَمِّس",
-  "en": "to motivate, to hype up",
-  "unit": 40,
-  "kind": "word"
- },
- {
   "key": "aal-wa7ad-ktiir-smallah",
   "lb": "aal wa7ad… ktiir smallah.",
   "say": "أال واحد… كتير سمالله",
@@ -6397,33 +4048,6 @@
   "en": "he said one… yeah, right.",
   "unit": 40,
   "kind": "dialogue"
- },
- {
-  "key": "add-maa",
-  "lb": "add maa",
-  "say": "أَدّ ما",
-  "ar": "قَدّ ما",
-  "en": "as much as",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "allah-ysee3edne-3leek",
-  "lb": "Allah yséé3edné 3léék",
-  "say": "الله يْساعِدْني عْليك",
-  "ar": "الله يْساعِدْني عْليك",
-  "en": "God help me with you",
-  "unit": 40,
-  "kind": "phrase"
- },
- {
-  "key": "awe",
-  "lb": "awé",
-  "say": "أَوي",
-  "ar": "قَوي",
-  "en": "strong",
-  "unit": 40,
-  "kind": "word"
  },
  {
   "key": "bemshe-kell-yoom-la-od3af",
@@ -6435,33 +4059,6 @@
   "kind": "example"
  },
  {
-  "key": "enhazz",
-  "lb": "enhazz",
-  "say": "إِنْهَزّ",
-  "ar": "إِنْهَزّ",
-  "en": "to get moving, to shift oneself",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "eshtiraak",
-  "lb": "eshtiraak",
-  "say": "إِشْتِراك",
-  "ar": "إِشْتِراك",
-  "en": "membership, subscription",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "esta3mel",
-  "lb": "esta3mel",
-  "say": "إِسْتَعْمِل",
-  "ar": "إِسْتَعْمِل",
-  "en": "to use",
-  "unit": 40,
-  "kind": "word"
- },
- {
   "key": "esta3mel-el-makana-add-maa-fiik",
   "lb": "esta3mel el-makana add maa fiik",
   "say": "إِسْتَعْمِل المَكَنة أَدّ ما فيك",
@@ -6469,15 +4066,6 @@
   "en": "Use the machine as much as you can.",
   "unit": 40,
   "kind": "example"
- },
- {
-  "key": "fashka",
-  "lb": "fashka!",
-  "say": "فَشْخَة!",
-  "ar": "فَشْخَة!",
-  "en": "a stone throw away",
-  "unit": 40,
-  "kind": "phrase"
  },
  {
   "key": "fiik-enta-awe-add-maa-baddak",
@@ -6498,24 +4086,6 @@
   "kind": "example"
  },
  {
-  "key": "helkeen",
-  "lb": "helkéén",
-  "say": "هِلْكان",
-  "ar": "هِلْكان",
-  "en": "exhausted, wiped out",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "keefe",
-  "lb": "kééfé",
-  "say": "كافي",
-  "ar": "كافي",
-  "en": "enough",
-  "unit": 40,
-  "kind": "word"
- },
- {
   "key": "khalas-bi-zyeede-la-lyoom-ya3tiik-el-3aafye",
   "lb": "khalaS, bi-zyéédé la-lyoom. ya3Tiik el-3aafyé.",
   "say": "خلص، بزيادة لليوم. يعطيك العافية",
@@ -6525,15 +4095,6 @@
   "kind": "dialogue"
  },
  {
-  "key": "ktiir-kharje",
-  "lb": "ktiir kharjé",
-  "say": "كْتير خَرْجي",
-  "ar": "كْتير خَرْجي",
-  "en": "oh, perfect for me",
-  "unit": 40,
-  "kind": "word"
- },
- {
   "key": "maa-3am-be2dar-rouu7-kell-yoom",
   "lb": "maa 3am be2dar rouu7 kell yoom",
   "say": "ما عَم بِأْدَر روح كِل يوم",
@@ -6541,15 +4102,6 @@
   "en": "I am not managing to go every day.",
   "unit": 40,
   "kind": "example"
- },
- {
-  "key": "maa-ele-jleede",
-  "lb": "maa elé jléédé",
-  "say": "ما إلي جْلادة",
-  "ar": "ما إلي جْلادة",
-  "en": "I have no appetite for it",
-  "unit": 40,
-  "kind": "phrase"
  },
  {
   "key": "maa-fiini-ana-helkeen",
@@ -6586,42 +4138,6 @@
   "en": "We go four times a week.",
   "unit": 40,
   "kind": "example"
- },
- {
-  "key": "moudarreb",
-  "lb": "moudarreb",
-  "say": "مُدَرِّب",
-  "ar": "مُدَرِّب",
-  "en": "trainer, coach",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "neede-riyaade",
-  "lb": "néédé riyaaDé",
-  "say": "نادي رياضي",
-  "ar": "نادي رياضي",
-  "en": "gym, sports club",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "od3af",
-  "lb": "oD3af",
-  "say": "إِضْعَف",
-  "ar": "إِضْعَف",
-  "en": "to lose weight",
-  "unit": 40,
-  "kind": "word"
- },
- {
-  "key": "saff",
-  "lb": "Saff",
-  "say": "صَفّ",
-  "ar": "صَفّ",
-  "en": "class",
-  "unit": 40,
-  "kind": "word"
  },
  {
   "key": "w-enta-kameen-bshouufak-boukra-nshalla",

@@ -15,7 +15,7 @@
  * `node verifica.js` fails loudly if you forget the first one.
  */
 
-var VERSION = 'lebanese-path-v4';
+var VERSION = 'lebanese-path-v5';
 
 var ASSETS = [
   './',
@@ -80,7 +80,13 @@ var ASSETS = [
   'icons/icon-512.png',
   'icons/icon-maskable-512.png',
   'icons/apple-touch-icon.png',
-  'icons/favicon-32.png'
+  'icons/favicon-32.png',
+
+  'images/stage-1.jpg',
+  'images/stage-2.jpg',
+  'images/stage-3.jpg',
+  'images/stage-4.jpg',
+  'images/stage-5.jpg'
 ];
 
 self.addEventListener('install', function (event) {
