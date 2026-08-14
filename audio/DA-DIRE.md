@@ -2,7 +2,7 @@
 
 Generato da `node voci.js`. Non si scrive a mano.
 
-Servono **1193** tracce in tutto, ne mancano **1193**.
+Servono **1193** tracce in tutto, ne mancano **970**.
 
 Chi registra legge la colonna **libanese**, non l'arabo: l'arabo è lì solo per
 chi genera con una macchina, e va letto con la pronuncia libanese (la qaaf è un
@@ -12,329 +12,106 @@ Il file va salvato in `audio/` col nome esatto della prima colonna, estensione `
 
 | nome del file | libanese | inglese | unità |
 | --- | --- | --- | --- |
-| `3afwan.mp3` | 3afwan | you are welcome, excuse me | 1 |
-| `ahla.mp3` | ahla | welcome | 1 |
-| `ahla-fiik.mp3` | ahla fiik | welcome to you too | 1 |
-| `ahla-w-sahla.mp3` | ahla w sahla | welcome | 1 |
-| `allah-ysallmak.mp3` | Allah ysallmak | may God keep you safe | 1 |
-| `kheer.mp3` | khéér | goodness, wellbeing | 1 |
-| `kiifak.mp3` | kiifak | how are you (to a man) | 1 |
-| `kiifik.mp3` | kiifik | how are you (to a woman) | 1 |
-| `l-7amdella.mp3` | l-7amdella | thank God — the standard answer, whatever the truth is | 1 |
-| `ma3-es-saleeme.mp3` | ma3 es-saléémé | go with safety | 1 |
-| `mar7aba.mp3` | mar7aba | hello | 1 |
-| `mar7abteen.mp3` | mar7abtéén | hello back (two hellos) | 1 |
-| `masa.mp3` | masa | evening | 1 |
-| `masa-l-kheer.mp3` | masa l-khéér | an evening of goodness | 1 |
-| `masa-n-nouur.mp3` | masa n-nouur | an evening of light | 1 |
-| `mnii7.mp3` | mnii7 | good, fine (a man) | 1 |
 | `mnii7-l-7amdella-kiifik.mp3` | mnii7, l-7amdella. kiifik? | good, thank God. And you? | 1 |
-| `mnii7a.mp3` | mnii7a | good, fine (a woman) | 1 |
 | `mnii7a-shukran.mp3` | mnii7a, shukran | good, thank you | 1 |
-| `nouur.mp3` | nouur | light | 1 |
-| `sabaa7.mp3` | Sabaa7 | morning | 1 |
-| `sabaa7-el-kheer.mp3` | Sabaa7 el-khéér | a morning of goodness | 1 |
-| `sabaa7-en-nouur.mp3` | Sabaa7 en-nouur | a morning of light | 1 |
-| `saleeme.mp3` | saléémé | safety, wellbeing | 1 |
-| `shukran.mp3` | shukran | thank you | 1 |
-| `tesba7-3ala-kheer.mp3` | tesba7 3ala khéér | may you wake to goodness | 1 |
-| `w-enta-men-ahlo.mp3` | w-enta men ahlo | and may you be of its people | 1 |
 | `ahla-w-sahla-min-ween-enta.mp3` | ahla w sahla. min wéén enta? | welcome. Where are you from? | 2 |
 | `ahla-w-sahla-tsharrafna.mp3` | ahla w sahla! tsharrafna. | welcome! We have been honoured | 2 |
-| `ana.mp3` | ana | I | 2 |
-| `ana-men.mp3` | ana men… | I am from… | 2 |
 | `ana-men-italia-w-enta-men-beerout.mp3` | ana men Italia. w enta, men Béérout? | I am from Italy. And you, from Beirut? | 2 |
 | `ana-mnii7.mp3` | ana mnii7 | I am fine. | 2 |
-| `beerout.mp3` | Béérout | Beirut | 2 |
-| `enta.mp3` | enta | you (one man) | 2 |
-| `ente.mp3` | enté | you (one woman) | 2 |
-| `ento.mp3` | ento | you (several) | 2 |
-| `esm.mp3` | esm | name | 2 |
-| `esme.mp3` | esmé… | My name is… | 2 |
 | `esme-marco.mp3` | esmé Marco | My name is Marco. | 2 |
-| `henne.mp3` | henné | they | 2 |
-| `hiyye.mp3` | hiyyé | she | 2 |
 | `hiyye-lebneniyye.mp3` | hiyyé lebnéniyyé | She is Lebanese. | 2 |
-| `houwwe.mp3` | houwwé | he | 2 |
-| `l-sharaf-ile.mp3` | l-sharaf ilé | the honour is mine | 2 |
 | `la2-ana-men-trablos.mp3` | la2, ana men Trablos. | no, I am from Tripoli | 2 |
-| `lebneene.mp3` | lebnééné | Lebanese (a man) | 2 |
-| `lebneniyye.mp3` | lebnéniyyé | Lebanese (a woman) | 2 |
 | `mar7aba-ana-ziad.mp3` | mar7aba! ana Ziad. | hello! I am Ziad | 2 |
 | `mar7abteen-esme-marco.mp3` | mar7abtéén. esmé Marco. | two hellos back. My name is Marco | 2 |
-| `men.mp3` | men | from | 2 |
-| `miin.mp3` | miin | who | 2 |
-| `miin-hayda.mp3` | miin hayda? | Who is that? | 2 |
-| `min-ween-enta.mp3` | min wéén enta? | Where are you from? | 2 |
 | `min-ween-ente.mp3` | min wéén enté? | Where are you from? | 2 |
-| `ne7na.mp3` | ne7na | we | 2 |
 | `ne7na-men-beerout.mp3` | ne7na men Béérout | We are from Beirut. | 2 |
-| `shou.mp3` | shou | what | 2 |
-| `shou-esmak.mp3` | shou esmak? | What is your name? | 2 |
-| `shou-esmik.mp3` | shou esmik? | What is your name? | 2 |
-| `tsharrafna.mp3` | tsharrafna | we have been honoured | 2 |
-| `ween.mp3` | wéén | where | 2 |
 | `3afwan-ween-es-souu2.mp3` | 3afwan, wéén es-souu2? | excuse me, where is the market? | 3 |
-| `akiid.mp3` | akiid | of course, sure | 3 |
 | `akiid-mesh-hayde-et-tarii2.mp3` | akiid? mesh haydé eT-Tarii2? | are you sure? Is this not the road? | 3 |
-| `ayya.mp3` | ayya | which | 3 |
 | `ayya-tarii2.mp3` | ayya Tarii2? | Which road? | 3 |
-| `beeb.mp3` | bééb | door | 3 |
-| `beet.mp3` | béét | house, home | 3 |
 | `es-souu2-3ala-tuul.mp3` | es-souu2? 3ala Tuul. | the market? Straight ahead | 3 |
-| `hayda.mp3` | hayda | this, that (a masculine thing) | 3 |
 | `hayda-l-beeb.mp3` | hayda l-bééb | this door | 3 |
 | `hayda-l-beeb-es-souu2-wara-l-beeb.mp3` | hayda l-bééb. es-souu2 wara l-bééb. | that is the door. The market is behind the door. | 3 |
-| `hayde.mp3` | haydé | this, that (a feminine thing) | 3 |
 | `hayde-siyyaara.mp3` | haydé siyyaara | This is a car. | 3 |
-| `kiif.mp3` | kiif | how | 3 |
-| `la2.mp3` | la2 | no | 3 |
-| `leesh.mp3` | léésh | why | 3 |
-| `leesh-la2.mp3` | léésh la2! | why not! | 3 |
-| `mbala.mp3` | mbala | yes it is (answering a negative question) | 3 |
 | `mbala-bass-el-beeb-a2rab.mp3` | mbala! bass el-bééb a2rab. | yes it is! But the door is nearer. | 3 |
-| `miin-hayde.mp3` | miin haydé? | who is she? | 3 |
-| `na3am.mp3` | na3am | yes | 3 |
-| `ouuda.mp3` | ouuDa | room | 3 |
-| `shou-hayda.mp3` | shou hayda? | what is this? | 3 |
-| `siyyaara.mp3` | siyyaara | car | 3 |
-| `souu2.mp3` | souu2 | market | 3 |
-| `taawle.mp3` | Taawlé | table | 3 |
-| `tarii2.mp3` | Tarii2 | road, way | 3 |
-| `tayyeb.mp3` | Tayyeb | all right, fine | 3 |
-| `telephon.mp3` | téléphon | telephone | 3 |
 | `ween-el-beeb.mp3` | wéén el-bééb? | Where is the door? | 3 |
-| `ween-es-souu2.mp3` | wéén es-souu2? | where is the market? | 3 |
 | `ween-et-telephon.mp3` | wéén et-téléphon? | Where is the phone? | 3 |
-| `3ashra.mp3` | 3ashra | ten | 4 |
-| `3endkon.mp3` | 3endkon …? | do you have …? | 4 |
-| `3eshriin.mp3` | 3eshriin | twenty | 4 |
-| `7seeb.mp3` | 7sééb | bill, account | 4 |
-| `addee.mp3` | addéé | how much | 4 |
-| `addee-baddak-menne.mp3` | addéé baddak menné? | how much do you want from me? | 4 |
-| `addee-betriid.mp3` | addéé betriid? | how much would you like? | 4 |
 | `addee-hayda-3mool-ma3rouuf.mp3` | addéé hayda, 3mool ma3rouuf? | how much is this, please? | 4 |
-| `addee-l-7seeb.mp3` | addéé l-7sééb? | how much is the bill? | 4 |
-| `alf.mp3` | alf | a thousand | 4 |
 | `alfeen.mp3` | alféén | two thousand | 4 |
-| `b-addee-ben-nhaar.mp3` | b-addéé ben-nhaar? | how much per day? | 4 |
-| `badde-eza-betriid.mp3` | baddé … eza betriid | I would like …, please | 4 |
-| `dollaar.mp3` | dollaar | dollar | 4 |
-| `fii-shii-arkhas.mp3` | fii shii arkhaS? | is there anything cheaper? | 4 |
 | `fii-tleetiin-w-hayda-l-aakhir.mp3` | fii. tléétiin. w hayda l-aakhir. | there is. Thirty. And that is the last of it. | 4 |
-| `ghaale.mp3` | ghaalé | expensive (a masculine thing) | 4 |
 | `ghaale-hayda-jdiid-ya-7abiibe.mp3` | ghaalé? hayda jdiid, ya 7abiibé. | expensive? This one is new, my dear. | 4 |
 | `hayda-khamsiin-dollaar.mp3` | hayda? khamsiin dollaar. | this one? Fifty dollars. | 4 |
-| `kam.mp3` | kam | how many | 4 |
 | `khams-taleef.mp3` | khams talééf | five thousand | 4 |
 | `khamsa-w-3eshriin.mp3` | khamsa w-3eshriin | twenty-five | 4 |
-| `khamse.mp3` | khamsé | five | 4 |
 | `khamsiin-mesh-ma32ouul.mp3` | khamsiin? mesh ma32ouul! | fifty? That is unbelievable! | 4 |
 | `kiiseen.mp3` | kiiséén | two bags | 4 |
-| `lira.mp3` | lira | lira, the Lebanese currency | 4 |
-| `m3awwadiin.mp3` | m3awwaDiin | may it come back to you | 4 |
-| `mesh-ma32ouul.mp3` | mesh ma32ouul! | that is unbelievable! | 4 |
-| `miyye.mp3` | miyyé | a hundred | 4 |
-| `rkhiis.mp3` | rkhiiS | cheap (a masculine thing) | 4 |
-| `se3r.mp3` | se3r | price | 4 |
 | `tleet-see3aat.mp3` | tléét séé3aat | three hours | 4 |
-| `tleete.mp3` | tléété | three | 4 |
 | `tleetiin-alf-lira.mp3` | tléétiin alf lira | thirty thousand lira | 4 |
-| `tneen.mp3` | tnéén | two | 4 |
-| `wa7ad.mp3` | wa7ad | one | 4 |
 | `3afwan-lyoom-mesh-bakkiir.mp3` | 3afwan. lyoom mesh bakkiir. | sorry. Today is not early. | 5 |
-| `3ashiyye.mp3` | 3ashiyyé | evening | 5 |
-| `allah-y3aafiik.mp3` | Allah y3aafiik | may God keep you strong | 5 |
-| `allah-y3aafiike.mp3` | Allah y3aafiiké | may God keep you strong | 5 |
-| `ba3d-boukra.mp3` | ba3d boukra | the day after tomorrow | 5 |
-| `ba3d-ed-dohr.mp3` | ba3d eD-Dohr | the afternoon | 5 |
-| `bakkiir.mp3` | bakkiir | early | 5 |
-| `bel-leel.mp3` | bel-léél | at night | 5 |
-| `boukra.mp3` | boukra | tomorrow | 5 |
 | `boukra-3ashiyye.mp3` | boukra 3ashiyyé | tomorrow evening | 5 |
 | `boukra-bakkiir-akiid.mp3` | boukra bakkiir, akiid! | tomorrow, early, of course! | 5 |
-| `el-a7ad.mp3` | el-a7ad | Sunday | 5 |
-| `es-sabet.mp3` | es-sabet | Saturday | 5 |
-| `es-sob7.mp3` | eS-Sob7 | the morning, in the morning | 5 |
-| `et-taneen.mp3` | et-tanéén | Monday | 5 |
-| `halla2.mp3` | halla2 | now | 5 |
 | `halla2-mesh-bakkiir.mp3` | halla2 mesh bakkiir | It is not early now. | 5 |
-| `jem3a.mp3` | jem3a | week, and also Friday | 5 |
 | `kell-en-nhaar.mp3` | kell en-nhaar | all day | 5 |
-| `kell-yoom.mp3` | kell yoom | every day | 5 |
-| `lyoom.mp3` | lyoom | today | 5 |
-| `marra-bel-jem3a.mp3` | marra bel-jem3a | once a week | 5 |
 | `masa-l-kheer-ya3tiik-el-3aafye.mp3` | masa l-khéér. ya3Tiik el-3aafyé. | good evening. May he give you strength. | 5 |
-| `mbeere7.mp3` | mbéére7 | yesterday | 5 |
 | `mbeere7-bel-leel.mp3` | mbéére7 bel-léél | last night | 5 |
 | `mbeere7-bel-leel-ha.mp3` | mbéére7 bel-léél, ha? | last night, eh? | 5 |
-| `nhaar.mp3` | nhaar | daytime | 5 |
 | `nhaar-es-sabet.mp3` | nhaar es-sabet | on Saturday, during the day | 5 |
-| `sa7-en-noom.mp3` | Sa7 en-noom | may your sleep be sound | 5 |
 | `tleet-layeele.mp3` | tléét layéélé | three nights | 5 |
 | `w-boukra-bakkiir.mp3` | w boukra? bakkiir? | and tomorrow? Early? | 5 |
-| `ya3tiik-alf-3aafye.mp3` | ya3Tiik alf 3aafyé | may he give you a thousand strengths | 5 |
-| `ya3tiik-el-3aafye.mp3` | ya3Tiik el-3aafyé | may he give you strength | 5 |
-| `ya3tiike-l-3aafye.mp3` | ya3Tiiké l-3aafyé | may he give you strength | 5 |
-| `yoom.mp3` | yoom | day | 5 |
 | `yoom-el-jem3a.mp3` | yoom el-jem3a | on Friday | 5 |
-| `3ayle.mp3` | 3aylé | family | 6 |
-| `3ende.mp3` | 3endé … | I have … | 6 |
 | `3ende-khay-w-okht.mp3` | 3endé khay w-okht | I have a brother and a sister. | 6 |
-| `7abiib.mp3` | 7abiib | dear one, love | 6 |
-| `7abiibe.mp3` | 7abiibé | my dear | 6 |
-| `baneet.mp3` | banéét | girls, daughters | 6 |
-| `bayy.mp3` | bayy | father | 6 |
-| `bayye-men.mp3` | bayyé men … | my father is from … | 6 |
 | `bayye-men-el-jnouub.mp3` | bayyé men el-jnouub | My father is from the south. | 6 |
-| `bent.mp3` | bent | daughter, girl | 6 |
-| `ebn.mp3` | ebn | son | 6 |
 | `ee-tleete-w-hayde-okhte-rita.mp3` | éé. tléété. w haydé okhté, Rita. | yes. Three. And this is my sister, Rita. | 6 |
-| `ekhwe.mp3` | ekhwé | brothers, siblings | 6 |
-| `emm.mp3` | emm | mother | 6 |
 | `emma-lebneeniyye.mp3` | emma lebnééniyyé | Her mother is Lebanese. | 6 |
 | `esma-therese.mp3` | esma Thérèse. | her name is Thérèse | 6 |
 | `hayde-3aylte.mp3` | haydé 3aylté. | this is my family | 6 |
 | `hayde-emme-w-hayda-bayye.mp3` | haydé emmé. w hayda bayyé. | this is my mother. And this is my father. | 6 |
-| `jawze.mp3` | jawzé | my husband | 6 |
-| `jooz.mp3` | jooz | husband | 6 |
-| `khay.mp3` | khay | brother | 6 |
 | `man2ouushe.mp3` | man2ouushé | a man2ouushé, the flatbread eaten for breakfast | 6 |
 | `man2ouusheta.mp3` | man2ouusheta | her man2ouushé | 6 |
 | `man2ouushte.mp3` | man2ouushté | my man2ouushé | 6 |
-| `mara.mp3` | mara | wife, woman | 6 |
-| `mart.mp3` | mart … | the wife of … | 6 |
-| `nawme.mp3` | nawmé | sleep | 6 |
-| `okht.mp3` | okht | sister | 6 |
-| `shou-esm-bayyak.mp3` | shou esm bayyak? | what is the name of your father? | 6 |
 | `shou-esm-emmik.mp3` | shou esm emmik? | what is your mother's name? | 6 |
-| `tekram-3aynak.mp3` | tekram 3aynak | may your eye be honoured | 6 |
 | `w-henne-ekhwtik.mp3` | w henné? ekhwtik? | and them? Your brothers? | 6 |
-| `wleed.mp3` | wlééd | children, sons | 6 |
-| `zawje.mp3` | zawjé | wife (the formal word) | 6 |
-| `2ahwe.mp3` | 2ahwe | coffee | 7 |
-| `3asiir.mp3` | 3aSiir | juice | 7 |
-| `3mool-ma3rouuf.mp3` | 3mool ma3rouuf | please | 7 |
-| `7aliib.mp3` | 7aliib | milk | 7 |
 | `ahla-w-sahla-shou-baddak.mp3` | ahla w sahla. shou baddak? | welcome. What do you want? | 7 |
-| `ana-bel-khedme.mp3` | ana bel-khedmé | I am at your service | 7 |
-| `badd.mp3` | badd- | to want | 7 |
-| `badde.mp3` | baddé… | I want… — then the thing, with nothing in between | 7 |
 | `badde-2ahwe-3mool-ma3rouuf.mp3` | baddé 2ahwe, 3mool ma3rouuf. | I want a coffee, please. | 7 |
 | `badde-3asiir-kameen.mp3` | baddé 3aSiir kaméén | I want a juice too. | 7 |
 | `badde-fenjeen-2ahwe.mp3` | baddé fenjéén 2ahwe | I want a cup of coffee. | 7 |
-| `badde-yeeh.mp3` | baddé yééh | I want that one | 7 |
 | `baddna-kees-maay.mp3` | baddna kéés maay | We want a glass of water. | 7 |
 | `baddo-kees-nbiid.mp3` | baddo kéés nbiid | He wants a glass of wine. | 7 |
-| `bala.mp3` | bala | without | 7 |
-| `eza-betriid.mp3` | eza betriid | please, if you would like | 7 |
-| `fenjeen.mp3` | fenjéén | cup | 7 |
-| `jou3aan.mp3` | jou3aan | hungry (a man) | 7 |
-| `kameen.mp3` | kaméén | also, as well | 7 |
-| `kees.mp3` | kéés | glass | 7 |
 | `la2-bala-7aliib.mp3` | la2, bala 7aliib. | no, without milk. | 7 |
-| `ma3.mp3` | ma3 | with | 7 |
 | `ma3-7aliib.mp3` | ma3 7aliib? | with milk? | 7 |
-| `maay.mp3` | maay | water | 7 |
 | `maay-kameen-eza-betriid.mp3` | maay kaméén, eza betriid. | water as well, if you would. | 7 |
-| `nbiid.mp3` | nbiid | wine | 7 |
-| `shaay.mp3` | shaay | tea | 7 |
 | `shaay-bala-7aliib-3mool-ma3rouuf.mp3` | shaay bala 7aliib, 3mool ma3rouuf | Tea without milk, please. | 7 |
-| `shii-teene.mp3` | shii tééné? | anything else? | 7 |
-| `shou-baddak.mp3` | shou baddak? | What do you want? | 7 |
 | `shou-baddik.mp3` | shou baddik? | What do you want? | 7 |
-| `shwayyet.mp3` | shwayyet | a little, a bit of | 7 |
-| `wala-shii-shukran.mp3` | wala shii, shukran | nothing at all, thank you | 7 |
-| `3end.mp3` | 3end- | to have, to own | 8 |
 | `3endak-sayyaara-mesh-heek.mp3` | 3endak sayyaara, mesh héék? | you have a car, don't you? | 8 |
 | `3ende-bass-mesh-hoon.mp3` | 3endé, bass mesh hoon. | I do, but not here. | 8 |
 | `3ende-sayyaara-bass-maa-ma3e-wa2t.mp3` | 3endé sayyaara bass maa ma3é wa2t | I have a car, but I have no time. | 8 |
 | `ee-ma3e-bass-maa-ma3e-l-kiis.mp3` | éé, ma3é. bass maa ma3é l-kiis. | yes, I have. But I have not got the bag on me. | 8 |
-| `emti7aan.mp3` | emti7aan | exam | 8 |
 | `es-see3a-la-elo.mp3` | es-séé3a la-elo | The watch is his. | 8 |
-| `hayda-la-ele.mp3` | hayda la-elé | this one is mine | 8 |
-| `kiis.mp3` | kiis | bag | 8 |
-| `la-el.mp3` | la-el- | to belong to | 8 |
-| `la2-maa-ma3e.mp3` | la2, maa ma3é | no, not on me | 8 |
-| `ma3ak.mp3` | ma3ak …? | have you got … on you? | 8 |
-| `ma3ak-7a2.mp3` | ma3ak 7a2 | you are right | 8 |
 | `ma3ak-7a2-yalla.mp3` | ma3ak 7a2. yalla. | you are right. Come on. | 8 |
 | `ma3ak-et-telephon.mp3` | ma3ak et-téléphon? | have you got the phone on you? | 8 |
 | `ma3ak-wa2t.mp3` | ma3ak wa2t? | have you got time? | 8 |
 | `ma3ik-el-7seeb.mp3` | ma3ik el-7sééb? | Have you got the bill on you? | 8 |
-| `maa-3ende-meene3.mp3` | maa 3endé mééne3 | I do not mind | 8 |
 | `maa-3enna-ouwad-lyoom.mp3` | maa 3enna ouwaD lyoom | We have no rooms today. | 8 |
-| `maa-ma3e-yeeh.mp3` | maa ma3é yééh | I have not got it on me | 8 |
-| `na3am-3enna.mp3` | na3am, 3enna | yes, we have — or maa 3enna, we have not | 8 |
-| `ra2m.mp3` | ra2m | number | 8 |
-| `sayyaara.mp3` | sayyaara | car | 8 |
-| `see3a.mp3` | séé3a | watch, clock, hour | 8 |
-| `sheghl.mp3` | sheghl | work, job | 8 |
-| `wa2t.mp3` | wa2t | time | 8 |
-| `2moor.mp3` | 2moor | how can I help | 9 |
 | `3afwan-fiik-tsee3edne.mp3` | 3afwan, fiik tséé3edné? | excuse me, can you help me? | 9 |
-| `7ada.mp3` | 7ada | someone, anybody | 9 |
 | `akiid-2moor.mp3` | akiid. 2moor. | of course. How can I help? | 9 |
-| `bass.mp3` | bass | only, but | 9 |
-| `fii.mp3` | fii- | can, to be able to | 9 |
 | `fii-7ada-hoon.mp3` | fii 7ada hoon? | Is there anybody here? | 9 |
 | `fii-7ada-hoon-esmo-elie.mp3` | fii 7ada hoon esmo Elie? | is there someone here called Elie? | 9 |
 | `fii-bass-mesh-hoon-halla2.mp3` | fii, bass mesh hoon halla2. | there is, but he is not here right now. | 9 |
-| `fiik-tsee3edne.mp3` | fiik tséé3edné? | can you help me? | 9 |
-| `fiini-see3dak.mp3` | fiini séé3dak? | can I help you? | 9 |
 | `fiini-see3dak-b-shii-teene.mp3` | fiini séé3dak b-shii tééné? | can I help you with anything else? | 9 |
-| `hoon.mp3` | hoon | here | 9 |
-| `khedme.mp3` | khedmé | favour, service | 9 |
 | `la2-shukran-ya3tiik-el-3aafye.mp3` | la2, shukran. ya3Tiik el-3aafyé. | no, thank you. May he give you strength. | 9 |
-| `leek.mp3` | léék | look, listen | 9 |
-| `maa-3leeh.mp3` | maa 3lééh | never mind, it is fine | 9 |
 | `maa-fii-7ada.mp3` | maa fii 7ada | There is nobody. | 9 |
-| `min-fadlak.mp3` | min faDlak | please | 9 |
-| `moumken.mp3` | moumken | may, possibly, could I | 9 |
-| `see3ed.mp3` | séé3ed | to help | 9 |
 | `tayyeb-maa-3leeh.mp3` | Tayyeb. maa 3lééh. | all right. Never mind. | 9 |
-| `3aatel.mp3` | 3aaTel | bad, no good | 10 |
-| `abadan.mp3` | abadan | at all, never | 10 |
 | `abadan-mesh-3aatel-mnii7-ktiir.mp3` | abadan! mesh 3aaTel, mnii7 ktiir. | not at all! It is not bad, it is very good. | 10 |
 | `bass-ana-te3been.mp3` | bass ana te3béén. | but I am tired. | 10 |
 | `kameen-shwayy.mp3` | kaméén shwayy? | a little bit more? | 10 |
-| `la2-shukran.mp3` | la2, shukran | no, thank you | 10 |
 | `la2-shukran-maa-fii-lzouum.mp3` | la2, shukran. maa fii lzouum. | no, thank you. There is no need. | 10 |
 | `la2-wala-shii-shukran.mp3` | la2, wala shii, shukran | No, nothing at all, thank you. | 10 |
 | `leesh-3aatel.mp3` | léésh? 3aaTel? | why? Is it no good? | 10 |
-| `ma-shii.mp3` | ma shii | nothing | 10 |
-| `ma32ouul.mp3` | ma32ouul | reasonable, believable | 10 |
-| `maa.mp3` | maa | not | 10 |
-| `maa-fii-lzouum.mp3` | maa fii lzouum | there is no need | 10 |
-| `maa-fii-shii-jdiid.mp3` | maa fii shii jdiid | nothing new | 10 |
-| `mann.mp3` | mann- | to not be | 10 |
 | `mannon-te3beeniin-abadan.mp3` | mannon te3bééniin abadan | They are not tired in the least. | 10 |
-| `mesh.mp3` | mesh | not | 10 |
-| `mesh-3aatel.mp3` | mesh 3aaTel | not bad | 10 |
-| `mesh-meshkle.mp3` | mesh meshklé | no problem | 10 |
-| `meshkle.mp3` | meshklé | problem | 10 |
-| `mfawwal.mp3` | mfawwal | fully booked | 10 |
-| `te3been.mp3` | te3béén | tired (a man) | 10 |
-| `te3beene.mp3` | te3bééné | tired (a woman) | 10 |
-| `wala-shii.mp3` | wala shii | nothing at all | 10 |
-| `yemken.mp3` | yemken | maybe | 10 |
-| `2adiim.mp3` | 2adiim | old | 11 |
 | `2adiim-bass-mesh-3aatel-l-ouuda-kbiire.mp3` | 2adiim, bass mesh 3aaTel. l-ouuDa kbiiré. | old, but not bad. The room is big. | 11 |
-| `2asiir.mp3` | 2aSiir | short | 11 |
-| `3youunak-el-7elwiin.mp3` | 3youunak el-7elwiin | your eyes are the beautiful ones | 11 |
-| `7elo.mp3` | 7elo | lovely, good-looking, sweet | 11 |
-| `7elo-ktiir.mp3` | 7elo ktiir | very nice — the safe, warm answer | 11 |
-| `a7mar.mp3` | a7mar | red | 11 |
-| `abyad.mp3` | abyaD | white | 11 |
-| `akhdar.mp3` | akhDar | green | 11 |
-| `basiita.mp3` | basiiTa! | it is nothing, never mind | 11 |
 | `bass-zghiir-shwayy-w-2adiim.mp3` | bass zghiir shwayy. w 2adiim. | but it is a bit small. And old. | 11 |
 | `beet-abyad.mp3` | béét abyaD | a white house | 11 |
 | `el-banadouura-7amra.mp3` | el-banadouura 7amra | the tomatoes are red | 11 |
 | `es-siyyaara-s-sawda.mp3` | es-siyyaara s-sawda | the black car | 11 |
-| `faade.mp3` | faaDé | empty, free, clear | 11 |
-| `ghaale-ktiir.mp3` | ghaalé ktiir | far too expensive | 11 |
-| `jdiid.mp3` | jdiid | new | 11 |
 | `kbiir.mp3` | kbiir | big | 11 |
 | `melyeen.mp3` | melyéén | full | 11 |
 | `raw3a.mp3` | raw3a! | wonderful! | 11 |

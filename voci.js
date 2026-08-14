@@ -69,6 +69,34 @@ function fonetica(s) {
     .replace(/[ذظ]/g, 'ز');
 }
 
+/* Le battute senza né say né ar (per lo più risposte) hanno la grafia scritta
+   a mano in audio/dire-a-mano.json, già fonetica. Senza, resterebbero mute. */
+let A_MANO = {};
+try { A_MANO = JSON.parse(fs.readFileSync(path.join(AUDIO, 'dire-a-mano.json'), 'utf8')); } catch (e) { /* facoltativo */ }
+
+/* La grafia araba non distingue kiifak da kiifik: tutte e due كيفك. Per la voce
+   la distinzione è vitale — è la grammatica dell'unità 1. Dove la parola latina
+   finisce in -ik (femminile) e quella araba in ك, la ك diventa يك come nella
+   chat libanese (كيفيك), e la voce legge il femminile. Allineamento parola per
+   parola; se i conteggi non tornano si lascia stare. */
+function femminile(lb, say) {
+  const L = String(lb).trim().split(/\s+/);
+  const A = String(say).trim().split(/\s+/);
+  if (!say || L.length !== A.length) return say;
+  return A.map((w, i) => {
+    const lat = L[i].replace(/[?!.,]/g, '');
+    /* Solo il suffisso femminile -ik BREVE: la i singola dopo consonante
+       (kiifik, ra2yik, esmik). Il maschile lungo -iik (fiik, y3aafiik) resta
+       com'è. E si inserisce anche se prima della ك c'è già una ي, perché può
+       essere del tema (رأيك = ra2y+ik → رأييك): il testo di partenza è sempre
+       la grafia originale, quindi la ي non si accumula tra una corsa e l'altra. */
+    if (/[^i]ik$/i.test(lat) && /ك[؟?!.,]*$/.test(w)) {
+      return w.replace(/ك([؟?!.,]*)$/, 'يك$1');
+    }
+    return w;
+  }).join(' ');
+}
+
 function add(lb, ar, en, unit, kind, say) {
   if (!lb || typeof lb !== 'string') return;
   const k = key(lb);
@@ -76,7 +104,7 @@ function add(lb, ar, en, unit, kind, say) {
   lines.set(k, {
     key: k,
     lb: lb,
-    say: fonetica(say || ar || ''),
+    say: femminile(lb, fonetica(say || ar || A_MANO[k] || '')),
     ar: ar || '',
     en: en || '',
     unit: unit,
