@@ -2,7 +2,7 @@
 
 Generato da `node voci.js`. Non si scrive a mano.
 
-Servono **1193** tracce in tutto, ne mancano **435**.
+Servono **1193** tracce in tutto, ne mancano **394**.
 
 Chi registra legge la colonna **libanese**, non l'arabo: l'arabo è lì solo per
 chi genera con una macchina, e va letto con la pronuncia libanese (la qaaf è un
@@ -12,47 +12,6 @@ Il file va salvato in `audio/` col nome esatto della prima colonna, estensione `
 
 | nome del file | libanese | inglese | unità |
 | --- | --- | --- | --- |
-| `hayda-khamsiin-dollaar.mp3` | hayda? khamsiin dollaar. | this one? Fifty dollars. | 4 |
-| `khams-taleef.mp3` | khams talééf | five thousand | 4 |
-| `khamsa-w-3eshriin.mp3` | khamsa w-3eshriin | twenty-five | 4 |
-| `khamsiin-mesh-ma32ouul.mp3` | khamsiin? mesh ma32ouul! | fifty? That is unbelievable! | 4 |
-| `kiiseen.mp3` | kiiséén | two bags | 4 |
-| `tleet-see3aat.mp3` | tléét séé3aat | three hours | 4 |
-| `tleetiin-alf-lira.mp3` | tléétiin alf lira | thirty thousand lira | 4 |
-| `3afwan-lyoom-mesh-bakkiir.mp3` | 3afwan. lyoom mesh bakkiir. | sorry. Today is not early. | 5 |
-| `boukra-3ashiyye.mp3` | boukra 3ashiyyé | tomorrow evening | 5 |
-| `boukra-bakkiir-akiid.mp3` | boukra bakkiir, akiid! | tomorrow, early, of course! | 5 |
-| `halla2-mesh-bakkiir.mp3` | halla2 mesh bakkiir | It is not early now. | 5 |
-| `kell-en-nhaar.mp3` | kell en-nhaar | all day | 5 |
-| `masa-l-kheer-ya3tiik-el-3aafye.mp3` | masa l-khéér. ya3Tiik el-3aafyé. | good evening. May he give you strength. | 5 |
-| `mbeere7-bel-leel.mp3` | mbéére7 bel-léél | last night | 5 |
-| `mbeere7-bel-leel-ha.mp3` | mbéére7 bel-léél, ha? | last night, eh? | 5 |
-| `nhaar-es-sabet.mp3` | nhaar es-sabet | on Saturday, during the day | 5 |
-| `tleet-layeele.mp3` | tléét layéélé | three nights | 5 |
-| `w-boukra-bakkiir.mp3` | w boukra? bakkiir? | and tomorrow? Early? | 5 |
-| `yoom-el-jem3a.mp3` | yoom el-jem3a | on Friday | 5 |
-| `3ende-khay-w-okht.mp3` | 3endé khay w-okht | I have a brother and a sister. | 6 |
-| `bayye-men-el-jnouub.mp3` | bayyé men el-jnouub | My father is from the south. | 6 |
-| `ee-tleete-w-hayde-okhte-rita.mp3` | éé. tléété. w haydé okhté, Rita. | yes. Three. And this is my sister, Rita. | 6 |
-| `emma-lebneeniyye.mp3` | emma lebnééniyyé | Her mother is Lebanese. | 6 |
-| `esma-therese.mp3` | esma Thérèse. | her name is Thérèse | 6 |
-| `hayde-3aylte.mp3` | haydé 3aylté. | this is my family | 6 |
-| `hayde-emme-w-hayda-bayye.mp3` | haydé emmé. w hayda bayyé. | this is my mother. And this is my father. | 6 |
-| `man2ouushe.mp3` | man2ouushé | a man2ouushé, the flatbread eaten for breakfast | 6 |
-| `man2ouusheta.mp3` | man2ouusheta | her man2ouushé | 6 |
-| `man2ouushte.mp3` | man2ouushté | my man2ouushé | 6 |
-| `shou-esm-emmik.mp3` | shou esm emmik? | what is your mother's name? | 6 |
-| `w-henne-ekhwtik.mp3` | w henné? ekhwtik? | and them? Your brothers? | 6 |
-| `ahla-w-sahla-shou-baddak.mp3` | ahla w sahla. shou baddak? | welcome. What do you want? | 7 |
-| `badde-2ahwe-3mool-ma3rouuf.mp3` | baddé 2ahwe, 3mool ma3rouuf. | I want a coffee, please. | 7 |
-| `badde-3asiir-kameen.mp3` | baddé 3aSiir kaméén | I want a juice too. | 7 |
-| `badde-fenjeen-2ahwe.mp3` | baddé fenjéén 2ahwe | I want a cup of coffee. | 7 |
-| `baddna-kees-maay.mp3` | baddna kéés maay | We want a glass of water. | 7 |
-| `baddo-kees-nbiid.mp3` | baddo kéés nbiid | He wants a glass of wine. | 7 |
-| `la2-bala-7aliib.mp3` | la2, bala 7aliib. | no, without milk. | 7 |
-| `ma3-7aliib.mp3` | ma3 7aliib? | with milk? | 7 |
-| `maay-kameen-eza-betriid.mp3` | maay kaméén, eza betriid. | water as well, if you would. | 7 |
-| `shaay-bala-7aliib-3mool-ma3rouuf.mp3` | shaay bala 7aliib, 3mool ma3rouuf | Tea without milk, please. | 7 |
 | `shou-baddik.mp3` | shou baddik? | What do you want? | 7 |
 | `3endak-sayyaara-mesh-heek.mp3` | 3endak sayyaara, mesh héék? | you have a car, don't you? | 8 |
 | `3ende-bass-mesh-hoon.mp3` | 3endé, bass mesh hoon. | I do, but not here. | 8 |
