@@ -2,7 +2,7 @@
 
 Generato da `node voci.js`. Non si scrive a mano.
 
-Servono **1193** tracce in tutto, ne mancano **462**.
+Servono **1193** tracce in tutto, ne mancano **435**.
 
 Chi registra legge la colonna **libanese**, non l'arabo: l'arabo è lì solo per
 chi genera con una macchina, e va letto con la pronuncia libanese (la qaaf è un
@@ -12,33 +12,6 @@ Il file va salvato in `audio/` col nome esatto della prima colonna, estensione `
 
 | nome del file | libanese | inglese | unità |
 | --- | --- | --- | --- |
-| `mnii7-l-7amdella-kiifik.mp3` | mnii7, l-7amdella. kiifik? | good, thank God. And you? | 1 |
-| `mnii7a-shukran.mp3` | mnii7a, shukran | good, thank you | 1 |
-| `ahla-w-sahla-min-ween-enta.mp3` | ahla w sahla. min wéén enta? | welcome. Where are you from? | 2 |
-| `ahla-w-sahla-tsharrafna.mp3` | ahla w sahla! tsharrafna. | welcome! We have been honoured | 2 |
-| `ana-men-italia-w-enta-men-beerout.mp3` | ana men Italia. w enta, men Béérout? | I am from Italy. And you, from Beirut? | 2 |
-| `ana-mnii7.mp3` | ana mnii7 | I am fine. | 2 |
-| `esme-marco.mp3` | esmé Marco | My name is Marco. | 2 |
-| `hiyye-lebneniyye.mp3` | hiyyé lebnéniyyé | She is Lebanese. | 2 |
-| `la2-ana-men-trablos.mp3` | la2, ana men Trablos. | no, I am from Tripoli | 2 |
-| `mar7aba-ana-ziad.mp3` | mar7aba! ana Ziad. | hello! I am Ziad | 2 |
-| `mar7abteen-esme-marco.mp3` | mar7abtéén. esmé Marco. | two hellos back. My name is Marco | 2 |
-| `min-ween-ente.mp3` | min wéén enté? | Where are you from? | 2 |
-| `ne7na-men-beerout.mp3` | ne7na men Béérout | We are from Beirut. | 2 |
-| `3afwan-ween-es-souu2.mp3` | 3afwan, wéén es-souu2? | excuse me, where is the market? | 3 |
-| `akiid-mesh-hayde-et-tarii2.mp3` | akiid? mesh haydé eT-Tarii2? | are you sure? Is this not the road? | 3 |
-| `ayya-tarii2.mp3` | ayya Tarii2? | Which road? | 3 |
-| `es-souu2-3ala-tuul.mp3` | es-souu2? 3ala Tuul. | the market? Straight ahead | 3 |
-| `hayda-l-beeb.mp3` | hayda l-bééb | this door | 3 |
-| `hayda-l-beeb-es-souu2-wara-l-beeb.mp3` | hayda l-bééb. es-souu2 wara l-bééb. | that is the door. The market is behind the door. | 3 |
-| `hayde-siyyaara.mp3` | haydé siyyaara | This is a car. | 3 |
-| `mbala-bass-el-beeb-a2rab.mp3` | mbala! bass el-bééb a2rab. | yes it is! But the door is nearer. | 3 |
-| `ween-el-beeb.mp3` | wéén el-bééb? | Where is the door? | 3 |
-| `ween-et-telephon.mp3` | wéén et-téléphon? | Where is the phone? | 3 |
-| `addee-hayda-3mool-ma3rouuf.mp3` | addéé hayda, 3mool ma3rouuf? | how much is this, please? | 4 |
-| `alfeen.mp3` | alféén | two thousand | 4 |
-| `fii-tleetiin-w-hayda-l-aakhir.mp3` | fii. tléétiin. w hayda l-aakhir. | there is. Thirty. And that is the last of it. | 4 |
-| `ghaale-hayda-jdiid-ya-7abiibe.mp3` | ghaalé? hayda jdiid, ya 7abiibé. | expensive? This one is new, my dear. | 4 |
 | `hayda-khamsiin-dollaar.mp3` | hayda? khamsiin dollaar. | this one? Fifty dollars. | 4 |
 | `khams-taleef.mp3` | khams talééf | five thousand | 4 |
 | `khamsa-w-3eshriin.mp3` | khamsa w-3eshriin | twenty-five | 4 |

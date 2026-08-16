@@ -30,13 +30,16 @@
 <header id="header"></header>
 <main id="app"></main>
 
-<!-- engine: order matters. data.js opens the registry; the audio manifest has to
-     be in place before audio.js reads it, or every speaker would come up silent. -->
+<!-- engine: order matters. data.js opens the registry; each manifest has to be in
+     place before the module that reads it, or every speaker would come up silent
+     and every photograph would stay hidden. -->
 <script src="js/data.js"></script>
 <script src="js/store.js"></script>
 <script src="js/art.js"></script>
 <script src="data/audio-manifest.js"></script>
 <script src="js/audio.js"></script>
+<script src="data/image-manifest.js"></script>
+<script src="js/pic.js"></script>
 <script src="js/drills.js"></script>
 <script src="js/runner.js"></script>
 

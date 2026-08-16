@@ -380,6 +380,16 @@
     var head = el('header', 'unit-cover');
     var back = el('div', 'unit-cover-art');
     back.innerHTML = Art.scene(Art.sceneForStage(u.stage));
+    /* A photograph of a real place in Lebanon, if one was found for this unit.
+       It lies over the drawing rather than replacing it, so the lesson has
+       something behind it during the moment the file is decoding and forever
+       after, if the file never arrives. The class goes on once it has actually
+       loaded — that is what lets the copy switch to its light-on-dark treatment
+       only when there is something dark to sit on. */
+    if (Pic.attachUnit(back, u.id, 'unit-cover-photo')) {
+      var ph = back.lastChild;
+      ph.addEventListener('load', function () { head.classList.add('has-photo'); });
+    }
     head.appendChild(back);
 
     var inner = el('div', 'unit-cover-copy');
@@ -508,6 +518,11 @@
     var list = el('div', 'vocab');
     vocab.forEach(function (v) {
       var row = el('div', 'vocab-row');
+      /* The picture column only exists when there is a picture. Reserving it for
+         every row would leave a ragged file of empty squares down the page —
+         and roughly half these words (the favour, the excuse, the opinion) have
+         no honest photograph at all. */
+      if (Pic.attachWord(row, v.lb)) row.classList.add('has-pic');
       var lb = el('div', 'v-lb');
       lb.appendChild(el('span', null, v.lb));
       Say.attach(lb, v.lb);
@@ -1046,6 +1061,27 @@
       'the point.'));
     wrap.appendChild(about);
 
+    /* The photographs are borrowed, and the licences want the lenders named. The
+       link is only offered when there are photographs to credit: on a fresh
+       checkout, before `node immagini.js` has run, it would lead to an empty
+       room. */
+    if (Pic.count()) {
+      var thanks = el('a', 'card more-guide');
+      thanks.href = '#/credits';
+      var th = el('div', 'train-head');
+      var tg = el('span', 'train-glyph');
+      tg.innerHTML = Art.glyph('star');
+      th.appendChild(tg);
+      var tt = el('div');
+      tt.appendChild(el('h2', null, 'The photographs'));
+      tt.appendChild(el('p', 'muted',
+        Pic.count() + ' pictures from Wikimedia Commons, lent under free licences. ' +
+        'Here is who made them.'));
+      th.appendChild(tt);
+      thanks.appendChild(th);
+      wrap.appendChild(thanks);
+    }
+
     var danger = el('section', 'card');
     danger.appendChild(el('h2', null, 'Start over'));
     danger.appendChild(el('p', 'muted', 'This erases progress, xp, streak and the review schedule on this device.'));
@@ -1136,6 +1172,69 @@
     if (Object.keys(kinds).length < 4) fail('only ' + Object.keys(kinds).length + ' exercise types, 4 minimum');
   }
 
+  /* ---------- who took the photographs ----------
+     Every photograph in this app is on loan under a Creative Commons licence,
+     and every one of those licences asks for the same thing in return: say who
+     made it. This screen is that payment. It is built from the manifest rather
+     than from a written page so it can never drift out of date, and it works
+     with the aeroplane mode on — an attribution you can only read online is not
+     an attribution. */
+
+  function screenCredits() {
+    var wrap = el('div', 'screen');
+    var list = Pic.credits();
+
+    wrap.appendChild(el('h1', null, 'The photographs'));
+    wrap.appendChild(el('p', 'lede',
+      list.length + ' photographs, all from Wikimedia Commons, all under a free ' +
+      'licence. Each one was resized and cropped to fit; a crop is an adaptation, ' +
+      'so each keeps the licence it arrived with. Thank you to the people below, ' +
+      'who will never know they taught anybody Lebanese.'));
+
+    if (!list.length) {
+      var none = el('section', 'card');
+      none.appendChild(el('p', 'muted',
+        'No photographs are installed. Run `node immagini.js` to fetch them.'));
+      wrap.appendChild(none);
+      return wrap;
+    }
+
+    var card = el('section', 'card');
+    var rows = el('div', 'credits');
+    list.forEach(function (c) {
+      var row = el('div', 'credit-row');
+      var thumb = new Image();
+      thumb.className = 'credit-pic';
+      thumb.alt = '';
+      thumb.loading = 'lazy';
+      thumb.src = (c.k.indexOf('unit-') === 0 ? 'images/unit/' : 'images/vocab/') + c.k + '.jpg';
+      thumb.addEventListener('error', function () { thumb.remove(); });
+      row.appendChild(thumb);
+
+      var text = el('div');
+      text.appendChild(el('div', 'credit-title', c.t || c.k));
+      var by = el('div', 'credit-by');
+      by.appendChild(el('span', null, c.a + ' · ' + c.l));
+      /* The link back to the original page on Commons. It is the one part of
+         this screen that needs a connection, and that is the right way round:
+         the name and the licence — the parts the licence actually obliges us to
+         show — are already on the page, and the link is the courtesy on top. */
+      if (c.u) {
+        var src = el('a', 'credit-src', 'source');
+        src.href = c.u;
+        src.target = '_blank';
+        src.rel = 'noopener noreferrer';
+        by.appendChild(src);
+      }
+      text.appendChild(by);
+      row.appendChild(text);
+      rows.appendChild(row);
+    });
+    card.appendChild(rows);
+    wrap.appendChild(card);
+    return wrap;
+  }
+
   function screenCheck() {
     var wrap = el('div', 'screen');
     wrap.appendChild(el('h1', null, 'Self check'));
@@ -1186,6 +1285,7 @@
       case 'words': case 'reference': view = screenWords(); break;
       case 'more': case 'settings': view = screenMore(); break;
       case 'guide': view = screenGuide(); break;
+      case 'credits': view = screenCredits(); break;
       case 'check': view = screenCheck(); break;
       default: view = screenPath();
     }

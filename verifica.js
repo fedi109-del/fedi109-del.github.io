@@ -175,6 +175,51 @@ for (const f of files) {
   if (!scripts.includes('data/' + f)) shellProblems.push('index.html never loads data/' + f);
 }
 
+/* Le fotografie seguono lo stesso patto dell'audio: comanda il manifesto, non il
+   disco. Un manifesto che promette un file che non c'è lascia un riquadro rotto
+   in mezzo a una lezione; un file sul disco che nessuna parola reclama è peso
+   morto che finisce nell'APK. Si controllano tutt'e due i versi.
+
+   `image-manifest.js` è generato: se non c'è, non è un errore — vuol dire che
+   `node immagini.js` non è mai stato lanciato, e l'app in quel caso mostra i
+   glifi disegnati e funziona lo stesso. */
+const imageProblems = [];
+const MANIFESTO_IMG = path.join(DATA, 'image-manifest.js');
+let chiaviImg = [];
+if (fs.existsSync(MANIFESTO_IMG)) {
+  const finestra = {};
+  new Function('window', fs.readFileSync(MANIFESTO_IMG, 'utf8'))(finestra);
+  chiaviImg = Object.keys(finestra.LEB_IMG || {});
+
+  const chiaveDi = s => String(s || '').toLowerCase()
+    .replace(/[éèêë]/g, 'e').replace(/[àâä]/g, 'a').replace(/[ìîï]/g, 'i')
+    .replace(/[òôö]/g, 'o').replace(/[ùûü]/g, 'u').replace(/['’`]/g, '2')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 64);
+
+  const paroleVive = new Set();
+  for (const u of units) for (const v of u.vocab || []) paroleVive.add(chiaveDi(v.lb));
+  const unitaVive = new Set(units.map(u => 'unit-' + u.id));
+
+  for (const k of chiaviImg) {
+    const dentroUnita = k.indexOf('unit-') === 0;
+    const file = path.join(DIR, 'images', dentroUnita ? 'unit' : 'vocab', k + '.jpg');
+    if (!fs.existsSync(file)) imageProblems.push('il manifesto promette una foto che non c\'è: ' + k);
+    if (dentroUnita) {
+      if (!unitaVive.has(k)) imageProblems.push('copertina di un\'unità che non esiste: ' + k);
+    } else if (!paroleVive.has(k)) {
+      imageProblems.push('foto orfana, nessuna parola la reclama: ' + k);
+    }
+  }
+
+  /* I crediti non sono un ornamento: senza il nome dell'autore la licenza di
+     quella fotografia è violata, e una riga mancante qui è un problema legale,
+     non estetico. */
+  const crediti = new Set((finestra.LEB_IMG_CREDITS || []).map(c => c.k));
+  for (const k of chiaviImg) {
+    if (!crediti.has(k)) imageProblems.push('foto senza crediti: ' + k);
+  }
+}
+
 const words = units.reduce((n, u) => n + (u.vocab || []).length, 0);
 const phrases = units.reduce((n, u) => n + (u.phrases || []).length, 0);
 const exercises = units.reduce((n, u) => n + (u.drills || []).length + (u.quiz || []).length, 0);
@@ -185,9 +230,11 @@ console.log(JSON.stringify({
   missingOrders: missing,
   duplicateOrders: dupOrders,
   words, phrases, exercises,
+  images: chiaviImg.length,
   syntaxErrors: syntax,
   schemaProblems: problems,
   shellProblems,
+  imageProblems,
   spellingClashes: clashes,
   latinQaaf: latinQ,
   italianFound: italian

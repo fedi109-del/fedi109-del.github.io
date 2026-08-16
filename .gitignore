@@ -10,3 +10,12 @@ desktop.ini
 *.apk
 *.aab
 *.zip
+
+# Misure delle tracce audio: sono uno scontrino locale (peso e data di modifica
+# dei file su QUESTO disco) che serve solo a non rimisurare 731 mp3 ogni volta.
+# Su un altro computer le date non tornerebbero e si rimisurerebbe comunque.
+audio/misure.json
+
+# Foglio di lavoro di chi rigenera: si ricava in un secondo incrociando
+# audio/tutte.json con audio/da-rifare.json, quindi non vale la pena tenerlo.
+audio/da-rigenerare.json

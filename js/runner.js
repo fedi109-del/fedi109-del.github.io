@@ -157,7 +157,12 @@ window.Runner = (function () {
       var score = scoreable ? Math.round((correct / scoreable) * 100) : 100;
       Store.addXp(correct * 4 + (mode === 'quiz' ? 10 : 0));
       host.innerHTML = '';
-      var card = el('div', 'card done-card');
+      /* Eighty is the line the whole app already draws — it is what marks a unit
+         cleared. Crossing it should look like crossing it. Below the line the
+         card stays plain rather than turning consoling: a celebration that fires
+         for every score is not a celebration, it is wallpaper, and after three
+         of them the learner stops seeing the difference between the two. */
+      var card = el('div', 'card done-card' + (score >= 80 ? ' won' : ''));
       card.appendChild(el('div', 'done-score', score + '%'));
       card.appendChild(el('div', 'done-line', correct + ' of ' + scoreable + ' right'));
 

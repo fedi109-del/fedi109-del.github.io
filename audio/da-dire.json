@@ -1,248 +1,5 @@
 [
  {
-  "key": "mnii7-l-7amdella-kiifik",
-  "lb": "mnii7, l-7amdella. kiifik?",
-  "say": "منيح، الحمدلله. كيفيك؟",
-  "ar": "منيح، الحمدلله. كيفك؟",
-  "en": "good, thank God. And you?",
-  "unit": 1,
-  "kind": "dialogue"
- },
- {
-  "key": "mnii7a-shukran",
-  "lb": "mnii7a, shukran",
-  "say": "منيحة، شكرا",
-  "ar": "منيحة، شكرا",
-  "en": "good, thank you",
-  "unit": 1,
-  "kind": "dialogue"
- },
- {
-  "key": "ahla-w-sahla-min-ween-enta",
-  "lb": "ahla w sahla. min wéén enta?",
-  "say": "أهلا وسهلا. من وين انت؟",
-  "ar": "أهلا وسهلا. من وين انت؟",
-  "en": "welcome. Where are you from?",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "key": "ahla-w-sahla-tsharrafna",
-  "lb": "ahla w sahla! tsharrafna.",
-  "say": "أهلا وسهلا! تشرفنا",
-  "ar": "أهلا وسهلا! تشرفنا",
-  "en": "welcome! We have been honoured",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "key": "ana-men-italia-w-enta-men-beerout",
-  "lb": "ana men Italia. w enta, men Béérout?",
-  "say": "أنا من ايطاليا. وانت، من بيروت؟",
-  "ar": "أنا من ايطاليا. وانت، من بيروت؟",
-  "en": "I am from Italy. And you, from Beirut?",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "key": "ana-mnii7",
-  "lb": "ana mnii7",
-  "say": "أنا منيح",
-  "ar": "أنا منيح",
-  "en": "I am fine.",
-  "unit": 2,
-  "kind": "example"
- },
- {
-  "key": "esme-marco",
-  "lb": "esmé Marco",
-  "say": "اسمي ماركو",
-  "ar": "اسمي ماركو",
-  "en": "My name is Marco.",
-  "unit": 2,
-  "kind": "example"
- },
- {
-  "key": "hiyye-lebneniyye",
-  "lb": "hiyyé lebnéniyyé",
-  "say": "هيي لبنانية",
-  "ar": "هيي لبنانية",
-  "en": "She is Lebanese.",
-  "unit": 2,
-  "kind": "example"
- },
- {
-  "key": "la2-ana-men-trablos",
-  "lb": "la2, ana men Trablos.",
-  "say": "لأ، أنا من طرابلس",
-  "ar": "لأ، أنا من طرابلس",
-  "en": "no, I am from Tripoli",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "key": "mar7aba-ana-ziad",
-  "lb": "mar7aba! ana Ziad.",
-  "say": "مرحبا! أنا زياد",
-  "ar": "مرحبا! أنا زياد",
-  "en": "hello! I am Ziad",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "key": "mar7abteen-esme-marco",
-  "lb": "mar7abtéén. esmé Marco.",
-  "say": "مرحبتين. اسمي ماركو",
-  "ar": "مرحبتين. اسمي ماركو",
-  "en": "two hellos back. My name is Marco",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "key": "min-ween-ente",
-  "lb": "min wéén enté?",
-  "say": "من وين إنتي؟",
-  "ar": "من وين إنتي؟",
-  "en": "Where are you from?",
-  "unit": 2,
-  "kind": "example"
- },
- {
-  "key": "ne7na-men-beerout",
-  "lb": "ne7na men Béérout",
-  "say": "نحنا من بيروت",
-  "ar": "نحنا من بيروت",
-  "en": "We are from Beirut.",
-  "unit": 2,
-  "kind": "example"
- },
- {
-  "key": "3afwan-ween-es-souu2",
-  "lb": "3afwan, wéén es-souu2?",
-  "say": "عفوا، وين السوء؟",
-  "ar": "عفوا، وين السوق؟",
-  "en": "excuse me, where is the market?",
-  "unit": 3,
-  "kind": "dialogue"
- },
- {
-  "key": "akiid-mesh-hayde-et-tarii2",
-  "lb": "akiid? mesh haydé eT-Tarii2?",
-  "say": "أكيد؟ مش هيدي الطريء؟",
-  "ar": "أكيد؟ مش هيدي الطريق؟",
-  "en": "are you sure? Is this not the road?",
-  "unit": 3,
-  "kind": "dialogue"
- },
- {
-  "key": "ayya-tarii2",
-  "lb": "ayya Tarii2?",
-  "say": "أي طَريء؟",
-  "ar": "أي طَريق؟",
-  "en": "Which road?",
-  "unit": 3,
-  "kind": "example"
- },
- {
-  "key": "es-souu2-3ala-tuul",
-  "lb": "es-souu2? 3ala Tuul.",
-  "say": "السوء؟ على طول",
-  "ar": "السوق؟ على طول",
-  "en": "the market? Straight ahead",
-  "unit": 3,
-  "kind": "dialogue"
- },
- {
-  "key": "hayda-l-beeb",
-  "lb": "hayda l-bééb",
-  "say": "هَيْدا الباب",
-  "ar": "هَيْدا الباب",
-  "en": "this door",
-  "unit": 3,
-  "kind": "example"
- },
- {
-  "key": "hayda-l-beeb-es-souu2-wara-l-beeb",
-  "lb": "hayda l-bééb. es-souu2 wara l-bééb.",
-  "say": "هيدا الباب. السوء ورا الباب",
-  "ar": "هيدا الباب. السوق ورا الباب",
-  "en": "that is the door. The market is behind the door.",
-  "unit": 3,
-  "kind": "dialogue"
- },
- {
-  "key": "hayde-siyyaara",
-  "lb": "haydé siyyaara",
-  "say": "هَيْدي سيّارة",
-  "ar": "هَيْدي سيّارة",
-  "en": "This is a car.",
-  "unit": 3,
-  "kind": "example"
- },
- {
-  "key": "mbala-bass-el-beeb-a2rab",
-  "lb": "mbala! bass el-bééb a2rab.",
-  "say": "مبلى! بس الباب أأرب",
-  "ar": "مبلى! بس الباب أقرب",
-  "en": "yes it is! But the door is nearer.",
-  "unit": 3,
-  "kind": "dialogue"
- },
- {
-  "key": "ween-el-beeb",
-  "lb": "wéén el-bééb?",
-  "say": "وين الباب؟",
-  "ar": "وين الباب؟",
-  "en": "Where is the door?",
-  "unit": 3,
-  "kind": "example"
- },
- {
-  "key": "ween-et-telephon",
-  "lb": "wéén et-téléphon?",
-  "say": "وين التيليفون؟",
-  "ar": "وين التيليفون؟",
-  "en": "Where is the phone?",
-  "unit": 3,
-  "kind": "example"
- },
- {
-  "key": "addee-hayda-3mool-ma3rouuf",
-  "lb": "addéé hayda, 3mool ma3rouuf?",
-  "say": "أديه هيدا، عمول معروف؟",
-  "ar": "قديه هيدا، عمول معروف؟",
-  "en": "how much is this, please?",
-  "unit": 4,
-  "kind": "dialogue"
- },
- {
-  "key": "alfeen",
-  "lb": "alféén",
-  "say": "أَلْفين",
-  "ar": "أَلْفين",
-  "en": "two thousand",
-  "unit": 4,
-  "kind": "example"
- },
- {
-  "key": "fii-tleetiin-w-hayda-l-aakhir",
-  "lb": "fii. tléétiin. w hayda l-aakhir.",
-  "say": "في. تلاتين. وهيدا الآخر",
-  "ar": "في. تلاتين. وهيدا الآخر",
-  "en": "there is. Thirty. And that is the last of it.",
-  "unit": 4,
-  "kind": "dialogue"
- },
- {
-  "key": "ghaale-hayda-jdiid-ya-7abiibe",
-  "lb": "ghaalé? hayda jdiid, ya 7abiibé.",
-  "say": "غالي؟ هيدا جديد، يا حبيبي",
-  "ar": "غالي؟ هيدا جديد، يا حبيبي",
-  "en": "expensive? This one is new, my dear.",
-  "unit": 4,
-  "kind": "dialogue"
- },
- {
   "key": "hayda-khamsiin-dollaar",
   "lb": "hayda? khamsiin dollaar.",
   "say": "هيدا؟ خمسين دولار",
@@ -1883,7 +1640,7 @@
  {
   "key": "badde-s-siyyaara-la-tleet-iyyeem",
   "lb": "baddé s-siyyaara la-tléét iyyéém",
-  "say": "",
+  "say": "بدّي السيّارة لتلات إيّام",
   "ar": "",
   "en": "I want the car for three days.",
   "unit": 21,
@@ -1892,7 +1649,7 @@
  {
   "key": "bemro2-3al-forn-3a-tarii2e",
   "lb": "bemro2 3al-forn 3a Tarii2é",
-  "say": "",
+  "say": "بمرأ عالفرن عَ طريئي",
   "ar": "",
   "en": "I pass by the bakery on my way.",
   "unit": 21,
@@ -1901,7 +1658,7 @@
  {
   "key": "berja3-etla3-3al-jabal",
   "lb": "berja3 eTla3 3al-jabal",
-  "say": "",
+  "say": "برجع إطلع عالجبل",
   "ar": "",
   "en": "I go back up to the mountain.",
   "unit": 21,
@@ -1928,7 +1685,7 @@
  {
   "key": "fii-majeel-twa22ef-hoon-3mool-ma3rouuf",
   "lb": "fii majéél twa22ef hoon 3mool ma3rouuf?",
-  "say": "",
+  "say": "في مجال تْوَئِّف هون، عمول معروف؟",
   "ar": "",
   "en": "Could you stop here please?",
   "unit": 21,
@@ -1955,7 +1712,7 @@
  {
   "key": "ma-tense-tredda-3ashiyye",
   "lb": "ma tensé tredda 3ashiyyé",
-  "say": "",
+  "say": "ما تنسى تردّا عشيّة",
   "ar": "",
   "en": "Do not forget to bring it back in the evening.",
   "unit": 21,
@@ -1964,7 +1721,7 @@
  {
   "key": "mnenzal-3a-beirut-kell-yoom",
   "lb": "mnenzal 3a Beirut kell yoom",
-  "say": "",
+  "say": "منِنزل عَ بيروت كل يوم",
   "ar": "",
   "en": "We go down to Beirut every day.",
   "unit": 21,
@@ -2000,7 +1757,7 @@
  {
   "key": "badde-3azzbik-fii-dajje-bel-ouuda",
   "lb": "baddé 3azzbik, fii Dajjé bel-ouuDa",
-  "say": "",
+  "say": "بدّي عَزّبِك، في ضجّة بالأوضة",
   "ar": "",
   "en": "Sorry to bother you, there is noise in the room.",
   "unit": 22,
@@ -2027,7 +1784,7 @@
  {
   "key": "fii-majeel-teje-3al-ouuda",
   "lb": "fii majéél tejé 3al-ouuDa?",
-  "say": "",
+  "say": "في مجال تجي عالأوضة؟",
   "ar": "",
   "en": "Could you come up to the room?",
   "unit": 22,
@@ -2045,7 +1802,7 @@
  {
   "key": "l-7ajz-la-tleet-layeele",
   "lb": "l-7ajz la-tléét layéélé",
-  "say": "",
+  "say": "الحجز لتلات ليالي",
   "ar": "",
   "en": "The booking is for three nights.",
   "unit": 22,
@@ -2054,7 +1811,7 @@
  {
   "key": "l-moukayyef-maa-byeshteghel",
   "lb": "l-moukayyef maa byeshteghel",
-  "say": "",
+  "say": "المكيّف ما بيشتغل",
   "ar": "",
   "en": "The air conditioner does not work.",
   "unit": 22,
@@ -2144,7 +1901,7 @@
  {
   "key": "maa-3leeh-mesh-meshkle",
   "lb": "maa 3lééh, mesh meshklé",
-  "say": "",
+  "say": "ما عليه، مش مشكلة",
   "ar": "",
   "en": "Never mind, it is not a problem.",
   "unit": 23,
@@ -2189,7 +1946,7 @@
  {
   "key": "tayyeb-lakeen-bshouufak-3al-khamse",
   "lb": "Tayyeb lakéén, bshouufak 3al-khamsé",
-  "say": "",
+  "say": "طيّب لكان، بشوفك عالخمسة",
   "ar": "",
   "en": "All right then, I will see you at five.",
   "unit": 23,
@@ -2198,7 +1955,7 @@
  {
   "key": "te3been-baleeha-lyoom",
   "lb": "te3béén? balééha lyoom",
-  "say": "",
+  "say": "تعبان؟ بلاها اليوم",
   "ar": "",
   "en": "Tired? Then let us drop it for today.",
   "unit": 23,
@@ -2207,7 +1964,7 @@
  {
   "key": "ya3ne-mesh-lyoom-boukra",
   "lb": "ya3né mesh lyoom, boukra",
-  "say": "",
+  "say": "يعني مش اليوم، بكرة",
   "ar": "",
   "en": "I mean not today, tomorrow.",
   "unit": 23,
@@ -2216,7 +1973,7 @@
  {
   "key": "yalla-basiita",
   "lb": "yalla basiiTa",
-  "say": "",
+  "say": "يلّا بسيطة",
   "ar": "",
   "en": "Never mind, it is nothing.",
   "unit": 23,
@@ -2225,7 +1982,7 @@
  {
   "key": "yalla-l-film-biballesh",
   "lb": "yalla, l-film biballesh",
-  "say": "",
+  "say": "يلّا، الفيلم بيبلّش",
   "ar": "",
   "en": "Come on, the film is starting.",
   "unit": 23,
@@ -2594,7 +2351,7 @@
  {
   "key": "addayna-honiik-shii-arb3a-see3aat-w-ba3deen-nzelna-3a-beirut",
   "lb": "aDDayna honiik shii arb3a séé3aat, w-ba3déén nzelna 3a Beirut.",
-  "say": "",
+  "say": "أضّينا هونيك شي أربع ساعات، وبعدين نزلنا عَ بيروت",
   "ar": "",
   "en": "We spent about four hours there, and then we went down to Beirut.",
   "unit": 28,
@@ -2603,7 +2360,7 @@
  {
   "key": "ana-w-hala-tlo3na-3al-jabal",
   "lb": "ana w-Hala Tlo3na 3al-jabal",
-  "say": "",
+  "say": "أنا وهَلا طلعنا عالجبل",
   "ar": "",
   "en": "Hala and I went up to the mountain.",
   "unit": 28,
@@ -2621,7 +2378,7 @@
  {
   "key": "awwal-shii-tmasshayna-shwayy-bel-balde-l-adiime",
   "lb": "awwal shii tmasshayna shwayy bel-baldé l-adiimé.",
-  "say": "",
+  "say": "أوّل شي تمشّينا شوي بالبلدة الأديمة",
   "ar": "",
   "en": "First of all we strolled a while around the old town.",
   "unit": 28,
@@ -2630,7 +2387,7 @@
  {
   "key": "ba3deen-akhadna-es-sayyaara-w-tlo3na-3al-jabal",
   "lb": "ba3déén akhadna es-sayyaara w-Tlo3na 3al-jabal.",
-  "say": "",
+  "say": "بعدين أخدنا السيّارة وطلعنا عالجبل",
   "ar": "",
   "en": "Then we took the car and went up to the mountain.",
   "unit": 28,
@@ -2648,7 +2405,7 @@
  {
   "key": "lamma-wsolna-keen-et-ta2s-deefe-ktiir",
   "lb": "lamma wSolna, kéén eT-Ta2s dééfé ktiir.",
-  "say": "",
+  "say": "لمّا وصلنا، كان الطأس دافي كتير",
   "ar": "",
   "en": "When we arrived, the weather was very warm.",
   "unit": 28,
@@ -2666,7 +2423,7 @@
  {
   "key": "maa-talabt-samak-talabt-kafta",
   "lb": "maa Talabt samak, Talabt kafta",
-  "say": "",
+  "say": "ما طلبت سمك، طلبت كفتة",
   "ar": "",
   "en": "I did not order fish, I ordered kofta.",
   "unit": 28,
@@ -2675,7 +2432,7 @@
  {
   "key": "men-ba3da-a3adna-b-mat3am-zghiir-2beel-et-tarii2-w-talabna-samak",
   "lb": "men ba3da a3adna b-maT3am zghiir 2béél eT-Tarii2 w-Talabna samak meshwé.",
-  "say": "",
+  "say": "من بعدا أعدنا بمطعم زغير أبيل الطريء وطلبنا سمك مشوي",
   "ar": "",
   "en": "After that we sat in a small restaurant opposite the road and ordered grilled fish.",
   "unit": 28,
@@ -2684,7 +2441,7 @@
  {
   "key": "nhaar-es-sabet-w3iina-bakkiir-w-trawwa2na-3as-sarii3",
   "lb": "nhaar es-sabet w3iina bakkiir w-trawwa2na 3as-sarii3.",
-  "say": "",
+  "say": "نهار السبت وعينا بكّير وترَوَّأنا عالسريع",
   "ar": "",
   "en": "On Saturday we woke up early and had a quick breakfast.",
   "unit": 28,
@@ -2693,7 +2450,7 @@
  {
   "key": "tania-w-jawza-tole3o-kameen",
   "lb": "Tania w-jawza Tole3o kaméén",
-  "say": "",
+  "say": "طانيا وجوزا طلعو كمان",
   "ar": "",
   "en": "Tania and her husband went up too.",
   "unit": 28,
@@ -2711,7 +2468,7 @@
  {
   "key": "w-akhiiran-rje3na-3al-beet-es-see3a-tes3a-kenna-te3beeniin-bass-",
   "lb": "w-akhiiran rje3na 3al-béét es-séé3a tes3a. kenna te3bééniin, bass el-yoom kéén 7elo.",
-  "say": "",
+  "say": "وأخيراً رجعنا عالبيت الساعة تسعة. كنّا تعبانين، بس اليوم كان حلو",
   "ar": "",
   "en": "And finally we got home at nine. We were tired, but it had been a lovely day.",
   "unit": 28,
@@ -2720,7 +2477,7 @@
  {
   "key": "w-ne7na-3am-mneshrab-2ahwe-shefna-tania-w-jawza-henne-kameen-tol",
   "lb": "w-ne7na 3am mneshrab 2ahwe, shefna Tania w-jawza: henné kaméén Tole3o 3al-jabal.",
-  "say": "",
+  "say": "ونحنا عم منشرب أهوة، شفنا طانيا وجوزا: هنّي كمان طلعو عالجبل",
   "ar": "",
   "en": "While we were drinking coffee we saw Tania and her husband: they had come up to the mountain too.",
   "unit": 28,
@@ -2756,7 +2513,7 @@
  {
   "key": "kenna-baddna-nrouu7-3al-ba7r-w-akhiiran-a3adna-bel-beet",
   "lb": "kenna baddna nrouu7 3al-ba7r, w-akhiiran a3adna bel-béét",
-  "say": "",
+  "say": "كنّا بدّنا نروح عالبحر، وأخيراً أعدنا بالبيت",
   "ar": "",
   "en": "We wanted to go to the sea, and in the end we stayed at home.",
   "unit": 29,
@@ -2765,7 +2522,7 @@
  {
   "key": "kenna-naatriinon-noss-see3a",
   "lb": "kenna naaTriinon noSS séé3a",
-  "say": "",
+  "say": "كنّا ناطرينون نص ساعة",
   "ar": "",
   "en": "We had been waiting for them for half an hour.",
   "unit": 29,
@@ -2774,7 +2531,7 @@
  {
   "key": "kent-3am-beshteghel-lamma-talfan-sami",
   "lb": "kent 3am beshteghel lamma talfan Sami",
-  "say": "",
+  "say": "كنت عم بشتغل لمّا تلفن سامي",
   "ar": "",
   "en": "I was working when Sami phoned.",
   "unit": 29,
@@ -2810,7 +2567,7 @@
  {
   "key": "kent-ra7-e7joz-taawle-bass-el-mat3am-keen-mfawwal",
   "lb": "kent ra7 e7joz Taawlé, bass el-maT3am kéén mfawwal",
-  "say": "",
+  "say": "كنت رح إحجز طاولة، بس المطعم كان مفوّل",
   "ar": "",
   "en": "I was about to book a table, but the restaurant was full.",
   "unit": 29,
@@ -2837,7 +2594,7 @@
  {
   "key": "lamma-kent-zghiir-kent-bel3ab-tennis-marra-bel-jem3a",
   "lb": "lamma kent zghiir, kent bel3ab tennis marra bel-jem3a",
-  "say": "",
+  "say": "لمّا كنت زغير، كنت بلعب تنس مرّة بالجمعة",
   "ar": "",
   "en": "When I was small I used to play tennis once a week.",
   "unit": 29,
@@ -2936,7 +2693,7 @@
  {
   "key": "sarelna-see3teen-naatriin",
   "lb": "Sarelna séé3téén naaTriin",
-  "say": "",
+  "say": "صرلنا ساعتين ناطرين",
   "ar": "",
   "en": "We have been waiting two hours.",
   "unit": 30,
@@ -2945,7 +2702,7 @@
  {
   "key": "sarle-jem3a-hoon",
   "lb": "Sarlé jem3a hoon",
-  "say": "",
+  "say": "صرلي جمعة هون",
   "ar": "",
   "en": "I have been here a week.",
   "unit": 30,
@@ -2963,7 +2720,7 @@
  {
   "key": "sarlo-shahreen-3am-byeshteghel-hoon",
   "lb": "Sarlo shahréén 3am byeshteghel hoon",
-  "say": "",
+  "say": "صرلو شهرين عم بيشتغل هون",
   "ar": "",
   "en": "He has been working here for two months.",
   "unit": 30,
@@ -2990,7 +2747,7 @@
  {
   "key": "bet7ebbo-7elo",
   "lb": "bet7ebbo 7elo?",
-  "say": "",
+  "say": "بتحبّو حلو؟",
   "ar": "",
   "en": "Would you like dessert?",
   "unit": 31,
@@ -2999,7 +2756,7 @@
  {
   "key": "dakhlak-be3te2ed-fii-ghalta-bel-7seeb",
   "lb": "dakhlak, be3te2ed fii ghalTa bel-7sééb",
-  "say": "",
+  "say": "دخلك، بعتئد في غلطة بالحساب",
   "ar": "",
   "en": "Excuse me, I think there is a mistake in the bill.",
   "unit": 31,
@@ -3008,7 +2765,7 @@
  {
   "key": "jebelna-2anniinteen-nbiid-a7mar-3mool-ma3rouuf",
   "lb": "jebelna 2anniintéén nbiid a7mar, 3mool ma3rouuf",
-  "say": "",
+  "say": "جبلنا أنّينتين نبيد أحمر، عمول معروف",
   "ar": "",
   "en": "Bring us two bottles of red wine, please.",
   "unit": 31,
@@ -3035,7 +2792,7 @@
  {
   "key": "maitre-fiik-t2ellna-shou-3endkon-lyoom",
   "lb": "Maitre! fiik t2ellna shou 3endkon lyoom?",
-  "say": "",
+  "say": "ميتر! فيك تئلّنا شو عندكن اليوم؟",
   "ar": "",
   "en": "Excuse me! Can you tell us what you have today?",
   "unit": 31,
@@ -3044,7 +2801,7 @@
  {
   "key": "ne7na-talabna-kees-nbiid-mesh-2anniine",
   "lb": "ne7na Talabna kéés nbiid, mesh 2anniiné",
-  "say": "",
+  "say": "نحنا طلبنا كاس نبيد، مش أنّينة",
   "ar": "",
   "en": "We ordered a glass of wine, not a bottle.",
   "unit": 31,
@@ -3062,7 +2819,7 @@
  {
   "key": "tole3-ghaale-shwayy",
   "lb": "Tole3 ghaalé shwayy",
-  "say": "",
+  "say": "طلع غالي شوي",
   "ar": "",
   "en": "It has come out a bit expensive.",
   "unit": 31,
@@ -3089,7 +2846,7 @@
  {
   "key": "fii-wa7de-btefta7-arb3a-w-3eshriin-see3a",
   "lb": "fii wa7dé btefta7 arb3a w-3eshriin séé3a",
-  "say": "",
+  "say": "في وحدة بتفتح أربعة وعشرين ساعة",
   "ar": "",
   "en": "There is one that is open twenty-four hours.",
   "unit": 32,
@@ -3098,7 +2855,7 @@
  {
   "key": "jesme-mlashlash-w-maa-3ende-eebliyye",
   "lb": "jesmé mlashlash w-maa 3endé éébliyyé",
-  "say": "",
+  "say": "جسمي ملشلش وما عندي إبليّة",
   "ar": "",
   "en": "I feel washed out and I have no appetite.",
   "unit": 32,
@@ -3134,7 +2891,7 @@
  {
   "key": "sarla-jem3a-maa-3am-bteekol-mnii7",
   "lb": "Sarla jem3a maa 3am btéékol mnii7",
-  "say": "",
+  "say": "صرلا جمعة ما عم بتاكل منيح",
   "ar": "",
   "en": "She has not been eating properly for a week.",
   "unit": 32,

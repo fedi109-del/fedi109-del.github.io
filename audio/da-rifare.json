@@ -1,0 +1,378 @@
+[
+ {
+  "grado": "sospetta",
+  "key": "sarelna",
+  "lb": "Sarelna",
+  "en": "it has been … for us",
+  "unit": 30,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "seme3",
+  "lb": "seme3",
+  "en": "he heard",
+  "unit": 27,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "men",
+  "lb": "men",
+  "en": "from",
+  "unit": 2,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "maa-te3tal-hamm",
+  "lb": "maa te3tal hamm",
+  "en": "do not carry worry",
+  "unit": 23,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "makana",
+  "lb": "makana",
+  "en": "clippers, machine",
+  "unit": 39,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "nezel",
+  "lb": "nezel",
+  "en": "he went down",
+  "unit": 27,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "kammal",
+  "lb": "kammal",
+  "en": "he carried on",
+  "unit": 26,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "maa-ra7-enzal-lyoom",
+  "lb": "maa ra7 enzal lyoom",
+  "en": "I am not going down today",
+  "unit": 25,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "abadan",
+  "lb": "abadan",
+  "en": "at all, never",
+  "unit": 10,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "kemm",
+  "lb": "kemm",
+  "en": "sleeve",
+  "unit": 20,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "la2-ana-men-trablos",
+  "lb": "la2, ana men Trablos.",
+  "en": "no, I am from Tripoli",
+  "unit": 2,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "7ada",
+  "lb": "7ada",
+  "en": "someone, anybody",
+  "unit": 9,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "allah-y3aafiik",
+  "lb": "Allah y3aafiik",
+  "en": "may God keep you strong",
+  "unit": 5,
+  "kind": "reply"
+ },
+ {
+  "grado": "sospetta",
+  "key": "ta3a",
+  "lb": "ta3a",
+  "en": "come on, let us (to a man)",
+  "unit": 17,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "we3e",
+  "lb": "we3e",
+  "en": "he woke up",
+  "unit": 27,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "maa-beshar-abadan",
+  "lb": "maa beshar abadan",
+  "en": "I never stay up late.",
+  "unit": 18,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "3end",
+  "lb": "3end-",
+  "en": "to have, to own",
+  "unit": 8,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "batn",
+  "lb": "baTn",
+  "en": "stomach, belly",
+  "unit": 32,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "hayde-siyyaara",
+  "lb": "haydé siyyaara",
+  "en": "This is a car.",
+  "unit": 3,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
+  "key": "jebelna-3asiir-eza-betriid",
+  "lb": "jebelna 3aSiir, eza betriid",
+  "en": "Bring us a juice, please.",
+  "unit": 19,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "ka",
+  "lb": "ka-",
+  "en": "as a",
+  "unit": 35,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "keen",
+  "lb": "kéén",
+  "en": "he was",
+  "unit": 27,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "seema7",
+  "lb": "sééma7",
+  "en": "he forgave",
+  "unit": 26,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "abel-maa",
+  "lb": "abel maa",
+  "en": "before (in front of a verb)",
+  "unit": 28,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "barra",
+  "lb": "barra",
+  "en": "outside",
+  "unit": 14,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "basiita-maa-fii-lzouum",
+  "lb": "basiiTa! maa fii lzouum",
+  "en": "it is nothing, there is no need",
+  "unit": 31,
+  "kind": "reply"
+ },
+ {
+  "grado": "sospetta",
+  "key": "et2akkhar",
+  "lb": "et2akkhar",
+  "en": "to be late",
+  "unit": 37,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "ma32ouul",
+  "lb": "ma32ouul",
+  "en": "reasonable, believable",
+  "unit": 10,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "halla2",
+  "lb": "halla2",
+  "en": "now",
+  "unit": 5,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "m3a22am",
+  "lb": "m3a22am",
+  "en": "sanitised",
+  "unit": 33,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "2eddeem",
+  "lb": "2eddéém",
+  "en": "in front of",
+  "unit": 14,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "e7ke",
+  "lb": "e7ké",
+  "en": "to talk, to speak (root)",
+  "unit": 24,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "houwwe",
+  "lb": "houwwé",
+  "en": "he",
+  "unit": 2,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "na3am-3enna",
+  "lb": "na3am, 3enna",
+  "en": "yes, we have — or maa 3enna, we have not",
+  "unit": 8,
+  "kind": "reply"
+ },
+ {
+  "grado": "sospetta",
+  "key": "sa7n",
+  "lb": "Sa7n",
+  "en": "plate",
+  "unit": 31,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "7abiibe",
+  "lb": "7abiibé",
+  "en": "my dear",
+  "unit": 6,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "ana-mnii7",
+  "lb": "ana mnii7",
+  "en": "I am fine.",
+  "unit": 2,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
+  "key": "ba3d-maa",
+  "lb": "ba3d maa",
+  "en": "after",
+  "unit": 34,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "eshtiraak",
+  "lb": "eshtiraak",
+  "en": "membership, subscription",
+  "unit": 40,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "et-taneen",
+  "lb": "et-tanéén",
+  "en": "Monday",
+  "unit": 5,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "fattesh-3a",
+  "lb": "fattesh 3a",
+  "en": "to look for",
+  "unit": 35,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "m7atta",
+  "lb": "m7aTTa",
+  "en": "station",
+  "unit": 14,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "mbala",
+  "lb": "mbala",
+  "en": "yes it is (answering a negative question)",
+  "unit": 3,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "sarlak",
+  "lb": "Sarlak",
+  "en": "it has been … for you (m)",
+  "unit": 30,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "shou-bak",
+  "lb": "shou bak?",
+  "en": "what is wrong with you?",
+  "unit": 32,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "siyyaara",
+  "lb": "siyyaara",
+  "en": "car",
+  "unit": 3,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "yaa-3ayb-esh-shouum",
+  "lb": "yaa 3ayb esh-shouum!",
+  "en": "how embarrassing",
+  "unit": 37,
+  "kind": "phrase"
+ }
+]

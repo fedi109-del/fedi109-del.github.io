@@ -145,6 +145,24 @@ fs.writeFileSync(
   'utf8'
 );
 
+/* ---------- 1b. l'elenco di TUTTO ----------
+   Quello sopra risponde a «che cosa non ho ancora registrato», ed è la domanda
+   giusta finché il corso si costruisce. Ma una traccia può esserci ed essere
+   venuta male — tagliata a metà parola — e allora la domanda diventa un'altra:
+   «che cosa dovrebbe dire il file che ho già?». Senza questo elenco quella
+   domanda non ha risposta, perché il testo fonetico da mandare al generatore
+   viene calcolato qui e da nessun'altra parte: si dovrebbe ricostruire a mano
+   proprio la catena (fonetica del qaaf, suffisso femminile, deroghe di
+   `dire-a-mano.json`) che rende dicibile una traslitterazione latina.
+
+   Costa una riga e chiude il cerchio: `voci-controllo.js` dice quali file sono
+   rotti, questo dice che cosa devono dire. */
+fs.writeFileSync(
+  path.join(AUDIO, 'tutte.json'),
+  JSON.stringify(wanted, null, 1),
+  'utf8'
+);
+
 const md = [
   '# Tracce da registrare',
   '',
@@ -182,5 +200,5 @@ console.log(JSON.stringify({
   presenti: present.length,
   mancanti: missing.length,
   orfani: orphans,
-  scritti: ['audio/da-dire.json', 'audio/DA-DIRE.md', 'data/audio-manifest.js']
+  scritti: ['audio/da-dire.json', 'audio/tutte.json', 'audio/DA-DIRE.md', 'data/audio-manifest.js']
 }, null, 1));

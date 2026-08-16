@@ -34,6 +34,7 @@ js/data.js            il registro: window.LEB (va caricato per primo)
 js/store.js           progressi, XP, serie di giorni, ripasso dilazionato (localStorage)
 js/art.js             tutti i disegni: glifi delle unità, scene delle tappe, marchio
 js/audio.js           il player e i pulsanti di ascolto; window.Say
+js/pic.js             quali fotografie esistono e dove si appendono; window.Pic
 js/drills.js          i sette tipi di esercizio: come si disegnano e come si correggono
 js/runner.js          una sessione di esercizi: pratica, quiz, ripasso
 js/app.js             schermate e navigazione
@@ -41,7 +42,16 @@ js/install.js         schermata iniziale del telefono e copia offline; muto sott
 data/00-reference.js  tabelle di riferimento (suoni, suffissi, griglia verbale, tempi)
 data/unit-NN-*.js     una unità = un file
 data/audio-manifest.js  quali tracce esistono davvero; generato, non si scrive a mano
+data/image-manifest.js  quali fotografie esistono, coi crediti; generato
 audio/                le tracce .mp3, più l'elenco di quelle che mancano
+images/lista.js       che cosa cercare, parola per parola: si scrive a mano
+images/unit/          una copertina per unità: quaranta luoghi del Libano
+images/vocab/         una fotografia per parola raffigurabile
+images/CREDITI.md     autore e licenza di ogni foto; generato
+
+immagini.js           scarica le foto da Wikimedia Commons; `node immagini.js`
+voci-controllo.js     misura le tracce e trova quelle tagliate; `node voci-controllo.js`
+serve.js              un server statico no-store per guardare l'app; `node serve.js`
 
 manifest.webmanifest  come si chiama e che faccia ha l'app una volta installata
 sw.js                 la copia offline: elenco dei file + strategia "prima la cache"
@@ -82,6 +92,37 @@ tasti morti. Basta far cadere gli mp3 in `audio/` col nome giusto e rilanciare `
 Il divieto della voce del browser resta: le voci arabe dei telefoni parlano arabo standard,
 direbbero *qahwa* per il caffè e insegnerebbero una pronuncia che in Libano non usa nessuno.
 
+`node voci-controllo.js` è il collaudo: misura ogni traccia e dichiara rotte quelle che si
+interrompono a metà parola. Serve perché il difetto è invisibile a occhio — il file c'è, pesa
+qualcosa, l'altoparlante compare — e si scopre solo ascoltando. Due prove indipendenti, e una
+traccia è condannata solo se cadono tutt'e due: dura molto meno delle tracce di pari sillabe
+**e** finisce a volume pieno invece che in silenzio. L'esito sta in `audio/DA-RIFARE.md`.
+
+## Le immagini
+
+Vengono da Wikimedia Commons, sotto licenze libere, e si scaricano una volta con
+`node immagini.js`. Da lì in poi vivono su disco: **la quarta legge non è toccata**, perché la
+rete la usa lo script che prepara il corso, non l'app che lo studia.
+
+Comanda il manifesto, come per l'audio: niente file, niente immagine, e al posto della foto
+resta il glifo disegnato. Non tutte le parole ne hanno una, ed è voluto: `khedme` (il favore),
+`ra2y` (l'opinione), `kheer` (il bene) non hanno una faccia, e mettere una foto qualsiasi
+accanto a una parola astratta insegna a chi studia che le immagini non vogliono dire niente.
+
+Le copertine delle unità non illustrano la grammatica — non è illustrabile — ma sono quaranta
+luoghi veri del Libano, in ordine di percorso: si comincia dalla Corniche di Beirut e si
+finisce sulle montagne di Jezzine. Coerenti per costruzione, perché quaranta fotografie dello
+stesso paese si somigliano.
+
+Quel che non si è trovato è scritto in `images/MANCANTI.md`, e va letto: una voce lì dentro
+può voler dire che la cosa non è fotografabile (e allora va bene così) oppure che la ricerca
+in `images/lista.js` è scritta male (e allora si aggiusta). Senza quel file un giro finito con
+«prese 108, mancanti 24» sembra un successo e i buchi scompaiono nel terminale.
+
+Le licenze vogliono il nome dell'autore: sta in `images/CREDITI.md` e nella schermata
+`#/credits` dentro l'app, che funziona offline. Un'attribuzione che ha bisogno della rete non
+è un'attribuzione.
+
 ## Il percorso è tutto aperto
 
 Nessuna unità è chiusa a chiave. Chi vuole la disciplina accende **Guided path** nelle
@@ -92,9 +133,13 @@ sarà un'altra cosa e passerà da un'altra parte.
 ## Verificare la grafica
 
 Il pannello browser misura e fotografa solo pagine servite via `http://`: da `file://` dà
-finestra 0×0 e istantanee vecchie. Serve un server statico sulla cartella, e va detto
-`Cache-Control: no-store`, altrimenti il service worker dell'app continua a servire la sua
-copia e si finisce per guardare modifiche che non sono mai arrivate a schermo.
+finestra 0×0 e istantanee vecchie. Il server c'è già: `node serve.js` (porta 8137), e serve
+tutto con `Cache-Control: no-store` — senza, il service worker continua a servire la sua copia
+e si finisce per guardare a lungo modifiche che non sono mai arrivate a schermo.
+
+Per guardare molte immagini insieme, montare un provino a contatto con ffmpeg **e non usare il
+filtro `tile`**: tronca silenziosamente a quattro fotogrammi e fa credere che le altre non
+esistano. Va usato `xstack` con gli ingressi elencati uno per uno.
 
 ## Come si aggiunge un'unità
 

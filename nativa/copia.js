@@ -25,6 +25,16 @@ DIRS.forEach(function (d) {
   if (fs.existsSync(src)) fs.cpSync(src, path.join(OUT, d), { recursive: true });
 });
 
+/* images/ carries two things the app never reads: `lista.js`, which tells
+ * `node immagini.js` what to search for, and CREDITI.md, which is the same
+ * attribution list in a form for humans (the app has its own copy inside
+ * data/image-manifest.js and shows it at #/credits). Neither belongs inside an
+ * APK — they are the recipe, not the meal. */
+['lista.js', 'CREDITI.md', 'crediti.json'].forEach(function (f) {
+  const dead = path.join(OUT, 'images', f);
+  if (fs.existsSync(dead)) fs.rmSync(dead);
+});
+
 /* Audio: only the mp3 clips — the DA-DIRE checklist stays out of the package. */
 const AUDIO = path.join(ROOT, 'audio');
 if (fs.existsSync(AUDIO)) {

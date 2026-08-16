@@ -93,7 +93,12 @@ LEB.addUnit({
   vocab: [
     { lb: 'maa', ar: 'ما', en: 'not', pos: 'adv', note: 'in front of verbs and suffix verbs' },
     { lb: 'mesh', ar: 'مش', en: 'not', pos: 'adv', note: 'in front of nouns, adjectives and participles' },
-    { lb: 'mann-', ar: 'من', en: 'to not be', pos: 'v', note: 'manné, mannak, mannik… it never appears bare' },
+    /* `say` differs from `ar` here on purpose. Written bare, mann- and men (from)
+       are both من, and a voice reading the Arabic says "men" for both — which
+       would teach the wrong word for a whole unit. The lengthened مان is how the
+       stem is actually said, and `say` is the field that exists for exactly this:
+       the spelling for a machine, when the correct spelling would mislead it. */
+    { lb: 'mann-', ar: 'من', say: 'مان', en: 'to not be', pos: 'v', note: 'manné, mannak, mannik… it never appears bare' },
     { lb: 'la2', ar: 'لأ', en: 'no', pos: 'adv', note: 'stretched into laa2 for emphasis' },
     { lb: 'abadan', ar: 'أبدا', en: 'at all, never', pos: 'adv' },
     { lb: 'wala shii', ar: 'ولا شي', en: 'nothing at all', pos: 'phr' },

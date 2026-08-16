@@ -12,21 +12,44 @@
 :root {
   color-scheme: light;
 
-  /* --- the pigments ------------------------------------------------- */
-  --cedar-900: #083126;
-  --cedar-800: #0b4536;
-  --cedar-700: #0e5b47;
-  --cedar-600: #12755c;
-  --cedar-500: #179071;
-  --cedar-400: #2eab8b;
+  /* --- the pigments -------------------------------------------------
+     Four families, and each one is a thing you can point at in Lebanon: the
+     cedar on the mountain, the sun going down behind it, the tiled roofs and
+     the sea. The first version of this file had only the cedar, and one dark
+     desaturated green carrying a whole app is exactly what "flat" looks like —
+     nothing to move towards, nothing to celebrate with, no second voice. */
 
+  /* The cedar. Warmer and more alive than it was: the old 600 was a forest in
+     shade, this one has sun on it. It still passes AA on the cream. */
+  --cedar-900: #06302a;
+  --cedar-800: #084537;
+  --cedar-700: #0a5c47;
+  --cedar-600: #0b7d5f;
+  --cedar-500: #0f9c78;
+  --cedar-400: #23bb95;
+  --cedar-300: #63d6b8;
+
+  /* The sun, twenty minutes before it goes. */
   --amber-700: #9c4d18;
-  --amber-600: #bd671f;
-  --amber-500: #dd8a35;
-  --amber-400: #efab63;
+  --amber-600: #c26720;
+  --amber-500: #e78b31;
+  --amber-400: #f5ab5c;
+  --amber-300: #fbc98d;
 
+  /* The tiled roofs, and the last of the light on them. */
   --clay-600: #a6382c;
   --clay-500: #c14b3d;
+  --rose-500: #d9564d;
+  --rose-400: #ec7a6d;
+  --rose-300: #f7a99e;
+
+  /* The sea, which is the only cold thing in the palette and earns its place
+     by being the one place the eye can rest. */
+  --sea-800: #093a4c;
+  --sea-700: #0c4c63;
+  --sea-600: #0f6480;
+  --sea-500: #14839f;
+  --sea-400: #2ea6c2;
 
   /* --- semantic surface ---------------------------------------------- */
   --bg: #f7f1e8;
@@ -38,19 +61,38 @@
 
   --ink: #1a1611;
   --ink-2: #3d3529;
-  --muted: #7a6f5e;
+  /* Un soffio più scuro di com'era (#7a6f5e). Misurato sul fondo crema quello
+     dava 4.39 contro l'1, appena sotto il minimo leggibile, e il testo grigio
+     porta qui metà delle spiegazioni: le note sotto le parole, i sottotitoli,
+     le glosse inglesi. Non è una questione di conformità — è la parte del
+     corso che si legge stanchi, la sera, sul telefono. */
+  --muted: #6f6454;
   --line: #e4d7c4;
   --line-strong: #d2c2aa;
 
   --accent: var(--cedar-600);
-  --accent-lite: #1a8a6c;
+  --accent-lite: #109573;
   --accent-edge: var(--cedar-800);
   --accent-ink: var(--cedar-700);
-  --accent-soft: #dcefe8;
-  --accent-soft-2: #c8e6db;
+  --accent-soft: #dbf1e9;
+  --accent-soft-2: #c2e8da;
 
   --warm: var(--amber-700);
-  --warm-soft: #fbeddc;
+  --warm-soft: #fceedc;
+
+  /* The second voice. Where the cedar means "right, done, keep going", this
+     means "this is the good part": the sun on a finished lesson, the fill of a
+     bar that is nearly full, the glow under a card worth pressing. */
+  --joy: var(--amber-500);
+  --joy-ink: var(--amber-700);
+  --joy-soft: #fde6c9;
+  --sea: var(--sea-600);
+  --sea-soft: #d8edf4;
+
+  /* The dusk itself, as one gradient, so every place that wants to feel like
+     the end of a Beirut afternoon says it the same way. */
+  --dusk: linear-gradient(135deg, var(--cedar-700) 0%, var(--sea-600) 34%, var(--amber-600) 76%, var(--rose-500) 100%);
+  --dusk-warm: linear-gradient(120deg, var(--amber-500), var(--rose-500));
 
   --good: #10684f;
   --good-edge: #0a4737;
@@ -121,6 +163,18 @@
     --warm: var(--amber-400);
     --warm-soft: #33220f;
 
+    /* At night the sun is remembered, not seen: the joy colour lightens so it
+       still reads on a dark ground, and the dusk gradient loses the daylight
+       end of itself. */
+    --joy: var(--amber-400);
+    --joy-ink: var(--amber-300);
+    --joy-soft: #3a2611;
+    --sea: var(--sea-400);
+    --sea-soft: #10303c;
+
+    --dusk: linear-gradient(135deg, var(--cedar-800) 0%, var(--sea-700) 36%, var(--amber-700) 78%, var(--clay-600) 100%);
+    --dusk-warm: linear-gradient(120deg, var(--amber-600), var(--clay-600));
+
     --good: #46c194;
     --good-edge: #125a44;
     --good-bg: #14352a;
@@ -186,9 +240,18 @@ body::after {
 body::before {
   z-index: -2;
   background:
-    radial-gradient(1200px 760px at 8% -12%, rgba(18, 117, 92, .22), transparent 62%),
-    radial-gradient(1000px 620px at 104% 4%, rgba(221, 138, 53, .18), transparent 60%),
-    radial-gradient(900px 900px at 46% 116%, rgba(189, 103, 31, .14), transparent 58%),
+    /* The sun, low and to the right, and warm enough to be seen. The earlier
+       version of these lights was set so faint (.22 down to .14) that the eye
+       registered a flat cream page and nothing else — the gradients were
+       technically present and emotionally absent. */
+    radial-gradient(980px 680px at 102% -6%, rgba(231, 139, 49, .42), transparent 62%),
+    /* The band of colour it throws across the top of the sky. */
+    radial-gradient(1500px 420px at 62% -18%, rgba(217, 86, 77, .26), transparent 66%),
+    /* The cedar side, in shade, coming over the left shoulder. */
+    radial-gradient(1100px 780px at -6% 2%, rgba(11, 125, 95, .30), transparent 60%),
+    /* The sea at the bottom of the page, cool, so the warmth above has
+       something to be warm against. */
+    radial-gradient(1200px 700px at 30% 118%, rgba(15, 100, 128, .24), transparent 62%),
     var(--bg);
 }
 
@@ -204,9 +267,10 @@ body::after {
 @media (prefers-color-scheme: dark) {
   body::before {
     background:
-      radial-gradient(1200px 760px at 8% -12%, rgba(23, 144, 113, .16), transparent 62%),
-      radial-gradient(1000px 620px at 104% 4%, rgba(221, 138, 53, .10), transparent 60%),
-      radial-gradient(900px 900px at 46% 116%, rgba(166, 56, 44, .09), transparent 58%),
+      radial-gradient(980px 680px at 102% -6%, rgba(231, 139, 49, .20), transparent 62%),
+      radial-gradient(1500px 420px at 62% -18%, rgba(217, 86, 77, .14), transparent 66%),
+      radial-gradient(1100px 780px at -6% 2%, rgba(15, 156, 120, .17), transparent 60%),
+      radial-gradient(1200px 700px at 30% 118%, rgba(20, 131, 159, .16), transparent 62%),
       var(--bg);
   }
 }
@@ -290,7 +354,10 @@ strong, b { font-weight: 680; }
   font-size: 1.05rem;
   line-height: 1;
   border-radius: 11px;
-  background: linear-gradient(160deg, var(--cedar-500), var(--cedar-700));
+  /* The one place the whole dusk shows at once. It is the size of a thumbnail
+     and it sits in the corner of every screen, so it can afford to be the most
+     saturated thing in the app without ever shouting. */
+  background: var(--dusk);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, .32),
     inset 0 -1px 0 rgba(0, 0, 0, .22),
@@ -321,11 +388,15 @@ strong, b { font-weight: 680; }
 .stat-lab { font-size: .63rem; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); }
 
 /* When something is actually due, the badge lights up instead of shouting. */
+/* Work waiting to be done is warm, not green. Green in this app means "done,
+   correct, carry on"; a review that has come due is the opposite of finished,
+   and giving it the same colour as success made the one chip that wants
+   attention read as another badge already earned. */
 .review.hot {
-  background: linear-gradient(180deg, var(--accent-soft-2), var(--accent-soft));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 0 0 1px var(--accent-soft-2), 0 4px 14px -6px rgba(18, 117, 92, .55);
+  background: linear-gradient(180deg, var(--joy-soft), var(--warm-soft));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 0 0 1px var(--joy-soft), 0 4px 14px -6px rgba(231, 139, 49, .55);
 }
-.review.hot .stat-num { color: var(--accent-ink); }
+.review.hot .stat-num { color: var(--joy-ink); }
 
 /* (The old top navigation lives in the tab bar now — see THE APP SHELL below.) */
 
@@ -362,8 +433,11 @@ strong, b { font-weight: 680; }
   font-weight: 750;
   letter-spacing: .04em;
   white-space: nowrap;
-  color: var(--accent-ink);
-  background: linear-gradient(180deg, var(--accent-soft), var(--accent-soft-2));
+  /* The sea, and the only cold thing on the path screen. A level is a fact
+     about the course, not a reward for the reader: giving it the accent green
+     put it in the same voice as everything the reader has earned. */
+  color: var(--sea);
+  background: linear-gradient(180deg, var(--sea-soft), var(--surface-2));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 1px 2px rgba(48, 33, 12, .08);
 }
 
@@ -377,11 +451,16 @@ strong, b { font-weight: 680; }
   overflow: hidden;
 }
 .bar.slim { height: 6px; }
+
+/* The fill is a sunrise, not a green stripe: it starts in the cedar's shade and
+   arrives in full sun. That way the bar says something as it grows — the far
+   end is visibly a better place than the near one — instead of just getting
+   longer. */
 .bar-fill {
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--cedar-700), var(--cedar-500) 60%, var(--cedar-400));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3), 0 0 12px -2px rgba(23, 144, 113, .55);
+  background: linear-gradient(90deg, var(--accent-edge), var(--accent-lite) 42%, var(--joy) 88%, var(--amber-400));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .34), 0 0 14px -2px rgba(231, 139, 49, .6);
   transition: width var(--slow) var(--ease);
 }
 
@@ -473,6 +552,43 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 }
 .vocab-row:hover { background: var(--surface-2); }
 .vocab-row:last-child { border-bottom: 0; }
+
+/* ---------- a word with a face ----------------------------------------
+   A photograph in front of the word, when an honest one exists. It is small on
+   purpose: the job is to let the eye recognise `khebz` as flatbread before it
+   has finished reading the English, not to turn the list into a gallery.
+
+   Only rows that got a picture grow the extra column. Reserving it everywhere
+   would leave a column of empty squares beside every word that cannot be
+   photographed — and those are not rare here: the favour, the excuse, the
+   opinion, the wellbeing. A gap where a picture would be is worse than no
+   column at all, because it reads as something missing rather than as
+   something that was never meant to be there. */
+.vocab-row.has-pic {
+  grid-template-columns: 46px minmax(110px, 1.1fr) minmax(110px, 1.2fr) auto;
+  align-items: center;
+}
+.v-pic {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--surface-3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .4),
+    0 0 0 1px var(--line),
+    0 3px 8px -4px rgba(48, 33, 12, .35);
+  transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
+}
+/* Pressing a word is not a gesture the row otherwise offers, so the picture
+   leans forward on hover to say the row is alive. */
+.vocab-row.has-pic:hover .v-pic {
+  transform: scale(1.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .4),
+    0 0 0 1px var(--accent-soft-2),
+    0 6px 16px -6px rgba(48, 33, 12, .5);
+}
 .v-lb { font-weight: 650; letter-spacing: -.01em; }
 .v-en { color: var(--muted); }
 .v-tags { display: flex; gap: 5px; justify-self: end; }
@@ -825,7 +941,109 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .fb-answer { font-size: 1.12rem; font-weight: 650; }
 .fb-note { color: var(--muted); font-size: .9rem; margin-top: 4px; }
 
-.done-card { text-align: center; padding: 30px 24px; }
+/* ---------- the credits ----------------------------------------------
+   A long list nobody will read end to end, which is exactly why it has to be
+   easy to skim: the thumbnail tells you which picture is being talked about
+   faster than any filename could. */
+.credits { display: grid; gap: 2px; }
+.credit-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line);
+  border-radius: 8px;
+}
+.credit-row:last-child { border-bottom: 0; }
+.credit-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: var(--surface-3);
+  box-shadow: 0 0 0 1px var(--line);
+}
+.credit-title { font-weight: 650; font-size: .94rem; letter-spacing: -.01em; }
+.credit-by { color: var(--muted); font-size: .82rem; display: flex; gap: 10px; flex-wrap: wrap; }
+.credit-src { color: var(--sea); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
+.credit-src:hover { color: var(--accent); }
+
+.done-card { text-align: center; padding: 30px 24px; position: relative; overflow: hidden; }
+
+/* ---------- crossing eighty -------------------------------------------
+   The app had no moment of arrival anywhere in it. You finished a unit, a
+   number appeared, and you clicked on. Everything else here — the colours, the
+   photographs — is about the app being somewhere; this is about the app
+   noticing that you did something.
+
+   It is built out of two pieces of light and nothing else: a sun coming up
+   behind the score, and rays turning slowly behind that. No confetti, no
+   sound, no bouncing. The restraint is the point — this fires often enough
+   (every cleared unit, forty times over a course) that anything louder would
+   wear out long before the learner reached Baalbek. */
+
+.done-card.won::before,
+.done-card.won::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* The rays. A cone repeated round the circle, masked to a ring so the middle
+   stays clear for the number, and turning slowly enough that you register it
+   as light rather than as motion. */
+.done-card.won::before {
+  width: 460px;
+  height: 460px;
+  margin-left: -230px;
+  opacity: .5;
+  background: repeating-conic-gradient(
+    from 0deg,
+    var(--amber-400) 0deg 5deg,
+    transparent 5deg 16deg);
+  -webkit-mask-image: radial-gradient(closest-side, transparent 24%, #000 44%, transparent 78%);
+  mask-image: radial-gradient(closest-side, transparent 24%, #000 44%, transparent 78%);
+  animation: sun-turn 34s linear infinite, sun-in .9s var(--ease) both;
+}
+
+/* The glow itself, sitting inside the ring. */
+.done-card.won::after {
+  width: 320px;
+  height: 320px;
+  margin-left: -160px;
+  background: radial-gradient(closest-side, rgba(231, 139, 49, .42), rgba(217, 86, 77, .16) 58%, transparent 76%);
+  animation: sun-in 1.1s var(--ease) both;
+}
+
+.done-card.won .done-score,
+.done-card.won .done-line,
+.done-card.won .done-note,
+.done-card.won .row { position: relative; z-index: 1; }
+
+/* The number arrives a moment after the light, and arrives in full sun. */
+.done-card.won .done-score {
+  background: var(--dusk-warm);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: score-in .5s var(--ease) both;
+  animation-delay: .12s;
+}
+
+@keyframes sun-turn { to { transform: rotate(360deg); } }
+@keyframes sun-in { from { opacity: 0; transform: scale(.72); } }
+@keyframes score-in { from { opacity: 0; transform: translateY(10px) scale(.9); } }
+
+/* Someone who has asked the system for less movement gets the light without the
+   turning: the moment still lands, it just holds still. */
+@media (prefers-reduced-motion: reduce) {
+  .done-card.won::before { animation: sun-in .9s var(--ease) both; }
+  .done-card.won .done-score { animation: none; }
+}
+
 .done-score {
   font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Noto Serif", ui-serif, serif;
   font-size: clamp(3rem, 2.2rem + 3.5vw, 4.2rem);
@@ -1027,6 +1245,72 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 
 .unit-cover .can-do { position: relative; z-index: 1; margin-top: 20px; }
 
+/* ---------- the head of a lesson, with a photograph -------------------
+   Forty units, forty real places in Lebanon. When the file exists the head of
+   the lesson stops being a decorated title and becomes somewhere: the picture
+   goes tall and full width, the words move down into the dark part of it, and
+   the whole thing dissolves into the page instead of ending on a line.
+
+   Everything below is scoped to `.has-photo`, a class added only after the
+   image fires its load event. A lesson without a photograph is not a lesson
+   with a hole in it — it keeps the drawing it always had, unchanged. */
+
+.unit-cover-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Hidden until it has loaded, so a file that never arrives shows nothing
+     rather than a broken frame. */
+  display: none;
+}
+.unit-cover.has-photo .unit-cover-photo { display: block; }
+
+.unit-cover.has-photo .unit-cover-art {
+  height: 300px;
+  opacity: 1;
+  /* The drawing stays underneath: it is what fills the frame during the
+     fraction of a second the photograph is decoding. */
+  -webkit-mask-image: linear-gradient(180deg, #000 62%, transparent 99%);
+  mask-image: linear-gradient(180deg, #000 62%, transparent 99%);
+}
+
+/* Two washes doing two different jobs. The upright one darkens the lower half
+   so white words have something to sit on wherever the photograph happens to be
+   bright — a sky in one unit, a limestone wall in the next. The sideways one
+   carries the page colour back in from the left so the picture reads as part of
+   the page and not as a postcard laid on it. */
+.unit-cover.has-photo::after {
+  height: 300px;
+  background:
+    linear-gradient(180deg, rgba(6, 20, 18, 0) 26%, rgba(6, 20, 18, .34) 52%, rgba(6, 20, 18, .74) 86%, var(--bg) 100%),
+    linear-gradient(92deg, rgba(6, 20, 18, .5) 0%, rgba(6, 20, 18, 0) 58%);
+}
+
+.unit-cover.has-photo .unit-cover-copy { padding-top: 156px; }
+.unit-cover.has-photo .crumb,
+.unit-cover.has-photo h1,
+.unit-cover.has-photo .lede { color: #fff; }
+.unit-cover.has-photo .crumb { opacity: .82; }
+.unit-cover.has-photo .lede { color: rgba(255, 255, 255, .88); }
+.unit-cover.has-photo h1,
+.unit-cover.has-photo .lede,
+.unit-cover.has-photo .crumb { text-shadow: 0 1px 14px rgba(0, 0, 0, .55); }
+
+/* On a photograph the seal cannot be a pale medallion — it would vanish. It
+   becomes a pane of smoked glass with the drawing cut out of it in white. */
+.unit-cover.has-photo .unit-seal {
+  color: #fff;
+  background: rgba(255, 255, 255, .14);
+  -webkit-backdrop-filter: blur(10px) saturate(1.3);
+  backdrop-filter: blur(10px) saturate(1.3);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .4),
+    0 0 0 1.5px rgba(255, 255, 255, .3),
+    0 12px 28px -12px rgba(0, 0, 0, .8);
+}
+
 /* ---------- listening ------------------------------------------------
    The speaker sits on the same line as the word and never pushes it around:
    `flex: none` and a fixed box keep the column of Lebanese words aligned even
@@ -1178,6 +1462,18 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   .screen { padding: 24px 14px 90px; }
   .card { padding: 18px; border-radius: var(--r); }
   .vocab-row { grid-template-columns: 1fr 1fr; }
+  /* On a phone the picture keeps its column and the words wrap beside it: the
+     thumbnail is the fastest thing on the row to recognise, so it is the last
+     thing that should be dropped when space runs out. */
+  .vocab-row.has-pic { grid-template-columns: 42px 1fr 1fr; }
+  .v-pic { width: 42px; height: 42px; border-radius: 11px; }
+
+  /* The lesson photograph shortens with the screen, and the title comes down
+     with it — otherwise the words would sit on the bright middle of the picture
+     instead of the dark bottom. */
+  .unit-cover.has-photo .unit-cover-art,
+  .unit-cover.has-photo::after { height: 224px; }
+  .unit-cover.has-photo .unit-cover-copy { padding-top: 108px; }
 
   .stage-cover { height: 104px; }
   .stage-text { padding: 4px 18px 18px; }

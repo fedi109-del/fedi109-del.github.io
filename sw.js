@@ -13,9 +13,16 @@
  *   1. add its file to ASSETS, and
  *   2. bump VERSION.
  * `node verifica.js` fails loudly if you forget the first one.
+ *
+ * And one thing that is easy to miss: VERSION must also be bumped when a file
+ * is REPLACED without being renamed. Cache-first means the copy already on the
+ * phone wins forever; re-recording a clip that keeps its old filename changes
+ * nothing for anyone who has already heard it. That is what happened to the 29
+ * truncated clips fixed on 16 August: same names, new audio, and the only way
+ * to make a phone let go of the old ones is to swap the whole cache.
  */
 
-var VERSION = 'lebanese-path-v5';
+var VERSION = 'lebanese-path-v7';
 
 var ASSETS = [
   './',
@@ -28,12 +35,14 @@ var ASSETS = [
   'js/store.js',
   'js/art.js',
   'js/audio.js',
+  'js/pic.js',
   'js/drills.js',
   'js/runner.js',
   'js/install.js',
   'js/app.js',
 
   'data/audio-manifest.js',
+  'data/image-manifest.js',
   'data/00-reference.js',
   'data/unit-01-sounds-and-hello.js',
   'data/unit-02-who-are-you.js',
@@ -87,6 +96,17 @@ var ASSETS = [
   'images/stage-3.jpg',
   'images/stage-4.jpg',
   'images/stage-5.jpg'
+
+  /* The unit covers and the vocabulary thumbnails are deliberately NOT listed.
+   * They follow the same rule as the mp3 files: about five megabytes across a
+   * hundred and twenty small files, cached the first time each one is actually
+   * looked at, by the catch-all in the fetch handler below. Listing them here
+   * would hold the first install hostage to a download nobody asked for, on a
+   * connection that may be a phone in a village — and it would mean this list
+   * had to be rewritten by hand every time `node immagini.js` finds one more
+   * photograph. What the app cannot start without is up above; what it merely
+   * looks better with arrives as it is met.
+   */
 ];
 
 self.addEventListener('install', function (event) {
