@@ -242,10 +242,14 @@
       wrap.appendChild(now);
     }
 
+    /* Which stages arrive open: the one you are standing in, and any you have
+       already put work into. The rest stay folded until you get there. */
     LEB.stages.forEach(function (stage) {
       var units = LEB.byStage(stage.id);
       if (!units.length) return;
-      wrap.appendChild(stageBlock(stage, units, next));
+      var qui = next && units.some(function (u) { return u.id === next.id; });
+      var iniziata = units.some(function (u) { return Store.unit(u.id).seen; });
+      wrap.appendChild(stageBlock(stage, units, next, qui || iniziata));
     });
 
     if (!LEB.all().length) {
@@ -256,8 +260,8 @@
 
   /* One stage: an illustrated band that says where you are, then its units as
      round stops staggered down the middle of the screen — a road, not a list. */
-  function stageBlock(stage, units, current) {
-    var sec = el('section', 'stage');
+  function stageBlock(stage, units, current, aperta) {
+    var sec = el('section', 'stage' + (aperta ? '' : ' folded'));
     var cleared = units.filter(function (u) { return Store.unit(u.id).done; }).length;
 
     var band = el('div', 'stage-band');
@@ -298,7 +302,27 @@
     units.forEach(function (u, i) {
       trail.appendChild(node(u, current && current.id === u.id, i));
     });
-    sec.appendChild(trail);
+
+    /* A stage you have not reached yet arrives folded. Opened, this screen
+       showed all forty units at once, every one of them drawn at the same
+       weight — and a wall of forty identical things answers no question. The
+       one question someone has when they open a course is "where was I", and
+       thirty-four units they will not touch for months were shouting over the
+       answer.
+
+       Folded with <details> rather than with a click handler on purpose: it
+       opens with the keyboard, it announces itself to a screen reader as a
+       disclosure, and it still works if the script never runs. */
+    if (aperta) {
+      sec.appendChild(trail);
+    } else {
+      var fold = el('details', 'stage-fold');
+      var head = el('summary', 'stage-open');
+      head.appendChild(el('span', null, 'Show the ' + units.length + ' units'));
+      fold.appendChild(head);
+      fold.appendChild(trail);
+      sec.appendChild(fold);
+    }
     return sec;
   }
 

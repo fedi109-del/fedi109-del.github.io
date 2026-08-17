@@ -134,6 +134,22 @@
 
   --grain-opacity: .045;
   --grain-blend: multiply;
+
+  /* ---------- the smallest type in the app ----------------------------
+     One size for every micro-label — the tab bar, the unit numbers, the
+     stat captions, the drill prompts — because they were nine different
+     sizes and every one of them was too small.
+
+     Measured on a phone before this existed: the tab bar labels were
+     9.9px, the unit numbers 9.9px, the stat captions 10.1px. The floor
+     for legible text on a phone is 11px, and these were the labels
+     naming the primary navigation and every unit in the course — the
+     text a learner reads most often and squints at hardest.
+
+     0.78rem is 12.5px at the default root size, and it scales with the
+     reader's own text-size preference instead of ignoring it. */
+  --micro: .78rem;
+  --micro-track: .04em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -220,7 +236,14 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--ink);
-  font: 16px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text",
+  /* 1.06rem, not 16px. Two reasons, and the first one is the important one.
+     A fixed pixel size here is a wall: everything that inherits from the body —
+     which is most of the prose in the course, the explanations a learner reads
+     slowly and at length — stays 16px no matter how large that learner has set
+     text in their browser or phone. Written in rem it follows them.
+     The second reason is that 16px is below the 17pt a phone wants by default,
+     and this is a reading app. */
+  font: 1.06rem/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text",
         "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-feature-settings: "kern" 1, "liga" 1;
   -webkit-text-size-adjust: 100%;
@@ -343,6 +366,8 @@ strong, b { font-weight: 680; }
   align-items: center;
   gap: 10px;
   font-weight: 700;
+  /* It is a link home, so it has to be pressable like one: 30px tall before. */
+  min-height: 44px;
 }
 
 /* The mark sits in a little embossed medallion. */
@@ -385,7 +410,7 @@ strong, b { font-weight: 680; }
   box-shadow: var(--sunk);
 }
 .stat-num { font-weight: 750; font-size: 1.02rem; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
-.stat-lab { font-size: .63rem; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); }
+.stat-lab { font-size: var(--micro); letter-spacing: var(--micro-track); color: var(--muted); }
 
 /* When something is actually due, the badge lights up instead of shouting. */
 /* Work waiting to be done is warm, not green. Green in this app means "done,
@@ -469,7 +494,7 @@ strong, b { font-weight: 680; }
 /* ---------- lesson ---------- */
 
 .unit-head { margin-bottom: 26px; }
-.crumb { font-size: .74rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 8px; font-weight: 650; }
+.crumb { font-size: var(--micro); letter-spacing: var(--micro-track); color: var(--muted); margin-bottom: 8px; font-weight: 650; }
 .can-do { margin: 16px 0 0; padding-left: 0; list-style: none; color: var(--muted); }
 .can-do li { margin-bottom: 6px; padding-left: 24px; position: relative; }
 .can-do li::before {
@@ -507,9 +532,8 @@ strong, b { font-weight: 680; }
 table { border-collapse: collapse; width: 100%; font-size: .94rem; }
 th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
 th {
-  font-size: .71rem;
-  text-transform: uppercase;
-  letter-spacing: .09em;
+  font-size: var(--micro);
+  letter-spacing: var(--micro-track);
   font-weight: 700;
   color: var(--muted);
   background: var(--surface-2);
@@ -596,10 +620,9 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   padding: 1px 8px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  font-size: .66rem;
+  font-size: var(--micro);
   font-weight: 650;
-  text-transform: uppercase;
-  letter-spacing: .07em;
+  letter-spacing: var(--micro-track);
   color: var(--muted);
 }
 .v-note { grid-column: 1 / -1; font-size: .84rem; color: var(--warm); }
@@ -710,7 +733,20 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .run-head { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .run-head .bar { flex: 1; margin: 0; }
 .run-counter { font-size: .84rem; font-weight: 650; color: var(--muted); min-width: 46px; text-align: right; font-variant-numeric: tabular-nums; }
-.run-head .ghost-btn { padding: 6px 12px; font-size: 1.05rem; color: var(--muted); box-shadow: 0 0 0 1px var(--line); background: var(--surface); }
+/* Leaving an exercise: 38x39 before, which is under the 44 a thumb needs — and
+   this is the one control someone reaches for when they want *out*, often in a
+   hurry. Being hard to hit is the worst thing an escape hatch can be. */
+.run-head .ghost-btn {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  font-size: 1.05rem;
+  color: var(--muted);
+  box-shadow: 0 0 0 1px var(--line);
+  background: var(--surface);
+}
 .run-head .ghost-btn:active { transform: translateY(1px); }
 .run-stage { min-height: 268px; }
 
@@ -725,7 +761,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .run-foot .primary-btn { width: 100%; padding: 16px; font-size: 1.04rem; }
 
 .drill-prompt { margin-bottom: 22px; }
-.drill-label { font-size: .71rem; text-transform: uppercase; letter-spacing: .13em; font-weight: 700; color: var(--muted); margin-bottom: 9px; }
+.drill-label { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 700; color: var(--muted); margin-bottom: 9px; }
 .drill-question {
   font-size: clamp(1.22rem, 1.05rem + .8vw, 1.5rem);
   font-weight: 650;
@@ -911,7 +947,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .thread { display: grid; gap: 12px; margin-bottom: 24px; }
 .bubble-row { display: grid; gap: 4px; max-width: 86%; }
 .bubble-row.you { margin-left: auto; text-align: right; justify-items: end; }
-.who { font-size: .69rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 650; color: var(--muted); }
+.who { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 650; color: var(--muted); }
 .bubble {
   display: inline-grid;
   gap: 3px;
@@ -966,7 +1002,17 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 }
 .credit-title { font-weight: 650; font-size: .94rem; letter-spacing: -.01em; }
 .credit-by { color: var(--muted); font-size: .82rem; display: flex; gap: 10px; flex-wrap: wrap; }
-.credit-src { color: var(--sea); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
+/* The padding grows the tap target to 44px; the negative margin gives back the
+   space it took, so the row looks exactly as it did and the finger gets more. */
+.credit-src {
+  display: inline-block;
+  padding: 12px 6px;
+  margin: -12px 0;
+  color: var(--sea);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .credit-src:hover { color: var(--accent); }
 
 .done-card { text-align: center; padding: 30px 24px; position: relative; overflow: hidden; }
@@ -1179,9 +1225,8 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .stage-text { position: relative; padding: 4px 26px 22px; margin-top: -30px; }
 .stage-line { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
 .stage-ord {
-  font-size: .69rem;
-  text-transform: uppercase;
-  letter-spacing: .14em;
+  font-size: var(--micro);
+  letter-spacing: var(--micro-track);
   font-weight: 700;
   color: var(--muted);
 }
@@ -1189,6 +1234,70 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .stage-text h2 { margin-bottom: .2em; }
 .stage-text .bar { margin-bottom: 8px; }
 .stage-count { font-size: .8rem; font-weight: 650; color: var(--accent-ink); margin: 0; }
+
+/* ---------- a stage still folded ------------------------------------
+   The handle that opens a stage you have not reached. It is a real control,
+   so it gets a real control's height: 48px, above the 44 a thumb needs, and
+   full width because here that is the honest shape — the thing it opens is
+   full width too. */
+/* A stage you have not reached is announced, not staged. It keeps its name,
+   its level and its one-line promise — enough to look forward to — but gives
+   up the tall photograph and the generous margins, because space on this
+   screen belongs to the stage you are actually standing in. */
+.stage.folded { margin-bottom: 22px; }
+.stage.folded .stage-cover { height: 74px; }
+.stage.folded .stage-text { padding-bottom: 16px; }
+.stage.folded .stage-text .bar { display: none; }
+
+.stage-fold { margin-top: 4px; }
+
+/* This line is what actually folds the stage, and it is not optional.
+   A closed <details> hides its contents through a browser rule of the form
+   `details:not([open]) > *:not(summary) { display: none }` — which carries the
+   specificity of a bare element selector and therefore loses to `.path-trail
+   { display: flex }` right below. Without this, the fold renders, the chevron
+   points the right way, `open` reports false, and all nine units sit there in
+   plain sight anyway. Measured, not assumed: the closed list was 1377px tall. */
+.stage-fold:not([open]) > .path-trail { display: none; }
+
+.stage-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: var(--r-md);
+  cursor: pointer;
+  font-size: .92rem;
+  font-weight: 650;
+  color: var(--muted);
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: color var(--fast) var(--ease), background var(--fast) var(--ease);
+  /* The default triangle is replaced by the chevron below. */
+  list-style: none;
+}
+.stage-open::-webkit-details-marker { display: none; }
+.stage-open:hover { color: var(--ink-2); background: var(--surface-3); }
+
+/* A chevron that turns when the stage opens: the state is in the shape, not
+   only in whether things are visible below. */
+.stage-open::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--fast) var(--ease);
+}
+.stage-fold[open] .stage-open::after { transform: translateY(1px) rotate(-135deg); }
+.stage-fold[open] .stage-open { margin-bottom: 10px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-open, .stage-open::after { transition: none; }
+}
 
 /* (The flat trail became the winding node path — see THE APP SHELL below.) */
 
@@ -1335,13 +1444,36 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   transition: color var(--fast) var(--ease), background var(--fast) var(--ease),
               box-shadow var(--fast) var(--ease), transform var(--fast) var(--ease);
 }
+/* The speaker is drawn at 26px because it sits inline beside a word and a
+   26px badge is the size that doesn't shove the line around. But a thumb needs
+   44px, and this is the single most-pressed control in a course about how a
+   language *sounds*. So the drawing stays small and the target grows underneath
+   it: an invisible 44x44 pad, centred, that catches the tap.
+
+   This is why the two numbers differ everywhere below — the visible size is a
+   typographic decision, the touch size is an accessibility one, and they are
+   allowed to disagree. */
+.say::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+.say { position: relative; }
+
 .say svg { width: 15px; height: 15px; fill: currentColor; }
 .say .wave { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
 .say:hover { color: var(--accent); background: var(--accent-soft); box-shadow: 0 0 0 1px var(--accent-soft-2); }
 .say:active { transform: scale(.92); }
 
-.say-lg { width: 32px; height: 32px; border-radius: 11px; }
-.say-lg svg { width: 18px; height: 18px; }
+/* The big speaker isn't inline next to anything — it stands alone in a
+   listening exercise, where pressing it *is* the exercise. Nothing forces it to
+   stay small, so it becomes a proper 44px control instead of a 32px one. */
+.say-lg { width: 44px; height: 44px; border-radius: 14px; }
+.say-lg svg { width: 21px; height: 21px; }
 
 /* Playing: the arcs light up one after the other, so the button says "sound is
    leaving me right now" without any text. */
@@ -1438,7 +1570,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   box-shadow: 0 0 0 1px var(--line);
 }
 .next-glyph .glyph { width: 21px; height: 21px; }
-.next-lab { display: block; font-size: .67rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: var(--muted); }
+.next-lab { display: block; font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 700; color: var(--muted); }
 .next-title { display: block; font-weight: 650; letter-spacing: -.01em; }
 
 /* ---------- nothing to do here --------------------------------------- */
@@ -1530,10 +1662,9 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   padding: 7px 4px 6px;
   border-radius: 13px;
   color: var(--muted);
-  font-size: .62rem;
+  font-size: var(--micro);
   font-weight: 750;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+  letter-spacing: var(--micro-track);
   -webkit-tap-highlight-color: transparent;
   transition: color var(--fast) var(--ease), background var(--fast) var(--ease);
 }
@@ -1700,10 +1831,9 @@ body.in-run .run-stage { flex: 1; }
   z-index: 2;
   padding: 5px 15px;
   border-radius: 999px;
-  font-size: .66rem;
+  font-size: var(--micro);
   font-weight: 800;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  letter-spacing: var(--micro-track);
   color: #fff;
   background: linear-gradient(180deg, var(--accent-lite), var(--accent));
   box-shadow: 0 2px 0 var(--accent-edge), 0 8px 18px -8px rgba(18, 117, 92, .7);
@@ -1717,7 +1847,7 @@ body.in-run .run-stage { flex: 1; }
 .node.locked .node-btn { opacity: .55; filter: saturate(.35); }
 
 .node-lab { margin-top: 11px; display: grid; gap: 1px; max-width: 150px; }
-.node-num { font-size: .62rem; text-transform: uppercase; letter-spacing: .13em; font-weight: 750; color: var(--muted); }
+.node-num { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 750; color: var(--muted); }
 .node-title { font-size: .9rem; font-weight: 650; letter-spacing: -.01em; line-height: 1.25; }
 .node.done .node-title { color: var(--muted); }
 
@@ -1785,10 +1915,9 @@ body.in-run .run-stage { flex: 1; }
 .teach-tag {
   padding: 4px 13px;
   border-radius: 999px;
-  font-size: .66rem;
+  font-size: var(--micro);
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .13em;
+  letter-spacing: var(--micro-track);
   color: var(--accent-ink);
   background: linear-gradient(180deg, var(--accent-soft), var(--accent-soft-2));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 1px 2px rgba(48, 33, 12, .08);
