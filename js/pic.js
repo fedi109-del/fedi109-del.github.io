@@ -100,9 +100,12 @@ window.Pic = (function () {
     return true;
   }
 
-  function attachUnit(host, id, cls) {
+  /* `pigra` again: the photograph at the head of a lesson is the LCP and must
+     load eagerly, but the same picture used as a 46px thumbnail in a list of
+     forty rows — most of them folded out of sight — should wait its turn. */
+  function attachUnit(host, id, cls, pigra) {
     if (!hasUnit(id)) return false;
-    host.appendChild(img(unitSrc(id), cls || 'cover-photo', false));
+    host.appendChild(img(unitSrc(id), cls || 'cover-photo', !!pigra));
     return true;
   }
 

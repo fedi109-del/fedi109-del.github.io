@@ -58,13 +58,17 @@
   --sea-500: #14839f;
   --sea-400: #2ea6c2;
 
-  /* --- semantic surface ---------------------------------------------- */
-  --bg: #f2f2f6;
-  --bg-flat: #f2f2f6;
+  /* --- semantic surface ----------------------------------------------
+     Warm paper, not hospital gray. The owner called the gray ground "sad",
+     and he was right: #f2f2f6 is the colour of a settings screen. This is
+     the colour of a page — barely warm, still neutral enough that the
+     photographs stay the most colourful thing on it. */
+  --bg: #f6f3ee;
+  --bg-flat: #f6f3ee;
   --surface: #ffffff;
-  --surface-2: #f0f0f4;
-  --surface-3: #e5e5ea;
-  --veil: rgba(250, 250, 252, .8);
+  --surface-2: #f2eee7;
+  --surface-3: #e9e3d9;
+  --veil: rgba(252, 250, 246, .82);
 
   --ink: #1c1c1e;
   --ink-2: #3a3a3c;
@@ -108,6 +112,24 @@
   --bad-edge: #94000f;
   --bad-bg: #fdebe9;
 
+  /* --- the five stages, five tints ------------------------------------
+     One green carrying forty units was the "sad colours" complaint made
+     visible. Each stage of the journey now has its own voice — cedar,
+     sea, sun, clay, vine — used the same three ways everywhere: the full
+     tint for filled things, the ink for text on light ground, the soft
+     for tinted fills. Every full tint holds white text at 3:1 or better;
+     every ink holds 4.5:1 on the soft. */
+  --tint-1: #00875a;  --tint-1-ink: #00714b;  --tint-1-soft: #e0f3ea;
+  --tint-2: #0071a4;  --tint-2-ink: #005e88;  --tint-2-soft: #e0f0f9;
+  --tint-3: #b95d00;  --tint-3-ink: #964b00;  --tint-3-soft: #fdeeda;
+  --tint-4: #bb4437;  --tint-4-ink: #9e372c;  --tint-4-soft: #fbe9e5;
+  --tint-5: #7a4fbf;  --tint-5-ink: #6540a4;  --tint-5-soft: #efe9fa;
+
+  /* Anything outside a stage falls back to the cedar. */
+  --tint: var(--tint-1);
+  --tint-ink: var(--tint-1-ink);
+  --tint-soft: var(--tint-1-soft);
+
   /* --- shape and motion ---------------------------------------------- */
   --r-sm: 10px;
   --r: 16px;
@@ -146,12 +168,15 @@
   --micro-track: .04em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+/* Dark is a choice, never an inheritance: it applies only when the reader
+   picks it under More (or picks Auto and their phone is dark). The switch is
+   the data-theme attribute, set before first paint by the inline script in
+   index.html and kept current by app.js. */
+:root[data-theme="dark"] {
     color-scheme: dark;
 
-    --bg: #000000;
-    --bg-flat: #000000;
+    --bg: #0e0e10;
+    --bg-flat: #0e0e10;
     --surface: #1c1c1e;
     --surface-2: #2c2c2e;
     --surface-3: #3a3a3c;
@@ -201,7 +226,14 @@
 
     --grain-opacity: 0;
     --grain-blend: screen;
-  }
+
+    /* The five tints at night: the fills lighten so white still reads on
+       them, the inks lighten further so they read on the dark softs. */
+    --tint-1: #00a06b;  --tint-1-ink: #4fd6a5;  --tint-1-soft: #12352a;
+    --tint-2: #1a8fc4;  --tint-2-ink: #6cc4ea;  --tint-2-soft: #0e2a38;
+    --tint-3: #cf7414;  --tint-3-ink: #f0a860;  --tint-3-soft: #33220e;
+    --tint-4: #cf5c50;  --tint-4-ink: #f19a90;  --tint-4-soft: #361614;
+    --tint-5: #9a6fe0;  --tint-5-ink: #c2a8f0;  --tint-5-soft: #251a38;
 }
 
 * { box-sizing: border-box; }
@@ -257,14 +289,8 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-@media (prefers-color-scheme: dark) {
-  body::before {
-  /* The dusk lights are gone: on neutral ground the photographs carry the
-     colour, and a glow behind white cards reads as dirt, not warmth. */
-  z-index: -2;
-  background: var(--bg);
-}
-}
+/* (The dark body::before repeated the light one verbatim; the token does the
+   work now, so the rule is gone.) */
 
 /* ---------- type ------------------------------------------------------
    Two voices: a warm serif for the things that announce something, the system
@@ -415,6 +441,15 @@ strong, b { font-weight: 680; }
    Five stages. Each opens with a serif heading and a level chip, then the
    units below it as pressable slabs. */
 
+/* Each stage wears its own tint: the class is set by app.js from the stage
+   number, and everything inside — icons, bars, badges, the current row —
+   reads the local variables instead of the global cedar. */
+.t1 { --tint: var(--tint-1); --tint-ink: var(--tint-1-ink); --tint-soft: var(--tint-1-soft); }
+.t2 { --tint: var(--tint-2); --tint-ink: var(--tint-2-ink); --tint-soft: var(--tint-2-soft); }
+.t3 { --tint: var(--tint-3); --tint-ink: var(--tint-3-ink); --tint-soft: var(--tint-3-soft); }
+.t4 { --tint: var(--tint-4); --tint-ink: var(--tint-4-ink); --tint-soft: var(--tint-4-soft); }
+.t5 { --tint: var(--tint-5); --tint-ink: var(--tint-5-ink); --tint-soft: var(--tint-5-soft); }
+
 .stage { margin-bottom: 46px; }
 .stage-head { display: flex; align-items: flex-start; gap: 14px; }
 .stage-head h2 { margin-bottom: .12em; }
@@ -427,12 +462,10 @@ strong, b { font-weight: 680; }
   font-weight: 750;
   letter-spacing: .04em;
   white-space: nowrap;
-  /* The sea, and the only cold thing on the path screen. A level is a fact
-     about the course, not a reward for the reader: giving it the accent green
-     put it in the same voice as everything the reader has earned. */
-  color: var(--sea);
-  background: linear-gradient(180deg, var(--sea-soft), var(--surface-2));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 1px 2px rgba(48, 33, 12, .08);
+  /* The stage's own tint: on the path each stage announces its level in its
+     own colour, which is also how the eye learns that colour means place. */
+  color: var(--tint-ink);
+  background: var(--tint-soft);
 }
 
 /* Progress bars are carved into the page, and the fill sits proud of them. */
@@ -446,16 +479,18 @@ strong, b { font-weight: 680; }
 }
 .bar.slim { height: 6px; }
 
-/* The fill is a sunrise, not a green stripe: it starts in the cedar's shade and
-   arrives in full sun. That way the bar says something as it grows — the far
-   end is visibly a better place than the near one — instead of just getting
-   longer. */
+/* A flat fill in the local tint: on the path each stage's bar grows in that
+   stage's colour. The sunrise gradient survives only in the exercise header,
+   where a single bar carries the whole session. */
 .bar-fill {
   height: 100%;
   border-radius: 999px;
+  background: var(--tint);
+  transition: width var(--slow) var(--ease);
+}
+.run-head .bar-fill {
   background: linear-gradient(90deg, var(--accent-edge), var(--accent-lite) 42%, var(--joy) 88%, var(--amber-400));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .34), 0 0 14px -2px rgba(231, 139, 49, .6);
-  transition: width var(--slow) var(--ease);
 }
 
 /* (The unit cards became round stops on the road — see THE APP SHELL below.) */
@@ -509,7 +544,7 @@ th {
 }
 tbody tr:last-child td { border-bottom: 0; }
 tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
-@media (prefers-color-scheme: dark) { tbody tr:nth-child(even) td { background: rgba(255, 255, 255, .018); } }
+[data-theme="dark"] tbody tr:nth-child(even) td { background: rgba(255, 255, 255, .018); }
 
 .examples { margin-top: 14px; display: grid; gap: 11px; }
 .example {
@@ -518,7 +553,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   background: var(--surface-2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6), 0 1px 2px rgba(48, 33, 12, .05);
 }
-@media (prefers-color-scheme: dark) { .example { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04); } }
+[data-theme="dark"] .example { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04); }
 .ex-lb { font-weight: 650; font-size: 1.08rem; letter-spacing: -.01em; }
 .ex-en { color: var(--muted); }
 .ex-note { font-size: .85rem; color: var(--warm); margin-top: 5px; }
@@ -664,6 +699,14 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .primary-btn.good { background: var(--good); }
 .primary-btn.bad  { background: var(--bad); box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 8px 20px -10px rgba(150, 20, 10, .45); }
 
+/* At night the filled colours lighten to stay vivid on a dark ground, which
+   costs white text its contrast (3.4:1 measured). The text goes dark instead:
+   6:1 and better on every fill, the way fitness rings label themselves. */
+[data-theme="dark"] .primary-btn { color: #00190f; }
+[data-theme="dark"] .primary-btn.bad { color: #2b0300; }
+[data-theme="dark"] .listen-btn { color: #00190f; }
+[data-theme="dark"] .node-flag { color: #0e0e10; }
+
 /* The quiet sibling: the tinted gray fill every platform uses for the second
    action. No border, no gradient, no ledge. */
 .ghost-btn {
@@ -738,9 +781,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
     0 6px 14px -8px rgba(48, 33, 12, .3);
   transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
 }
-@media (prefers-color-scheme: dark) {
-  .option { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1.5px var(--line), 0 3px 0 var(--line-strong), 0 8px 16px -8px rgba(0, 0, 0, .7); }
-}
+[data-theme="dark"] .option { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1.5px var(--line), 0 3px 0 var(--line-strong), 0 8px 16px -8px rgba(0, 0, 0, .7); }
 .option:hover:not(:disabled) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--accent), 0 3px 0 var(--accent-soft-2), 0 8px 18px -8px rgba(18, 117, 92, .4); }
 .option:active:not(:disabled) { transform: translateY(3px); box-shadow: inset 0 2px 6px rgba(48, 33, 12, .16), 0 0 0 1.5px var(--accent); }
 .option:disabled { cursor: default; }
@@ -801,10 +842,8 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   background: linear-gradient(180deg, var(--surface), var(--surface-2));
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--line-strong), 0 3px 0 var(--line-strong);
 }
-@media (prefers-color-scheme: dark) {
-  .tile { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1.5px var(--accent-soft-2), 0 3px 0 var(--accent-soft-2), 0 8px 16px -8px rgba(0, 0, 0, .6); }
-  .tile.ghost { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1.5px var(--line-strong), 0 3px 0 var(--line-strong); }
-}
+[data-theme="dark"] .tile { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1.5px var(--accent-soft-2), 0 3px 0 var(--accent-soft-2), 0 8px 16px -8px rgba(0, 0, 0, .6); }
+[data-theme="dark"] .tile.ghost { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1.5px var(--line-strong), 0 3px 0 var(--line-strong); }
 
 /* --- typing */
 .type-input {
@@ -845,9 +884,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
     0 6px 12px -7px rgba(48, 33, 12, .4);
   transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
 }
-@media (prefers-color-scheme: dark) {
-  .key { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1px var(--line-strong), 0 3px 0 var(--line-strong), 0 6px 14px -7px rgba(0, 0, 0, .7); }
-}
+[data-theme="dark"] .key { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1px var(--line-strong), 0 3px 0 var(--line-strong), 0 6px 14px -7px rgba(0, 0, 0, .7); }
 .key:hover { color: var(--accent-ink); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .85), 0 0 0 1px var(--accent), 0 3px 0 var(--accent-soft-2); }
 .key:active { transform: translateY(3px); box-shadow: inset 0 2px 6px rgba(48, 33, 12, .18), 0 0 0 1px var(--accent); }
 
@@ -870,9 +907,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
     0 3px 0 var(--line-strong);
   transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease), opacity var(--fast) var(--ease);
 }
-@media (prefers-color-scheme: dark) {
-  .match-item { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1.5px var(--line), 0 3px 0 var(--line-strong); }
-}
+[data-theme="dark"] .match-item { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .05), 0 0 0 1.5px var(--line), 0 3px 0 var(--line-strong); }
 .match-item:hover:not(.solved) { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--accent), 0 3px 0 var(--accent-soft-2); }
 .match-item:active:not(.solved) { transform: translateY(3px); box-shadow: inset 0 2px 6px rgba(48, 33, 12, .16), 0 0 0 1.5px var(--accent); }
 .match-item.picked { background: linear-gradient(180deg, var(--surface), var(--accent-soft)); box-shadow: 0 0 0 2px var(--accent), 0 3px 0 var(--accent-soft-2); }
@@ -1180,7 +1215,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .stage-line .level-badge { margin-left: 0; }
 .stage-text h2 { margin-bottom: .2em; }
 .stage-text .bar { margin-bottom: 8px; }
-.stage-count { font-size: .8rem; font-weight: 650; color: var(--accent-ink); margin: 0; }
+.stage-count { font-size: .8rem; font-weight: 650; color: var(--tint-ink); margin: 0; }
 
 /* ---------- a stage still folded ------------------------------------
    The handle that opens a stage you have not reached. It is a real control,
@@ -1214,7 +1249,8 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   gap: 8px;
   min-height: 48px;
   padding: 0 18px;
-  border-radius: var(--r-md);
+  /* --r-md never existed; the token was a typo and the radius fell to 0. */
+  border-radius: var(--r-sm);
   cursor: pointer;
   font-size: .92rem;
   font-weight: 650;
@@ -1656,6 +1692,143 @@ body.in-run .run-stage { flex: 1; }
 .now-strip .crumb { margin-bottom: 2px; }
 .now-title { font-weight: 700; font-size: 1.06rem; letter-spacing: -.015em; }
 
+/* ---------- the hero: where you are, as a place -----------------------
+   The first thing on the Learn screen is a photograph of the place the next
+   unit is named after, with the unit's name written on its dark lower edge
+   and the two doors — continue, review — on a white ledge underneath. An app
+   opens on the action; this one opens on the action standing somewhere. */
+
+.hero-next {
+  margin-bottom: 20px;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--lift-2), 0 0 0 1px var(--line);
+}
+.hero-next-cover {
+  position: relative;
+  display: block;
+  height: 176px;
+  background: var(--tint-soft);
+  cursor: pointer;
+}
+.hero-next-cover .scene { position: absolute; inset: 0; }
+.hero-next-cover img,
+.hero-next-cover .hero-pic {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* The wash that guarantees the words a dark ground, whatever the picture. */
+.hero-next-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 18, 16, .06) 30%, rgba(8, 18, 16, .72) 100%);
+}
+.hero-next-copy {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 13px;
+  z-index: 1;
+}
+.hero-next-copy .crumb {
+  color: rgba(255, 255, 255, .85);
+  margin-bottom: 2px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+}
+.hero-next-title {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.2;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .55);
+}
+.hero-next-actions {
+  display: flex;
+  gap: 10px;
+  padding: 13px 14px;
+}
+.hero-next-actions .primary-btn { flex: 2; }
+.hero-next-actions .ghost-btn { flex: 1; }
+
+/* The one line that answers "how far in am I" without a screen of its own. */
+.journey {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 2px 30px;
+}
+.journey .bar { flex: 1; margin: 0; }
+.journey-lab {
+  flex: none;
+  font-size: .84rem;
+  font-weight: 650;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- the journey in numbers (More) ---------- */
+
+.prog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.prog-cell {
+  padding: 14px 16px;
+  border-radius: var(--r);
+  background: var(--surface-2);
+  box-shadow: var(--sunk);
+}
+.prog-num {
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.prog-lab { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 650; color: var(--muted); }
+.prog-cell.c1 .prog-num { color: var(--tint-1-ink); }
+.prog-cell.c2 .prog-num { color: var(--tint-2-ink); }
+.prog-cell.c3 .prog-num { color: var(--tint-3-ink); }
+.prog-cell.c4 .prog-num { color: var(--tint-4-ink); }
+
+/* ---------- the segmented control (Appearance) ---------- */
+
+.seg {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  margin-top: 12px;
+  border-radius: 13px;
+  background: var(--surface-3);
+  box-shadow: var(--sunk);
+}
+.seg button {
+  flex: 1;
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: .95rem;
+  font-weight: 650;
+  color: var(--muted);
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color var(--fast) var(--ease), background var(--fast) var(--ease);
+}
+.seg button.on {
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: var(--lift-1), 0 0 0 1px var(--line);
+}
+
 /* ---------- the first-visit welcome ---------- */
 
 .welcome-card { padding: 0; overflow: hidden; }
@@ -1714,7 +1887,8 @@ body.in-run .run-stage { flex: 1; }
 .node:active { background: var(--surface-2); }
 
 .node-btn {
-  position: static;
+  position: relative;
+  overflow: hidden;
   flex: none;
   display: grid;
   place-items: center;
@@ -1723,11 +1897,22 @@ body.in-run .run-stage { flex: 1; }
   border: 0;
   border-radius: 12px;
   cursor: pointer;
-  color: var(--accent-ink);
-  background: var(--accent-soft);
+  color: var(--tint-ink);
+  background: var(--tint-soft);
   -webkit-tap-highlight-color: transparent;
 }
 .node-btn .glyph { width: 23px; height: 23px; }
+
+/* When a real photograph of the unit's place exists, it fills the square and
+   the drawn glyph disappears under it. Forty small windows onto Lebanon down
+   the path — this is where the colour of the app actually comes from. */
+.node-pic {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .node-lab { display: grid; gap: 1px; min-width: 0; }
 .node-num { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 650; color: var(--muted); }
@@ -1748,30 +1933,31 @@ body.in-run .run-stage { flex: 1; }
   transform: rotate(45deg);
 }
 
-/* Done: the icon fills in, a small check sits on its corner, the title steps
-   back. Finished work reads as settled, not lit. */
-.node.done .node-btn { color: #fff; background: var(--accent); }
+/* Done: the icon fills in, a small check sits on the corner of the square,
+   the title steps back. Finished work reads as settled, not lit. */
+.node.done .node-btn { color: #fff; background: var(--tint); }
 .node.done .node-title { color: var(--muted); }
 .node-check {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 2px;
+  top: 2px;
+  z-index: 1;
   display: grid;
   place-items: center;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   color: #fff;
-  background: var(--accent-edge);
+  background: var(--tint);
   box-shadow: 0 0 0 2px var(--surface);
 }
 .node-check .glyph { width: 10px; height: 10px; }
 
 /* Where you are: the one tinted row in the card, with a pill saying "start". */
-.node.current { background: var(--accent-soft); }
+.node.current { background: var(--tint-soft); }
 .node.current + .node::before { display: none; }
-.node.current .node-btn { color: #fff; background: var(--accent); }
-.node.current::after { border-color: var(--accent); margin-left: 12px; }
+.node.current .node-btn { color: #fff; background: var(--tint); }
+.node.current::after { border-color: var(--tint); margin-left: 12px; }
 .node-flag {
   order: 8;
   flex: none;
@@ -1782,7 +1968,7 @@ body.in-run .run-stage { flex: 1; }
   font-weight: 750;
   letter-spacing: var(--micro-track);
   color: #fff;
-  background: var(--accent);
+  background: var(--tint);
 }
 
 /* Not yet reachable (guided path on): dimmed, the icon goes gray. */
@@ -1889,6 +2075,14 @@ body.in-run .run-stage { flex: 1; }
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--accent-soft-2);
 }
 .train-glyph .glyph { width: 22px; height: 22px; }
+
+/* Each practice door gets its own tint, same grammar as the stages: review is
+   the sun (work waiting), listening is the sea, weak spots are the clay,
+   the mixer is the vine. */
+.train-card.c2 .train-glyph { color: var(--tint-2-ink); background: linear-gradient(180deg, var(--surface), var(--tint-2-soft)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--tint-2-soft); }
+.train-card.c3 .train-glyph { color: var(--tint-3-ink); background: linear-gradient(180deg, var(--surface), var(--tint-3-soft)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--tint-3-soft); }
+.train-card.c4 .train-glyph { color: var(--tint-4-ink); background: linear-gradient(180deg, var(--surface), var(--tint-4-soft)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--tint-4-soft); }
+.train-card.c5 .train-glyph { color: var(--tint-5-ink); background: linear-gradient(180deg, var(--surface), var(--tint-5-soft)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8), 0 0 0 1.5px var(--tint-5-soft); }
 .train-card .primary-btn { margin-top: 16px; }
 .train-card .row { margin-top: 12px; }
 
@@ -1926,6 +2120,8 @@ a.more-guide:hover { box-shadow: var(--lift-3), 0 0 0 1.5px var(--accent); }
 
   .now-strip { padding: 14px 16px; }
   .now-strip .primary-btn, .now-strip .ghost-btn { flex: 1; }
+  .hero-next-cover { height: 150px; }
+  .hero-next-title { font-size: 1.22rem; }
   .sheet { border-radius: var(--r-lg) var(--r-lg) 0 0; padding: 12px 18px calc(20px + env(safe-area-inset-bottom)); }
   .unit-cta { bottom: calc(58px + env(safe-area-inset-bottom)); }
 }

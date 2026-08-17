@@ -26,6 +26,28 @@
 
   function arabicOn() { return Store.settings().arabic; }
 
+  /* ---------- theme ----------
+     Light unless the reader chooses otherwise, under More. The inline script
+     in index.html sets the attribute before first paint; this keeps it true
+     afterwards — when the setting changes, and when a phone on Auto crosses
+     into the evening. */
+
+  var darkQuery = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function applyTheme() {
+    var mode = Store.settings().theme || 'light';
+    var t = (mode === 'auto') ? (darkQuery && darkQuery.matches ? 'dark' : 'light') : mode;
+    document.documentElement.setAttribute('data-theme', t);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', t === 'dark' ? '#0e0e10' : '#f6f3ee');
+  }
+
+  if (darkQuery) {
+    var onDarkChange = function () { if (Store.settings().theme === 'auto') applyTheme(); };
+    if (darkQuery.addEventListener) darkQuery.addEventListener('change', onDarkChange);
+    else if (darkQuery.addListener) darkQuery.addListener(onDarkChange);
+  }
+
   /* A very small markup dialect for lesson text: **bold**, `code`, and line breaks.
      Nothing is injected as raw HTML — the source text is escaped first. */
   function rich(text) {
@@ -225,21 +247,18 @@
       hello.appendChild(wc);
       wrap.appendChild(hello);
     } else if (next) {
-      var now = el('section', 'now-strip');
-      var nt = el('div', 'now-text');
-      nt.appendChild(el('div', 'crumb', 'Up next'));
-      nt.appendChild(el('div', 'now-title', 'Unit ' + next.order + ' — ' + next.title));
-      now.appendChild(nt);
-      var cont = el('a', 'primary-btn', Store.unit(next.id).seen ? 'Continue' : 'Start');
-      cont.href = Store.unit(next.id).seen ? '#/practice/' + next.id : '#/unit/' + next.id;
-      now.appendChild(cont);
-      var due = Store.dueCount();
-      if (due) {
-        var rev = el('a', 'ghost-btn', 'Review ' + due);
-        rev.href = '#/review';
-        now.appendChild(rev);
-      }
-      wrap.appendChild(now);
+      wrap.appendChild(heroNext(next));
+
+      /* One line for "how far in am I", so the answer never needs a screen. */
+      var total = LEB.all().length;
+      var journey = el('div', 'journey');
+      var jbar = el('div', 'bar slim');
+      var jfill = el('div', 'bar-fill');
+      jfill.style.width = (total ? Math.round((done / total) * 100) : 0) + '%';
+      jbar.appendChild(jfill);
+      journey.appendChild(jbar);
+      journey.appendChild(el('span', 'journey-lab', done + ' of ' + total + ' units'));
+      wrap.appendChild(journey);
     }
 
     /* Which stages arrive open: the one you are standing in, and any you have
@@ -258,10 +277,59 @@
     return wrap;
   }
 
+  /* The hero: the next unit as a place. A photograph of what the unit is named
+     after (or the stage's own cover while there is none), the unit's name on
+     its dark lower edge, and the two doors on a white ledge underneath. */
+  function heroNext(next) {
+    var p = Store.unit(next.id);
+    var hero = el('section', 'hero-next t' + next.stage);
+
+    var cover = el('a', 'hero-next-cover');
+    cover.href = '#/unit/' + next.id;
+    cover.setAttribute('aria-label', 'Unit ' + next.order + ' — ' + next.title + ', tips and notes');
+    cover.innerHTML = Art.scene(Art.sceneForStage(next.stage));
+    if (!Pic.attachUnit(cover, next.id, 'hero-pic')) {
+      /* No photograph for this unit: the stage's cover stands in, and if that
+         file is missing too the drawn scene stays — the same pact as always. */
+      var ph = new Image();
+      ph.className = 'hero-pic';
+      ph.alt = '';
+      ph.src = 'images/stage-' + next.stage + '.jpg';
+      ph.addEventListener('error', function () { ph.remove(); });
+      cover.appendChild(ph);
+    }
+
+    var stage = null;
+    LEB.stages.forEach(function (s) { if (s.id === next.stage) stage = s; });
+    var copy = el('div', 'hero-next-copy');
+    copy.appendChild(el('div', 'crumb',
+      (p.seen ? 'Continue' : 'Up next') + ' · Stage ' + next.stage + (stage ? ' · ' + stage.level : '')));
+    copy.appendChild(el('div', 'hero-next-title', 'Unit ' + next.order + ' — ' + next.title));
+    cover.appendChild(copy);
+    hero.appendChild(cover);
+
+    var act = el('div', 'hero-next-actions');
+    var go1 = el('a', 'primary-btn', p.seen ? 'Continue lesson' : 'Start lesson');
+    go1.href = '#/practice/' + next.id;
+    act.appendChild(go1);
+    var due = Store.dueCount();
+    if (due) {
+      var rev = el('a', 'ghost-btn', 'Review ' + due);
+      rev.href = '#/review';
+      act.appendChild(rev);
+    } else {
+      var tips = el('a', 'ghost-btn', 'Tips & notes');
+      tips.href = '#/unit/' + next.id;
+      act.appendChild(tips);
+    }
+    hero.appendChild(act);
+    return hero;
+  }
+
   /* One stage: an illustrated band that says where you are, then its units as
      round stops staggered down the middle of the screen — a road, not a list. */
   function stageBlock(stage, units, current, aperta) {
-    var sec = el('section', 'stage' + (aperta ? '' : ' folded'));
+    var sec = el('section', 'stage t' + stage.id + (aperta ? '' : ' folded'));
     var cleared = units.filter(function (u) { return Store.unit(u.id).done; }).length;
 
     var band = el('div', 'stage-band');
@@ -341,6 +409,9 @@
     btn.type = 'button';
     btn.setAttribute('aria-label', 'Unit ' + u.order + ' — ' + u.title);
     btn.innerHTML = Art.glyph(open ? Art.iconFor(u) : 'lock');
+    /* The unit's photograph fills the square when one exists: forty small
+       windows onto Lebanon down the path. Lazily — most stages are folded. */
+    if (open && Pic.attachUnit(btn, u.id, 'node-pic', true)) li.classList.add('has-pic');
     if (p.done) {
       var badge = el('span', 'node-check');
       badge.innerHTML = Art.glyph('check');
@@ -785,7 +856,7 @@
 
     /* Review — the one that matters most, so it comes first and biggest. */
     var due = Store.dueCount();
-    var rev = el('section', 'card train-card');
+    var rev = el('section', 'card train-card c3');
     var rh = el('div', 'train-head');
     var rg = el('span', 'train-glyph');
     rg.innerHTML = Art.glyph('hourglass');
@@ -805,7 +876,7 @@
     wrap.appendChild(rev);
 
     /* Listening — only shown as a door when there are clips to hear. */
-    var lis = el('section', 'card train-card');
+    var lis = el('section', 'card train-card c2');
     var lh = el('div', 'train-head');
     var lg = el('span', 'train-glyph');
     lg.innerHTML = Art.glyph('ear');
@@ -830,7 +901,7 @@
       return p.quizBest > 0 && p.quizBest < 80;
     });
     if (weak.length) {
-      var wk = el('section', 'card train-card');
+      var wk = el('section', 'card train-card c4');
       var wh = el('div', 'train-head');
       var wg = el('span', 'train-glyph');
       wg.innerHTML = Art.glyph('scales');
@@ -852,7 +923,7 @@
 
     /* The mixer — a spare five minutes, twelve questions from anywhere. */
     var seen = LEB.all().some(function (u) { return Store.unit(u.id).seen; });
-    var mix = el('section', 'card train-card');
+    var mix = el('section', 'card train-card c5');
     var mh = el('div', 'train-head');
     var mg = el('span', 'train-glyph');
     mg.innerHTML = Art.glyph('star');
@@ -1041,6 +1112,26 @@
     var wrap = el('div', 'screen');
     wrap.appendChild(el('h1', null, 'More'));
 
+    /* The journey in four numbers. It lives here and not on the path because
+       the path is for going forward; this is for looking back. */
+    var prog = el('section', 'card');
+    prog.appendChild(el('h2', null, 'Your journey'));
+    var grid = el('div', 'prog-grid');
+    function cell(num, lab, c) {
+      var d = el('div', 'prog-cell ' + c);
+      d.appendChild(el('div', 'prog-num', String(num)));
+      d.appendChild(el('div', 'prog-lab', lab));
+      return d;
+    }
+    var wordsMet = 0;
+    LEB.all().forEach(function (u) { if (Store.unit(u.id).seen) wordsMet += u.vocab.length; });
+    grid.appendChild(cell(Store.completedCount() + ' / ' + LEB.all().length, 'units cleared', 'c1'));
+    grid.appendChild(cell(wordsMet, 'words met', 'c2'));
+    grid.appendChild(cell(Store.xp(), 'xp earned', 'c3'));
+    grid.appendChild(cell(Store.streak(), 'day streak', 'c4'));
+    prog.appendChild(grid);
+    wrap.appendChild(prog);
+
     var guide = el('a', 'card more-guide');
     guide.href = '#/guide';
     var gh = el('div', 'train-head');
@@ -1056,6 +1147,7 @@
 
     var card = el('section', 'card');
     card.appendChild(el('h2', null, 'Settings'));
+    card.appendChild(appearanceRow());
     card.appendChild(toggle('Show Arabic script', 'arabic',
       'Lebanese is mostly written in Latin letters by Lebanese people themselves. ' +
       'Keep the Arabic on if you also want to train your eye for signs and menus.'));
@@ -1127,6 +1219,40 @@
     danger.appendChild(b);
     wrap.appendChild(danger);
     return wrap;
+  }
+
+  /* Appearance is a choice of three, not a switch: Light (the default),
+     Dark, and Auto for whoever wants the app to follow the phone. */
+  function appearanceRow() {
+    var row = el('div', 'setting');
+    var txt = el('div');
+    txt.style.flex = '1';
+    txt.appendChild(el('div', 'setting-name', 'Appearance'));
+    txt.appendChild(el('div', 'muted',
+      'Light is how the app is meant to look. Dark is here for reading at night; ' +
+      'Auto follows the phone.'));
+    var seg = el('div', 'seg');
+    seg.setAttribute('role', 'group');
+    seg.setAttribute('aria-label', 'Appearance');
+    [['light', 'Light'], ['dark', 'Dark'], ['auto', 'Auto']].forEach(function (opt) {
+      var b = el('button', Store.settings().theme === opt[0] ? 'on' : '', opt[1]);
+      b.type = 'button';
+      b.setAttribute('aria-pressed', Store.settings().theme === opt[0] ? 'true' : 'false');
+      b.addEventListener('click', function () {
+        Store.setSetting('theme', opt[0]);
+        applyTheme();
+        seg.querySelectorAll('button').forEach(function (x) {
+          x.classList.remove('on');
+          x.setAttribute('aria-pressed', 'false');
+        });
+        b.classList.add('on');
+        b.setAttribute('aria-pressed', 'true');
+      });
+      seg.appendChild(b);
+    });
+    txt.appendChild(seg);
+    row.appendChild(txt);
+    return row;
   }
 
   function toggle(label, name, note) {
@@ -1330,6 +1456,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     root = document.getElementById('app');
     headerSlot = document.getElementById('header');
+    applyTheme();
     buildTabs();
     render();
   });

@@ -29,7 +29,7 @@ nessun server, nessuna connessione a internet.
 
 ```
 index.html            il guscio; elenca tutti gli script
-css/style.css         superfici neutre + un accento cedro (stile HIG); il colore lo fanno le foto
+css/style.css         carta calda, 5 tinte di tappa, chiaro di default (scuro solo su scelta)
 js/data.js            il registro: window.LEB (va caricato per primo)
 js/store.js           progressi, XP, serie di giorni, ripasso dilazionato (localStorage)
 js/art.js             tutti i disegni: glifi delle unità, scene delle tappe, marchio

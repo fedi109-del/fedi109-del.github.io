@@ -8,12 +8,31 @@
 <title>Lebanese Path — learn the Lebanese people actually speak</title>
 <meta name="description" content="A forty-unit course in spoken Lebanese Arabic, from first hello to real conversation. Works offline.">
 
+<!-- The theme is decided before the stylesheet paints, or a phone set to dark
+     would flash the wrong colours for a frame. Light is the default on
+     purpose: dark is a choice made in the app, never inherited silently. -->
+<script>
+(function () {
+  var t = 'light';
+  try {
+    var raw = localStorage.getItem('lebanese-path/v1');
+    if (raw) {
+      var s = JSON.parse(raw);
+      if (s && s.settings && (s.settings.theme === 'dark' || s.settings.theme === 'auto')) t = s.settings.theme;
+    }
+  } catch (e) { /* an unreadable save must never stop the page */ }
+  if (t === 'auto') {
+    t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  }
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+
 <link rel="stylesheet" href="css/style.css">
 
 <!-- installable app -->
 <link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#f7f1e8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#100e0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f3ee">
 
 <!-- iPhone: Safari ignores the manifest, so everything has to be said twice -->
 <meta name="apple-mobile-web-app-capable" content="yes">

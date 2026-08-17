@@ -15,7 +15,7 @@ window.Store = (function () {
     xp: 0,
     streak: 0,
     lastDay: '',
-    settings: { arabic: true, guided: false, audio: true }
+    settings: { arabic: true, guided: false, audio: true, theme: 'light' }
   };
 
   var state = load();
@@ -39,6 +39,12 @@ window.Store = (function () {
            An old save is deliberately not migrated — whoever was locked out by the
            previous default should find the whole path open the next time they look. */
         s.settings.guided = saved.settings.guided === true;
+        /* The app is light unless the reader chooses otherwise. Following the
+           phone's dark mode by default painted the whole course black for
+           anyone whose phone happened to be set that way — and they read it as
+           the app's own face, not as their setting. */
+        s.settings.theme = (saved.settings.theme === 'dark' || saved.settings.theme === 'auto')
+          ? saved.settings.theme : 'light';
       }
       return s;
     } catch (e) {
