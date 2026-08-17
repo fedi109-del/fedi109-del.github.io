@@ -1,4 +1,11 @@
-/* Lebanese Path — "Beirut at dusk".
+/* Lebanese Path — clean surfaces, Lebanese light.
+   Restyled 17 Aug against the Apple HIG skill, after the owner rejected the
+   parchment look twice. The rule now: the INTERFACE is neutral and quiet —
+   near-white surfaces, one vivid cedar accent, flat controls, big type — and
+   the COLOUR comes from the photographs of Lebanon, which is where it was
+   always most convincing.
+
+   Previously: "Beirut at dusk".
    One stylesheet. No build step, no downloaded fonts, no network of any kind:
    every colour, every texture and every shadow below is written by hand so the
    page looks the same on a plane as it does at home.
@@ -52,54 +59,54 @@
   --sea-400: #2ea6c2;
 
   /* --- semantic surface ---------------------------------------------- */
-  --bg: #f7f1e8;
-  --bg-flat: #f7f1e8;
-  --surface: #fffdfa;
-  --surface-2: #f4ece0;
-  --surface-3: #ece0cf;
-  --veil: rgba(255, 253, 250, .82);
+  --bg: #f2f2f6;
+  --bg-flat: #f2f2f6;
+  --surface: #ffffff;
+  --surface-2: #f0f0f4;
+  --surface-3: #e5e5ea;
+  --veil: rgba(250, 250, 252, .8);
 
-  --ink: #1a1611;
-  --ink-2: #3d3529;
+  --ink: #1c1c1e;
+  --ink-2: #3a3a3c;
   /* Un soffio più scuro di com'era (#7a6f5e). Misurato sul fondo crema quello
      dava 4.39 contro l'1, appena sotto il minimo leggibile, e il testo grigio
      porta qui metà delle spiegazioni: le note sotto le parole, i sottotitoli,
      le glosse inglesi. Non è una questione di conformità — è la parte del
      corso che si legge stanchi, la sera, sul telefono. */
-  --muted: #6f6454;
-  --line: #e4d7c4;
-  --line-strong: #d2c2aa;
+  --muted: #63636b;
+  --line: rgba(60, 60, 67, .14);
+  --line-strong: rgba(60, 60, 67, .3);
 
-  --accent: var(--cedar-600);
-  --accent-lite: #109573;
-  --accent-edge: var(--cedar-800);
-  --accent-ink: var(--cedar-700);
-  --accent-soft: #dbf1e9;
-  --accent-soft-2: #c2e8da;
+  --accent: #00875a;
+  --accent-lite: #009e69;
+  --accent-edge: #005c3d;
+  --accent-ink: #00714b;
+  --accent-soft: #e3f4ec;
+  --accent-soft-2: #c8ead9;
 
-  --warm: var(--amber-700);
-  --warm-soft: #fceedc;
+  --warm: #b25200;
+  --warm-soft: #fff1e0;
 
   /* The second voice. Where the cedar means "right, done, keep going", this
      means "this is the good part": the sun on a finished lesson, the fill of a
      bar that is nearly full, the glow under a card worth pressing. */
-  --joy: var(--amber-500);
-  --joy-ink: var(--amber-700);
-  --joy-soft: #fde6c9;
-  --sea: var(--sea-600);
-  --sea-soft: #d8edf4;
+  --joy: #ff9500;
+  --joy-ink: #b25200;
+  --joy-soft: #ffeed6;
+  --sea: #00739b;
+  --sea-soft: #e0f2f9;
 
   /* The dusk itself, as one gradient, so every place that wants to feel like
      the end of a Beirut afternoon says it the same way. */
   --dusk: linear-gradient(135deg, var(--cedar-700) 0%, var(--sea-600) 34%, var(--amber-600) 76%, var(--rose-500) 100%);
   --dusk-warm: linear-gradient(120deg, var(--amber-500), var(--rose-500));
 
-  --good: #10684f;
-  --good-edge: #0a4737;
-  --good-bg: #ddf0e7;
-  --bad: var(--clay-600);
-  --bad-edge: #7d2820;
-  --bad-bg: #fae3df;
+  --good: #00875a;
+  --good-edge: #005c3d;
+  --good-bg: #e3f4ec;
+  --bad: #d70015;
+  --bad-edge: #94000f;
+  --bad-bg: #fdebe9;
 
   /* --- shape and motion ---------------------------------------------- */
   --r-sm: 10px;
@@ -112,27 +119,14 @@
   --slow: .32s;
 
   /* --- elevation: four rungs, each one a real distance off the page --- */
-  --lift-1:
-    inset 0 1px 0 rgba(255, 255, 255, .85),
-    0 1px 2px rgba(48, 33, 12, .05),
-    0 3px 8px -4px rgba(48, 33, 12, .10);
-  --lift-2:
-    inset 0 1px 0 rgba(255, 255, 255, .90),
-    0 1px 2px rgba(48, 33, 12, .05),
-    0 8px 18px -8px rgba(48, 33, 12, .16),
-    0 22px 44px -28px rgba(48, 33, 12, .22);
-  --lift-3:
-    inset 0 1px 0 rgba(255, 255, 255, .95),
-    0 2px 4px rgba(48, 33, 12, .06),
-    0 14px 28px -10px rgba(48, 33, 12, .18),
-    0 34px 64px -32px rgba(48, 33, 12, .28);
-  --sunk:
-    inset 0 2px 6px rgba(48, 33, 12, .13),
-    inset 0 1px 0 rgba(48, 33, 12, .07);
+  --lift-1: 0 1px 2px rgba(0, 0, 0, .06);
+  --lift-2: 0 1px 2px rgba(0, 0, 0, .05), 0 8px 24px -10px rgba(0, 0, 0, .09);
+  --lift-3: 0 2px 6px rgba(0, 0, 0, .08), 0 18px 44px -14px rgba(0, 0, 0, .16);
+  --sunk: inset 0 0 0 1px rgba(60, 60, 67, .08);
 
   --ring: 0 0 0 3px var(--accent-soft-2), 0 0 0 4.5px var(--accent);
 
-  --grain-opacity: .045;
+  --grain-opacity: 0;
   --grain-blend: multiply;
 
   /* ---------- the smallest type in the app ----------------------------
@@ -156,69 +150,56 @@
   :root {
     color-scheme: dark;
 
-    --bg: #100e0c;
-    --bg-flat: #100e0c;
-    --surface: #1a1815;
-    --surface-2: #232019;
-    --surface-3: #2e2a22;
-    --veil: rgba(26, 24, 21, .86);
+    --bg: #000000;
+    --bg-flat: #000000;
+    --surface: #1c1c1e;
+    --surface-2: #2c2c2e;
+    --surface-3: #3a3a3c;
+    --veil: rgba(20, 20, 22, .78);
 
-    --ink: #f4eee4;
-    --ink-2: #d8cfc0;
-    --muted: #a1957f;
-    --line: #322d25;
-    --line-strong: #453e33;
+    --ink: #f2f2f7;
+    --ink-2: #d6d6db;
+    --muted: #9d9da5;
+    --line: rgba(120, 120, 128, .28);
+    --line-strong: rgba(120, 120, 128, .46);
 
-    --accent: #35b795;
-    --accent-lite: #45c9a6;
-    --accent-edge: #0d5844;
-    --accent-ink: #6fd3b8;
-    --accent-soft: #16332b;
-    --accent-soft-2: #1e463b;
+    --accent: #00a06b;
+    --accent-lite: #14b47e;
+    --accent-edge: #006644;
+    --accent-ink: #4fd6a5;
+    --accent-soft: #12352a;
+    --accent-soft-2: #1a4a39;
 
-    --warm: var(--amber-400);
-    --warm-soft: #33220f;
+    --warm: #e8a54c;
+    --warm-soft: #33230a;
 
     /* At night the sun is remembered, not seen: the joy colour lightens so it
        still reads on a dark ground, and the dusk gradient loses the daylight
        end of itself. */
-    --joy: var(--amber-400);
-    --joy-ink: var(--amber-300);
-    --joy-soft: #3a2611;
-    --sea: var(--sea-400);
-    --sea-soft: #10303c;
+    --joy: #ff9f0a;
+    --joy-ink: #ffb340;
+    --joy-soft: #33230a;
+    --sea: #56b8da;
+    --sea-soft: #0e2836;
 
     --dusk: linear-gradient(135deg, var(--cedar-800) 0%, var(--sea-700) 36%, var(--amber-700) 78%, var(--clay-600) 100%);
     --dusk-warm: linear-gradient(120deg, var(--amber-600), var(--clay-600));
 
-    --good: #46c194;
-    --good-edge: #125a44;
-    --good-bg: #14352a;
-    --bad: #e08278;
-    --bad-edge: #6e2a22;
-    --bad-bg: #38201c;
+    --good: #2ec98c;
+    --good-edge: #0f5c40;
+    --good-bg: #12352a;
+    --bad: #ff6b61;
+    --bad-edge: #7a1f17;
+    --bad-bg: #391411;
 
-    --lift-1:
-      inset 0 1px 0 rgba(255, 255, 255, .05),
-      0 1px 2px rgba(0, 0, 0, .5),
-      0 3px 10px -4px rgba(0, 0, 0, .5);
-    --lift-2:
-      inset 0 1px 0 rgba(255, 255, 255, .06),
-      0 1px 2px rgba(0, 0, 0, .55),
-      0 10px 22px -10px rgba(0, 0, 0, .7),
-      0 26px 50px -30px rgba(0, 0, 0, .8);
-    --lift-3:
-      inset 0 1px 0 rgba(255, 255, 255, .08),
-      0 2px 4px rgba(0, 0, 0, .6),
-      0 16px 32px -12px rgba(0, 0, 0, .72),
-      0 40px 70px -34px rgba(0, 0, 0, .85);
-    --sunk:
-      inset 0 2px 8px rgba(0, 0, 0, .55),
-      inset 0 1px 0 rgba(0, 0, 0, .4);
+    --lift-1: 0 1px 2px rgba(0, 0, 0, .5);
+    --lift-2: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 26px -10px rgba(0, 0, 0, .55);
+    --lift-3: 0 2px 6px rgba(0, 0, 0, .55), 0 20px 48px -14px rgba(0, 0, 0, .6);
+    --sunk: inset 0 0 0 1px rgba(120, 120, 128, .16);
 
     --ring: 0 0 0 3px var(--accent-soft-2), 0 0 0 4.5px var(--accent);
 
-    --grain-opacity: .06;
+    --grain-opacity: 0;
     --grain-blend: screen;
   }
 }
@@ -261,21 +242,10 @@ body::after {
 }
 
 body::before {
+  /* The dusk lights are gone: on neutral ground the photographs carry the
+     colour, and a glow behind white cards reads as dirt, not warmth. */
   z-index: -2;
-  background:
-    /* The sun, low and to the right, and warm enough to be seen. The earlier
-       version of these lights was set so faint (.22 down to .14) that the eye
-       registered a flat cream page and nothing else — the gradients were
-       technically present and emotionally absent. */
-    radial-gradient(980px 680px at 102% -6%, rgba(231, 139, 49, .42), transparent 62%),
-    /* The band of colour it throws across the top of the sky. */
-    radial-gradient(1500px 420px at 62% -18%, rgba(217, 86, 77, .26), transparent 66%),
-    /* The cedar side, in shade, coming over the left shoulder. */
-    radial-gradient(1100px 780px at -6% 2%, rgba(11, 125, 95, .30), transparent 60%),
-    /* The sea at the bottom of the page, cool, so the warmth above has
-       something to be warm against. */
-    radial-gradient(1200px 700px at 30% 118%, rgba(15, 100, 128, .24), transparent 62%),
-    var(--bg);
+  background: var(--bg);
 }
 
 /* A fine film of grain. It kills the plastic look of flat gradients and costs
@@ -289,13 +259,11 @@ body::after {
 
 @media (prefers-color-scheme: dark) {
   body::before {
-    background:
-      radial-gradient(980px 680px at 102% -6%, rgba(231, 139, 49, .20), transparent 62%),
-      radial-gradient(1500px 420px at 62% -18%, rgba(217, 86, 77, .14), transparent 66%),
-      radial-gradient(1100px 780px at -6% 2%, rgba(15, 156, 120, .17), transparent 60%),
-      radial-gradient(1200px 700px at 30% 118%, rgba(20, 131, 159, .16), transparent 62%),
-      var(--bg);
-  }
+  /* The dusk lights are gone: on neutral ground the photographs carry the
+     colour, and a glow behind white cards reads as dirt, not warmth. */
+  z-index: -2;
+  background: var(--bg);
+}
 }
 
 /* ---------- type ------------------------------------------------------
@@ -308,11 +276,12 @@ h1, h2, h3 {
   letter-spacing: -.018em;
 }
 
+/* Headings in the same sans as everything else, heavy and tight — the
+   large-title pattern. The serif voice went with the parchment. */
 h1, .stage-head h2 {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
-               "Noto Serif", ui-serif, serif;
-  font-weight: 600;
-  letter-spacing: -.022em;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -.03em;
 }
 
 h1 { font-size: clamp(1.75rem, 1.35rem + 1.7vw, 2.45rem); }
@@ -356,7 +325,7 @@ strong, b { font-weight: 680; }
   z-index: 20;
   background: var(--veil);
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 6px 24px -18px rgba(48, 33, 12, .5);
+  box-shadow: none;
   -webkit-backdrop-filter: saturate(1.5) blur(14px);
   backdrop-filter: saturate(1.5) blur(14px);
 }
@@ -391,7 +360,7 @@ strong, b { font-weight: 680; }
 }
 
 .brand-name {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Noto Serif", ui-serif, serif;
+  font-family: inherit;
   font-size: 1.12rem;
   font-weight: 600;
   letter-spacing: -.02em;
@@ -667,65 +636,43 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   align-items: center;
   justify-content: center;
   gap: .5em;
-  padding: 13px 22px;
+  min-height: 50px;
+  padding: 12px 22px;
   border: 0;
   border-radius: 14px;
   font: inherit;
+  font-size: 1.02rem;
   font-weight: 650;
-  letter-spacing: .005em;
+  letter-spacing: -.01em;
   cursor: pointer;
   text-align: center;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease),
-              filter var(--fast) var(--ease);
+  transition: transform var(--fast) var(--ease), filter var(--fast) var(--ease),
+              background var(--fast) var(--ease);
 }
 
+/* Flat, filled, one colour: a control, not joinery. Pressed = shrink and dim,
+   the platform grammar, instead of the old 3D key travelling into the page. */
 .primary-btn {
-  --face: var(--accent-lite);
-  --face-2: var(--accent);
-  --edge: var(--accent-edge);
-  --glow: 18, 117, 92;
   color: #fff;
-  background: linear-gradient(180deg, var(--face), var(--face-2));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .34),
-    inset 0 -1px 0 rgba(0, 0, 0, .16),
-    0 5px 0 var(--edge),
-    0 8px 14px -6px rgba(var(--glow), .45),
-    0 18px 34px -16px rgba(var(--glow), .5);
+  background: var(--accent);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 8px 20px -10px rgba(0, 90, 60, .45);
 }
 .primary-btn:hover { filter: brightness(1.06); }
-.primary-btn:active {
-  transform: translateY(5px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .16),
-    inset 0 3px 8px rgba(0, 0, 0, .22),
-    0 0 0 var(--edge),
-    0 2px 6px -2px rgba(var(--glow), .4);
-}
-.primary-btn.good { --face: #148a68; --face-2: var(--good); --edge: var(--good-edge); --glow: 16, 104, 79; }
-.primary-btn.bad  { --face: #b8443a; --face-2: var(--bad);  --edge: var(--bad-edge);  --glow: 166, 56, 44; }
+.primary-btn:active { transform: scale(.97); filter: brightness(.93); }
+.primary-btn.good { background: var(--good); }
+.primary-btn.bad  { background: var(--bad); box-shadow: 0 1px 2px rgba(0, 0, 0, .1), 0 8px 20px -10px rgba(150, 20, 10, .45); }
 
+/* The quiet sibling: the tinted gray fill every platform uses for the second
+   action. No border, no gradient, no ledge. */
 .ghost-btn {
   color: var(--accent-ink);
-  background: linear-gradient(180deg, var(--surface), var(--surface-2));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .8),
-    0 0 0 1px var(--line-strong),
-    0 3px 0 var(--line-strong),
-    0 6px 12px -6px rgba(48, 33, 12, .3);
+  background: var(--surface-3);
 }
-@media (prefers-color-scheme: dark) {
-  .ghost-btn { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1px var(--line-strong), 0 3px 0 var(--line-strong), 0 6px 14px -6px rgba(0, 0, 0, .7); }
-}
-.ghost-btn:hover { color: var(--accent); background: linear-gradient(180deg, var(--surface), var(--accent-soft)); }
-.ghost-btn:active {
-  transform: translateY(3px);
-  box-shadow: inset 0 2px 5px rgba(48, 33, 12, .16), 0 0 0 1px var(--line-strong);
-}
+.ghost-btn:hover { filter: brightness(.97); }
+.ghost-btn:active { transform: scale(.97); filter: brightness(.94); }
 .ghost-btn.danger { color: var(--bad); }
-.ghost-btn.danger:hover { background: linear-gradient(180deg, var(--surface), var(--bad-bg)); }
 
 /* ---------- exercise session ---------- */
 
@@ -1091,7 +1038,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 }
 
 .done-score {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Noto Serif", ui-serif, serif;
+  font-family: inherit;
   font-size: clamp(3rem, 2.2rem + 3.5vw, 4.2rem);
   font-weight: 700;
   line-height: 1;
@@ -1647,7 +1594,7 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
   padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
   background: var(--veil);
   border-top: 1px solid var(--line);
-  box-shadow: 0 -6px 24px -18px rgba(48, 33, 12, .5);
+  box-shadow: none;
   -webkit-backdrop-filter: saturate(1.5) blur(14px);
   backdrop-filter: saturate(1.5) blur(14px);
 }
@@ -1674,10 +1621,6 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .tab.on {
   color: var(--accent-ink);
   background: var(--accent-soft);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 0 0 1px var(--accent-soft-2);
-}
-@media (prefers-color-scheme: dark) {
-  .tab.on { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1px var(--accent-soft-2); }
 }
 
 /* Room for the bar at the foot of every screen. */
@@ -1729,127 +1672,122 @@ body.in-run .run-stage { flex: 1; }
 
 /* ---------- the road of stops ---------- */
 
+/* ---------- the path as a grouped list -------------------------------
+   The winding road of 80px coins is gone. It borrowed the grammar of a game
+   and spent a whole screen saying so: four units per screenful, names squeezed
+   under coins, the eye zigzagging to read what is honestly a numbered list.
+   This is the platform's inset grouped list instead — one card, one row per
+   unit, icon in a tinted square, title at full reading size, a chevron
+   promising the sheet. Ten units per screenful, and the whole row is the tap
+   target. */
+
 .path-trail {
   list-style: none;
-  margin: 30px 0 10px;
+  margin: 16px 0 6px;
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 34px;
+  background: var(--surface);
+  border-radius: var(--r);
+  overflow: hidden;
+  box-shadow: var(--lift-1), 0 0 0 1px var(--line);
 }
 
-/* Each stop steps left, centre, right, centre — the eye walks a winding road
-   instead of falling down a well. */
 .node {
   position: relative;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  transform: translateX(var(--shift, 0));
+  gap: 13px;
+  padding: 10px 16px 10px 13px;
 }
-.node.shift-1 { --shift: -78px; }
-.node.shift-3 { --shift: 78px; }
+/* Hairline between rows, inset past the icon column like every grouped list. */
+.node + .node::before {
+  content: "";
+  position: absolute;
+  left: 72px;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--line);
+}
+.node:active { background: var(--surface-2); }
 
 .node-btn {
-  position: relative;
+  position: static;
+  flex: none;
   display: grid;
   place-items: center;
-  width: 80px;
-  height: 80px;
+  width: 46px;
+  height: 46px;
   border: 0;
-  border-radius: 28px;
+  border-radius: 12px;
   cursor: pointer;
   color: var(--accent-ink);
-  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  background: var(--accent-soft);
   -webkit-tap-highlight-color: transparent;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .85),
-    0 0 0 1.5px var(--line-strong),
-    0 6px 0 var(--line-strong),
-    0 14px 26px -12px rgba(48, 33, 12, .45);
-  transition: transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease),
-              color var(--fast) var(--ease);
 }
-@media (prefers-color-scheme: dark) {
-  .node-btn { box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1.5px var(--line-strong), 0 6px 0 var(--line-strong), 0 16px 28px -12px rgba(0, 0, 0, .8); }
-}
-.node-btn .glyph { width: 34px; height: 34px; }
-.node-btn:hover {
-  color: var(--accent);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .85),
-    0 0 0 1.5px var(--accent),
-    0 6px 0 var(--accent-soft-2),
-    0 16px 30px -12px rgba(18, 117, 92, .5);
-}
-.node-btn:active {
-  transform: translateY(6px);
-  box-shadow: inset 0 2px 8px rgba(48, 33, 12, .2), 0 0 0 1.5px var(--accent);
+.node-btn .glyph { width: 23px; height: 23px; }
+
+.node-lab { display: grid; gap: 1px; min-width: 0; }
+.node-num { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 650; color: var(--muted); }
+.node-title { font-size: 1.02rem; font-weight: 650; letter-spacing: -.012em; line-height: 1.3; }
+
+/* The trailing chevron: this row goes somewhere. order 9 because pseudo
+   elements are flex items too, and the "start" pill (DOM-first, order 8)
+   must land before it. */
+.node::after {
+  content: "";
+  flex: none;
+  order: 9;
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--line-strong);
+  border-top: 2px solid var(--line-strong);
+  transform: rotate(45deg);
 }
 
-/* Cleared: the coin is solid green behind you, with a small stamped check. */
-.node.done .node-btn {
-  color: #fff;
-  background: linear-gradient(180deg, var(--accent-lite), var(--accent));
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .34),
-    inset 0 -1px 0 rgba(0, 0, 0, .16),
-    0 6px 0 var(--accent-edge),
-    0 14px 28px -12px rgba(18, 117, 92, .6);
-}
+/* Done: the icon fills in, a small check sits on its corner, the title steps
+   back. Finished work reads as settled, not lit. */
+.node.done .node-btn { color: #fff; background: var(--accent); }
+.node.done .node-title { color: var(--muted); }
 .node-check {
   position: absolute;
-  right: -7px;
-  top: -7px;
+  right: 8px;
+  top: 8px;
   display: grid;
   place-items: center;
-  width: 27px;
-  height: 27px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  color: var(--accent-ink);
-  background: var(--surface);
-  box-shadow: 0 0 0 2px var(--accent), 0 4px 10px -3px rgba(0, 0, 0, .35);
+  color: #fff;
+  background: var(--accent-edge);
+  box-shadow: 0 0 0 2px var(--surface);
 }
-.node-check .glyph { width: 15px; height: 15px; }
+.node-check .glyph { width: 10px; height: 10px; }
 
-/* Where you are: a double ring and a small flag that breathes. */
-.node.current .node-btn {
-  color: var(--accent);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, .85),
-    0 0 0 2.5px var(--accent),
-    0 0 0 9px var(--accent-soft),
-    0 6px 0 var(--accent-soft-2),
-    0 16px 32px -12px rgba(18, 117, 92, .55);
-}
+/* Where you are: the one tinted row in the card, with a pill saying "start". */
+.node.current { background: var(--accent-soft); }
+.node.current + .node::before { display: none; }
+.node.current .node-btn { color: #fff; background: var(--accent); }
+.node.current::after { border-color: var(--accent); margin-left: 12px; }
 .node-flag {
-  position: absolute;
-  top: -32px;
-  left: 50%;
-  z-index: 2;
-  padding: 5px 15px;
+  order: 8;
+  flex: none;
+  margin-left: auto;
+  padding: 4px 11px;
   border-radius: 999px;
   font-size: var(--micro);
-  font-weight: 800;
+  font-weight: 750;
   letter-spacing: var(--micro-track);
   color: #fff;
-  background: linear-gradient(180deg, var(--accent-lite), var(--accent));
-  box-shadow: 0 2px 0 var(--accent-edge), 0 8px 18px -8px rgba(18, 117, 92, .7);
-  animation: flag-bob 2.6s var(--ease) infinite;
-}
-@keyframes flag-bob {
-  0%, 100% { transform: translate(-50%, 0); }
-  50%      { transform: translate(-50%, -4px); }
+  background: var(--accent);
 }
 
-.node.locked .node-btn { opacity: .55; filter: saturate(.35); }
-
-.node-lab { margin-top: 11px; display: grid; gap: 1px; max-width: 150px; }
-.node-num { font-size: var(--micro); letter-spacing: var(--micro-track); font-weight: 750; color: var(--muted); }
-.node-title { font-size: .9rem; font-weight: 650; letter-spacing: -.01em; line-height: 1.25; }
-.node.done .node-title { color: var(--muted); }
+/* Not yet reachable (guided path on): dimmed, the icon goes gray. */
+.node.locked { opacity: .6; }
+.node.locked .node-btn { color: var(--muted); background: var(--surface-3); }
 
 /* ---------- the unit sheet ---------- */
 
@@ -1924,7 +1862,7 @@ body.in-run .run-stage { flex: 1; }
 }
 .teach-head { display: flex; align-items: center; gap: 8px; }
 .teach-lb {
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Noto Serif", ui-serif, serif;
+  font-family: inherit;
   font-size: clamp(2.1rem, 1.55rem + 2.6vw, 3rem);
   font-weight: 700;
   line-height: 1.08;
@@ -1982,11 +1920,10 @@ a.more-guide:hover { box-shadow: var(--lift-3), 0 0 0 1.5px var(--accent); }
 
 @media (max-width: 620px) {
   .screen { padding-bottom: 128px; }
-  .node.shift-1 { --shift: -56px; }
-  .node.shift-3 { --shift: 56px; }
-  .node-btn { width: 72px; height: 72px; border-radius: 25px; }
+  .node { padding: 9px 12px 9px 10px; }
+  .node + .node::before { left: 64px; }
   .node-btn .glyph { width: 31px; height: 31px; }
-  .path-trail { gap: 28px; }
+
   .now-strip { padding: 14px 16px; }
   .now-strip .primary-btn, .now-strip .ghost-btn { flex: 1; }
   .sheet { border-radius: var(--r-lg) var(--r-lg) 0 0; padding: 12px 18px calc(20px + env(safe-area-inset-bottom)); }

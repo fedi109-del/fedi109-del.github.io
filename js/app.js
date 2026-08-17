@@ -346,8 +346,14 @@
       badge.innerHTML = Art.glyph('check');
       btn.appendChild(badge);
     }
-    btn.addEventListener('click', function () { openSheet(u); });
     li.appendChild(btn);
+    /* The handler lives on the row, not the button. The visible button is 46px,
+       but a list row's promise is that the whole row responds — and a CSS-only
+       stretch of the button's ::after cannot deliver it here, because Chrome
+       makes <button> the containing block for its own pseudo-elements no matter
+       what the ancestors say. Clicks on the button bubble to the row, so the
+       keyboard path through the button still works, and fires this once. */
+    li.addEventListener('click', function () { openSheet(u); });
 
     var lab = el('span', 'node-lab');
     lab.appendChild(el('span', 'node-num', 'Unit ' + u.order));
