@@ -1,6 +1,14 @@
 [
  {
   "grado": "sospetta",
+  "key": "aloo-mar7aba",
+  "lb": "aloo, mar7aba.",
+  "en": "hello.",
+  "unit": 33,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
   "key": "seme3",
   "lb": "seme3",
   "en": "he heard",
@@ -9,11 +17,11 @@
  },
  {
   "grado": "sospetta",
-  "key": "makana",
-  "lb": "makana",
-  "en": "clippers, machine",
-  "unit": 39,
-  "kind": "word"
+  "key": "3am-beshteghel",
+  "lb": "3am beshteghel",
+  "en": "I am working.",
+  "unit": 24,
+  "kind": "example"
  },
  {
   "grado": "sospetta",
@@ -25,11 +33,27 @@
  },
  {
   "grado": "sospetta",
+  "key": "bet7ebbo-7elo",
+  "lb": "bet7ebbo 7elo?",
+  "en": "Would you like dessert?",
+  "unit": 31,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
   "key": "maa-te3tal-hamm",
   "lb": "maa te3tal hamm",
   "en": "do not carry worry",
   "unit": 23,
   "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "maa-kenna-mabsouutiin",
+  "lb": "maa kenna mabsouuTiin",
+  "en": "We were not happy.",
+  "unit": 29,
+  "kind": "example"
  },
  {
   "grado": "sospetta",
@@ -41,27 +65,11 @@
  },
  {
   "grado": "sospetta",
-  "key": "boukra-bakkiir-akiid",
-  "lb": "boukra bakkiir, akiid!",
-  "en": "tomorrow, early, of course!",
-  "unit": 5,
-  "kind": "dialogue"
- },
- {
-  "grado": "sospetta",
-  "key": "la2-ana-men-trablos",
-  "lb": "la2, ana men Trablos.",
-  "en": "no, I am from Tripoli",
-  "unit": 2,
-  "kind": "dialogue"
- },
- {
-  "grado": "sospetta",
-  "key": "kammal",
-  "lb": "kammal",
-  "en": "he carried on",
-  "unit": 26,
-  "kind": "word"
+  "key": "w-ne7na-3am-mneshrab-2ahwe-shefna-tania-w-jawza-henne-kameen-tol",
+  "lb": "w-ne7na 3am mneshrab 2ahwe, shefna Tania w-jawza: henné kaméén Tole3o 3al-jabal.",
+  "en": "While we were drinking coffee we saw Tania and her husband: they had come up to the mountain too.",
+  "unit": 28,
+  "kind": "example"
  },
  {
   "grado": "sospetta",
@@ -73,19 +81,51 @@
  },
  {
   "grado": "sospetta",
-  "key": "maa-beshar-abadan",
-  "lb": "maa beshar abadan",
-  "en": "I never stay up late.",
-  "unit": 18,
-  "kind": "phrase"
+  "key": "shou-ra2yak-bel-beet",
+  "lb": "shou ra2yak bel-béét?",
+  "en": "what do you think of the place?",
+  "unit": 11,
+  "kind": "dialogue"
  },
  {
   "grado": "sospetta",
-  "key": "maa-ra7-enzal-lyoom",
-  "lb": "maa ra7 enzal lyoom",
-  "en": "I am not going down today",
-  "unit": 25,
-  "kind": "phrase"
+  "key": "ba3deen-akhadna-es-sayyaara-w-tlo3na-3al-jabal",
+  "lb": "ba3déén akhadna es-sayyaara w-Tlo3na 3al-jabal.",
+  "en": "Then we took the car and went up to the mountain.",
+  "unit": 28,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
+  "key": "kammal",
+  "lb": "kammal",
+  "en": "he carried on",
+  "unit": 26,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "maa-fii-7ada-hoon",
+  "lb": "maa fii 7ada hoon",
+  "en": "there is nobody here",
+  "unit": 14,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
+  "key": "abel-maa",
+  "lb": "abel maa",
+  "en": "before (in front of a verb)",
+  "unit": 28,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "et2akkhar",
+  "lb": "et2akkhar",
+  "en": "to be late",
+  "unit": 37,
+  "kind": "word"
  },
  {
   "grado": "sospetta",
@@ -94,6 +134,14 @@
   "en": "sleeve",
   "unit": 20,
   "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "w-akhiiran-rje3na-3al-beet-es-see3a-tes3a-kenna-te3beeniin-bass-",
+  "lb": "w-akhiiran rje3na 3al-béét es-séé3a tes3a. kenna te3bééniin, bass el-yoom kéén 7elo.",
+  "en": "And finally we got home at nine. We were tired, but it had been a lovely day.",
+  "unit": 28,
+  "kind": "example"
  },
  {
   "grado": "sospetta",
@@ -109,14 +157,6 @@
   "lb": "Allah y3aafiik",
   "en": "may God keep you strong",
   "unit": 5,
-  "kind": "reply"
- },
- {
-  "grado": "sospetta",
-  "key": "basiita-maa-fii-lzouum",
-  "lb": "basiiTa! maa fii lzouum",
-  "en": "it is nothing, there is no need",
-  "unit": 31,
   "kind": "reply"
  },
  {
@@ -137,18 +177,34 @@
  },
  {
   "grado": "sospetta",
+  "key": "b-addee-men-hoon-lal-m7atta",
+  "lb": "b-addéé men hoon lal-m7aTTa?",
+  "en": "how much from here to the station?",
+  "unit": 21,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "shou-betjiib-ma3ak",
+  "lb": "shou betjiib ma3ak?",
+  "en": "what do you bring with you? (to a man)",
+  "unit": 16,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "3am-bteshteghel-lyoom",
+  "lb": "3am bteshteghel lyoom?",
+  "en": "are you working today?",
+  "unit": 24,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
   "key": "3end",
   "lb": "3end-",
   "en": "to have, to own",
   "unit": 8,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
-  "key": "abel-maa",
-  "lb": "abel maa",
-  "en": "before (in front of a verb)",
-  "unit": 28,
   "kind": "word"
  },
  {
@@ -161,27 +217,11 @@
  },
  {
   "grado": "sospetta",
-  "key": "et2akkhar",
-  "lb": "et2akkhar",
-  "en": "to be late",
-  "unit": 37,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
   "key": "hayde-siyyaara",
   "lb": "haydé siyyaara",
   "en": "This is a car.",
   "unit": 3,
   "kind": "example"
- },
- {
-  "grado": "sospetta",
-  "key": "jebelna-3asiir-eza-betriid",
-  "lb": "jebelna 3aSiir, eza betriid",
-  "en": "Bring us a juice, please.",
-  "unit": 19,
-  "kind": "phrase"
  },
  {
   "grado": "sospetta",
@@ -209,46 +249,6 @@
  },
  {
   "grado": "sospetta",
-  "key": "barra",
-  "lb": "barra",
-  "en": "outside",
-  "unit": 14,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
-  "key": "ma32ouul",
-  "lb": "ma32ouul",
-  "en": "reasonable, believable",
-  "unit": 10,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
-  "key": "halla2",
-  "lb": "halla2",
-  "en": "now",
-  "unit": 5,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
-  "key": "m3a22am",
-  "lb": "m3a22am",
-  "en": "sanitised",
-  "unit": 33,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
-  "key": "2eddeem",
-  "lb": "2eddéém",
-  "en": "in front of",
-  "unit": 14,
-  "kind": "word"
- },
- {
-  "grado": "sospetta",
   "key": "ana-mnii7",
   "lb": "ana mnii7",
   "en": "I am fine.",
@@ -257,11 +257,27 @@
  },
  {
   "grado": "sospetta",
-  "key": "e7ke",
-  "lb": "e7ké",
-  "en": "to talk, to speak (root)",
-  "unit": 24,
+  "key": "barra",
+  "lb": "barra",
+  "en": "outside",
+  "unit": 14,
   "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "berja3-etla3-3al-jabal",
+  "lb": "berja3 eTla3 3al-jabal",
+  "en": "I go back up to the mountain.",
+  "unit": 21,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
+  "key": "es-siyyaara-m2ammane",
+  "lb": "es-siyyaara m2ammané?",
+  "en": "is the car insured?",
+  "unit": 21,
+  "kind": "phrase"
  },
  {
   "grado": "sospetta",
@@ -281,11 +297,155 @@
  },
  {
   "grado": "sospetta",
+  "key": "ma32ouul",
+  "lb": "ma32ouul",
+  "en": "reasonable, believable",
+  "unit": 10,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "siyyaara",
+  "lb": "siyyaara",
+  "en": "car",
+  "unit": 3,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "noss-kiilo-w-2anniinet-7aliib",
+  "lb": "noSS kiilo. w 2anniinet 7aliib.",
+  "en": "half a kilo. And a bottle of milk.",
+  "unit": 12,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "service-3a-mar-mikhayel",
+  "lb": "service. 3a Mar Mikhayel.",
+  "en": "service. To Mar Mikhael.",
+  "unit": 21,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "3am-bfattesh-3a-sheghl",
+  "lb": "3am bfattesh 3a sheghl",
+  "en": "I am looking for work",
+  "unit": 35,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "beshteghel-bi-bank",
+  "lb": "beshteghel bi-bank",
+  "en": "I work in a bank.",
+  "unit": 24,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
+  "key": "halla2",
+  "lb": "halla2",
+  "en": "now",
+  "unit": 5,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "khalliina-ne23od",
+  "lb": "khalliina ne23od",
+  "en": "let us sit down",
+  "unit": 17,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "m3a22am",
+  "lb": "m3a22am",
+  "en": "sanitised",
+  "unit": 33,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "shou-ra2yik",
+  "lb": "shou ra2yik?",
+  "en": "what do you think? (to a woman)",
+  "unit": 11,
+  "kind": "phrase"
+ },
+ {
+  "grado": "sospetta",
+  "key": "tayyeb-kiilo-banadouura-kameen",
+  "lb": "Tayyeb, kiilo banadouura kaméén.",
+  "en": "all right, a kilo of tomatoes as well.",
+  "unit": 12,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "2eddeem",
+  "lb": "2eddéém",
+  "en": "in front of",
+  "unit": 14,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "aloo-shou-3am-ta3mol",
+  "lb": "aloo? shou 3am ta3mol?",
+  "en": "hello? What are you doing?",
+  "unit": 24,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "basiita-wala-yhemmak",
+  "lb": "basiiTa. wala yhemmak.",
+  "en": "it is nothing. Do not let it worry you.",
+  "unit": 29,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "bass-ana-te3been",
+  "lb": "bass ana te3béén.",
+  "en": "but I am tired.",
+  "unit": 10,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "e7ke",
+  "lb": "e7ké",
+  "en": "to talk, to speak (root)",
+  "unit": 24,
+  "kind": "word"
+ },
+ {
+  "grado": "sospetta",
   "key": "houwwe",
   "lb": "houwwé",
   "en": "he",
   "unit": 2,
   "kind": "word"
+ },
+ {
+  "grado": "sospetta",
+  "key": "la2-shukran-ya3tiik-el-3aafye",
+  "lb": "la2, shukran. ya3Tiik el-3aafyé.",
+  "en": "no, thank you. May he give you strength.",
+  "unit": 9,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "mannon-te3beeniin-abadan",
+  "lb": "mannon te3bééniin abadan",
+  "en": "They are not tired in the least.",
+  "unit": 10,
+  "kind": "example"
  },
  {
   "grado": "sospetta",
@@ -305,10 +465,10 @@
  },
  {
   "grado": "sospetta",
-  "key": "siyyaara",
-  "lb": "siyyaara",
-  "en": "car",
-  "unit": 3,
+  "key": "la2enno",
+  "lb": "la2enno",
+  "en": "because",
+  "unit": 34,
   "kind": "word"
  },
  {
@@ -337,6 +497,14 @@
  },
  {
   "grado": "sospetta",
+  "key": "khalliina-nenzal-w-enta-bteji-ba3deen",
+  "lb": "khalliina nenzal, w enta bteji ba3déén.",
+  "en": "let us go down, and you come after.",
+  "unit": 17,
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
   "key": "m7atta",
   "lb": "m7aTTa",
   "en": "station",
@@ -361,6 +529,14 @@
  },
  {
   "grado": "sospetta",
+  "key": "sarlo-shahreen-3am-byeshteghel-hoon",
+  "lb": "Sarlo shahréén 3am byeshteghel hoon",
+  "en": "He has been working here for two months.",
+  "unit": 30,
+  "kind": "example"
+ },
+ {
+  "grado": "sospetta",
   "key": "shou-bak",
   "lb": "shou bak?",
   "en": "what is wrong with you?",
@@ -369,11 +545,19 @@
  },
  {
   "grado": "sospetta",
-  "key": "shou-ra2yik",
-  "lb": "shou ra2yik?",
-  "en": "what do you think? (to a woman)",
+  "key": "w-es-se3r",
+  "lb": "w es-se3r?",
+  "en": "and the price?",
   "unit": 11,
-  "kind": "phrase"
+  "kind": "dialogue"
+ },
+ {
+  "grado": "sospetta",
+  "key": "w-khallast-esh-sheghl",
+  "lb": "w khallaSt esh-sheghl?",
+  "en": "and did you finish the work?",
+  "unit": 26,
+  "kind": "dialogue"
  },
  {
   "grado": "sospetta",
