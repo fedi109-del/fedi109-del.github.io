@@ -1095,6 +1095,26 @@ tbody tr:nth-child(even) td { background: rgba(0, 0, 0, .012); }
 .setting:last-child { border-bottom: 0; }
 .setting-name { font-weight: 650; }
 
+/* The backup card: one code carries the progress to another device or address. */
+.backup-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+.backup-box {
+  width: 100%;
+  min-height: 96px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--bg);
+  color: var(--ink);
+  font: inherit;
+  font-size: .85rem;
+  resize: vertical;
+}
+.backup-box:focus { outline: none; box-shadow: var(--ring); }
+.backup-msg { margin-top: 10px; }
+.backup-msg:empty { display: none; }
+.backup-box + .primary-btn { margin-top: 12px; }
+
 .switch { position: relative; width: 50px; height: 29px; flex: none; margin-top: 2px; }
 .switch input { opacity: 0; width: 0; height: 0; }
 .slider {

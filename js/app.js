@@ -1159,6 +1159,85 @@
       'Turn it on and each unit waits until you have cleared the one before it with 80%.'));
     wrap.appendChild(card);
 
+    /* Progress never leaves this browser on its own — which also means a new
+       phone, or this app at a new address, would start from zero. The backup
+       code is the bridge: all of it as one piece of text, copied there and
+       pasted here. */
+    var backup = el('section', 'card');
+    backup.appendChild(el('h2', null, 'Backup'));
+    backup.appendChild(el('p', 'muted',
+      'Your progress lives only on this device. A backup code carries it to ' +
+      'another phone, another browser, or this app at a new address. Copy it, ' +
+      'keep it somewhere you can reach from the other device — a note, a ' +
+      'message to yourself — and restore it there.'));
+
+    var actions = el('div', 'backup-actions');
+    var restoreSpot = el('div');
+
+    var copyBtn = el('button', 'ghost-btn', 'Copy backup code');
+    copyBtn.type = 'button';
+    var copyBox = null;
+    copyBtn.addEventListener('click', function () {
+      var code = Store.exportData();
+      /* The box only appears when the clipboard says no — old browsers,
+         denied permission — so the copy can still happen by hand. */
+      var byHand = function () {
+        if (!copyBox) {
+          copyBox = el('textarea', 'backup-box');
+          copyBox.readOnly = true;
+          copyBox.setAttribute('aria-label', 'Backup code');
+          backup.insertBefore(copyBox, restoreSpot);
+        }
+        copyBox.value = code;
+        copyBox.focus();
+        copyBox.select();
+        copyBtn.textContent = 'Copy the code below by hand';
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).then(function () {
+          copyBtn.textContent = 'Copied — paste it somewhere safe';
+          setTimeout(function () { copyBtn.textContent = 'Copy backup code'; }, 2600);
+        }, byHand);
+      } else {
+        byHand();
+      }
+    });
+    actions.appendChild(copyBtn);
+
+    var openRestore = el('button', 'ghost-btn', 'Restore from a code');
+    openRestore.type = 'button';
+    openRestore.addEventListener('click', function () {
+      actions.removeChild(openRestore);
+      var area = el('textarea', 'backup-box');
+      area.placeholder = 'Paste the backup code here';
+      area.setAttribute('aria-label', 'Paste the backup code here');
+      var note = el('p', 'muted backup-msg');
+      var doIt = el('button', 'primary-btn', 'Restore this backup');
+      doIt.type = 'button';
+      doIt.addEventListener('click', function () {
+        var raw = area.value.trim();
+        if (!raw) { note.textContent = 'The box is empty — paste the code first.'; return; }
+        if (!confirm('Replace the progress on this device with this backup?')) return;
+        if (Store.importData(raw)) {
+          applyTheme();
+          go('#/path');
+          render();
+        } else {
+          note.textContent = 'That does not look like a Lebanese Path backup code. ' +
+            'Copy it again on the old device — the whole thing — and paste it unchanged.';
+        }
+      });
+      restoreSpot.appendChild(area);
+      restoreSpot.appendChild(doIt);
+      restoreSpot.appendChild(note);
+      area.focus();
+    });
+    actions.appendChild(openRestore);
+
+    backup.appendChild(actions);
+    backup.appendChild(restoreSpot);
+    wrap.appendChild(backup);
+
     var sound = el('section', 'card');
     sound.appendChild(el('h2', null, 'About the recordings'));
     var have = Say.count();

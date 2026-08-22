@@ -22,7 +22,7 @@
  * to make a phone let go of the old ones is to swap the whole cache.
  */
 
-var VERSION = 'lebanese-path-v11';
+var VERSION = 'lebanese-path-v12';
 
 var ASSETS = [
   './',

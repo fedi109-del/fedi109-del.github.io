@@ -178,6 +178,30 @@ window.Store = (function () {
     save();
   }
 
+  /* ---- backup ----
+     Progress lives in this browser, tied to one address on one device. The
+     backup code is the whole record as text: copied there, pasted here, and
+     nothing is lost when the phone or the address changes. */
+
+  function exportData() {
+    return JSON.stringify(state);
+  }
+
+  function importData(raw) {
+    var saved;
+    try { saved = JSON.parse(raw); } catch (e) { return false; }
+    if (!saved || typeof saved !== 'object' ||
+        !saved.units || typeof saved.units !== 'object' ||
+        !saved.sched || typeof saved.sched !== 'object' ||
+        !saved.settings || typeof saved.settings !== 'object') {
+      return false;
+    }
+    localStorage.setItem(KEY, JSON.stringify(saved));
+    state = load(); /* through the same door every saved record enters, defaults and all */
+    save();
+    return true;
+  }
+
   return {
     unit: unit,
     markSeen: markSeen,
@@ -193,6 +217,8 @@ window.Store = (function () {
     addXp: addXp,
     setSetting: setSetting,
     reset: reset,
+    exportData: exportData,
+    importData: importData,
     settings: function () { return state.settings; },
     xp: function () { return state.xp; },
     streak: function () { return state.streak; }
